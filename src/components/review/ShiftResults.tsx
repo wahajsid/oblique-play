@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ObliqueWordmark } from "@/components/brand/ObliqueMark";
+import { ObliqueMark } from "@/components/brand/ObliqueMark";
+import { ProfileCard } from "@/components/ProfileCard";
 import { SiteFooter } from "@/components/SiteFooter";
+import type { PlayerProfile } from "@/lib/players";
 import { formatTime, type AnswerRecord } from "@/lib/review/progress";
 import type { ShiftInfo } from "@/lib/review/types";
 
@@ -19,12 +21,14 @@ export function ShiftResults({
   answers,
   deskMs,
   isBest,
+  profile,
   onReplay,
 }: {
   shift: ShiftInfo;
   answers: AnswerRecord[];
   deskMs: number;
   isBest: boolean;
+  profile: PlayerProfile | null;
   onReplay: () => void;
 }) {
   const total = answers.length;
@@ -58,7 +62,7 @@ export function ShiftResults({
         >
           <span aria-hidden="true">←</span> Shifts
         </Link>
-        <ObliqueWordmark className="text-sm" />
+        <ObliqueMark height={16} />
       </header>
       <main className="flex flex-1 flex-col px-4 pt-4">
         <p className="text-sm font-semibold tracking-wide text-accent uppercase">
@@ -83,11 +87,14 @@ export function ShiftResults({
           ))}
         </ol>
 
+        {/* Asked after the first round, until the player has filled it in or skipped. */}
+        {profile && !profile.displayName && !profile.role && <ProfileCard profile={profile} />}
+
         <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
           <button
             type="button"
             onClick={share}
-            className="min-h-14 rounded-xl bg-accent px-4 text-base font-semibold text-accent-ink"
+            className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold"
           >
             Share my score
           </button>
@@ -97,12 +104,12 @@ export function ShiftResults({
             </p>
           )}
           <div className="grid grid-cols-2 gap-2">
-            <button type="button" onClick={onReplay} className="min-h-12 rounded-xl border border-line text-sm font-semibold">
+            <button type="button" onClick={onReplay} className="min-h-12 rounded-full border border-line text-sm font-semibold">
               Play again
             </button>
             <Link
               href="/review"
-              className="inline-flex min-h-12 items-center justify-center rounded-xl border border-line text-sm font-semibold"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-line text-sm font-semibold"
             >
               All shifts
             </Link>

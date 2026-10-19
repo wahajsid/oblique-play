@@ -10,6 +10,8 @@ export type AnswerRecord = {
 
 export type ShiftRun = {
   shift: number;
+  // Matches the attempt recorded on the server for signed-in players.
+  attemptId: string;
   answers: AnswerRecord[];
   startedAt: number;
 };

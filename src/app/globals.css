@@ -1,48 +1,49 @@
 @import "tailwindcss";
 
 /*
-  Brand tokens. PLACEHOLDERS until Oblique's brand files arrive:
-  swap the colour values here and the fonts in layout.tsx, and the whole
-  game follows.
+  Brand tokens, taken from obliqueconsult.com: navy #141428, aqua #ADEBF2,
+  cream paper #FAF7F1 and the Satoshi typeface (see layout.tsx).
 */
 :root {
-  --bg: #f5f3ee;
+  --bg: #fbfafb;
   --surface: #ffffff;
-  --ink: #17191e;
-  --muted: #5a6170;
-  --line: #e2ded5;
-  --accent: #2747d6;
-  --accent-ink: #ffffff;
-  --accent-soft: #e8ecfb;
-  --ok: #1d6b4c;
-  --ok-soft: #e3f1ea;
+  --ink: #141428;
+  --muted: #5f6170;
+  --line: #dfe0e4;
+  --accent: #141428;
+  --accent-soft: #e6f9fb;
+  --ok: #1d7a5c;
+  --ok-soft: #e3f3ec;
   --notquite: #8a4b00;
   --notquite-soft: #fbeedc;
-  /* The document itself stays paper-coloured in both modes. */
-  --paper: #fffefb;
-  --paper-ink: #1c1c1c;
-  --paper-muted: #5c6170;
-  --paper-line: #e8e4da;
+  /* The document stays paper-coloured in both modes, with its own ink. */
+  --paper: #faf7f1;
+  --paper-ink: #141428;
+  --paper-muted: #5c5f6b;
+  --paper-line: #e6e0d3;
+  --paper-select: #dcf5f8;
+  --paper-ring: #3c3c7f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1115;
-    --surface: #181b21;
-    --ink: #eceef2;
-    --muted: #a3a9b5;
-    --line: #2a2f38;
-    --accent: #8aa2ff;
-    --accent-ink: #0f1115;
-    --accent-soft: #1e2540;
-    --ok: #6fd1a2;
-    --ok-soft: #12291f;
+    --bg: #0b0d12;
+    --surface: #141428;
+    --ink: #f0f0fa;
+    --muted: #a7a9bb;
+    --line: #2a2c44;
+    --accent: #adebf2;
+    --accent-soft: #1c3240;
+    --ok: #74e984;
+    --ok-soft: #13291c;
     --notquite: #f2b66b;
     --notquite-soft: #2e2210;
-    --paper: #ece9e1;
-    --paper-ink: #1c1c1c;
-    --paper-muted: #50555f;
-    --paper-line: #d4d0c5;
+    --paper: #f2eee3;
+    --paper-ink: #141428;
+    --paper-muted: #55585f;
+    --paper-line: #d8d2c4;
+    --paper-select: #d3f1f5;
+    --paper-ring: #3c3c7f;
   }
 }
 
@@ -53,7 +54,6 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-accent: var(--accent);
-  --color-accent-ink: var(--accent-ink);
   --color-accent-soft: var(--accent-soft);
   --color-ok: var(--ok);
   --color-ok-soft: var(--ok-soft);
@@ -63,6 +63,8 @@
   --color-paper-ink: var(--paper-ink);
   --color-paper-muted: var(--paper-muted);
   --color-paper-line: var(--paper-line);
+  --color-paper-select: var(--paper-select);
+  --color-paper-ring: var(--paper-ring);
   --font-sans: var(--font-sans-brand);
   --font-mono: var(--font-mono-brand);
 }
@@ -75,6 +77,16 @@ html {
 body {
   background: var(--bg);
   color: var(--ink);
+}
+
+/* The main call-to-action pill, as on obliqueconsult.com */
+.btn-primary {
+  background: linear-gradient(100deg, #adebf2 0%, #adebf2 35%, #d6f9fc 100%);
+  border: 1px solid #8fd8e2;
+  color: #141428;
+}
+.btn-primary:disabled {
+  opacity: 0.45;
 }
 
 :focus-visible {

@@ -59,7 +59,7 @@ export function ZoomSheet({ content, onClose }: { content: ZoomContent; onClose:
           ref={closeRef}
           type="button"
           onClick={onClose}
-          className="mt-5 min-h-12 w-full rounded-xl border border-paper-line text-base font-semibold"
+          className="mt-5 min-h-12 w-full rounded-full border border-paper-line text-base font-semibold"
         >
           Close
         </button>

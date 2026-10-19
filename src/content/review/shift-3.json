@@ -1,0 +1,724 @@
+[
+  {
+    "id": "s3-01",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Palmfield Office Supplies LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Warehouse 21, Al Quoz Industrial 3, Dubai" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100248613570003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Kilima Office Furnishings Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "Plot 18, Baobab Road, Nairobi, Kenya" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "POS-EX-0091", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "6 Oct 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "2 Oct 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "25,600.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "25,600.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0418827", "style": "mono" },
+          { "id": "transport-doc", "label": "Bill of lading no.", "value": "BL-PFS-261002", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "4 Oct 2026" },
+          { "id": "destination", "label": "Destination", "value": "Mombasa, Kenya" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Ergonomic office chair", "quantity": "40", "unitPrice": "640.00", "vatRate": "0%", "amount": "25,600.00" }
+      ]
+    },
+    "answer": { "verdict": "right" },
+    "explanation": {
+      "what": "Goods exported outside the GCC can be zero-rated (VAT at 0%) when the supplier holds official evidence, such as an exit declaration, and commercial evidence, such as a bill of lading.",
+      "why": "The chairs were shipped to Kenya 2 days after the date of supply, and both kinds of evidence are listed. So 0% is right and the total is AED 25,600.00 with no VAT.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": { "topic": "Zero-rated exports", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-02",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Saffron Shore Interiors LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Showroom 2, Marina Promenade, Ajman" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100735192460003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Harbourline Hotels Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "40 Quayside Row, London, United Kingdom" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "SSI-2026-118", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "12 Oct 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "8 Oct 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "32,100.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "32,100.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Delivery",
+        "variant": "notes",
+        "fields": [
+          { "id": "transport-doc", "label": "Delivery note no.", "value": "DN-4471", "style": "mono" },
+          { "id": "export-date", "label": "Delivered on", "value": "8 Oct 2026" },
+          { "id": "destination", "label": "Delivered to", "value": "Hotel fit-out site, Jumeirah, Dubai, UAE" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Lobby sofa, made to order", "quantity": "6", "unitPrice": "4,200.00", "vatRate": "0%", "amount": "25,200.00" },
+        { "id": "line-2", "description": "Marble coffee table", "quantity": "6", "unitPrice": "1,150.00", "vatRate": "0%", "amount": "6,900.00" }
+      ]
+    },
+    "answer": { "verdict": "off", "targets": ["destination", "vat", "lines"], "targetLabel": "VAT rate: the goods stayed in the UAE" },
+    "explanation": {
+      "what": "Zero-rating is for goods that leave the country. Goods delivered to an address in the UAE are taxed at 5%, even when the customer is based abroad.",
+      "why": "The customer is a UK company, but the furniture went to a site in Dubai. Nothing was exported, so VAT should be 5% of AED 32,100.00 = AED 1,605.00, making the total AED 33,705.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 27 and 45"
+    },
+    "meta": { "topic": "Zero-rated exports", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-03",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Marina Coffee Trading LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Shop 7, Harbour Walk, Dubai" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100384729160003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Brightleaf Roasters Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "Unit 6, Canal Works, Manchester, United Kingdom" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "MCT-EX-0027", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "8 Oct 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "7 Oct 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "8,200.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "8,200.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0522914", "style": "mono" },
+          { "id": "transport-doc", "label": "Airway bill no.", "value": "AWB 999-48213377", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "9 Oct 2026" },
+          { "id": "destination", "label": "Destination", "value": "Manchester, United Kingdom" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Specialty green coffee, 30 kg sack", "quantity": "20", "unitPrice": "410.00", "vatRate": "0%", "amount": "8,200.00" }
+      ]
+    },
+    "answer": { "verdict": "right" },
+    "explanation": {
+      "what": "Exported goods can be zero-rated whether they travel by sea or by air. An airway bill is commercial evidence, just like a bill of lading.",
+      "why": "The coffee left by air for the UK 2 days after supply, with both an exit declaration and an airway bill on file. So VAT at 0% is right, and the total stays AED 8,200.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": { "topic": "Export evidence", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-04",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Byte Souq Laptop Repairs LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Shop 14, Tech Arcade, Sharjah" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100957318420003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Lion Rock Tech Traders Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "Flat 9B, Harbour View Building, Kowloon, Hong Kong" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "BSL-EX-0058", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "3 Oct 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "1 Oct 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "29,500.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "29,500.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "Not held" },
+          { "id": "transport-doc", "label": "Bill of lading no.", "value": "Not held" },
+          { "id": "destination", "label": "Destination", "value": "Hong Kong" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Refurbished business laptop", "quantity": "25", "unitPrice": "1,180.00", "vatRate": "0%", "amount": "29,500.00" }
+      ]
+    },
+    "answer": { "verdict": "off", "targets": ["export-evidence"], "targetLabel": "Export evidence" },
+    "explanation": {
+      "what": "To zero-rate an export, the supplier must hold official and commercial evidence that the goods left the UAE.",
+      "why": "The invoice charges 0% but lists no exit declaration and no bill of lading. Without evidence, the 0% rate isn't supported, and VAT of 5% (AED 1,475.00 on AED 29,500.00) would be due.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": { "topic": "Export evidence", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-05",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Golden Frond Dates Trading LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Store 4, Date Market Road, Al Ain" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100815264790003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Nordkai Delikatessen GmbH", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "Speicherweg 12, Hamburg, Germany" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "GFD-EX-0310", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "10 Aug 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "1 Aug 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "29,850.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "29,850.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0391406", "style": "mono" },
+          { "id": "transport-doc", "label": "Bill of lading no.", "value": "BL-GFD-260924", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "24 Sep 2026" },
+          { "id": "destination", "label": "Destination", "value": "Hamburg, Germany" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Premium Medjool dates, 5 kg box", "quantity": "300", "unitPrice": "95.00", "vatRate": "0%", "amount": "28,500.00" },
+        { "id": "line-2", "description": "Gift packaging", "quantity": "300", "unitPrice": "4.50", "vatRate": "0%", "amount": "1,350.00" }
+      ]
+    },
+    "answer": { "verdict": "right" },
+    "explanation": {
+      "what": "Exported goods don't have to leave on the day of supply. They must leave within 90 days of the date of supply.",
+      "why": "The date of supply was 1 Aug and the dates were shipped on 24 Sep, 54 days later. That is inside the 90-day window, with evidence on file, so 0% is right on the full AED 29,850.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": { "topic": "The 90-day export window", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-06",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Falcon Lane Print Studio LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Office 304, Creekside Tower, Dubai" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100184639270003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Coral Coast Publishing Pte Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "21 Merchant Quay, Singapore" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "FLP-EX-0044", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "30 Sep 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "28 Sep 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "13,000.00" },
+          { "id": "vat", "label": "VAT at 5%", "value": "650.00" },
+          { "id": "total", "label": "Total payable", "value": "13,650.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0477150", "style": "mono" },
+          { "id": "transport-doc", "label": "Bill of lading no.", "value": "BL-FLP-261001", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "1 Oct 2026" },
+          { "id": "destination", "label": "Destination", "value": "Singapore" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Printed product catalogue", "quantity": "2,000", "unitPrice": "6.50", "vatRate": "5%", "amount": "13,000.00" }
+      ]
+    },
+    "answer": { "verdict": "off", "targets": ["vat", "total", "lines"], "targetLabel": "VAT rate" },
+    "explanation": {
+      "what": "When an export meets the conditions, it is zero-rated. Zero-rating isn't optional, so the supplier shouldn't charge 5%.",
+      "why": "The catalogues left for Singapore 3 days after supply, with an exit declaration and a bill of lading. This is a qualifying export, so VAT should be 0%. Charging 5% overcharges the customer by AED 650.00; the total should be AED 13,000.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": { "topic": "Zero-rated exports", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-07",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Oasis Thread Tailoring LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Shop 3, Textile Lane, Fujairah" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100638275910003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Savile Lane Outfitters Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "3 Tailors Court, London, United Kingdom" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "OTT-EX-0019", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "9 Jun 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "2 Jun 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "17,600.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "17,600.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0498833", "style": "mono" },
+          { "id": "transport-doc", "label": "Airway bill no.", "value": "AWB 999-50117264", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "30 Sep 2026" },
+          { "id": "destination", "label": "Destination", "value": "London, United Kingdom" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Kandura, tailored for export", "quantity": "80", "unitPrice": "220.00", "vatRate": "0%", "amount": "17,600.00" }
+      ]
+    },
+    "answer": { "verdict": "off", "targets": ["export-date", "supply-date"], "targetLabel": "Date goods left the UAE" },
+    "explanation": {
+      "what": "To be zero-rated, exported goods must leave the UAE within 90 days of the date of supply, unless the tax authority has allowed longer.",
+      "why": "The date of supply was 2 Jun, but the goods only left on 30 Sep, 120 days later. That is 30 days past the limit, so 0% doesn't hold; VAT of 5% (AED 880.00 on AED 17,600.00) would apply.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 30"
+    },
+    "meta": { "topic": "The 90-day export window", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-08",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Bluewave Pool Services LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Unit 5, Palm Grove Business Park, Ras Al Khaimah" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100412958360003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Lagoon Leisure Supplies Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "7 Coral Street, Port Louis, Mauritius" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "BWP-EX-0006", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "22 Sep 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "20 Sep 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "27,900.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "27,900.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0466021", "style": "mono" },
+          { "id": "transport-doc", "label": "Bill of lading no.", "value": "BL-BWP-261001", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "1 Oct 2026" },
+          { "id": "destination", "label": "Destination", "value": "Port Louis, Mauritius" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Pool pump unit", "quantity": "10", "unitPrice": "2,450.00", "vatRate": "0%", "amount": "24,500.00" },
+        { "id": "line-2", "description": "Spare filter cartridge", "quantity": "40", "unitPrice": "85.00", "vatRate": "0%", "amount": "3,400.00" }
+      ]
+    },
+    "answer": { "verdict": "right" },
+    "explanation": {
+      "what": "An export of goods outside the GCC, with evidence and shipped within 90 days, is zero-rated.",
+      "why": "The pumps and filters left for Mauritius on 1 Oct, 11 days after supply, with an exit declaration and a bill of lading. Both lines are at 0%, so the total is AED 24,500.00 + AED 3,400.00 = AED 27,900.00 with no VAT.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": { "topic": "Zero-rated exports", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-09",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Saffron Shore Interiors LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Showroom 2, Marina Promenade, Ajman" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100735192460003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Andes Home Studio SAC", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "Calle Los Cedros 410, Lima, Peru" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "SSI-2026-121", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "6 Oct 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "5 Oct 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "25,800.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "25,800.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "Not held" },
+          { "id": "transport-doc", "label": "Bill of lading no.", "value": "BL-SSI-261008", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "8 Oct 2026" },
+          { "id": "destination", "label": "Destination", "value": "Callao, Peru" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Hand-painted wall tiles, box", "quantity": "150", "unitPrice": "120.00", "vatRate": "0%", "amount": "18,000.00" },
+        { "id": "line-2", "description": "Brass wall lamp", "quantity": "30", "unitPrice": "260.00", "vatRate": "0%", "amount": "7,800.00" }
+      ]
+    },
+    "answer": { "verdict": "off", "targets": ["exit-declaration"], "targetLabel": "Exit declaration" },
+    "explanation": {
+      "what": "Zero-rating an export needs both kinds of evidence: official (such as the exit declaration from customs) and commercial (such as a bill of lading).",
+      "why": "There's a bill of lading, but no exit declaration is held. Commercial evidence alone isn't enough to support 0% on the AED 25,800.00 of goods.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 30"
+    },
+    "meta": { "topic": "Export evidence", "difficulty": "advanced", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  },
+  {
+    "id": "s3-10",
+    "shift": 3,
+    "kind": "tax_invoice",
+    "heading": { "id": "heading", "label": "Document title", "value": "TAX INVOICE" },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          { "id": "supplier-name", "label": "Supplier name", "value": "Qamar Ridge Bakery LLC", "style": "strong" },
+          { "id": "supplier-address", "label": "Supplier address", "value": "Unit 12, Old Souk Lane, Sharjah" },
+          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100527364190003", "style": "mono" }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          { "id": "customer-name", "label": "Customer name", "value": "Harbour Bake House Ltd", "style": "strong" },
+          { "id": "customer-address", "label": "Customer address", "value": "88 Lighthouse Lane, Colombo, Sri Lanka" }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          { "id": "invoice-number", "label": "Invoice number", "value": "QRB-EX-0012", "style": "mono" },
+          { "id": "issue-date", "label": "Date of issue", "value": "13 Oct 2026" },
+          { "id": "supply-date", "label": "Date of supply", "value": "11 Oct 2026" }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          { "id": "subtotal", "label": "Subtotal", "value": "9,600.00" },
+          { "id": "vat", "label": "VAT at 0%", "value": "0.00" },
+          { "id": "total", "label": "Total payable", "value": "10,080.00", "style": "strong" }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          { "id": "exit-declaration", "label": "Exit declaration no.", "value": "ED 2026-0530478", "style": "mono" },
+          { "id": "transport-doc", "label": "Airway bill no.", "value": "AWB 999-50288416", "style": "mono" },
+          { "id": "export-date", "label": "Date goods left the UAE", "value": "12 Oct 2026" },
+          { "id": "destination", "label": "Destination", "value": "Colombo, Sri Lanka" }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        { "id": "line-1", "description": "Date rolls, box of 12", "quantity": "240", "unitPrice": "40.00", "vatRate": "0%", "amount": "9,600.00" }
+      ]
+    },
+    "answer": { "verdict": "off", "targets": ["total"], "targetLabel": "Total payable" },
+    "explanation": {
+      "what": "On a zero-rated invoice, VAT is AED 0.00, so the total equals the subtotal.",
+      "why": "The export itself qualifies, and the VAT line correctly shows 0.00. But the total is AED 10,080.00, which is AED 9,600.00 plus 5%. The customer is being asked for AED 480.00 of VAT that isn't charged anywhere. The total should be AED 9,600.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 59(1)"
+    },
+    "meta": { "topic": "Zero-rated exports", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+  }
+]

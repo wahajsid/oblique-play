@@ -20,9 +20,9 @@ export function TaxDocument({ doc, mode, selectedId, revealIds = [], stamp, onTa
 
   const tapClass = (id: string, extra = "") => {
     const base = `block w-full min-h-11 rounded-md px-2 text-left transition-colors ${extra}`;
-    if (selectedId === id) return `${base} bg-accent-soft ring-2 ring-accent`;
+    if (selectedId === id) return `${base} bg-paper-select ring-2 ring-paper-ring`;
     if (isRevealed(id)) return `${base} bg-notquite-soft outline-2 outline-dashed outline-notquite`;
-    if (mode === "select") return `${base} hover:bg-accent-soft/60 ring-1 ring-paper-line`;
+    if (mode === "select") return `${base} hover:bg-paper-select/60 ring-1 ring-paper-line`;
     return `${base} hover:bg-black/[0.03]`;
   };
 
@@ -141,7 +141,7 @@ export function TaxDocument({ doc, mode, selectedId, revealIds = [], stamp, onTa
       {stamp && (
         <div
           aria-hidden="true"
-          className="anim-stamp pointer-events-none absolute top-1/3 left-1/2 rounded-lg border-4 border-accent px-4 py-1.5 text-2xl font-black tracking-widest whitespace-nowrap text-accent uppercase"
+          className="anim-stamp pointer-events-none absolute top-1/3 left-1/2 rounded-lg border-4 border-paper-ring px-4 py-1.5 text-2xl font-black tracking-widest whitespace-nowrap text-paper-ring uppercase"
         >
           {stamp === "right" ? "Looks right" : "Flagged"}
         </div>

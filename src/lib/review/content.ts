@@ -2,6 +2,8 @@ import "server-only";
 
 import shiftsData from "@/content/review/shifts.json";
 import shift1 from "@/content/review/shift-1.json";
+import shift2 from "@/content/review/shift-2.json";
+import shift3 from "@/content/review/shift-3.json";
 import type {
   CheckRequest,
   CheckResult,
@@ -16,6 +18,8 @@ import type {
 const shifts = shiftsData as ShiftInfo[];
 const documentsByShift: Record<number, ReviewDocument[]> = {
   1: shift1 as ReviewDocument[],
+  2: shift2 as ReviewDocument[],
+  3: shift3 as ReviewDocument[],
 };
 const documentsById = new Map(
   Object.values(documentsByShift)

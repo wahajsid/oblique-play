@@ -1,0 +1,54 @@
+<!--
+  Oblique Play sign-in email.
+  Paste into Supabase: Authentication → Emails → Templates, for BOTH
+  "Magic link" (returning players) and "Confirm signup" (new players).
+  Subject for both: Your sign-in code for the UAE tax game
+
+  The button goes to /auth/confirm, which asks for one more tap before signing
+  in, so company link scanners can't use up the code. Keep "next" paths
+  free of "?" query strings (use path segments instead), because RedirectTo is
+  inserted here unencoded.
+-->
+<!doctype html>
+<html lang="en">
+  <body style="margin:0;padding:0;background:#fbfafb;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fbfafb;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#ffffff;border:1px solid #dfe0e4;border-radius:16px;">
+            <tr>
+              <td style="padding:28px 28px 8px;font-family:Arial,Helvetica,sans-serif;color:#141428;">
+                <p style="margin:0;font-size:22px;font-weight:bold;letter-spacing:-0.5px;">ob/co</p>
+                <p style="margin:24px 0 0;font-size:16px;line-height:24px;">Here&#39;s your code for the UAE tax learning game:</p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:16px 28px;">
+                <p style="margin:0;padding:16px 0;background:#e6f9fb;border-radius:12px;font-family:'Courier New',Courier,monospace;font-size:36px;font-weight:bold;letter-spacing:8px;color:#141428;">{{ .Token }}</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 28px;font-family:Arial,Helvetica,sans-serif;color:#141428;font-size:16px;line-height:24px;">
+                <p style="margin:0;">Type it into the game, or tap the button below.</p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:24px 28px;">
+                <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email&amp;next={{ .RedirectTo }}"
+                   style="display:inline-block;padding:14px 28px;background:#adebf2;border:1px solid #8fd8e2;border-radius:999px;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;color:#141428;text-decoration:none;">Tap to sign in</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 28px 28px;font-family:Arial,Helvetica,sans-serif;color:#5f6170;font-size:13px;line-height:20px;">
+                <p style="margin:0;">The code works once and expires in an hour. If you didn&#39;t ask for it, you can ignore this email.</p>
+              </td>
+            </tr>
+          </table>
+          <p style="margin:16px 0 0;font-family:Arial,Helvetica,sans-serif;color:#5f6170;font-size:12px;line-height:18px;">
+            A learning game by <a href="https://obliqueconsult.com" style="color:#5f6170;">Oblique</a>. For learning purposes only. Not tax advice.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ObliqueWordmark } from "./brand/ObliqueMark";
+import { ObliqueMark } from "./brand/ObliqueMark";
 
 // The small permanent Oblique mark that sits on every screen.
 export function AppHeader({ back, children }: { back?: { href: string; label: string }; children?: React.ReactNode }) {
@@ -14,13 +14,13 @@ export function AppHeader({ back, children }: { back?: { href: string; label: st
         </Link>
       ) : (
         <Link href="/" className="inline-flex min-h-11 items-center text-ink" aria-label="Oblique Play home">
-          <ObliqueWordmark />
+          <ObliqueMark height={20} />
         </Link>
       )}
       {children}
       {back && (
         <Link href="/" className="inline-flex min-h-11 items-center text-ink" aria-label="Oblique Play home">
-          <ObliqueWordmark className="text-sm" />
+          <ObliqueMark height={16} />
         </Link>
       )}
     </header>

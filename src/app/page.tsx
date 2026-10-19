@@ -1,11 +1,28 @@
 import Link from "next/link";
 import { AppHeader } from "@/components/AppHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { authEnabled } from "@/lib/supabase/config";
+import { getSignedInPlayer } from "@/lib/supabase/server";
 
-export default function Home() {
+export default async function Home() {
+  const player = await getSignedInPlayer();
   return (
     <>
-      <AppHeader />
+      <AppHeader>
+        {player ? (
+          <form action="/auth/signout" method="post">
+            <button type="submit" className="min-h-11 rounded-full px-3 text-sm font-medium text-muted">
+              Sign out
+            </button>
+          </form>
+        ) : (
+          authEnabled && (
+            <Link href="/signin" className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-medium">
+              Sign in
+            </Link>
+          )
+        )}
+      </AppHeader>
       <main className="flex flex-1 flex-col px-4 pt-6">
         <p className="text-sm font-medium text-muted">A learning game by Oblique</p>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight text-balance">Learn UAE tax by doing it.</h1>
@@ -23,7 +40,7 @@ export default function Home() {
             <p className="mt-1 text-sm text-muted">
               Three-minute shifts. Check each document: does it look right, or is something off?
             </p>
-            <span className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-accent px-4 text-sm font-semibold text-accent-ink">
+            <span className="mt-4 inline-flex min-h-11 items-center rounded-full btn-primary px-4 text-sm font-semibold">
               Start a shift
             </span>
           </Link>

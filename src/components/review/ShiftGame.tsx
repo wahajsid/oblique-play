@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ObliqueWordmark } from "@/components/brand/ObliqueMark";
+import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   clearRun,
@@ -14,6 +14,7 @@ import {
   type ShiftRun,
 } from "@/lib/review/progress";
 import type { CheckResult, PublicDocument, ShiftInfo, Verdict } from "@/lib/review/types";
+import type { PlayerProfile } from "@/lib/players";
 import { FeedbackSheet } from "./FeedbackSheet";
 import { ShiftResults } from "./ShiftResults";
 import { TaxDocument, type DocMode, type Stamp } from "./TaxDocument";
@@ -29,12 +30,21 @@ const buzz = () => {
   } catch {}
 };
 
-export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: PublicDocument[] }) {
+type Props = {
+  shift: ShiftInfo;
+  documents: PublicDocument[];
+  // When sign-in is switched on, a player must be signed in to start.
+  needsSignIn: boolean;
+  profile: PlayerProfile | null;
+};
+
+export function ShiftGame({ shift, documents, needsSignIn, profile }: Props) {
   const total = documents.length;
   const [phase, setPhase] = useState<Phase>("intro");
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
   const [startedAt, setStartedAt] = useState(0);
+  const [attemptId, setAttemptId] = useState("");
   const [selected, setSelected] = useState<{ id: string; label: string } | null>(null);
   const [stamp, setStamp] = useState<Stamp>(null);
   const [result, setResult] = useState<CheckResult | null>(null);
@@ -50,7 +60,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
 
   useEffect(() => {
     const run = getRun(shift.number);
-    if (run && run.answers.length > 0 && run.answers.length < total) setSavedRun(run);
+    if (run?.attemptId && run.answers.length > 0 && run.answers.length < total) setSavedRun(run);
   }, [shift.number, total]);
 
   const timing = phase === "deciding" || phase === "selecting";
@@ -87,14 +97,20 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
   }, []);
 
   const start = (resume: boolean) => {
+    if (needsSignIn) {
+      window.location.assign(`/signin?next=${encodeURIComponent(`/review/${shift.number}`)}`);
+      return;
+    }
     if (resume && savedRun) {
       setAnswers(savedRun.answers);
       setStartedAt(savedRun.startedAt);
+      setAttemptId(savedRun.attemptId);
       showDocument(savedRun.answers.length);
     } else {
       clearRun(shift.number);
       setAnswers([]);
       setStartedAt(Date.now());
+      setAttemptId(crypto.randomUUID());
       showDocument(0);
     }
     setSavedRun(null);
@@ -109,13 +125,13 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
       const res = await fetch("/api/review/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ docId: doc.id, verdict, targetId }),
+        body: JSON.stringify({ docId: doc.id, verdict, targetId, attemptId, deskMs: Math.round(thisDocMs) }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const checked = (await res.json()) as CheckResult;
       const next = [...answers, { docId: doc.id, correct: checked.correct, deskMs: thisDocMs }];
       setAnswers(next);
-      saveRun({ shift: shift.number, answers: next, startedAt });
+      saveRun({ shift: shift.number, attemptId, answers: next, startedAt });
       setResult(checked);
       setPhase("feedback");
     } catch {
@@ -132,6 +148,13 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
     }
     const score = answers.filter((a) => a.correct).length;
     setIsBest(recordFinish(shift.number, { score, total, deskMs: doneMs, completedAt: Date.now() }));
+    // Signed-in players: the server scores the attempt from its own records.
+    fetch("/api/review/finish", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ attemptId, shift: shift.number }),
+      keepalive: true,
+    }).catch(() => {});
     setPhase("done");
     window.scrollTo({ top: 0 });
   };
@@ -151,6 +174,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
         shift={shift}
         total={total}
         resumeAt={savedRun ? savedRun.answers.length + 1 : null}
+        needsSignIn={needsSignIn}
         onStart={start}
       />
     );
@@ -163,6 +187,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
         answers={answers}
         deskMs={doneMs}
         isBest={isBest}
+        profile={profile}
         onReplay={() => start(false)}
       />
     );
@@ -187,7 +212,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
           <p className="min-w-12 text-right text-sm text-muted tabular-nums" aria-label="Desk time">
             {formatTime(deskMs)}
           </p>
-          <ObliqueWordmark className="text-sm" />
+          <ObliqueMark height={16} />
         </div>
         <div className="h-1 overflow-hidden rounded-full bg-line" aria-hidden="true">
           <div
@@ -241,7 +266,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
                       setSelected(null);
                       setPhase("deciding");
                     }}
-                    className="min-h-12 rounded-xl border border-line px-4 text-sm font-semibold"
+                    className="min-h-12 rounded-full border border-line px-4 text-sm font-semibold"
                   >
                     Back
                   </button>
@@ -249,7 +274,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
                     type="button"
                     disabled={!selected}
                     onClick={() => selected && submit("off", selected.id)}
-                    className="min-h-12 rounded-xl bg-accent px-4 text-base font-semibold text-accent-ink disabled:opacity-40"
+                    className="min-h-12 rounded-full btn-primary px-4 text-base font-semibold disabled:opacity-40"
                   >
                     Flag it
                   </button>
@@ -261,7 +286,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
                   type="button"
                   disabled={phase === "checking"}
                   onClick={() => submit("right")}
-                  className="min-h-14 rounded-xl border-2 border-accent bg-surface px-3 text-base font-semibold text-accent disabled:opacity-60"
+                  className="min-h-14 rounded-full border-2 border-accent bg-surface px-3 text-base font-semibold text-accent disabled:opacity-60"
                 >
                   Looks right
                 </button>
@@ -272,7 +297,7 @@ export function ShiftGame({ shift, documents }: { shift: ShiftInfo; documents: P
                     setPhase("selecting");
                     setError(null);
                   }}
-                  className="min-h-14 rounded-xl bg-accent px-3 text-base font-semibold text-accent-ink disabled:opacity-60"
+                  className="min-h-14 rounded-full btn-primary px-3 text-base font-semibold disabled:opacity-60"
                 >
                   Something&apos;s off
                 </button>
@@ -295,11 +320,13 @@ function Intro({
   shift,
   total,
   resumeAt,
+  needsSignIn,
   onStart,
 }: {
   shift: ShiftInfo;
   total: number;
   resumeAt: number | null;
+  needsSignIn: boolean;
   onStart: (resume: boolean) => void;
 }) {
   return (
@@ -311,7 +338,7 @@ function Intro({
         >
           <span aria-hidden="true">←</span> Shifts
         </Link>
-        <ObliqueWordmark className="text-sm" />
+        <ObliqueMark height={16} />
       </header>
       <main className="flex flex-1 flex-col px-4 pt-6">
         <p className="text-sm font-semibold tracking-wide text-accent uppercase">Shift {shift.number}</p>
@@ -333,7 +360,7 @@ function Intro({
             <button
               type="button"
               onClick={() => onStart(true)}
-              className="min-h-14 rounded-xl bg-accent px-4 text-base font-semibold text-accent-ink"
+              className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold"
             >
               Pick up at document {resumeAt}
             </button>
@@ -343,11 +370,11 @@ function Intro({
             onClick={() => onStart(false)}
             className={
               resumeAt
-                ? "min-h-12 rounded-xl border border-line px-4 text-sm font-semibold"
-                : "min-h-14 rounded-xl bg-accent px-4 text-base font-semibold text-accent-ink"
+                ? "min-h-12 rounded-full border border-line px-4 text-sm font-semibold"
+                : "min-h-14 rounded-full btn-primary px-4 text-base font-semibold"
             }
           >
-            {resumeAt ? "Start again" : "Start shift"}
+            {resumeAt ? "Start again" : needsSignIn ? "Sign in to start" : "Start shift"}
           </button>
         </div>
       </main>

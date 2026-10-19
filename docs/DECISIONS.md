@@ -38,8 +38,8 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 | Days | Dates | Work |
 | --- | --- | --- |
-| 1–3 | Wed 21 – Fri 23 Oct | Module 1 core. **Started early on Mon 19 Oct.** |
-| 4–5 | Sat 24 – Sun 25 Oct | Email-code sign-in, Resend, consent, Supabase to HubSpot |
+| 1–3 | Wed 21 – Fri 23 Oct | Module 1 core, Shifts 1–3. **Done on Mon 19 Oct.** |
+| 4–5 | Sat 24 – Sun 25 Oct | Email-code sign-in, Resend, consent, Supabase to HubSpot. **Code done on Mon 19 Oct; waiting on account setup (docs/SETUP.md).** |
 | 6–7 | Mon 26 – Tue 27 Oct | Module 2: daily quiz |
 | 8 | Wed 28 Oct | Sharing, share cards, challenge links |
 | 9 | Thu 29 Oct | Shifts 4–6, daily document, streaks, leaderboard, certificate |
@@ -55,6 +55,12 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 - **Tapping a field before deciding zooms in on it.** After "Something's off", tapping selects it instead.
 - **Progress saves on the device after every answer.** It moves to Supabase when sign-in is built (days 4–5).
 - **Scoring integrity.** Answers are checked on the server. Once sign-in exists, the server will also record each player's first answer per document, so scores can't be improved by peeking.
+
+- **Sign-in is needed to start a shift.** The intro screen is open to everyone. (Alternative to consider: let players try the first document before signing in.)
+- **The sign-in email's button opens a "Confirm sign-in" page** rather than signing in straight away, so company link scanners can't use up the code.
+- **Only confirmed emails become players**, so unverified sign-ups never reach HubSpot.
+- **Leaderboard names:** players start as anonymous (a random name such as "Patient Heron 57") and can switch to their display name after their first round.
+- **Brand** taken from obliqueconsult.com: navy, aqua, cream paper, Satoshi, the ob/co mark.
 
 ## Risks to act on
 

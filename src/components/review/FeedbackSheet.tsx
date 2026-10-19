@@ -73,7 +73,7 @@ export function FeedbackSheet({
           ref={nextRef}
           type="button"
           onClick={onNext}
-          className="mt-4 min-h-14 w-full rounded-xl bg-accent px-4 text-base font-semibold text-accent-ink"
+          className="mt-4 min-h-14 w-full rounded-full btn-primary px-4 text-base font-semibold"
         >
           {isLast ? "See results" : "Next document"}
         </button>

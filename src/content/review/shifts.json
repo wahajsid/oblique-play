@@ -9,13 +9,13 @@
     "number": 2,
     "title": "Simplified tax invoices",
     "summary": "When a shorter invoice is allowed, and what it still needs.",
-    "available": false
+    "available": true
   },
   {
     "number": 3,
     "title": "Zero-rated exports",
     "summary": "Exports at 0% and the evidence that supports them.",
-    "available": false
+    "available": true
   },
   {
     "number": 4,
