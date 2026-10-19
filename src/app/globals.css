@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
+/*
+  Brand tokens. PLACEHOLDERS until Oblique's brand files arrive:
+  swap the colour values here and the fonts in layout.tsx, and the whole
+  game follows.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #f5f3ee;
+  --surface: #ffffff;
+  --ink: #17191e;
+  --muted: #5a6170;
+  --line: #e2ded5;
+  --accent: #2747d6;
+  --accent-ink: #ffffff;
+  --accent-soft: #e8ecfb;
+  --ok: #1d6b4c;
+  --ok-soft: #e3f1ea;
+  --notquite: #8a4b00;
+  --notquite-soft: #fbeedc;
+  /* The document itself stays paper-coloured in both modes. */
+  --paper: #fffefb;
+  --paper-ink: #1c1c1c;
+  --paper-muted: #5c6170;
+  --paper-line: #e8e4da;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #0f1115;
+    --surface: #181b21;
+    --ink: #eceef2;
+    --muted: #a3a9b5;
+    --line: #2a2f38;
+    --accent: #8aa2ff;
+    --accent-ink: #0f1115;
+    --accent-soft: #1e2540;
+    --ok: #6fd1a2;
+    --ok-soft: #12291f;
+    --notquite: #f2b66b;
+    --notquite-soft: #2e2210;
+    --paper: #ece9e1;
+    --paper-ink: #1c1c1c;
+    --paper-muted: #50555f;
+    --paper-line: #d4d0c5;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-notquite: var(--notquite);
+  --color-notquite-soft: var(--notquite-soft);
+  --color-paper: var(--paper);
+  --color-paper-ink: var(--paper-ink);
+  --color-paper-muted: var(--paper-muted);
+  --color-paper-line: var(--paper-line);
+  --font-sans: var(--font-sans-brand);
+  --font-mono: var(--font-mono-brand);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.pb-safe {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Document slides onto the desk */
+@keyframes slide-in {
+  from { transform: translateY(24px) rotate(-1deg); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.anim-slide-in { animation: slide-in 320ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+/* Stamp lands on the document after each decision */
+@keyframes stamp {
+  0% { transform: translate(-50%, -50%) scale(2.2) rotate(-14deg); opacity: 0; }
+  60% { transform: translate(-50%, -50%) scale(0.92) rotate(-14deg); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(-14deg); opacity: 0.92; }
+}
+.anim-stamp { animation: stamp 380ms cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+
+/* Explanation sheet rises from the bottom */
+@keyframes sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: none; }
+}
+.anim-sheet-up { animation: sheet-up 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+/* Respect the phone's "reduce motion" setting */
+@media (prefers-reduced-motion: reduce) {
+  .anim-slide-in,
+  .anim-sheet-up { animation: none; }
+  .anim-stamp { animation: none; transform: translate(-50%, -50%) rotate(-14deg); opacity: 0.92; }
 }

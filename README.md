@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oblique Play: UAE Tax Learning Game
 
-## Getting Started
+A free, mobile-first UAE tax learning game by Oblique, served at play.obliqueconsult.com.
 
-First, run the development server:
+## Running it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev            # http://localhost:3000, reloads as you edit
+npm run check:content  # re-checks every document's arithmetic and rules
+npm run build          # what Vercel runs before going live
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How the code is organised
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you know Python, think of each folder as a module:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Folder | What lives there |
+| --- | --- |
+| `src/app/` | The pages. Each folder is a URL: `app/review/[shift]/page.tsx` is `/review/1`, `/review/2` and so on. |
+| `src/app/api/` | Small server functions the game calls, like Python functions behind a URL. `api/review/check` marks an answer. |
+| `src/components/` | Reusable building blocks of the screens: the invoice, the feedback sheet, the results screen. |
+| `src/lib/` | Plain logic with no screens: content loading, answer checking, saving progress. |
+| `src/content/` | The game content as JSON files. Tax reviewers edit these (later via a spreadsheet export). |
+| `scripts/` | Helper scripts, like the content checker. |
+| `docs/` | Decisions and the content review checklist. |
 
-## Learn More
+## Two rules the code enforces
 
-To learn more about Next.js, take a look at the following resources:
+1. **Answers never reach the browser before the player commits.** Pages receive documents with the answer and explanation removed (`toPublic` in `src/lib/review/content.ts`). The server marks each answer at `/api/review/check`.
+2. **No document goes live unless its arithmetic checks out.** `npm run check:content` recalculates every line, total, VAT figure and currency conversion in whole fils. A document marked "right" must have no problems; a document marked "off" must have problems only where its answer says.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Brand placeholders
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The colours, fonts and Oblique mark are placeholders until the brand files arrive:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- colours: the top of `src/app/globals.css`
+- fonts: `src/app/layout.tsx`
+- mark: `src/components/brand/ObliqueMark.tsx`

@@ -1,0 +1,38 @@
+[
+  {
+    "number": 1,
+    "title": "Tax invoice basics",
+    "summary": "TRNs, dates, the 5% calculation and AED amounts.",
+    "available": true
+  },
+  {
+    "number": 2,
+    "title": "Simplified tax invoices",
+    "summary": "When a shorter invoice is allowed, and what it still needs.",
+    "available": false
+  },
+  {
+    "number": 3,
+    "title": "Zero-rated exports",
+    "summary": "Exports at 0% and the evidence that supports them.",
+    "available": false
+  },
+  {
+    "number": 4,
+    "title": "Exempt supplies",
+    "summary": "Supplies with no VAT at all, and how they differ from 0%.",
+    "available": false
+  },
+  {
+    "number": 5,
+    "title": "Reverse charge on imports",
+    "summary": "When the buyer accounts for the VAT instead of the seller.",
+    "available": false
+  },
+  {
+    "number": 6,
+    "title": "Mixed review",
+    "summary": "Everything so far, all on one desk.",
+    "available": false
+  }
+]
