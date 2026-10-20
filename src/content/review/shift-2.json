@@ -3,16 +3,34 @@
     "id": "s2-01",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Marina Coffee Trading LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Shop 7, Harbour Walk, Dubai" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100384729160003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Marina Coffee Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 7, Harbour Walk, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100384729160003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -20,8 +38,17 @@
         "title": "Receipt details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Receipt number", "value": "MCT-R-55102", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "14 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "MCT-R-55102",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "14 Oct 2026"
+          }
         ]
       },
       {
@@ -29,46 +56,98 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "total", "label": "Total (incl. VAT)", "value": "63.00", "style": "strong" },
-          { "id": "vat", "label": "VAT included at 5%", "value": "3.00" }
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "63.00",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "3.00"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Flat white", "quantity": "2", "unitPrice": "21.00", "vatRate": "5%", "amount": "42.00" },
-        { "id": "line-2", "description": "Date and walnut muffin", "quantity": "1", "unitPrice": "21.00", "vatRate": "5%", "amount": "21.00" }
+        {
+          "id": "line-1",
+          "description": "Flat white",
+          "quantity": "2",
+          "unitPrice": "21.00",
+          "vatRate": "5%",
+          "amount": "42.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Date and walnut muffin",
+          "quantity": "1",
+          "unitPrice": "21.00",
+          "vatRate": "5%",
+          "amount": "21.00"
+        }
       ]
     },
-    "answer": { "verdict": "right" },
+    "answer": {
+      "verdict": "right"
+    },
     "explanation": {
       "what": "A simplified tax invoice can be issued when the customer isn't VAT registered. It still shows \"Tax Invoice\", the supplier's name, address and TRN, the date, what was sold, the total and the VAT charged.",
       "why": "This is a café receipt for a walk-in customer, and it has everything it needs. The prices include VAT, so the VAT inside AED 63.00 is 63.00 × 5/105 = AED 3.00.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "When a simplified invoice is allowed", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-02",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Qamar Ridge Bakery LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Unit 12, Old Souk Lane, Sharjah" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Qamar Ridge Bakery LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 12, Old Souk Lane, Sharjah"
+          }
         ]
       },
       {
@@ -76,8 +155,17 @@
         "title": "Receipt details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Receipt number", "value": "QRB-R-20871", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "15 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "QRB-R-20871",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "15 Oct 2026"
+          }
         ]
       },
       {
@@ -85,47 +173,108 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "total", "label": "Total (incl. VAT)", "value": "86.10", "style": "strong" },
-          { "id": "vat", "label": "VAT included at 5%", "value": "4.10" }
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "86.10",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "4.10"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Sourdough loaf", "quantity": "2", "unitPrice": "21.00", "vatRate": "5%", "amount": "42.00" },
-        { "id": "line-2", "description": "Date rolls, box of 12", "quantity": "1", "unitPrice": "44.10", "vatRate": "5%", "amount": "44.10" }
+        {
+          "id": "line-1",
+          "description": "Sourdough loaf",
+          "quantity": "2",
+          "unitPrice": "21.00",
+          "vatRate": "5%",
+          "amount": "42.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Date rolls, box of 12",
+          "quantity": "1",
+          "unitPrice": "44.10",
+          "vatRate": "5%",
+          "amount": "44.10"
+        }
       ]
     },
-    "answer": { "verdict": "off", "targets": ["supplier"], "targetLabel": "Supplier TRN" },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "supplier"
+      ],
+      "targetLabel": "Supplier TRN"
+    },
     "explanation": {
       "what": "Even a simplified tax invoice must show the supplier's TRN.",
       "why": "The bakery charged AED 4.10 of VAT but didn't print its TRN. A shorter invoice drops the customer's details, not the supplier's.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "What a simplified invoice still needs", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "What a simplified invoice still needs",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-03",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Byte Souq Laptop Repairs LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Shop 14, Tech Arcade, Sharjah" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100957318420003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Byte Souq Laptop Repairs LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 14, Tech Arcade, Sharjah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100957318420003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -133,8 +282,18 @@
         "title": "Customer",
         "variant": "party",
         "fields": [
-          { "id": "customer-name", "label": "Customer name", "value": "Palmfield Office Supplies LLC", "style": "strong" },
-          { "id": "customer-trn", "label": "Customer TRN", "value": "100248613570003", "style": "mono" }
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Palmfield Office Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100248613570003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -142,8 +301,17 @@
         "title": "Invoice details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Invoice number", "value": "BSL-S-0412", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "9 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "BSL-S-0412",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "9 Oct 2026"
+          }
         ]
       },
       {
@@ -151,9 +319,22 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "subtotal", "label": "Subtotal", "value": "4,800.00" },
-          { "id": "vat", "label": "VAT at 5%", "value": "240.00" },
-          { "id": "total", "label": "Total payable", "value": "5,040.00", "style": "strong" }
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "4,800.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "240.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "5,040.00",
+            "style": "strong"
+          }
         ]
       }
     ],
@@ -161,32 +342,74 @@
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Laptop screen replacement", "quantity": "3", "unitPrice": "1,450.00", "vatRate": "5%", "amount": "4,350.00" },
-        { "id": "line-2", "description": "Diagnostic check", "quantity": "3", "unitPrice": "150.00", "vatRate": "5%", "amount": "450.00" }
+        {
+          "id": "line-1",
+          "description": "Laptop screen replacement",
+          "quantity": "3",
+          "unitPrice": "1,450.00",
+          "vatRate": "5%",
+          "amount": "4,350.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Diagnostic check",
+          "quantity": "3",
+          "unitPrice": "150.00",
+          "vatRate": "5%",
+          "amount": "450.00"
+        }
       ]
     },
-    "answer": { "verdict": "right" },
+    "answer": {
+      "verdict": "right"
+    },
     "explanation": {
       "what": "A simplified tax invoice can also go to a VAT-registered customer, as long as the amount doesn't exceed AED 10,000.",
       "why": "Palmfield is registered, but the invoice is for AED 4,800.00 before VAT (AED 5,040.00 with it), well under AED 10,000. The VAT is right too: 5% of AED 4,800.00 is AED 240.00.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "When a simplified invoice is allowed", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-04",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Oasis Thread Tailoring LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Shop 3, Textile Lane, Fujairah" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100638275910003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Oasis Thread Tailoring LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 3, Textile Lane, Fujairah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100638275910003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -194,8 +417,17 @@
         "title": "Receipt details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Receipt number", "value": "OTT-R-3318", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "11 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "OTT-R-3318",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "11 Oct 2026"
+          }
         ]
       },
       {
@@ -203,47 +435,108 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "total", "label": "Total (incl. VAT)", "value": "1,260.00", "style": "strong" },
-          { "id": "vat", "label": "VAT included at 5%", "value": "63.00" }
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "1,260.00",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "63.00"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Kandura, stitched to measure", "quantity": "4", "unitPrice": "210.00", "vatRate": "5%", "amount": "840.00" },
-        { "id": "line-2", "description": "Alterations", "quantity": "4", "unitPrice": "105.00", "vatRate": "5%", "amount": "420.00" }
+        {
+          "id": "line-1",
+          "description": "Kandura, stitched to measure",
+          "quantity": "4",
+          "unitPrice": "210.00",
+          "vatRate": "5%",
+          "amount": "840.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Alterations",
+          "quantity": "4",
+          "unitPrice": "105.00",
+          "vatRate": "5%",
+          "amount": "420.00"
+        }
       ]
     },
-    "answer": { "verdict": "off", "targets": ["vat"], "targetLabel": "VAT amount" },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat"
+      ],
+      "targetLabel": "VAT amount"
+    },
     "explanation": {
       "what": "When prices include VAT, the VAT inside the total is total × 5/105, not 5% of the total.",
       "why": "The total of AED 1,260.00 already includes VAT. The VAT inside it is 1,260.00 × 5/105 = AED 60.00, and the price before VAT is AED 1,200.00. The receipt shows AED 63.00, which is 5% of the total including VAT.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 3; VAT Executive Regulation, Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "VAT inside a VAT-inclusive price", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "VAT inside a VAT-inclusive price",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-05",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Palmfield Office Supplies LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Warehouse 21, Al Quoz Industrial 3, Dubai" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100248613570003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Palmfield Office Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Warehouse 21, Al Quoz Industrial 3, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100248613570003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -251,8 +544,18 @@
         "title": "Customer",
         "variant": "party",
         "fields": [
-          { "id": "customer-name", "label": "Customer name", "value": "Saffron Shore Interiors LLC", "style": "strong" },
-          { "id": "customer-trn", "label": "Customer TRN", "value": "100735192460003", "style": "mono" }
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Saffron Shore Interiors LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100735192460003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -260,8 +563,17 @@
         "title": "Invoice details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Invoice number", "value": "POS-S-80144", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "13 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "POS-S-80144",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "13 Oct 2026"
+          }
         ]
       },
       {
@@ -269,9 +581,22 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "subtotal", "label": "Subtotal", "value": "13,940.00" },
-          { "id": "vat", "label": "VAT at 5%", "value": "697.00" },
-          { "id": "total", "label": "Total payable", "value": "14,637.00", "style": "strong" }
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "13,940.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "697.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "14,637.00",
+            "style": "strong"
+          }
         ]
       }
     ],
@@ -279,32 +604,80 @@
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Ergonomic office chair", "quantity": "20", "unitPrice": "640.00", "vatRate": "5%", "amount": "12,800.00" },
-        { "id": "line-2", "description": "LED desk lamp", "quantity": "12", "unitPrice": "95.00", "vatRate": "5%", "amount": "1,140.00" }
+        {
+          "id": "line-1",
+          "description": "Ergonomic office chair",
+          "quantity": "20",
+          "unitPrice": "640.00",
+          "vatRate": "5%",
+          "amount": "12,800.00"
+        },
+        {
+          "id": "line-2",
+          "description": "LED desk lamp",
+          "quantity": "12",
+          "unitPrice": "95.00",
+          "vatRate": "5%",
+          "amount": "1,140.00"
+        }
       ]
     },
-    "answer": { "verdict": "off", "targets": ["heading", "total"], "targetLabel": "Document type" },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "heading",
+        "total",
+        "customer"
+      ],
+      "targetLabel": "Document type"
+    },
     "explanation": {
       "what": "A registered customer can only be given a simplified tax invoice when the amount doesn't exceed AED 10,000. Above that, they need a full tax invoice.",
       "why": "Saffron Shore is registered, and this sale is AED 13,940.00 before VAT (AED 14,637.00 with it). That is over AED 10,000, so Palmfield should issue a full tax invoice with the customer's address and the other full details. The VAT figure itself is right.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "When a simplified invoice is allowed", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "VERIFIER (blind check): agrees off. The customer block is now also accepted as a tap. | E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-06",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Dune & Date Catering LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Kitchen 3, Food Hub, Al Ain" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100579204830003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Dune & Date Catering LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Kitchen 3, Food Hub, Al Ain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100579204830003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -312,7 +685,12 @@
         "title": "Customer",
         "variant": "party",
         "fields": [
-          { "id": "customer-name", "label": "Customer name", "value": "Layla Haddad (private wedding)", "style": "strong" }
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Layla Haddad (private wedding)",
+            "style": "strong"
+          }
         ]
       },
       {
@@ -320,8 +698,17 @@
         "title": "Invoice details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Invoice number", "value": "DDC-S-0217", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "10 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "DDC-S-0217",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "10 Oct 2026"
+          }
         ]
       },
       {
@@ -329,46 +716,96 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "total", "label": "Total (incl. VAT)", "value": "12,600.00", "style": "strong" },
-          { "id": "vat", "label": "VAT included at 5%", "value": "600.00" }
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "12,600.00",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "600.00"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Wedding buffet, per guest", "quantity": "150", "unitPrice": "84.00", "vatRate": "5%", "amount": "12,600.00" }
+        {
+          "id": "line-1",
+          "description": "Wedding buffet, per guest",
+          "quantity": "150",
+          "unitPrice": "84.00",
+          "vatRate": "5%",
+          "amount": "12,600.00"
+        }
       ]
     },
-    "answer": { "verdict": "right" },
+    "answer": {
+      "verdict": "right"
+    },
     "explanation": {
       "what": "The AED 10,000 limit only applies to VAT-registered customers. For a customer who isn't registered, a simplified tax invoice is fine at any amount.",
       "why": "The customer is a private individual, not a registered business, so a simplified invoice is allowed even for AED 12,600.00. The VAT inside the total is 12,600.00 × 5/105 = AED 600.00.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "When a simplified invoice is allowed", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-07",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Falcon Lane Print Studio LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Office 304, Creekside Tower, Dubai" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100184639270003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Falcon Lane Print Studio LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Office 304, Creekside Tower, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100184639270003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -376,52 +813,114 @@
         "title": "Receipt details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Receipt number", "value": "FLP-R-6620", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "12 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "FLP-R-6620",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "12 Oct 2026"
+          }
         ]
       },
       {
         "id": "totals",
         "title": "Totals (AED)",
         "variant": "totals",
-        "fields": [{ "id": "total", "label": "Total (incl. VAT)", "value": "315.00", "style": "strong" }]
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "315.00",
+            "style": "strong"
+          }
+        ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Business cards, box of 500", "quantity": "2", "unitPrice": "157.50", "vatRate": "5%", "amount": "315.00" }
+        {
+          "id": "line-1",
+          "description": "Business cards, box of 500",
+          "quantity": "2",
+          "unitPrice": "157.50",
+          "vatRate": "5%",
+          "amount": "315.00"
+        }
       ]
     },
-    "answer": { "verdict": "off", "targets": ["totals", "notes"], "targetLabel": "VAT amount" },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "totals",
+        "notes"
+      ],
+      "targetLabel": "VAT amount"
+    },
     "explanation": {
       "what": "A simplified tax invoice must show the amount of VAT charged, not just a total that includes it.",
       "why": "The receipt says prices include VAT but never shows how much. It should show VAT of 315.00 × 5/105 = AED 15.00.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "What a simplified invoice still needs", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "What a simplified invoice still needs",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-08",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Bluewave Pool Services LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Unit 5, Palm Grove Business Park, Ras Al Khaimah" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100412958360003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Bluewave Pool Services LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 5, Palm Grove Business Park, Ras Al Khaimah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100412958360003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -429,8 +928,17 @@
         "title": "Receipt details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Receipt number", "value": "BWP-R-0938", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "16 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "BWP-R-0938",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "16 Oct 2026"
+          }
         ]
       },
       {
@@ -438,100 +946,215 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "net", "label": "Amount before VAT", "value": "1,000.00" },
-          { "id": "vat", "label": "VAT at 5%", "value": "50.00" },
-          { "id": "total", "label": "Total (incl. VAT)", "value": "1,050.00", "style": "strong" }
+          {
+            "id": "net",
+            "label": "Amount before VAT",
+            "value": "1,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "50.00"
+          },
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "1,050.00",
+            "style": "strong"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Home pool cleaning visit", "quantity": "4", "unitPrice": "262.50", "vatRate": "5%", "amount": "1,050.00" }
+        {
+          "id": "line-1",
+          "description": "Home pool cleaning visit",
+          "quantity": "4",
+          "unitPrice": "262.50",
+          "vatRate": "5%",
+          "amount": "1,050.00"
+        }
       ]
     },
-    "answer": { "verdict": "right" },
+    "answer": {
+      "verdict": "right"
+    },
     "explanation": {
       "what": "When prices include VAT, the VAT inside the total is total × 5/105.",
       "why": "1,050.00 × 5/105 = AED 50.00, leaving AED 1,000.00 before VAT. Check it the other way: 5% of AED 1,000.00 is AED 50.00. A common slip is to take 5% of the total (AED 52.50), but that overstates the VAT.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 3; VAT Executive Regulation, Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "VAT inside a VAT-inclusive price", "difficulty": "intermediate", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "VAT inside a VAT-inclusive price",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-09",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "SIMPLIFIED TAX INVOICE" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Coral Dhow Events LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Villa 9, Corniche Road, Abu Dhabi" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100691827340003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Coral Dhow Events LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Villa 9, Corniche Road, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100691827340003",
+            "style": "mono"
+          }
         ]
       },
       {
         "id": "details",
         "title": "Receipt details",
         "variant": "details",
-        "fields": [{ "id": "invoice-number", "label": "Receipt number", "value": "CDE-R-1145", "style": "mono" }]
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "CDE-R-1145",
+            "style": "mono"
+          }
+        ]
       },
       {
         "id": "totals",
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "total", "label": "Total (incl. VAT)", "value": "472.50", "style": "strong" },
-          { "id": "vat", "label": "VAT included at 5%", "value": "22.50" }
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "472.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "22.50"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Sunset dhow cruise ticket", "quantity": "3", "unitPrice": "157.50", "vatRate": "5%", "amount": "472.50" }
+        {
+          "id": "line-1",
+          "description": "Sunset dhow cruise ticket",
+          "quantity": "3",
+          "unitPrice": "157.50",
+          "vatRate": "5%",
+          "amount": "472.50"
+        }
       ]
     },
-    "answer": { "verdict": "off", "targets": ["details"], "targetLabel": "Date of issue" },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "details"
+      ],
+      "targetLabel": "Date of issue"
+    },
     "explanation": {
       "what": "A simplified tax invoice must show the date it was issued.",
       "why": "The receipt has a number, the supplier's details and the correct VAT (472.50 × 5/105 = AED 22.50), but no date anywhere. Without a date, nobody can tell which VAT period the sale belongs to.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "What a simplified invoice still needs", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "What a simplified invoice still needs",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   },
   {
     "id": "s2-10",
     "shift": 2,
     "kind": "simplified_tax_invoice",
-    "heading": { "id": "heading", "label": "Document title", "value": "CASH RECEIPT" },
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "CASH RECEIPT"
+    },
     "blocks": [
       {
         "id": "supplier",
         "title": "From",
         "variant": "party",
         "fields": [
-          { "id": "supplier-name", "label": "Supplier name", "value": "Mangrove Flowers Trading LLC", "style": "strong" },
-          { "id": "supplier-address", "label": "Supplier address", "value": "Kiosk 2, Garden Market, Abu Dhabi" },
-          { "id": "supplier-trn", "label": "Supplier TRN", "value": "100471529380003", "style": "mono" }
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Mangrove Flowers Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Kiosk 2, Garden Market, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100471529380003",
+            "style": "mono"
+          }
         ]
       },
       {
@@ -539,8 +1162,17 @@
         "title": "Receipt details",
         "variant": "details",
         "fields": [
-          { "id": "invoice-number", "label": "Receipt number", "value": "MFT-00731", "style": "mono" },
-          { "id": "issue-date", "label": "Date of issue", "value": "17 Oct 2026" }
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "MFT-00731",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "17 Oct 2026"
+          }
         ]
       },
       {
@@ -548,31 +1180,74 @@
         "title": "Totals (AED)",
         "variant": "totals",
         "fields": [
-          { "id": "total", "label": "Total (incl. VAT)", "value": "430.50", "style": "strong" },
-          { "id": "vat", "label": "VAT included at 5%", "value": "20.50" }
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "430.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "20.50"
+          }
         ]
       },
       {
         "id": "notes",
         "title": "Note",
         "variant": "notes",
-        "fields": [{ "id": "receipt-note", "label": "Prices", "value": "All prices include VAT" }]
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
       }
     ],
     "lines": {
       "id": "lines",
       "currency": "AED",
       "rows": [
-        { "id": "line-1", "description": "Rose bouquet", "quantity": "2", "unitPrice": "189.00", "vatRate": "5%", "amount": "378.00" },
-        { "id": "line-2", "description": "Glass vase", "quantity": "1", "unitPrice": "52.50", "vatRate": "5%", "amount": "52.50" }
+        {
+          "id": "line-1",
+          "description": "Rose bouquet",
+          "quantity": "2",
+          "unitPrice": "189.00",
+          "vatRate": "5%",
+          "amount": "378.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Glass vase",
+          "quantity": "1",
+          "unitPrice": "52.50",
+          "vatRate": "5%",
+          "amount": "52.50"
+        }
       ]
     },
-    "answer": { "verdict": "off", "targets": ["heading"], "targetLabel": "Document title" },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "heading"
+      ],
+      "targetLabel": "Document title"
+    },
     "explanation": {
       "what": "A simplified tax invoice must still clearly show the words \"Tax Invoice\".",
       "why": "Everything else is in order, and the VAT is right (430.50 × 5/105 = AED 20.50). But the document is titled \"Cash Receipt\", so it doesn't present itself as a tax invoice.",
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
     },
-    "meta": { "topic": "What a simplified invoice still needs", "difficulty": "foundation", "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null }
+    "meta": {
+      "topic": "What a simplified invoice still needs",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+    }
   }
 ]
