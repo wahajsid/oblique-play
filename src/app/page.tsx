@@ -45,12 +45,17 @@ export default async function Home() {
             </span>
           </Link>
 
-          <div className="rounded-2xl border border-dashed border-line p-5" aria-disabled="true">
-            <p className="text-xs font-semibold tracking-wide text-muted uppercase">Corporate Tax · VAT</p>
-            <h2 className="mt-1 text-xl font-semibold text-muted">Daily quiz</h2>
+          <Link
+            href="/quiz"
+            className="group rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-accent"
+          >
+            <p className="text-xs font-semibold tracking-wide text-accent uppercase">Corporate Tax · VAT · Advanced</p>
+            <h2 className="mt-1 text-xl font-semibold">Daily quiz</h2>
             <p className="mt-1 text-sm text-muted">20 fresh questions every day, with the what and why after each one.</p>
-            <p className="mt-3 text-sm font-medium text-muted">Coming soon</p>
-          </div>
+            <span className="mt-4 inline-flex min-h-11 items-center rounded-full btn-primary px-4 text-sm font-semibold">
+              Today&apos;s quiz
+            </span>
+          </Link>
         </div>
       </main>
       <SiteFooter />

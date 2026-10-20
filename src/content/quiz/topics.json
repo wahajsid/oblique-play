@@ -1,0 +1,33 @@
+{
+  "ct": {
+    "basics": "Rates and basics",
+    "registration": "Registration",
+    "taxable_persons": "Taxable persons",
+    "exempt_persons": "Exempt persons",
+    "free_zones": "Free zones",
+    "small_business_relief": "Small Business Relief",
+    "tax_groups": "Tax groups",
+    "transfer_pricing": "Transfer pricing",
+    "interest_limitation": "Interest limitation",
+    "tax_losses": "Tax losses",
+    "reliefs": "Reliefs",
+    "exempt_income": "Exempt income",
+    "deductions": "Deductions",
+    "foreign_income": "Foreign income and credits",
+    "penalties_admin": "Penalties and administration"
+  },
+  "vat": {
+    "registration": "Registration thresholds",
+    "place_of_supply": "Place of supply",
+    "date_of_supply": "Date of supply",
+    "zero_rating": "Zero rating",
+    "exemptions": "Exemptions",
+    "designated_zones": "Designated zones",
+    "reverse_charge": "Reverse charge",
+    "tax_invoices": "Tax invoices",
+    "input_tax": "Input tax recovery",
+    "profit_margin": "Profit margin scheme",
+    "tax_groups": "Tax groups",
+    "real_estate": "Real estate"
+  }
+}

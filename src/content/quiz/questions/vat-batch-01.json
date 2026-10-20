@@ -1,0 +1,658 @@
+[
+  {
+    "id": "vat-b1-001",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "zero_rating",
+    "prompt": "Which of these supplies is zero-rated for UAE VAT?",
+    "options": [
+      "Rent on a flat that has been let to tenants for several years",
+      "A meal at a restaurant in Abu Dhabi",
+      "A return flight ticket from Dubai to London",
+      "A one-year lease of an office in Ajman"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "International transport of passengers is zero-rated: VAT is charged at 0%, and the supplier can still recover the VAT on its costs.",
+      "why": "A Dubai to London flight is international passenger transport, so it is zero-rated. Rent on a flat that has been let before is exempt, which is not the same as zero-rated. The restaurant meal and the office lease are standard-rated at 5%.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (zero-rating); Article 46 for residential rent"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-002",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "exemptions",
+    "prompt": "A business that makes only exempt supplies can recover the VAT it pays on its costs.",
+    "options": ["True", "False"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "VAT on costs (input tax) can be recovered only when the costs are used to make taxable supplies, including zero-rated ones. Costs used for exempt supplies carry no right of recovery.",
+      "why": "A business making only exempt supplies, such as a landlord letting existing residential flats, charges no VAT and can't recover the VAT on its costs, so that VAT is a real cost to it. This is the key difference between exempt and zero-rated supplies.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 46 and 54"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-003",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "exemptions",
+    "prompt": "A bus ticket from Abu Dhabi to Dubai is an exempt supply.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Local passenger transport, meaning passenger journeys within the UAE, is exempt from VAT.",
+      "why": "A bus journey between two emirates is still within the UAE, so it is local passenger transport and exempt. Compare a flight from Dubai to London: that is international passenger transport, which is zero-rated.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46 (local passenger transport)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-004",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "real_estate",
+    "prompt": "Falcon Lane Print Studio LLC rents an office unit in Dubai from a VAT-registered landlord. How is the rent treated for VAT?",
+    "options": [
+      "Standard-rated at 5%",
+      "Exempt, like the rent on a flat",
+      "Zero-rated, because it is property",
+      "Outside the scope of VAT, because it is a lease and not a sale"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Leases and sales of commercial property, such as offices, shops and warehouses, are standard-rated at 5%. The exemption covers residential buildings and bare land, not commercial property.",
+      "why": "An office unit is commercial property, so the landlord charges 5% VAT on the rent. Only residential property (after its first supply) and bare land are exempt, and leases are supplies just as sales are.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46; VAT Executive Regulation, Article 37 (residential buildings)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-005",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "place_of_supply",
+    "scenario": "Seashell Villas Hotel LLC, in Umm Al Quwain, hosts 12 engineers from a company based in Germany for a week. The German company books and pays for the rooms directly and has no presence in the UAE.",
+    "prompt": "How should the hotel treat the room charges for VAT?",
+    "options": [
+      "Zero-rated, because the customer is based outside the UAE",
+      "Exempt, because accommodation is treated like residential rent",
+      "Outside the scope, with the German company accounting for VAT under the reverse charge",
+      "Standard-rated at 5%, because the hotel is in the UAE"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Services connected with real estate, including hotel accommodation, are supplied where the property is. A stay in a UAE hotel is a UAE supply, whoever the customer is.",
+      "why": "The rooms are in Umm Al Quwain, so the place of supply is the UAE and 5% VAT applies. Zero-rating as an export of services doesn't apply to services directly connected with UAE real estate. Hotels are excluded from the residential exemption, and the reverse charge doesn't apply to a supply made in the UAE.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 30 (place of supply: services connected with real estate); VAT Executive Regulation, Articles 31 and 37"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Rule: high confidence. Please confirm the article numbers for the real-estate place-of-supply rule (Decree-Law Art. 30) and the export-of-services exclusion (Exec. Reg. Art. 31)."
+    }
+  },
+  {
+    "id": "vat-b1-006",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "date_of_supply",
+    "scenario": "Palmfield Office Supplies LLC files monthly VAT returns. It delivers 40 office chairs to a customer on 28 October, issues the tax invoice on 3 November, and is paid on 30 November.",
+    "prompt": "In which VAT return should Palmfield report the VAT on this sale?",
+    "options": [
+      "November, because that is when the tax invoice was issued",
+      "October, because the chairs were delivered on 28 October",
+      "November, because that is when payment was received",
+      "Whichever month the customer recovers the VAT in"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "For goods, the date of supply is the earliest of: when the goods are delivered or made available, when payment is received, and when the tax invoice is issued. VAT is due in the return covering that date.",
+      "why": "Delivery on 28 October came first, before the invoice (3 November) and the payment (30 November). So the date of supply is 28 October, and the VAT goes in the October return even though the invoice and the cash came later.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 25 (date of supply)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-007",
+    "track": "vat",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "date_of_supply",
+    "scenario": "Extract from Coral Dhow Events LLC's notes for its VAT returns, which it files monthly",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "25 Sep: the customer paid a deposit of AED 10,500, including VAT.",
+      "VAT inside the deposit: AED 10,500 × 5/105 = AED 500.",
+      "The deposit's VAT belongs in the October return, when the event took place.",
+      "10 Oct: the event took place, and the balance of AED 21,000 including VAT of AED 1,000 was invoiced."
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "When payment is received before the goods or services are supplied, the payment itself creates a date of supply, to the extent of the amount paid.",
+      "why": "The AED 10,500 deposit arrived on 25 September, so the AED 500 of VAT inside it is due in the September return, not October. The AED 1,000 of VAT on the balance belongs to October, when the event took place and the balance was invoiced.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 25 (date of supply)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-008",
+    "track": "vat",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "reverse_charge",
+    "scenario": "Extract from Sandstone Software Studio LLC's VAT return working. It bought a design software licence for AED 20,000 from a supplier in the United States, for use in its taxable business.",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Amount paid to the US supplier: AED 21,000, including UAE VAT of AED 1,000.",
+      "The supplier has no place of establishment in the UAE and isn't registered for UAE VAT.",
+      "Output tax under the reverse charge: AED 1,000.",
+      "Input tax recovered on the same licence: AED 1,000."
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "When a UAE-registered business buys services from a supplier abroad, the business itself accounts for the VAT under the reverse charge. The foreign supplier doesn't charge UAE VAT.",
+      "why": "The US supplier isn't registered for UAE VAT, so it can't charge UAE VAT: Sandstone pays it AED 20,000. Sandstone then declares 5% of AED 20,000 = AED 1,000 of output tax under the reverse charge and, because it uses the licence for taxable supplies, recovers the same AED 1,000 as input tax. The net cost is nil.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48 (reverse charge)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-009",
+    "track": "vat",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "real_estate",
+    "scenario": "Extract from Palm Grove Properties LLC's list of its supplies and their VAT treatment",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Lease of a shop unit in a mall: standard-rated at 5%.",
+      "Serviced apartment with daily housekeeping, let by the night: exempt.",
+      "Lease of a flat that has been let to tenants before: exempt.",
+      "Sale of a bare plot with no buildings or civil engineering works: exempt."
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The residential exemption doesn't cover hotels, motels, serviced apartments and similar accommodation where services are provided alongside the stay. These are standard-rated at 5%.",
+      "why": "A serviced apartment let by the night with daily housekeeping is hotel-type accommodation, not a residential building for VAT, so it is standard-rated at 5%. The shop lease is commercial and correctly at 5%, a flat that has been let before is exempt, and bare land is exempt.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 37 (residential buildings); VAT Decree-Law, Article 46"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm the current wording of Exec. Reg. Art. 37 on serviced accommodation (excluded from 'residential building' where services are provided in addition to accommodation)."
+    }
+  },
+  {
+    "id": "vat-b1-010",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "profit_margin",
+    "prompt": "Under the profit margin scheme, if a dealer sells a second-hand item for less than it paid for it, no VAT is due on that sale.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Under the profit margin scheme, VAT is charged only on the dealer's margin: the selling price minus the purchase price. If there is no margin, there is no VAT.",
+      "why": "If Desert Lane Motors LLC buys a used car from a private seller for AED 40,000 and sells it under the scheme for AED 38,000, its margin is negative, so the VAT due on that sale is nil.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 43 (profit margin scheme); VAT Executive Regulation, Article 29"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm the article numbers for the profit margin scheme (Decree-Law Art. 43, Exec. Reg. Art. 29)."
+    }
+  },
+  {
+    "id": "vat-b1-011",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "tax_groups",
+    "prompt": "Supplies between members of the same VAT tax group are disregarded for VAT, so no VAT is charged on them.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A tax group is treated as a single taxable person. Supplies between its members are disregarded; only supplies to and from people outside the group count.",
+      "why": "If Marina Coffee Trading LLC and its sister company are in one tax group, coffee supplied from one to the other carries no VAT. VAT applies when a group member supplies someone outside the group, and the group files one return.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 14 (tax groups)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-012",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "zero_rating",
+    "prompt": "Purely cosmetic treatment at a clinic, which isn't needed for medical reasons, is zero-rated as healthcare.",
+    "options": ["True", "False"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Preventive and basic healthcare services are zero-rated. Services that are cosmetic and not needed for medical reasons are excluded, and are standard-rated at 5%.",
+      "why": "A purely cosmetic treatment isn't basic healthcare, so the clinic charges 5% VAT on it. The same clinic's diagnosis and treatment of an illness or injury would be zero-rated.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (healthcare); VAT Executive Regulation, Article 41"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-013",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "input_tax",
+    "scenario": "Bluewave Pool Services LLC makes only standard-rated supplies. This year it pays for two things for its staff: gym memberships, which no law requires it to provide, and the health insurance that the law requires it to provide for its employees. Both invoices include 5% VAT.",
+    "prompt": "Which VAT can Bluewave recover as input tax?",
+    "options": [
+      "Both, because both are business expenses",
+      "Neither, because both are benefits for employees",
+      "Only the gym memberships, because they keep staff productive",
+      "Only the health insurance, because the law requires it"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "VAT on goods or services given to employees free for their personal use can't be recovered, unless the employer is required by law to provide them.",
+      "why": "The gym memberships are for staff's personal use and aren't required by law, so that VAT is blocked. The health insurance is a legal obligation of the employer, so its VAT can be recovered like any other business cost.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 53"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Medium confidence on detail: please confirm the employee-benefit block and its legal-obligation exception in Exec. Reg. Art. 53 as amended by Cabinet Decision No. 100 of 2024, and that employee health insurance required by law falls within the exception."
+    }
+  },
+  {
+    "id": "vat-b1-014",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "scenario": "Dune Ridge Robotics LLC was set up a year ago and hasn't made any sales yet. Over the last 12 months it has spent AED 210,000 on equipment and office rent, all subject to 5% VAT.",
+    "prompt": "Can Dune Ridge register for VAT?",
+    "options": [
+      "No. A business can register only once its sales pass AED 187,500",
+      "No. It must wait until its sales pass AED 375,000",
+      "Yes. Its taxable expenses are over AED 187,500, so it can register voluntarily",
+      "Yes. It must register, because its expenses are over AED 187,500"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A business may register voluntarily if its taxable supplies and imports, or its taxable expenses, exceed AED 187,500 over 12 months. Registration is mandatory only when taxable supplies and imports exceed AED 375,000.",
+      "why": "Dune Ridge has no sales, but its AED 210,000 of taxable expenses is above the AED 187,500 voluntary threshold, so it may register and recover the VAT on its costs. It doesn't have to, because the mandatory test looks at taxable supplies and imports, not expenses.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 13 and 17; VAT Executive Regulation, Article 7"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-015",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "tax_groups",
+    "prompt": "Three companies are registered together as one VAT tax group. Who is responsible for paying the group's VAT?",
+    "options": [
+      "Only the representative member, because it files the return",
+      "All members, jointly and severally, although the representative member files the return",
+      "Each member, but only for the VAT on its own supplies",
+      "Only the parent company, whatever its role in the group"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A tax group acts through a representative member, which files one return for the group. All members are jointly and severally liable for the group's VAT.",
+      "why": "If the group doesn't pay, the tax authority can collect the whole amount from any member, not just the representative member, and not only the share linked to that member's own supplies.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 14 (tax groups)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-016",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "exemptions",
+    "prompt": "A UAE insurer sells several kinds of policy. Which one is exempt from VAT?",
+    "options": [
+      "Motor insurance for a delivery van",
+      "Property insurance for a warehouse",
+      "Life insurance for an individual",
+      "Health insurance for a company's staff"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Life insurance, and reinsurance of life insurance, are exempt financial services. Other insurance, such as motor, property and health insurance, is standard-rated at 5%.",
+      "why": "Only the life policy is exempt. Motor, property and health insurance are all taxed at 5%, even though they are also insurance.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46 (financial services); VAT Executive Regulation, Article 42"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-017",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "zero_rating",
+    "prompt": "A bullion dealer in Dubai sells a 1 kg bar of 99.9% pure gold, of a kind traded in global bullion markets, to a private investor. How is the sale treated for VAT?",
+    "options": [
+      "Zero-rated, as investment precious metal",
+      "Standard-rated at 5%, like gold jewellery",
+      "Exempt, as a financial service",
+      "Subject to the reverse charge, with the investor accounting for the VAT"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Investment precious metals, meaning gold, silver and platinum of at least 99% purity in a form traded in global bullion markets, are zero-rated.",
+      "why": "A 99.9% gold bar of a tradable kind is investment precious metal, so the sale is zero-rated. Gold jewellery is standard-rated at 5%. The domestic reverse charge for gold applies only between registered businesses buying to resell or to make gold products, not to a private investor.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 36 (investment precious metals)"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-018",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "designated_zones",
+    "prompt": "When goods are moved from a designated zone into the UAE mainland, they are treated for VAT as imported into the UAE.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A designated zone that meets the legal conditions is treated as outside the UAE for VAT on goods. So goods moving from such a zone into the mainland are treated as imported.",
+      "why": "Because the zone counts as outside the UAE, goods leaving it for the mainland enter the UAE for VAT purposes, and import VAT applies. A registered importer normally accounts for that VAT in its VAT return under the reverse charge.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 51 (designated zones); VAT Executive Regulation, Article 51"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Medium confidence on detail: please confirm that goods released from a designated zone into the mainland are treated as an import, and the article references."
+    }
+  },
+  {
+    "id": "vat-b1-019",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "prompt": "A VAT-registered business's taxable supplies over the last 12 months have fallen to AED 150,000, and it doesn't expect them to rise. What does the law require?",
+    "options": [
+      "Nothing: once registered, a business stays registered for at least five years",
+      "It may choose to stay registered, because its supplies are above zero",
+      "It must deregister only if its supplies fall below AED 100,000",
+      "It must apply to deregister, because its supplies are below the AED 187,500 voluntary threshold"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A registrant must apply to deregister if it stops making taxable supplies, or if its taxable supplies over 12 months fall below the AED 187,500 voluntary registration threshold.",
+      "why": "AED 150,000 is below AED 187,500, so deregistration is required, not optional. If its supplies were between AED 187,500 and AED 375,000, it could apply to deregister but wouldn't have to.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 21 (deregistration)"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm Art. 21 (and any amendment) on the mandatory deregistration test. The item deliberately doesn't state the application deadline."
+    }
+  },
+  {
+    "id": "vat-b1-020",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "tax_invoices",
+    "prompt": "After issuing a tax invoice, Falcon Lane Print Studio LLC agrees a 10% rebate with the customer, reducing the price. What should Falcon Lane issue to adjust the VAT?",
+    "options": [
+      "A tax credit note",
+      "A new tax invoice for the full original amount",
+      "Nothing, because VAT can't be adjusted once it has been invoiced",
+      "A simplified tax invoice for the rebate"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "When the value of a supply falls after the tax invoice is issued, for example because of a rebate, the supplier adjusts its output tax and issues a tax credit note to the customer.",
+      "why": "The rebate lowers the price, so Falcon Lane reduces the VAT it owes and issues a tax credit note. The customer then reduces the input tax it recovered by the same amount. The original tax invoice stays as it is.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 61 and 62; VAT Executive Regulation, Article 60"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Rule: high confidence. Please confirm the article numbers for output tax adjustments and tax credit notes."
+    }
+  },
+  {
+    "id": "vat-b1-021",
+    "track": "vat",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "tax_invoices",
+    "scenario": "Extract from a tax credit note issued by Palmfield Office Supplies LLC",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Original tax invoice: POS-78105",
+      "Reason: 10% volume rebate agreed after the invoice",
+      "Reduction in value, before VAT: AED 441.00",
+      "VAT reduced by: AED 21.00"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "The VAT on a tax credit note is 5% of the reduction in the value before VAT. The 5/105 fraction is only for amounts that already include VAT.",
+      "why": "The reduction of AED 441.00 is before VAT, so the VAT reduced is 5% of AED 441.00 = AED 22.05. The credit note shows AED 21.00, which is AED 441.00 × 5/105: the formula for an amount that already includes VAT.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 62 (tax credit notes); VAT Executive Regulation, Article 60"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 441.00 × 0.05 = 22.05; 441.00 × 5/105 = 21.00. Please confirm the article numbers for tax credit notes."
+    }
+  },
+  {
+    "id": "vat-b1-022",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "place_of_supply",
+    "prompt": "A restaurant in Dubai serves dinner to a tourist visiting from France. How is the bill treated for VAT?",
+    "options": [
+      "Zero-rated, because the customer lives outside the UAE",
+      "Standard-rated at 5%, because the service is performed in the UAE",
+      "Exempt, because food is a basic necessity",
+      "Standard-rated, but refundable to the tourist at the airport"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Restaurant, hotel and catering services are supplied where they are actually performed. A meal served in the UAE is a UAE supply at 5%, whoever eats it.",
+      "why": "The dinner is served in Dubai, so 5% VAT applies. The tourist's home country doesn't matter, food isn't exempt in the UAE, and the tourist refund scheme covers goods bought to take out of the country, not meals eaten here.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 30 (place of supply: restaurant, hotel and catering services)"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Rule: high confidence. Please confirm the article number for the place of supply of restaurant and catering services."
+    }
+  },
+  {
+    "id": "vat-b1-023",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "input_tax",
+    "scenario": "Last year Palm Grove Properties LLC made these supplies: AED 2,600,000 of commercial rent (5%), AED 1,000,000 of first sales of new flats within three years of completion (0%), and AED 2,400,000 of rent on flats let before (exempt). The VAT on its shared overheads, used for all its activities, was AED 25,000.",
+    "prompt": "Using the standard method, how much of the AED 25,000 can Palm Grove recover?",
+    "options": [
+      "AED 25,000",
+      "AED 10,833.33",
+      "AED 15,000",
+      "AED 10,000"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "VAT on overheads used for both taxable and exempt supplies is shared out. Under the standard method, the recoverable share is taxable supplies, including zero-rated ones, divided by total supplies.",
+      "why": "Taxable supplies are AED 2,600,000 + AED 1,000,000 = AED 3,600,000, out of total supplies of AED 6,000,000. That is 60%, and 60% of AED 25,000 is AED 15,000. Leaving out the zero-rated flat sales would give AED 10,833.33, which is wrong because zero-rated supplies carry the right to recover.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 55; VAT Executive Regulation, Article 55 (input tax apportionment)"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 3.6m / 6.0m = 60%, 25,000 × 0.6 = 15,000; distractors 25,000 × 2.6/6 = 10,833.33 and 25,000 × 2.4/6 = 10,000. Please confirm the standard-method formula and any rounding of the recovery percentage in Exec. Reg. Art. 55 (60% is unaffected by rounding to a whole percent)."
+    }
+  },
+  {
+    "id": "vat-b1-024",
+    "track": "vat",
+    "format": "spot_issue",
+    "difficulty": "advanced",
+    "topic": "reverse_charge",
+    "scenario": "Extract from a tax invoice issued by Golden Dune Jewellery Wholesale LLC to Saffron Gold Jewellers LLC",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "21-carat gold bangles, 500 g: AED 210,000",
+      "VAT at 5% charged on this invoice: AED 10,500",
+      "Customer: Saffron Gold Jewellers LLC, VAT-registered, buying the gold to resell",
+      "Note: the customer must account for the VAT under the reverse charge"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "When a registered business buys gold or diamonds from another registered business to resell them or to make gold or diamond products, the buyer accounts for the VAT under the reverse charge. The seller doesn't charge it.",
+      "why": "Saffron Gold Jewellers is registered and buying to resell, so the domestic reverse charge applies. The invoice correctly says so, but then also charges AED 10,500 of VAT. It should charge none; the buyer declares the AED 10,500 (5% of AED 210,000) itself.",
+      "reference": "Cabinet Decision No. 25 of 2018 on the treatment of gold and diamonds; VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm the conditions in Cabinet Decision No. 25 of 2018 (including the buyer's declaration) and its effective date for meta.appliesFrom, and that B2B sales of 21-carat jewellery for resale are within scope."
+    }
+  },
+  {
+    "id": "vat-b1-025",
+    "track": "vat",
+    "format": "true_false",
+    "difficulty": "advanced",
+    "topic": "zero_rating",
+    "prompt": "Tuition fees charged by a private university that receives no government funding are zero-rated.",
+    "options": ["True", "False"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Tuition at nurseries, pre-schools and schools is zero-rated. Higher education is zero-rated only at institutions owned by the government or receiving more than 50% of their annual funding from it.",
+      "why": "A private university with no government funding doesn't meet the higher-education condition, so its tuition fees are standard-rated at 5%. A licensed private school's curriculum fees, by contrast, are zero-rated.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (education); VAT Executive Regulation, Article 40"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm the higher-education condition in Exec. Reg. Art. 40 (government-owned or more than 50% government-funded) after the 2024 amendments."
+    }
+  },
+  {
+    "id": "vat-b1-026",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "real_estate",
+    "scenario": "Palm Grove Properties LLC finished a new block of flats in March 2025. In January 2026 it lets one flat for the first time, on a one-year lease to a family. In January 2027 the same flat is let again, to a new tenant.",
+    "prompt": "How are the two leases treated for VAT?",
+    "options": [
+      "Both are exempt, because residential rent is always exempt",
+      "The first lease is zero-rated; the second is exempt",
+      "The first lease is standard-rated at 5%; the second is exempt",
+      "Both are zero-rated, because both are within three years of completion"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The first supply of a new residential building, by sale or by lease, is zero-rated if made within three years of completion. Later supplies of the same building are exempt.",
+      "why": "The January 2026 lease is the first supply of that flat and comes 10 months after completion, so it is zero-rated. The January 2027 lease is a later supply, so it is exempt, even though it is still within three years of completion.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (first supply of residential buildings) and Article 46"
+    },
+    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+  },
+  {
+    "id": "vat-b1-027",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "advanced",
+    "topic": "profit_margin",
+    "prompt": "A second-hand goods dealer wants to use the profit margin scheme when it resells items. For which purchase can it use the scheme?",
+    "options": [
+      "A used laptop bought from a private individual who isn't registered for VAT",
+      "A new laptop bought from the manufacturer for resale",
+      "A used laptop bought from a registered business that charged 5% VAT, which the dealer recovered as input tax",
+      "A used laptop imported for resale, with the import VAT recovered"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The profit margin scheme covers second-hand goods, antiques and collectors' items bought without VAT being charged, for example from a private individual or from a dealer using the scheme. It can't be used if VAT was charged and recovered on the purchase.",
+      "why": "The laptop from a private individual carried no VAT, so the dealer can charge VAT on its margin alone. Where the dealer recovered VAT on the purchase, from a registered business or on import, it must charge VAT on the full selling price. New goods are outside the scheme altogether.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 43; VAT Executive Regulation, Article 29"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm the eligible-purchase conditions in Exec. Reg. Art. 29 (including goods bought before registration, not used in this item)."
+    }
+  },
+  {
+    "id": "vat-b1-028",
+    "track": "vat",
+    "format": "mcq",
+    "difficulty": "advanced",
+    "topic": "registration",
+    "prompt": "When Dune Ridge Robotics LLC deregisters from VAT, it still owns machinery on which it recovered VAT when it bought it. What happens to that VAT?",
+    "options": [
+      "Nothing, because the VAT was recovered properly when the machinery was bought",
+      "It must repay the VAT it recovered on every purchase since it registered",
+      "It accounts for VAT on the machinery as a deemed supply, as if it had sold it",
+      "The machinery becomes exempt, so no VAT is due"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "When a business deregisters, goods and assets it still holds on which it recovered input tax are treated as supplied by it (a deemed supply), so it must account for VAT on them.",
+      "why": "Dune Ridge recovered VAT on the machinery and will keep using it outside the VAT system, so it accounts for output tax on the machinery's value in its final return. It doesn't repay the VAT on everything bought since registration: only goods and assets still held are caught.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 11 (deemed supplies)"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Rule: high confidence. Please confirm the Art. 11 paragraph and how the deemed supply is valued (market value), which the item deliberately leaves out."
+    }
+  },
+  {
+    "id": "vat-b1-029",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "profit_margin",
+    "scenario": "Desert Lane Motors LLC buys a used car from a private individual for AED 30,000. It pays a registered garage AED 2,000 plus AED 100 VAT for repairs, then sells the car for AED 40,500 under the profit margin scheme.",
+    "prompt": "How much VAT is due on the sale of the car?",
+    "options": [
+      "AED 404.76",
+      "AED 525.00",
+      "AED 1,928.57",
+      "AED 500.00"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Under the profit margin scheme, the margin is the selling price minus the purchase price, and it includes VAT. So the VAT due is the margin × 5/105. Repair costs don't reduce the margin.",
+      "why": "The margin is AED 40,500 − AED 30,000 = AED 10,500, and the VAT inside it is AED 10,500 × 5/105 = AED 500. The repairs don't come off the margin; instead, Desert Lane recovers the AED 100 of VAT on the garage's invoice in the normal way.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 43; VAT Executive Regulation, Article 29"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 10,500 × 5/105 = 500 and 10,500 − 10,500/1.05 = 500. Distractors: 8,500 × 5/105 = 404.76 (repairs deducted), 5% × 10,500 = 525, 40,500 × 5/105 = 1,928.57. Medium-high confidence: please confirm that repair costs are excluded from the margin (Exec. Reg. Art. 29) and that the VAT on them is recoverable."
+    }
+  },
+  {
+    "id": "vat-b1-030",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "reverse_charge",
+    "scenario": "Palm Grove Properties LLC's standard-method recovery rate this year is 60%. It buys consultancy services for AED 100,000 from a firm in the United Kingdom with no UAE presence. The consultancy supports all of Palm Grove's activities, taxable and exempt.",
+    "prompt": "What is the net VAT cost to Palm Grove of this purchase?",
+    "options": [
+      "AED 2,000",
+      "AED 0, because the reverse charge always cancels out",
+      "AED 3,000",
+      "AED 5,000"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Under the reverse charge, the buyer declares the VAT as output tax, then recovers it as input tax under the normal rules. If the buyer can't recover all its input tax, part of the reverse-charge VAT is a real cost.",
+      "why": "Palm Grove declares 5% of AED 100,000 = AED 5,000 of output tax. It can recover 60% of that, AED 3,000, as input tax, because the consultancy supports both taxable and exempt activities. The net cost is AED 5,000 − AED 3,000 = AED 2,000. The reverse charge only cancels out fully for a business that can recover all its input tax.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 48 and 55; VAT Executive Regulation, Article 55"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 100,000 × 5% = 5,000; 5,000 × 60% = 3,000; 5,000 − 3,000 = 2,000 (equivalently 5,000 × 40%)."
+    }
+  }
+]

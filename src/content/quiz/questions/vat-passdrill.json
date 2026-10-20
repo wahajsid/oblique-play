@@ -1,0 +1,466 @@
+[
+  {
+    "id": "vat-pd-009",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "registration",
+    "scenario": "A UAE-resident business's taxable supplies and imports total AED 400,000 over the last 12 months.",
+    "prompt": "Under UAE VAT Law (Federal Decree-Law No. 8 of 2017), what is its VAT registration position?",
+    "options": [
+      "The business may voluntarily register if it wishes, but registration is not required until taxable supplies exceed AED 187,500",
+      "The business is exempt from registering because it has not yet exceeded the AED 1,000,000 Corporate Tax natural-person turnover threshold",
+      "The business must wait until the next calendar year end before assessing its registration obligation, since VAT thresholds are tested only once a year",
+      "The business must register for VAT within 30 days, because AED 400,000 exceeds the AED 375,000 mandatory registration threshold"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A business must register for VAT if its taxable supplies and imports exceed AED 375,000 over the previous 12 months, or are expected to in the next 30 days. It must apply within 30 days.",
+      "why": "AED 400,000 is over AED 375,000, so registration is mandatory. AED 187,500 is the voluntary threshold, AED 1,000,000 is a Corporate Tax test for individuals, and the test runs on a rolling basis, not once a year.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 13"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-009",
+      "reviewNotes": "The threshold amounts sit in the VAT Executive Regulation (Article 7 as I understand it); consider adding to the reference. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-010",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "reverse_charge",
+    "scenario": "A VAT-registered UAE business imports Concerned Goods for use in its business from a supplier outside the UAE who isn't registered for UAE VAT.",
+    "prompt": "Under Article 48 of Federal Decree-Law No. 8 of 2017, how is VAT accounted for on this import?",
+    "options": [
+      "The foreign supplier must register for UAE VAT and charge VAT directly to the importer at the point of sale",
+      "No VAT applies to imports handled by suppliers who are not registered for UAE VAT, regardless of the goods' destination or use",
+      "The importing business applies the reverse charge mechanism, treating itself as having made a taxable supply to itself and self-accounting for output and input tax on the same VAT return",
+      "The importer must pay VAT in cash to UAE Customs at the border and cannot recover it as input tax"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "When a registered business imports goods or services for its business, it accounts for the VAT itself under the reverse charge, and recovers it as input tax under the normal rules.",
+      "why": "The importer reports the output tax and claims the matching input tax on the same VAT return, so the foreign supplier doesn't charge UAE VAT. VAT still applies to the import, and for a registered business it isn't a non-recoverable cash payment at the border.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 48"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-010",
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-011",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "zero_rating",
+    "scenario": "A UAE VAT-registered supplier sells goods to a customer outside the GCC implementing states. The goods leave the UAE 60 days after the date of supply, and the supplier keeps both the customs export document and the airway bill.",
+    "prompt": "Under UAE VAT Law, how is this export of goods treated?",
+    "options": [
+      "Standard-rated at 5%, because zero-rating for exports under UAE VAT Law applies only to services, not to goods",
+      "Exempt from VAT entirely, meaning the supplier cannot recover any input tax related to the export",
+      "Zero-rated regardless of the 90-day limit, since export documentation was eventually obtained",
+      "Zero-rated, because the goods left the UAE within the 90-day limit and both official and commercial evidence of export were retained"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "An export of goods outside the GCC implementing states is zero-rated if the goods leave the UAE within 90 days of supply and the supplier keeps official and commercial evidence of export.",
+      "why": "60 days is inside the limit and both kinds of evidence are held, so 0% applies. Zero-rating covers goods as well as services, and it isn't an exemption: input tax stays recoverable. Missing the 90-day limit would mean 5%, even if paperwork came later.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 45 and its Executive Regulation"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-011",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-012",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "designated_zones",
+    "scenario": "A VAT-registered supplier on the UAE mainland sells goods to a customer in a Designated Zone that meets all the Executive Regulation conditions (fenced, secured and under Customs control).",
+    "prompt": "Under the Designated Zone rules (Article 51 of Federal Decree-Law No. 8 of 2017 and its Executive Regulation), how is this ordinary sale from the mainland into the zone generally treated?",
+    "options": [
+      "Zero-rated, because any goods physically located within a Designated Zone are automatically treated as exported outside the UAE",
+      "Standard-rated at 5%, because the Designated Zone's 'outside the State' treatment applies to specified zone-to-zone transfers and exports, not to an ordinary mainland-to-zone domestic sale",
+      "Out of scope of VAT entirely, because a Designated Zone is legally outside the UAE for all VAT purposes regardless of where the goods originate",
+      "Exempt from VAT, because supplies into Designated Zones fall under the same exemption category as bare land and residential leases"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Designated Zone is treated as outside the UAE only for specified movements of goods. An ordinary sale of goods from the mainland into a Designated Zone is a domestic supply at 5%.",
+      "why": "Being located in the zone doesn't make the sale an export, the zone isn't outside the scope of VAT for everything, and the rule has nothing to do with the exemptions for bare land and residential buildings.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 51 and its Executive Regulation"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-012",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-019",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "exemptions",
+    "scenario": "A VAT-registered landlord leases a bare plot of land, with no buildings and no civil engineering works on it, to a tenant for commercial storage.",
+    "prompt": "Under Article 46 of Federal Decree-Law No. 8 of 2017, how is this supply of bare land treated for VAT?",
+    "options": [
+      "Zero-rated, on the same basis as the first supply of a new residential building within three years of its completion",
+      "Standard-rated at 5%, because only supplies of buildings, not undeveloped land, ever qualify for special VAT treatment",
+      "Exempt from VAT, because bare land with no completed or partly completed buildings or civil engineering works is on the Article 46 list of exempt supplies",
+      "Out of scope of VAT entirely, because land transactions of any kind are excluded from the scope of Federal Decree-Law No. 8 of 2017"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Supplying bare land, with no completed or partly completed buildings or civil engineering works, is exempt from VAT: no VAT is charged and related input tax can't be recovered.",
+      "why": "This plot is bare, so the lease is exempt and is taken out of the 5% rate. The zero rate is for the first supply of a new residential building, a different rule. An exempt supply is still within the VAT system, which is why it isn't 'out of scope'.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 46"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-019",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-020",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "tax_groups",
+    "scenario": "Three UAE-resident companies each have a fixed establishment in the UAE. Company X holds 60% of the votes in Company Y and 55% in Company Z, and no one else controls any of them.",
+    "prompt": "Under Article 14 of Federal Decree-Law No. 8 of 2017, can all three register together as one VAT Tax Group?",
+    "options": [
+      "Yes, because each company has a UAE establishment, the companies are related parties through Company X's controlling interest in the other two, and Company X, as the controlling party, satisfies the requirement that one of the persons control the others",
+      "No, because VAT Tax Group registration requires 100% common ownership between every member, unlike the lower threshold used for a Corporate Tax Group under Article 40",
+      "No, because a VAT Tax Group can only ever consist of exactly two members, a controlling company and a single subsidiary",
+      "Yes, but only if all three companies also elect to form a Corporate Tax Group under Article 40 at the same time, since UAE VAT Law treats the two group regimes as mutually conditional"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Two or more persons can form a VAT Tax Group if each has a place of establishment or fixed establishment in the UAE, they are related parties, and one or more of them control the others.",
+      "why": "Company X controls both Y and Z through its majority voting interests, and all three are established in the UAE, so they can group. Full ownership isn't needed, a group can have more than two members, and VAT grouping doesn't depend on a Corporate Tax Group.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 14"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-020",
+      "reviewNotes": "Article 14 and the control test were amended (Federal Decree-Law No. 18 of 2022, from 1 Jan 2023, as I understand it); confirm the 60%/55% facts still meet the current test. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-021",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "input_tax",
+    "scenario": "A VAT-registered company buys a car for its sales team. The car is available for personal use (it isn't a taxi, an emergency vehicle or a rental-fleet car). Separately, it pays for a dinner for prospective clients, who aren't its employees.",
+    "prompt": "Under Article 53 of the VAT Executive Regulation, can it recover the input tax on the car or on the dinner?",
+    "options": [
+      "Only the vehicle's input tax is blocked; the client dinner is fully recoverable because entertaining prospective, rather than existing, clients is treated as an ordinary business development cost",
+      "Neither is recoverable: input tax on a motor vehicle available for personal use is blocked unless it falls within a specific exception such as a taxi, an emergency vehicle, or a rental-fleet vehicle, and input tax on entertainment provided to anyone who is not an employee, including prospective clients, is also blocked",
+      "Both are fully recoverable, because Article 53 only blocks input tax on goods and services used exclusively for a person's private, non-business purposes",
+      "Only the client dinner's input tax is blocked; the vehicle's input tax is recoverable in full so long as the vehicle is used predominantly, even if not exclusively, for business purposes"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Input tax can't be recovered on a motor vehicle available for personal use, unless an exception applies, or on entertainment provided to people who aren't employees.",
+      "why": "Neither exception helps: the car is available for personal use, and prospective clients are non-employees, just like existing clients. Mostly business use doesn't unblock the car, and the rule isn't limited to purely private purchases.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017), Article 53"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-021",
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-022",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "date_of_supply",
+    "scenario": "A VAT-registered contractor provides construction services under a contract with periodic milestone payments. For one milestone, 14 months have passed since the work was done. Nothing has been paid and no tax invoice issued, because the client disputes whether the milestone was completed.",
+    "prompt": "Under Article 26 of Federal Decree-Law No. 8 of 2017 and its Executive Regulation, has the date of supply for that work already arisen, and if so, when?",
+    "options": [
+      "No date of supply is triggered until the dispute is resolved and either a payment is made or an invoice is issued, however long that takes",
+      "Yes, but only once the contractor issues a tax invoice, since for continuous supplies the tax invoice date is always the operative trigger regardless of elapsed time",
+      "No, because continuous supply date-of-supply rules only apply once a formal milestone acceptance certificate has been signed by both parties",
+      "Yes, the date of supply was automatically triggered once 12 months passed from the date the services were provided, even though no invoice was issued and no payment was received"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "For supplies with periodic payments or consecutive invoices, the date of supply is the earliest of the invoice, the payment due date, receipt of payment, or one year after the goods or services were provided.",
+      "why": "No invoice or payment has happened, but the one-year backstop passed two months ago, at 12 months, so the date of supply has already arisen. A dispute can't delay it indefinitely, the invoice isn't always the trigger, and no acceptance certificate is needed.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 26 and its Executive Regulation"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-022",
+      "reviewNotes": "Article 26 was amended by Federal Decree-Law No. 18 of 2022 (from 1 Jan 2023, as I understand it); confirm the 12-month backstop still applies to this case. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-029",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "registration",
+    "scenario": "A new UAE business's taxable supplies and imports over the last 12 months total AED 220,000, and it expects a similar level over the next 30 days. It hasn't passed the mandatory VAT registration threshold.",
+    "prompt": "Under UAE VAT Law (Federal Decree-Law No. 8 of 2017), can it register for VAT?",
+    "options": [
+      "No, a business cannot register for VAT at all unless its taxable supplies and imports exceed the mandatory registration threshold",
+      "Yes, but only if it is a Qualifying Free Zone Person, since only Free Zone entities may register below the mandatory threshold",
+      "Yes, it may apply for voluntary VAT registration, because its taxable supplies and imports of AED 220,000 exceed the AED 187,500 voluntary registration threshold, even though they remain below the AED 375,000 mandatory registration threshold",
+      "Yes, but only after first registering for UAE Corporate Tax, since VAT registration is conditional on prior Corporate Tax registration"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A business can register voluntarily once its taxable supplies and imports, or its taxable expenses, exceed AED 187,500, even while it is below the AED 375,000 mandatory threshold.",
+      "why": "AED 220,000 is above AED 187,500, so voluntary registration is open to it. Voluntary registration exists for exactly this case, isn't limited to free zone businesses, and doesn't depend on Corporate Tax registration.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 17"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-029",
+      "reviewNotes": "PassDrill also cited Article 19 for the mandatory threshold; as I understand it mandatory registration is Article 13, with the amounts in Executive Regulation Article 7. Confirm. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-030",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "reverse_charge",
+    "scenario": "A VAT-registered UAE company receives consulting services from a supplier based outside the UAE, with no place of establishment or fixed establishment here and no UAE VAT registration. It uses the services for its taxable business in the UAE.",
+    "prompt": "Under Article 48 of Federal Decree-Law No. 8 of 2017, how is VAT accounted for on these imported services?",
+    "options": [
+      "No VAT applies at all, because Article 48's reverse charge mechanism applies only to imports of goods, never to imported services",
+      "The foreign supplier must register for UAE VAT and charge VAT on its invoice to the UAE company, exactly as a UAE-based supplier would",
+      "The UAE company must pay VAT directly to UAE Customs at the point the services are received, in the same manner as VAT is collected on imported goods at the border",
+      "The UAE company must self-account for VAT under the reverse charge mechanism, treating itself as if it were both the supplier and recipient of the services, calculating output tax on the value of the imported services and recovering corresponding input tax subject to the normal input tax recovery rules"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Imported services from a supplier with no UAE establishment fall under the reverse charge: the UAE business accounts for the output tax itself and recovers input tax under the normal rules.",
+      "why": "The reverse charge covers services as well as goods. The foreign supplier doesn't charge UAE VAT, and services don't pass through Customs, so the VAT is self-accounted on the company's own return. For fully taxable use, the net cost is usually nil.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 48"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-030",
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-031",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "real_estate",
+    "scenario": "A developer completes a new residential building and sells it to its first buyer 8 months after completion. Two years later, that buyer resells the building to a third party.",
+    "prompt": "Under Articles 45 and 46 of Federal Decree-Law No. 8 of 2017, how are the two sales treated for VAT?",
+    "options": [
+      "The developer's sale to the first buyer is zero-rated, because it is the first supply of a residential building made within three years of the building's completion, while the buyer's later resale to the third party is exempt from VAT as a subsequent supply of a residential building",
+      "Both supplies are zero-rated, because any supply of a residential building anywhere in the UAE is zero-rated regardless of how many times it has previously been sold",
+      "Both supplies are exempt from VAT, because residential buildings are always exempt and the three-year first-supply zero-rating only applies to commercial buildings",
+      "The developer's sale to the first buyer is exempt, because it occurred more than six months after completion, while the buyer's later resale is zero-rated as the true 'first' arm's-length sale between unrelated non-developer parties"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The first supply of a residential building within three years of its completion is zero-rated. Later supplies of residential buildings are exempt.",
+      "why": "The developer's sale, 8 months after completion, is the first supply inside three years, so it is zero-rated. The buyer's resale is a later supply, so it is exempt. The three-year rule is a residential one, its window is three years (not six months), and not every residential sale is zero-rated.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 45(9) and Article 46(1)"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-031",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-032",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "designated_zones",
+    "scenario": "A company in a Designated Zone that meets all the Executive Regulation conditions provides consulting services to a customer in the same zone.",
+    "prompt": "Under the Designated Zone rules (Article 51 of Federal Decree-Law No. 8 of 2017 and its Executive Regulation), how is this supply of services treated, compared with a sale of goods between two businesses in the same zone?",
+    "options": [
+      "Both the services and the goods are treated as taking place outside the UAE for VAT purposes, because the special Designated Zone place-of-supply rules under Article 51 apply equally to goods and services",
+      "The special Designated Zone rules under Article 51 apply only to supplies of goods; a supply of services between two businesses in the same Designated Zone is instead subject to the normal place-of-supply rules, so it is treated as a taxable supply within the UAE like any other domestic supply of services",
+      "The consulting services are zero-rated exports, because any service supplied within a Designated Zone is automatically treated as an export outside the UAE",
+      "Neither the goods sale nor the consulting services can be supplied within a Designated Zone at all, because Designated Zones are restricted to the storage of goods only"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The special Designated Zone rules apply only to certain supplies of goods. Services supplied in a Designated Zone follow the normal place of supply rules, so they are treated as made in the UAE.",
+      "why": "The consulting is a normal domestic supply of services, taxable like any other in the UAE; only the goods sale can benefit from the zone's goods-specific treatment. Being in a zone doesn't make a service an export, and services can of course be supplied there.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 51 and its Executive Regulation"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-032",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-041",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "input_tax",
+    "scenario": "A VAT-registered business buys a new office building for AED 8,000,000 and specialised manufacturing equipment for AED 6,000,000 (both before VAT). The building's useful life is more than ten years and the equipment's is six years. Both are Capital Assets under the Capital Assets Scheme.",
+    "prompt": "Under Article 58 of the VAT Executive Regulation, for how many years must the input tax recovered on each asset be monitored and, if needed, adjusted?",
+    "options": [
+      "10 consecutive years for both the building and the equipment, since the Capital Assets Scheme applies a single uniform adjustment period to every qualifying Capital Asset",
+      "10 consecutive years for the building and 5 consecutive years for the equipment, since the scheme uses a 10-year adjustment period for buildings or parts of buildings and a 5-year adjustment period for all other qualifying Capital Assets",
+      "5 consecutive years for both assets, matching each asset's own estimated useful life rather than a fixed statutory period",
+      "10 consecutive years for the equipment, matching its useful life, and 5 consecutive years for the building"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Under the Capital Assets Scheme, input tax is monitored for 10 years on a building or part of a building, and 5 years on other capital assets, whatever their own useful life.",
+      "why": "The office building takes 10 years and the equipment, not being a building, 5 years. The periods are fixed by type of asset, not by each asset's useful life or one uniform period, and it's the building that gets the longer period.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017), Article 58"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-041",
+      "reviewNotes": "Confirm the article number (Article 57 or 58) after the 2024 amendments, and the scheme's value threshold. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-042",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "input_tax",
+    "scenario": "A VAT-registered supplier delivered goods and charged, reported and paid the output VAT. Seven months after the date of supply the customer still hasn't paid. The supplier has written the debt off in its accounts but hasn't told the customer the amount written off.",
+    "prompt": "Under Article 64 of Federal Decree-Law No. 8 of 2017, can it make a bad debt relief adjustment yet?",
+    "options": [
+      "Yes, because all of the conditions Article 64 requires are already satisfied by the facts given",
+      "No, because seven months still falls short of a required 12-month unpaid period before bad debt relief becomes available",
+      "Yes, but only for half of the output VAT originally paid, since customer notification is required only for full write-offs, not partial ones",
+      "No, because although the supply, output VAT payment, six-month unpaid period, and formal write-off conditions are all satisfied, Article 64 also requires the supplier to have notified the customer of the amount written off as consideration for the supply, which has not yet happened here"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Bad debt relief needs the output tax to have been paid, the debt written off in the accounts, more than six months since the date of supply, and the customer notified of the amount written off.",
+      "why": "The first three conditions are met (seven months is more than six), but the customer hasn't been notified, so no adjustment can be made yet. There's no 12-month rule, and notification is needed for partial write-offs too.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 64; Public Clarification VATP024"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-042",
+      "reviewNotes": "Confirm the Article 64 conditions after the VAT amendments effective 1 Jan 2026. No exact topic key for bad debt relief; filed under input_tax. Consider adding an 'adjustments' topic. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-043",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exemptions",
+    "scenario": "A UAE bank lends to a business customer. Its return is (i) interest built into the loan margin, with no separate charge shown, and (ii) a separately itemised annual account-maintenance fee, charged whatever the loan balance.",
+    "prompt": "Under Article 42 of Federal Decree-Law No. 8 of 2017 and its Executive Regulation, how is each part of the bank's return treated for VAT?",
+    "options": [
+      "Both elements are exempt from VAT, because the entire arrangement is a financial service supplied by a bank",
+      "Both elements are taxable at 5%, because Article 42 only exempts financial services provided by non-bank lenders",
+      "The implicit margin-based interest return is exempt from VAT, while the separately itemised account-maintenance fee is a taxable supply at 5%, because Article 42 distinguishes implicit margin-based returns from explicit fees, commissions, and charges",
+      "The implicit margin-based interest return is taxable at 5%, while the separately itemised account-maintenance fee is exempt, because only identifiable charges qualify as financial services under Article 42"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Financial services paid for through an implicit margin, such as interest, are exempt. Financial services charged as an explicit fee, commission, discount or rebate are taxable at 5%.",
+      "why": "The interest within the margin is exempt; the itemised account fee is taxable at 5%. The test is how the return is charged, not whether the lender is a bank, so neither 'both exempt' nor 'both taxable' is right, and the treatment isn't the other way round.",
+      "reference": "Federal Decree-Law No. 8 of 2017, Article 42 and its Executive Regulation"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-043",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "vat-pd-047",
+    "track": "vat",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "zero_rating",
+    "scenario": "A UAE marketing consultancy prepares a one-off research report for a company with no place of establishment or fixed establishment in the UAE. The client's project lead is in the UAE throughout the two weeks the report is prepared and delivered.",
+    "prompt": "Under Article 31 of the VAT Executive Regulation, is this supply of services zero-rated?",
+    "options": [
+      "Yes, zero-rating applies because the recipient has no place of establishment or fixed establishment anywhere in the UAE, and that alone satisfies Article 31",
+      "No, because zero-rating under Article 31 never applies to services, only to exports of goods",
+      "Yes, because the recipient's physical presence during performance is irrelevant as long as the underlying contract was signed while the recipient was outside the UAE",
+      "No, because Article 31 requires both that the recipient has no place of residence in the UAE and that the recipient is outside the UAE when the services are performed; the recipient's continuous presence here throughout performance fails the second condition even though the first is met"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "An export of services is zero-rated only if the recipient has no place of residence in the UAE and is outside the UAE when the services are performed.",
+      "why": "The client isn't resident here, but its project lead is present the whole time the report is prepared, so the second condition fails. Services can be zero-rated, and where the contract was signed is not the test.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017), Article 31"
+    },
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-047",
+      "reviewNotes": "Date-sensitive: as I understand it Article 31 was amended by Cabinet Decision No. 100 of 2024 (effective 15 Nov 2024), including how the 'outside the State' condition applies to business recipients and their representatives. Confirm the answer under the current text. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  }
+]

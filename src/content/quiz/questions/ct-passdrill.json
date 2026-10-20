@@ -1,0 +1,901 @@
+[
+  {
+    "id": "ct-pd-001",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "scenario": "A UAE-resident company that is not a Qualifying Free Zone Person, and has not elected Small Business Relief, reports taxable income of AED 500,000 for a tax period.",
+    "prompt": "Under UAE Corporate Tax Law (Federal Decree-Law No. 47 of 2022), what is its Corporate Tax liability for that tax period?",
+    "options": [
+      "AED 11,250, applying 0% to the first AED 375,000 and 9% to the remaining AED 125,000",
+      "AED 0, because taxable income below AED 1,000,000 is fully exempt",
+      "AED 25,000, applying a flat 5% rate to the full AED 500,000",
+      "AED 45,000, applying the 9% rate to the full AED 500,000"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "UAE Corporate Tax is charged at 0% on the first AED 375,000 of taxable income and at 9% on taxable income above that.",
+      "why": "Only the AED 125,000 above AED 375,000 is taxed at 9%: AED 125,000 × 9% = AED 11,250. Charging 9% on the full AED 500,000 (AED 45,000) ignores the 0% band. There is no 5% Corporate Tax rate; 5% is the VAT rate. The AED 1,000,000 figure is the turnover test for individuals' businesses, not an exemption for companies.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 3"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-001",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-002",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "small_business_relief",
+    "scenario": "A UAE-resident company had revenue of AED 2.8 million in both the current and the previous tax period. The current tax period starts on or after 1 June 2023 and ends on or before 31 December 2026.",
+    "prompt": "Under Small Business Relief (Article 21 of Federal Decree-Law No. 47 of 2022 and Ministerial Decision No. 73 of 2023), what happens if it makes a valid election for the relief for the current tax period?",
+    "options": [
+      "The taxable person automatically receives Small Business Relief without needing to make any election",
+      "The taxable person is treated as if it derived no taxable income for the tax period and has no Corporate Tax liability",
+      "The taxable person still owes Corporate Tax on income above AED 375,000, because Small Business Relief only removes the registration obligation",
+      "The taxable person permanently loses eligibility for Small Business Relief in all future tax periods because its revenue is approaching the AED 3,000,000 threshold"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A resident person whose revenue does not exceed AED 3,000,000 in the current and previous tax periods can elect Small Business Relief, and is then treated as having no taxable income for that period.",
+      "why": "AED 2.8 million is under the AED 3,000,000 limit in both periods, so a valid election means no Corporate Tax for the period. The relief has to be elected; it isn't automatic. It removes the tax on the whole taxable income, not just a registration step. Being close to the limit doesn't affect eligibility unless revenue actually goes over it.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-002",
+      "reviewNotes": "Small Business Relief covers tax periods ending on or before 31 Dec 2026; retire or rewrite this item for 2027. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-003",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "scenario": "A UAE-resident individual runs a licensed freelance consulting business that isn't incorporated. In a calendar year the business has turnover of AED 1.2 million. The individual also earns a salary from a full-time job.",
+    "prompt": "Under UAE Corporate Tax Law (Cabinet Decision No. 49 of 2023), which amount decides whether this individual is a Taxable Person for Corporate Tax?",
+    "options": [
+      "The combined total of the AED 1.2 million business turnover and the salary, because all of an individual's income counts toward the threshold",
+      "Only the salary income, because Corporate Tax targets employment income earned above AED 1,000,000",
+      "Only the AED 1.2 million business turnover, since the AED 1,000,000 threshold is measured on licensed business or business activity turnover, and employment income is excluded from scope",
+      "Neither amount, because natural persons can never be Corporate Tax Taxable Persons under UAE law"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "An individual is a Taxable Person only if turnover from their business or business activity exceeds AED 1,000,000 in a calendar year. Salary, personal investment income and unlicensed real estate investment income don't count.",
+      "why": "Only the AED 1.2 million business turnover counts, and it exceeds AED 1,000,000, so the individual is in scope. Adding the salary is wrong because employment income is left out of the test. The salary on its own is never the test, and individuals can be Taxable Persons once their business turnover passes the threshold.",
+      "reference": "Cabinet Decision No. 49 of 2023 (natural persons conducting business)"
+    },
+    "meta": {
+      "appliesFrom": "2024-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-003",
+      "reviewNotes": "appliesFrom set to 1 Jan 2024, when natural persons' first Corporate Tax period began as I understand it; confirm. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-004",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "scenario": "A Qualifying Free Zone Person has total revenue of AED 80 million for a tax period. AED 3.5 million of it is Non-Qualifying Revenue.",
+    "prompt": "Under the de minimis requirement for Qualifying Free Zone Persons, does this Non-Qualifying Revenue make the entity fail the test?",
+    "options": [
+      "No, because AED 3.5 million is below both the AED 5 million cap and 5% of AED 80 million (AED 4 million), and the de minimis test uses whichever of those two figures is lower",
+      "Yes, because any Non-Qualifying Revenue at all disqualifies a Qualifying Free Zone Person, regardless of amount",
+      "No, because the de minimis test only applies to Free Zone Persons with total revenue below AED 50 million",
+      "Yes, because AED 3.5 million exceeds a flat AED 3 million de minimis cap that applies to every Qualifying Free Zone Person"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person passes the de minimis test if its Non-Qualifying Revenue is no more than AED 5 million or 5% of total revenue, whichever is lower.",
+      "why": "5% of AED 80 million is AED 4 million, which is lower than AED 5 million, so the limit is AED 4 million. AED 3.5 million is under it, so the test is passed. Some Non-Qualifying Revenue is allowed; the test doesn't depend on revenue being under AED 50 million; and there is no flat AED 3 million cap.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 18; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-004",
+      "reviewNotes": "REFERENCE TO CONFIRM: as I understand it the de minimis requirement is set out in Cabinet Decision No. 100 of 2023, not Ministerial Decision No. 265 of 2023. Also confirm whether either decision was replaced in 2025. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-005",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_groups",
+    "scenario": "Parent Co. and Subsidiary Co. are both UAE-resident companies. Parent Co. holds 96% of Subsidiary Co.'s share capital, voting rights, and entitlement to profits and net assets. They have the same financial year and accounting standards, and neither is a Qualifying Free Zone Person or exempt from Corporate Tax.",
+    "prompt": "They want to form a Tax Group under Article 40 of UAE Corporate Tax Law. What else is needed before the Tax Group takes effect?",
+    "options": [
+      "No further step is needed; meeting the 95% ownership and residency conditions automatically creates the Tax Group from the start of the tax period",
+      "The 96% ownership must first be reduced to exactly 95%, since Corporate Tax Law caps eligible ownership for Tax Group purposes at that level",
+      "Each member must independently register for and pay Corporate Tax, because a Tax Group only consolidates VAT filings, not Corporate Tax",
+      "Parent Co. and Subsidiary Co. must jointly apply to the tax authority, which must approve the Tax Group before the members are treated as a single Taxable Person"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Tax Group needs at least 95% ownership plus the residency, financial year and accounting conditions, and the parent and subsidiary must apply together and be approved by the tax authority.",
+      "why": "Meeting the conditions isn't enough on its own: the group only exists once the joint application is approved. 95% is a minimum, so 96% is fine and doesn't need cutting back. And this is a Corporate Tax group under Article 40, separate from VAT grouping.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 40"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-005",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-006",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_income",
+    "scenario": "A UAE company has held 4% of a foreign company for 18 months, and paid AED 4.5 million for the shares. The foreign company is taxed at home at a statutory rate of 12%, and no more than 50% of its assets would fail the Participation Exemption's asset test.",
+    "prompt": "Under the Participation Exemption (Article 23 of Federal Decree-Law No. 47 of 2022), can a dividend from this company be exempt even though the holding is below 5%?",
+    "options": [
+      "No, because falling below the 5% ownership threshold automatically and permanently disqualifies the interest from the Participation Exemption",
+      "Yes, because the AED 4 million acquisition-cost alternative to the 5% ownership test is met, and the holding-period, subject-to-tax, and asset tests are also satisfied",
+      "Yes, but only if the UAE company also elects Small Business Relief for the same tax period",
+      "No, because the subsidiary's 12% statutory tax rate is below the UAE's 9% headline Corporate Tax rate, so the subject-to-tax test fails"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The Participation Exemption needs a holding of at least 5% or an acquisition cost of at least AED 4 million, held for 12 months, in a company taxed at 9% or more, and the asset test.",
+      "why": "The AED 4.5 million cost meets the AED 4 million alternative, so a 4% holding is enough. 18 months is longer than the 12-month holding period, and 12% is above 9%, so the subject-to-tax test is met. Small Business Relief has nothing to do with it.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 23"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-006",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-007",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "interest_limitation",
+    "scenario": "A UAE taxable person (not a bank, insurer or individual) has Net Interest Expenditure of AED 20 million and tax-adjusted EBITDA of AED 50 million for a tax period.",
+    "prompt": "Under the General Interest Deduction Limitation Rule (Article 30 of Federal Decree-Law No. 47 of 2022), how much Net Interest Expenditure can it deduct for the period?",
+    "options": [
+      "AED 12 million only, because the AED 12 million de minimis figure is an absolute cap that always overrides the 30%-of-EBITDA calculation",
+      "AED 15 million (30% of the AED 50 million EBITDA), since the AED 12 million de minimis figure is a floor that does not reduce a higher EBITDA-based deduction capacity",
+      "AED 20 million in full, because the entire Net Interest Expenditure is below the taxable person's total EBITDA of AED 50 million",
+      "AED 6 million, calculated by applying 30% to the AED 20 million of Net Interest Expenditure rather than to EBITDA"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Net Interest Expenditure is deductible up to the greater of 30% of tax-adjusted EBITDA or AED 12 million. Any excess can be carried forward.",
+      "why": "30% of AED 50 million is AED 15 million, which is more than AED 12 million, so AED 15 million is deductible and the other AED 5 million is carried forward. AED 12 million is a floor, not a cap. The 30% applies to EBITDA, not to the interest itself, and the full AED 20 million isn't allowed just because it is below total EBITDA.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 30"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-007",
+      "reviewNotes": "Confirm the carry-forward period for disallowed interest (10 years as I understand it) if the 'what' is expanded. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-008",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "transfer_pricing",
+    "scenario": "A UAE taxable person is not part of a multinational group. Its own revenue for the tax period is AED 210 million.",
+    "prompt": "Under the transfer pricing documentation rules (Ministerial Decision No. 97 of 2023), must it keep a Master File and a Local File for that period?",
+    "options": [
+      "Yes, because the AED 200 million standalone revenue threshold is met on its own, independently of any Multinational Enterprise Group membership or the separate AED 3.15 billion consolidated-revenue test",
+      "No, because the Master File and Local File requirement only applies to constituent entities of Multinational Enterprise Groups with consolidated group revenue of at least AED 3.15 billion",
+      "No, because AED 210 million in revenue only triggers the disclosure form requirement, not the Master File and Local File obligation",
+      "Yes, but only if the taxable person's related-party transactions, separately from total revenue, also exceed AED 200 million"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Master File and Local File are required if the taxable person's revenue is AED 200 million or more, or if it belongs to a multinational group with consolidated revenue of AED 3.15 billion or more.",
+      "why": "These are two separate triggers. AED 210 million passes the AED 200 million test on its own, so group membership doesn't matter. The test uses total revenue, not the value of related-party transactions, and it requires the files themselves, not just the disclosure form.",
+      "reference": "Ministerial Decision No. 97 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-008",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-013",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "scenario": "A UAE-incorporated company is wholly owned and controlled by a Government Entity that is an Exempt Person. The company's only activity is carrying out part of that Government Entity's mandated function.",
+    "prompt": "Under UAE Corporate Tax Law (Article 4 of Federal Decree-Law No. 47 of 2022), what must the company do to become an Exempt Person in its own right?",
+    "options": [
+      "Nothing further; wholly-owned and controlled subsidiaries of a Government Entity are automatically exempt the moment the ownership and control conditions are met",
+      "It must instead register for Small Business Relief, since a wholly-owned government subsidiary cannot be exempt on its own account",
+      "It must apply to, and be approved by, the tax authority, and continue to satisfy the conditions in Article 4, since exemption for such subsidiaries is not automatic",
+      "It must obtain a Cabinet Decision naming it individually as a Government Controlled Entity, the same route used for the parent Government Entity"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A UAE company wholly owned and controlled by certain Exempt Persons, such as a Government Entity, can become exempt itself, but only by applying to and being approved by the tax authority, and continuing to meet the conditions.",
+      "why": "Ownership and control alone don't make the company exempt; approval is a required step. Small Business Relief is unrelated. A Cabinet Decision naming an entity is how Government Controlled Entities are designated, not how ordinary wholly owned subsidiaries qualify.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 4"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-013",
+      "reviewNotes": "Confirm the exact paragraph (Article 4(2) as I understand it) and that Government Entity subsidiaries use this application route. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-014",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "foreign_income",
+    "scenario": "A UAE-resident company pays interest to a non-resident lender. The lender has no Permanent Establishment in the UAE and no other UAE-sourced income.",
+    "prompt": "Under Articles 45 and 46 of Federal Decree-Law No. 47 of 2022, what rate of UAE Withholding Tax currently applies to this payment?",
+    "options": [
+      "0%, because the Cabinet has not yet prescribed a positive Withholding Tax rate under Article 46, even though the mechanism itself exists in the law",
+      "9%, the same flat rate applied to Corporate Tax on taxable income above the AED 375,000 threshold",
+      "5%, matching the standard VAT rate, since Withholding Tax piggybacks on the VAT rate schedule",
+      "20%, matching the rate commonly applied to non-resident payments in comparable jurisdictions"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "UAE Corporate Tax Law includes a Withholding Tax on certain UAE-sourced income of non-residents, but the rate is currently set at 0%.",
+      "why": "The interest is within the Withholding Tax rules, but the rate is 0%, so nothing is withheld. 9% is the Corporate Tax rate on taxable income, 5% is VAT, and no 20% rate has been set.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 45 and 46"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-014",
+      "reviewNotes": "The rate can be changed by Cabinet Decision; confirm it is still 0% for Nov 2026. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-015",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "foreign_income",
+    "scenario": "A UAE-resident company's taxable income includes AED 800,000 of foreign-sourced income. It paid AED 90,000 of foreign tax on that income. UAE Corporate Tax on the same income, at 9%, is AED 72,000.",
+    "prompt": "Under Article 47 of Federal Decree-Law No. 47 of 2022, how much Foreign Tax Credit can it claim, and what happens to any unused amount?",
+    "options": [
+      "AED 90,000 in full, and the company can request a cash refund of the entire amount from the tax authority regardless of its UAE Corporate Tax liability",
+      "AED 72,000, capped at the UAE Corporate Tax due on that income, and the remaining AED 18,000 cannot be carried forward, carried back, or refunded",
+      "AED 90,000 in full, split evenly over the current and following tax period as a two-year carry-forward of the excess",
+      "AED 0, because Article 47 only allows a Foreign Tax Credit where the UAE has a bilateral double-taxation treaty in force with the foreign jurisdiction in question"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Foreign Tax Credit is capped at the UAE Corporate Tax due on the same income. Any unused credit can't be carried forward, carried back or refunded.",
+      "why": "The credit is the lower of AED 90,000 and AED 72,000, so AED 72,000. The other AED 18,000 is lost. There's no refund and no two-year carry-forward, and the credit doesn't depend on a double tax treaty being in place.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 47"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-015",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-016",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "scenario": "Two individuals run a business together in the UAE as an Unincorporated Partnership. They haven't formed a company and haven't applied to the tax authority about how the partnership is taxed.",
+    "prompt": "Under Article 16 of Federal Decree-Law No. 47 of 2022, how is the partnership treated for Corporate Tax by default?",
+    "options": [
+      "The partnership is fiscally transparent by default, so it is disregarded as a Taxable Person and each partner includes their distributive share of the partnership's income and expenses in their own taxable income",
+      "The partnership is automatically treated as a standalone Taxable Person from formation, exactly like an incorporated company, unless the partners apply to the tax authority for fiscal transparency",
+      "The partnership is exempt from Corporate Tax entirely, because Unincorporated Partnerships are listed among the Exempt Persons under Article 4",
+      "The partnership must first register as a Qualifying Free Zone Person before either partner can determine their own tax treatment"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "An Unincorporated Partnership is fiscally transparent by default: it isn't a Taxable Person itself, and each partner is taxed on their share. The partners can apply for it to be taxed as a Taxable Person instead.",
+      "why": "Transparency is the default, so no application is needed; an application is only needed to go the other way. Unincorporated Partnerships aren't on the Exempt Persons list, and Qualifying Free Zone Person status is a separate regime.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 16"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-016",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-017",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "scenario": "A UAE Taxable Person enters into an arrangement with no credible commercial or non-fiscal reason reflecting economic reality. Its main purpose, or one of its main purposes, is to reduce Corporate Tax in a way that goes against the intent of Federal Decree-Law No. 47 of 2022.",
+    "prompt": "Under Article 50 of that law, what can the tax authority do?",
+    "options": [
+      "Nothing, because Article 50 only applies to cross-border arrangements involving a non-resident counterparty",
+      "Refer the matter exclusively to the UAE courts, since the tax authority itself has no independent power to adjust a Taxable Person's position under Article 50",
+      "Counteract the tax advantage by making a compensating adjustment, such as disallowing a deduction or recharacterising the arrangement, to reflect the transaction's true economic substance rather than its legal form",
+      "Automatically impose the maximum administrative penalty under Cabinet Decision No. 75 of 2023 without conducting any assessment or adjustment of the underlying tax position"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Under the General Anti-Abuse Rule, where an arrangement lacks economic reality and a main purpose is a Corporate Tax advantage, the tax authority can counteract that advantage by adjusting the tax position.",
+      "why": "The tax authority can make the adjustment itself, for example by disallowing a deduction or recharacterising the arrangement, without going to court first. The rule covers domestic arrangements as well as cross-border ones, and it works by correcting the tax, not by an automatic maximum penalty.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 50"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-017",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-018",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "penalties_admin",
+    "scenario": "A UAE company subject to Corporate Tax doesn't submit its Corporate Tax registration application within the deadline set for its category of Taxable Person.",
+    "prompt": "Under Cabinet Decision No. 10 of 2024 (amending Cabinet Decision No. 75 of 2023 on administrative penalties), what is the standard penalty for this?",
+    "options": [
+      "AED 500 per month of delay, capped at AED 10,000 in total, mirroring the late VAT registration penalty structure",
+      "A percentage-based penalty calculated as 1% of the Taxable Person's annual revenue",
+      "No penalty applies as long as the Taxable Person voluntarily registers within 12 months of the missed deadline",
+      "A flat AED 10,000 administrative penalty for failing to submit the Corporate Tax registration application within the specified timeframe"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Missing the Corporate Tax registration deadline carries a flat administrative penalty of AED 10,000.",
+      "why": "It is one flat amount however long the delay, not AED 500 a month or a percentage of revenue, and there is no 12-month grace period. A separate initiative has let some businesses have the penalty waived or refunded if they filed their first return on time.",
+      "reference": "Cabinet Decision No. 10 of 2024, amending Cabinet Decision No. 75 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2024-03-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-018",
+      "reviewNotes": "Date-sensitive: penalty amounts and the waiver initiative; confirm the position for Nov 2026. appliesFrom set to 1 Mar 2024 (effective date of Cabinet Decision No. 10 of 2024 as I understand it). Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-023",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "scenario": "Company A, a Qualifying Free Zone Person, supplies specialised software services to Company B, a Free Zone Person in the same free zone. Company B must, under its contract, recharge the exact cost with no markup to its own mainland UAE customer, who receives and uses the software directly.",
+    "prompt": "Under the 'Beneficial Recipient' requirement in Ministerial Decision No. 265 of 2023, does Company A's income count as income from a transaction with another Free Zone Person?",
+    "options": [
+      "Yes, because Company B is itself a Free Zone Person, and any transaction between two Free Zone Persons automatically qualifies as Qualifying Income regardless of how the recipient uses the services",
+      "Yes, because the recharge is made at cost with no markup, and Ministerial Decision No. 265 of 2023 treats an at-cost recharge between Free Zone Persons as automatically satisfying the Beneficial Recipient test",
+      "No, because Company B is not the Beneficial Recipient of the services: it is contractually obliged to pass their benefit on to its mainland customer. So the transaction isn't treated as one with another Free Zone Person, and Company A's income must be tested as if the recipient were not a Free Zone Person",
+      "No, because a Qualifying Free Zone Person can never derive Qualifying Income from providing services to another Free Zone Person, only from selling goods"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Income from another Free Zone Person only counts on that basis if that person is the Beneficial Recipient: it uses and enjoys the goods or services itself, with no obligation to pass the benefit on.",
+      "why": "Company B has to pass the software through to its mainland customer, so it is a conduit, not the Beneficial Recipient. Company A's income has to be tested as if it came from a recipient that isn't a Free Zone Person. Charging at cost doesn't change this, and services can be Qualifying Income when the conditions are met.",
+      "reference": "Ministerial Decision No. 265 of 2023; Federal Decree-Law No. 47 of 2022, Article 18"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-023",
+      "reviewNotes": "Confirm Ministerial Decision No. 265 of 2023 is still the current decision (it may have been replaced in 2025) and where 'Beneficial Recipient' is defined. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-024",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "transfer_pricing",
+    "scenario": "A UAE-resident company sells stock to its wholly owned foreign subsidiary at 40% below the price it charges unrelated distributors for identical goods. There's no commercial reason for the discount.",
+    "prompt": "Under Article 34 of Federal Decree-Law No. 47 of 2022 (the arm's length principle), what happens for Corporate Tax?",
+    "options": [
+      "The tax authority may adjust the company's taxable income to reflect the arm's length price that would have been agreed between independent parties in comparable circumstances, using one of the transfer pricing methods recognized under Article 34 and its implementing decisions",
+      "Nothing -- Article 34's arm's length principle only applies to transactions between a UAE Free Zone Person and its foreign parent, not to a mainland UAE resident company selling to its own foreign subsidiary",
+      "The full amount of the discount is automatically treated as a deemed dividend distribution to the foreign subsidiary and subjected to UAE Withholding Tax",
+      "The transaction is disregarded entirely for Corporate Tax purposes and excluded from taxable income, because intra-group transfers of inventory are not treated as taxable supplies under UAE Corporate Tax Law"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Transactions between Related Parties must be priced as if between independent parties. If they aren't, taxable income can be adjusted to the arm's length price.",
+      "why": "The 40% discount has no commercial reason, so the tax authority can adjust the company's taxable income to the price independent parties would have agreed. The rule covers all Related Party transactions, not just free zone ones. It doesn't create a deemed dividend or Withholding Tax, and intra-group sales are fully within taxable income.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 34; Ministerial Decision No. 97 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-024",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-025",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_losses",
+    "scenario": "A UAE-resident company has AED 900,000 of Tax Losses brought forward. It meets all the conditions for using them, and its ownership hasn't changed by more than 50% since they arose. Its taxable income for the current period, before using any losses, is AED 1,000,000.",
+    "prompt": "Under Article 37 of Federal Decree-Law No. 47 of 2022, what is the most it can offset against this period's taxable income?",
+    "options": [
+      "AED 900,000, because Article 37 allows the full brought-forward Tax Loss balance to be offset against taxable income in the immediately following tax period with no percentage cap",
+      "AED 750,000, because Article 37 caps the offset at 75% of the tax period's taxable income before the offset, i.e. 75% of AED 1,000,000, with the remaining AED 150,000 of Tax Losses available to carry forward to future tax periods",
+      "AED 500,000, because Article 37 caps Tax Loss relief at 50% of the tax period's taxable income before the offset",
+      "AED 0, because carried-forward Tax Losses expire and become permanently unusable after a single tax period if not fully utilized"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Brought-forward Tax Losses can reduce taxable income by up to 75% of that period's taxable income before the losses. Unused losses carry forward, subject to the ownership and business continuity conditions.",
+      "why": "75% of AED 1,000,000 is AED 750,000, so that's the maximum, and the remaining AED 150,000 carries forward. There is a cap, so the full AED 900,000 can't be used. The cap is 75%, not 50% (the 50% figure belongs to the ownership-change test), and losses don't expire after one period.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 37 and 39"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-025",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-026",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "exempt_income",
+    "scenario": "A UAE-resident company receives a dividend from another UAE-resident company that is subject to UAE Corporate Tax. It holds only 2% of that company, bought six months ago.",
+    "prompt": "Under Article 22 of Federal Decree-Law No. 47 of 2022, is the dividend exempt from Corporate Tax?",
+    "options": [
+      "No, because a 2% ownership interest held for only six months fails the Participation Exemption's minimum ownership and 12-month holding-period tests",
+      "No, because dividends are only exempt if received from a Free Zone Person, and here the paying company's Free Zone status is not stated",
+      "Yes, but only if the recipient elects to apply Small Business Relief for the same tax period",
+      "Yes, because Article 22 exempts dividends and profit distributions received from another UAE resident juridical person that is itself subject to UAE Corporate Tax, unconditionally and without needing to satisfy the Participation Exemption's ownership or holding-period tests, which apply only to Participating Interests in foreign juridical persons"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Dividends from a UAE-resident company are exempt income, with no minimum holding or holding period. Those conditions belong to the Participation Exemption for foreign holdings.",
+      "why": "The paying company is a UAE resident, so the dividend is exempt despite the 2% stake held for six months. The Participation Exemption tests don't apply to domestic dividends, the payer doesn't need to be in a free zone, and Small Business Relief is irrelevant.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 22 and 23"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-026",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-027",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "scenario": "A foreign company with no UAE legal entity runs a dedicated office in Dubai, staffed by its own employees. From there it manages and fulfils UAE customer orders on an ongoing basis, well beyond preparatory or auxiliary work.",
+    "prompt": "Under Article 14 of Federal Decree-Law No. 47 of 2022, does it have a Permanent Establishment in the UAE?",
+    "options": [
+      "Yes, because it has a fixed or permanent place in the UAE through which its business is wholly or partly conducted, which constitutes a Permanent Establishment under Article 14's fixed place of business test, since the office's activities go beyond preparatory or auxiliary functions",
+      "No, because a foreign company can only have a UAE Permanent Establishment if it incorporates a separate UAE legal entity such as a branch registered with the relevant licensing authority",
+      "No, because Permanent Establishment status under Article 14 requires the foreign company to hold at least a 51% stake in a UAE-resident company",
+      "Yes, but only because the office employees are UAE nationals; a foreign company staffing the same office entirely with expatriate employees would not create a Permanent Establishment"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A non-resident has a Permanent Establishment in the UAE if it has a fixed or permanent place here through which its business is wholly or partly carried on, unless the activities are only preparatory or auxiliary.",
+      "why": "The Dubai office is a fixed place of business used for core, ongoing work, so it is a Permanent Establishment even without a UAE branch or company. The test isn't about owning 51% of a UAE company, and the staff's nationality is irrelevant.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 14"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-027",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-028",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "deductions",
+    "scenario": "A UAE-resident company spends AED 200,000 in a tax period on dinners and event tickets for its customers and suppliers.",
+    "prompt": "Under Article 32 of Federal Decree-Law No. 47 of 2022, how much of the AED 200,000 is deductible?",
+    "options": [
+      "The full AED 200,000, because entertainment expenditure incurred for customers and suppliers is treated the same as any other ordinary business expense under Article 28",
+      "AED 100,000, because Article 32 limits the deduction for entertainment expenditure incurred to entertain customers, shareholders, suppliers, or other business partners to 50% of the amount incurred, with the remaining 50% permanently disallowed",
+      "AED 0, because Article 32 disallows entertainment expenditure in full regardless of who it is incurred for",
+      "The full AED 200,000, but only if the company first obtains prior written approval from the tax authority before incurring the expenditure"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Only 50% of entertainment expenditure for customers, shareholders, suppliers and other business partners is deductible. The other 50% is permanently disallowed.",
+      "why": "50% of AED 200,000 is AED 100,000. Entertainment has its own rule, so the general deduction rule doesn't allow the full amount, but it isn't disallowed entirely either, and no prior approval is involved.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 32"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-028",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-033",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "free_zones",
+    "prompt": "A Qualifying Free Zone Person passes the de minimis requirement for a tax period, so it keeps its status. Under UAE Corporate Tax Law, what rate applies to its Non-Qualifying Revenue for that period?",
+    "options": [
+      "0%, because passing the de minimis test converts all of the entity's revenue, qualifying and non-qualifying alike, into Qualifying Income",
+      "The Qualifying Free Zone Person status is revoked retroactively for the whole tax period, so all of its revenue is instead taxed at the standard 9% rate",
+      "9%, the standard Corporate Tax rate, while the entity's genuine Qualifying Income continues to benefit from the 0% rate",
+      "0%, but only if the entity also separately elects Small Business Relief for the same tax period"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person pays 0% only on its Qualifying Income. Non-Qualifying Revenue is taxed at 9%, even when it is small enough to pass the de minimis test.",
+      "why": "Passing de minimis protects the entity's status; it doesn't turn Non-Qualifying Revenue into Qualifying Income. Status is lost when the test is failed, not passed. Small Business Relief doesn't affect how a Qualifying Free Zone Person's revenue is taxed.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 18; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-033",
+      "reviewNotes": "REFERENCE TO CONFIRM: the 0%/9% split for Qualifying Free Zone Persons is set out in Cabinet Decision No. 100 of 2023 as I understand it. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-034",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "small_business_relief",
+    "scenario": "A UAE-resident company's revenue was AED 3.2 million in one tax period, over the AED 3,000,000 limit, so it didn't elect Small Business Relief. In a later period its revenue falls to AED 2 million.",
+    "prompt": "Under Small Business Relief (Article 21 of Federal Decree-Law No. 47 of 2022 and Ministerial Decision No. 73 of 2023), can it elect the relief for the later period?",
+    "options": [
+      "No, because once revenue exceeds AED 3,000,000 in any tax period, Article 21 permanently disqualifies the taxable person from electing Small Business Relief in every subsequent tax period, regardless of later revenue",
+      "Yes, because eligibility is reassessed independently each tax period based solely on that period's own revenue, with no lasting effect from an earlier breach",
+      "Yes, but only if the taxable person also switches from the accrual basis to the cash basis of accounting for that later period",
+      "No, but only for the two tax periods immediately following the breach, after which eligibility is automatically restored"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Small Business Relief needs revenue of no more than AED 3,000,000 in the current and previous periods. Once revenue goes over AED 3,000,000 in any period, the relief can't be elected in later periods.",
+      "why": "The AED 3.2 million period rules the company out for good, so AED 2 million later doesn't bring it back. Eligibility isn't freshly reassessed each period, there's no two-period lock-out, and the accounting basis has nothing to do with it.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-034",
+      "reviewNotes": "Small Business Relief covers tax periods ending on or before 31 Dec 2026; retire or rewrite this item for 2027. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-035",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "basics",
+    "scenario": "A UAE-resident company prepares accrual-basis financial statements and has made a valid, irrevocable election to use the realisation basis. In a tax period, an investment property it holds on capital account rises in fair value by AED 300,000 (not sold), and a trade receivable on revenue account is revalued up by AED 50,000 (no cash received).",
+    "prompt": "Under Article 20 of Federal Decree-Law No. 47 of 2022, how are these two unrealised gains treated after the election?",
+    "options": [
+      "Both amounts are excluded from taxable income until actually realised, because the realisation basis election applies uniformly to all unrealised gains regardless of how the underlying asset is classified",
+      "Both amounts remain currently taxable in full, because the realisation basis election only defers the recognition of unrealised losses, never unrealised gains",
+      "The AED 300,000 property gain remains currently taxable while the AED 50,000 receivable gain is deferred until realised, the opposite of how the election actually applies to each account",
+      "The AED 300,000 property gain is excluded from taxable income until realised, but the AED 50,000 receivable gain continues to be included in taxable income on a current basis, because the election only applies to assets and liabilities held on capital account"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "The realisation basis election defers unrealised gains and losses only on assets and liabilities held on capital account. Items on revenue account stay taxable as they arise.",
+      "why": "The investment property is on capital account, so its AED 300,000 gain waits until it is realised. The receivable is on revenue account, so its AED 50,000 gain is taxed now. The election covers gains as well as losses, but it doesn't apply to everything.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 20; Corporate Tax Guide on Determination of Taxable Income (CTGDTI1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-035",
+      "reviewNotes": "PassDrill cited Article 20(1); as I understand it the realisation basis election is in Article 20(3). The prompt now says 'Article 20'; confirm the paragraph. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-036",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "foreign_income",
+    "scenario": "A UAE-resident company has a foreign branch that is a Permanent Establishment abroad. The branch's profits are taxed there at a headline rate of 7%.",
+    "prompt": "Can the company elect the Foreign Permanent Establishment exemption under Article 24 of Federal Decree-Law No. 47 of 2022, so the branch's income and expenditure are left out of its UAE taxable income?",
+    "options": [
+      "Yes, automatically, because any amount of foreign tax paid on the branch's profits, however low the rate, satisfies Article 24's requirements",
+      "No, because Article 24 requires a Foreign Permanent Establishment to be taxed abroad at a rate not less than 9%; a branch taxed at only 7% is a Non-Qualifying Foreign Permanent Establishment, so its income cannot be excluded through this election",
+      "Yes, but only if the company separately claims a Foreign Tax Credit for the shortfall between the 7% foreign rate and the UAE's 9% rate",
+      "No, but only because the foreign jurisdiction lacks a bilateral double-taxation treaty with the UAE, which is a precondition for any Article 24 election"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The Foreign Permanent Establishment exemption is only for branches taxed abroad at a rate of at least 9%. A branch taxed below that can't be exempted through the election.",
+      "why": "7% is below 9%, so the branch is a Non-Qualifying Foreign Permanent Establishment and stays in the UAE tax base. Paying some foreign tax isn't enough, a Foreign Tax Credit doesn't make up the shortfall for this election, and a tax treaty isn't the test.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 24; Ministerial Decision No. 302 of 2024"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-036",
+      "reviewNotes": "Confirm how the 9% test applies to headline versus effective rates under Ministerial Decision No. 302 of 2024. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-037",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "reliefs",
+    "scenario": "Company A transfers an asset to Company B, a member of the same Qualifying Group, under a valid Qualifying Group Relief election, at no gain or loss. Fourteen months later, Company B sells the asset to an unrelated buyer outside the group.",
+    "prompt": "Under Article 26 of Federal Decree-Law No. 47 of 2022, what are the Corporate Tax consequences of this sale?",
+    "options": [
+      "None, because Qualifying Group Relief's clawback window is only 12 months, and 14 months has already passed since the original transfer",
+      "The clawback gain is recognised in the tax period of the original intra-group transfer, so Company A must file an amended return for that earlier period",
+      "Because the subsequent transfer outside the Qualifying Group occurs within two years of the original transfer, the clawback rule applies: the original transfer is retroactively treated as having occurred at market value on its original date, and the resulting gain or loss is recognised in the tax period of the clawback event itself",
+      "Only Company A, the original transferor, bears any clawback tax consequence; Company B's own sale of the asset to the third party is entirely disregarded for Corporate Tax purposes"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "If an asset transferred under Qualifying Group Relief leaves the group within two years, the relief is clawed back: the original transfer is treated as made at market value, with the gain or loss recognised in the period of the later event.",
+      "why": "Fourteen months is inside the two-year window, so the clawback applies. The gain is recognised in the tax period of the sale, not by amending the earlier return. And Company B's sale isn't disregarded: it is taxed in the usual way.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 26; Corporate Tax Guide on Qualifying Group Relief (CTGQGR1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-037",
+      "reviewNotes": "POSSIBLE ERROR (explanation, not the answer key): PassDrill's explanation says Company B 'bears the consequences' of the clawback. As I understand Article 26, the clawback gain arises to the transferor (Company A) in the period of the clawback event, with Company B's cost base uplifted to market value. The 'why' here avoids saying who bears it; please confirm and complete. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-038",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "reliefs",
+    "scenario": "Company X transfers its whole retail division to Company Y in exchange for newly issued shares in Company Y. Both are UAE resident, neither is exempt or a Qualifying Free Zone Person, they share a year end and accounting standards, and there are genuine commercial reasons. Company X claims Business Restructuring Relief, then sells the Company Y shares to an unrelated investor 8 months later.",
+    "prompt": "Under Article 27 of Federal Decree-Law No. 47 of 2022, what happens to the relief originally claimed?",
+    "options": [
+      "The relief is unaffected, because Article 27 imposes no minimum holding period on the shares received in exchange for the transferred business",
+      "The relief is unaffected, because the two-year minimum holding period applies to Company Y, the transferee, rather than to Company X, the transferor that received the shares",
+      "The relief automatically converts into Qualifying Group Relief rather than being clawed back, since both companies remain UAE resident taxable persons",
+      "The relief is clawed back, because Company X disposes of the shares it received in the exchange before the two-year minimum holding period required by Article 27 has elapsed, so the original transfer is treated as having occurred at market value and the resulting gain becomes taxable"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Business Restructuring Relief is clawed back if the shares received in exchange are sold or otherwise disposed of within two years. The original transfer is then treated as made at market value.",
+      "why": "Company X sold its Company Y shares after 8 months, inside the two years, so the relief is clawed back and the deferred gain becomes taxable. The holding period applies to the transferor that received the shares, and failed relief doesn't turn into Qualifying Group Relief.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 27; Corporate Tax Guide on Business Restructuring Relief (CTGBRR1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-038",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-039",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "exempt_persons",
+    "scenario": "A business holds a Local Government right, concession or licence to extract a natural resource, is taxed on that activity under the Emirate's legislation, and has notified the Ministry of Finance of its Extractive Business status.",
+    "prompt": "Under Article 7 of Federal Decree-Law No. 47 of 2022, how is its income from the Extractive Business treated for federal Corporate Tax?",
+    "options": [
+      "It is exempt from federal Corporate Tax, since it is taxed instead under the applicable Emirate legislation, provided the Article 7 conditions continue to be met",
+      "Federal Corporate Tax applies at the standard 9% rate regardless of the Emirate-level taxation, because Article 7 does not provide any exemption for extractive activities",
+      "The exemption only applies if the business also separately elects Small Business Relief for the same tax period",
+      "The income is exempt only for the first three tax periods following the Corporate Tax Law's effective date, after which the standard 9% rate applies"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "An Extractive Business that holds a Local Government right or licence, is taxed under Emirate legislation and has notified the Ministry of Finance is exempt from federal Corporate Tax while the conditions are met.",
+      "why": "All three conditions are met, so the income is taxed at Emirate level instead of federally. The exemption isn't limited to three tax periods, and Small Business Relief plays no part.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 7"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-039",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-040",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "interest_limitation",
+    "scenario": "Company M borrows from its related party, Company N, and uses the money to reduce its own share capital, paying the proceeds to Company N. Company N is taxed at home at 11%.",
+    "prompt": "Under the Specific Interest Deduction Limitation Rule (Article 31 of Federal Decree-Law No. 47 of 2022), can Company M deduct the interest on this loan?",
+    "options": [
+      "No, because Article 31 disallows the deduction outright with no exception, regardless of the related-party lender's own tax rate",
+      "Yes, but only because the general 30%-of-EBITDA interest limitation under Article 30 has not also been breached",
+      "Yes, because although Article 31 generally disallows interest deductions on related-party loans that fund a share-capital-reduction payment to a related party, that restriction does not apply here, since Company N is subject to tax at 11%, which is not less than the 9% rate specified in Article 3",
+      "No, because a share capital reduction funded by related-party debt is always treated as a taxable deemed dividend under UAE Corporate Tax Law regardless of Article 31"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Interest on a related-party loan used to fund payments such as a capital reduction to a related party is generally not deductible, unless the main purpose isn't a tax advantage. That's taken as shown when the lender is taxed at 9% or more.",
+      "why": "Company N is taxed at 11%, which is not below 9%, so the Article 31 restriction doesn't apply to this interest. Article 31 is separate from the 30%-of-EBITDA rule in Article 30, and the capital reduction isn't turned into a deemed dividend.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 31 and 3"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-040",
+      "reviewNotes": "Confirm whether the 9% lender test is a deeming rule or one way of showing the main-purpose exception. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-044",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "deductions",
+    "scenario": "A UAE-resident company is fined by a government regulator for breaching an environmental licence condition. The fine has nothing to do with any contract.",
+    "prompt": "Under Article 33 of Federal Decree-Law No. 47 of 2022, can it deduct the fine when calculating its taxable income?",
+    "options": [
+      "Yes, in full, because any expenditure actually incurred in the ordinary course of business is deductible regardless of its nature",
+      "Yes, but only up to 50% of the fine, on the same limited-deductibility basis that applies to entertainment expenditure",
+      "No, but only because the fine was imposed by a government regulator; a fine imposed by a private counterparty would be fully deductible",
+      "No, fines and penalties are not deductible under Article 33, except for amounts awarded as compensation for damages for breach of contract, and this regulatory fine does not fall within that exception"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Fines and penalties are not deductible, except amounts paid as compensation for damages for breach of contract.",
+      "why": "A regulator's fine is a penalty, not contract compensation, so none of it is deductible. The 50% limit is the entertainment rule, and the test isn't who imposed the fine but whether it compensates a contract party.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 33"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-044",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-045",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "scenario": "An entity is set up and run only to promote scientific research for public benefit. All its income and assets go to that purpose, and none benefits its founders or trustees. It isn't listed in any Cabinet Decision of Qualifying Public Benefit Entities.",
+    "prompt": "Under Article 9 of Federal Decree-Law No. 47 of 2022, is it exempt from Corporate Tax as a Qualifying Public Benefit Entity?",
+    "options": [
+      "No, satisfying Article 9's purpose and no-private-benefit conditions is necessary but not sufficient; the entity must also be listed in a Cabinet Decision before the exemption applies",
+      "Yes, because meeting the purpose and no-private-benefit conditions is itself sufficient to qualify as a Qualifying Public Benefit Entity, with Cabinet Decision listing only a formality completed afterwards",
+      "Yes, because any entity pursuing a scientific or charitable purpose is automatically exempt from Corporate Tax regardless of how its income is used",
+      "No, because scientific research purposes are excluded from Article 9's list of qualifying purposes, which covers only religious and charitable entities"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "To be a Qualifying Public Benefit Entity, an entity must meet the purpose and no-private-benefit conditions and also be listed in a Cabinet Decision.",
+      "why": "Meeting the conditions isn't enough without the Cabinet Decision listing, so it isn't exempt yet. Listing is a precondition, not a formality that follows, and scientific purposes are among those that can qualify.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 9"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-045",
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+    }
+  },
+  {
+    "id": "ct-pd-046",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "penalties_admin",
+    "prompt": "A UAE Resident Person subject to Corporate Tax has a Tax Period ending on 31 December. Under Article 53 of Federal Decree-Law No. 47 of 2022, by when must it file its Corporate Tax Return and pay any Corporate Tax due?",
+    "options": [
+      "Within one month of the end of the Tax Period, the same deadline that applies to a VAT return",
+      "Within nine months of the end of the Tax Period",
+      "Within twelve months of the end of the Tax Period, matching the deadline for filing audited financial statements",
+      "Within six months of the end of the Tax Period, unless the tax authority grants an extension"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The Corporate Tax Return must be filed, and any Corporate Tax due paid, within nine months of the end of the Tax Period.",
+      "why": "For a period ending 31 December, that is 30 September of the following year. One month is closer to the VAT return cycle, and the deadline isn't linked to audited accounts or a six-month rule.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 53"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "passdrill:tax-uae-tax-046",
+      "reviewNotes": "Article 53 covers the return; payment timing may sit in Article 48. Confirm the reference. Also live on passdrill.org (public), so the answer can be searched."
+    }
+  }
+]

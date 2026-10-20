@@ -1,0 +1,582 @@
+[
+  {
+    "id": "ct-b1-001",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "prompt": "Marina Coffee Trading LLC is a UAE-resident company and not a Qualifying Free Zone Person. Its taxable income for the tax period 1 Jan–31 Dec 2025 is exactly AED 375,000. True or false: it has no Corporate Tax to pay for that period.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Corporate Tax is 0% on the first AED 375,000 of taxable income and 9% on the part above it.",
+      "why": "AED 375,000 sits entirely inside the 0% band, so the tax is 9% × (375,000 − 375,000) = AED 0. Tax at 9% starts only on income above AED 375,000. The company still has to be registered and file its return.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 3(1); Cabinet Decision No. 116 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Confirm Cabinet Decision No. 116 of 2023 is the decision that sets the AED 375,000 threshold."
+    }
+  },
+  {
+    "id": "ct-b1-002",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "prompt": "Corporate Tax applies to tax periods that start on or after 1 June 2023. Palmfield Office Supplies LLC's financial year runs from 1 January to 31 December. Which is its first tax period subject to Corporate Tax?",
+    "options": [
+      "1 June 2023 to 31 December 2023",
+      "1 January 2023 to 31 December 2023",
+      "1 January 2024 to 31 December 2024",
+      "1 June 2023 to 31 May 2024"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Corporate Tax applies from the first financial year that starts on or after 1 June 2023. A company's tax period normally follows its financial year.",
+      "why": "Palmfield's 2023 financial year started on 1 January 2023, before 1 June 2023, so it isn't covered. Its next financial year starts on 1 January 2024, so that is its first tax period. The law doesn't cut a financial year short to start on 1 June.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 57 and 69"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Confirm article numbers: tax period (Art. 57) and effective date (Art. 69)."
+    }
+  },
+  {
+    "id": "ct-b1-003",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "penalties_admin",
+    "prompt": "Coral Dhow Events LLC's tax period ended on 31 December 2025. True or false: it must file its Corporate Tax return by 31 March 2026.",
+    "options": ["True", "False"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Corporate Tax return must be filed, and the tax paid, within 9 months of the end of the tax period.",
+      "why": "Nine months after 31 December 2025 is 30 September 2026, so that is the deadline, not 31 March 2026. Three months is a common misreading of the rule.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 48 and 53"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-004",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "scenario": "Dhow Byte Labs FZ-LLC is incorporated in a UAE free zone. All of its customers are outside the UAE.",
+    "prompt": "Is it a resident person for UAE Corporate Tax?",
+    "options": [
+      "Yes, because it is incorporated in the UAE, and free zones are part of the UAE",
+      "No, because free zones are treated as outside the UAE for Corporate Tax",
+      "Only if it chooses to be treated as resident",
+      "No, because all of its customers are outside the UAE"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A company incorporated in the UAE, including one incorporated in a free zone, is a resident person for Corporate Tax.",
+      "why": "Dhow Byte Labs is incorporated in a UAE free zone, so it is resident wherever its customers are. Free zone companies are taxable persons and must register. Whether it also gets the 0% rate on qualifying income depends on the Qualifying Free Zone Person conditions, which is a separate question.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11(3)(a) and 18"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-005",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "basics",
+    "scenario": "Extract from a draft Corporate Tax computation for Falcon Lane Print Studio LLC, a UAE-resident company that is not a Qualifying Free Zone Person, tax period ended 31 December 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Accounting net profit: AED 1,450,000",
+      "Add back: fine from a government regulator, AED 20,000",
+      "Add back: 50% of AED 60,000 client entertainment, AED 30,000",
+      "Corporate Tax: 9% × AED 1,500,000 = AED 135,000"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Taxable income up to AED 375,000 is taxed at 0%. Only the part above AED 375,000 is taxed at 9%.",
+      "why": "Taxable income is 1,450,000 + 20,000 + 30,000 = AED 1,500,000, and both add-backs are right: fines aren't deductible, and only 50% of client entertainment is. But the tax should be 9% × (1,500,000 − 375,000) = 9% × 1,125,000 = AED 101,250, not AED 135,000. The draft forgot the 0% band.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3, 32 and 33"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-006",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "prompt": "Bluewave Pool Services LLC is a UAE-resident company with revenue of AED 1.8 million for the tax period 1 Jan–31 Dec 2025, and below AED 3 million in every earlier period. It belongs to a multinational group whose consolidated revenue is AED 4 billion. Can it elect for Small Business Relief for 2025?",
+    "options": [
+      "Yes, because its own revenue is below AED 3 million",
+      "No, because members of a multinational group with consolidated revenue of AED 3.15 billion or more can't elect",
+      "Yes, but only for its first tax period",
+      "No, because Small Business Relief is only for natural persons"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Small Business Relief is open to resident persons with revenue of AED 3 million or less in the period and every earlier period, but not to members of multinational groups with consolidated revenue of AED 3.15 billion or more.",
+      "why": "Bluewave's own revenue passes the AED 3 million test, which makes the first option tempting. But its group's consolidated revenue of AED 4 billion is above AED 3.15 billion, so it is excluded. The relief is open to companies as well as individuals, and it isn't limited to a first period.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Confirm the multinational-group exclusion and the AED 3.15 billion threshold (multinational group as defined for country-by-country reporting) as they apply under Ministerial Decision No. 73 of 2023."
+    }
+  },
+  {
+    "id": "ct-b1-007",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "prompt": "Marina Coffee Trading LLC had revenue of AED 2.5 million in each of its tax periods ending 31 December 2024 and 31 December 2025. True or false: if it elects for Small Business Relief for 2025, it must still be registered for Corporate Tax and file a tax return for 2025.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Small Business Relief treats an eligible business as having no taxable income, but it doesn't remove the duty to register and file. The election is made in the tax return.",
+      "why": "Marina Coffee's revenue is under AED 3 million in both periods, so it can elect. It still needs a Corporate Tax registration, and it makes the election by filing its 2025 return. Not registering on time can lead to a penalty.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 21, 51 and 53; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-008",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "prompt": "Which of these is NOT a condition for a free zone company to be a Qualifying Free Zone Person?",
+    "options": [
+      "Keeping adequate substance in the free zone",
+      "Earning qualifying income",
+      "Preparing audited financial statements",
+      "Having revenue of AED 3 million or less"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person must keep adequate substance in the free zone, earn qualifying income, meet the de minimis rule, follow transfer pricing rules, prepare audited financial statements, and not elect for the standard rates.",
+      "why": "There is no revenue ceiling for a Qualifying Free Zone Person. AED 3 million is the Small Business Relief limit, and a Qualifying Free Zone Person can't elect for that relief anyway. The other three options are all real conditions.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 18; Cabinet Decision No. 100 of 2023; Ministerial Decision No. 82 of 2023 (audited financial statements)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-009",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "tax_groups",
+    "scenario": "Palmfield Holdings LLC owns 92% of the shares, voting rights and profit entitlement of Palmfield Office Supplies LLC. Both are UAE-resident, neither is a Qualifying Free Zone Person or an Exempt Person, and both have a 31 December year-end and use IFRS.",
+    "prompt": "Can the two companies form a Tax Group?",
+    "options": [
+      "Yes, because 75% common ownership is enough",
+      "No, because the parent needs at least 95% ownership",
+      "Yes, because the parent controls the subsidiary",
+      "No, because a Tax Group needs 100% ownership"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "To form a Tax Group, the parent must hold at least 95% of the subsidiary's share capital, voting rights, and entitlement to profits and net assets, directly or indirectly.",
+      "why": "Palmfield Holdings holds 92%, below the 95% test, so a Tax Group isn't possible. The 75% figure is the test for Qualifying Group Relief and for transferring tax losses, which these companies could still use. Full 100% ownership isn't required.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 40; Articles 26 and 38 for the 75% tests"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-010",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "tax_losses",
+    "prompt": "Coral Dhow Events LLC has unused tax losses. Its owners sell 80% of the shares to a new investor, and the company carries on exactly the same events business. True or false: the change of ownership means the company loses its tax losses.",
+    "options": ["True", "False"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Tax losses carry forward only if at least 50% of the ownership stays the same, unless the company continues the same or a similar business after the change.",
+      "why": "More than 50% of the ownership changed, which on its own would block the losses. But Coral Dhow carries on the same events business, so the exception applies and it keeps its losses.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 39"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Medium confidence on detail: confirm how Article 39 applies the same-or-similar-business exception, and whether any further conditions (for example in a Ministerial Decision) apply to this example."
+    }
+  },
+  {
+    "id": "ct-b1-011",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "transfer_pricing",
+    "prompt": "True or false: for UAE transfer pricing, two companies count as Related Parties only if one owns at least 75% of the other.",
+    "options": ["True", "False"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Companies are Related Parties if one owns 50% or more of the other, if the same person owns 50% or more of both, or if one controls the other.",
+      "why": "The threshold is 50%, not 75%, and control on its own can also make companies related. 75% is the ownership test for Qualifying Group Relief and loss transfers. Transactions between Related Parties must be at arm's length.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 34 and 35"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-012",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "deductions",
+    "scenario": "Extract from a draft Corporate Tax computation for Bluewave Pool Services LLC, tax period ended 31 December 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Accounting net profit: AED 2,000,000",
+      "Less: Corporate Tax paid for 2024, as a deductible expense, AED 60,000",
+      "Less: dividend received from Coral Dhow Events LLC, a UAE-resident company, AED 150,000",
+      "Add back: donation to a charity that is not a Qualifying Public Benefit Entity, AED 25,000"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Corporate Tax itself is never a deductible expense. Dividends from UAE-resident companies are exempt, and donations are deductible only when made to a Qualifying Public Benefit Entity.",
+      "why": "Taking off last year's Corporate Tax wrongly reduces taxable income by AED 60,000. The dividend from a UAE-resident company is exempt income, so taking it out is right. The donation went to a charity that isn't a Qualifying Public Benefit Entity, so adding it back is right too.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 22 and 33"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-013",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "transfer_pricing",
+    "scenario": "Marina Coffee Trading LLC pays its sole owner, who is also its director, a salary of AED 900,000 for 2025. An independent manager in the same role would be paid about AED 600,000.",
+    "prompt": "How much of the salary can Marina Coffee deduct for Corporate Tax?",
+    "options": [
+      "AED 900,000, because salaries are always deductible",
+      "AED 450,000, because only 50% of payments to owners is deductible",
+      "AED 600,000, the market value of the role",
+      "Nothing, because payments to owners are never deductible"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Payments to a connected person, such as an owner or director, are deductible only up to the market value of the service, and only if incurred for the business.",
+      "why": "The owner-director is a connected person. The market value of the role is AED 600,000, so AED 600,000 is deductible and the extra AED 300,000 isn't. There is no 50% rule for these payments (that rule is for entertainment), and they aren't banned outright.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 36"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-014",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "prompt": "Which of these can be an Exempt Person for Corporate Tax only after applying to the tax authority and being approved?",
+    "options": [
+      "A Qualifying Investment Fund",
+      "A federal government ministry",
+      "A UAE company whose only income is dividends from other UAE companies",
+      "An individual whose only income is a salary"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Some Exempt Persons, such as Government Entities, are exempt automatically. Others, including Qualifying Investment Funds and pension funds, are exempt only once the tax authority approves their application.",
+      "why": "A Qualifying Investment Fund must apply and be approved. A federal ministry is a Government Entity and is exempt automatically. A company living on UAE dividends is still a taxable person; only its dividend income is exempt. An individual earning only a salary isn't a taxable person at all, so there is nothing to apply for.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4, 10 and 22; Cabinet Decision No. 49 of 2023 (natural persons)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Medium-high confidence: confirm Article 4(2) lists Qualifying Investment Funds among the persons that are exempt only on application and approval."
+    }
+  },
+  {
+    "id": "ct-b1-015",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "reliefs",
+    "prompt": "Two UAE-resident companies are 80% owned by the same parent. Neither is exempt or a Qualifying Free Zone Person, and both use the same year-end and accounting standards. True or false: if they elect for Qualifying Group Relief, an asset can move between them at its net book value, so no gain or loss arises on the transfer.",
+    "options": ["True", "False"],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Qualifying Group Relief lets assets and liabilities move between companies with at least 75% common ownership at net book value, so no gain or loss is taxed when they move.",
+      "why": "80% common ownership passes the 75% test, and the other conditions are met. The relief can be clawed back if the asset or either company leaves the group within two years, but that doesn't change the answer here.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 26"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-016",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "free_zones",
+    "scenario": "Dune Gate Logistics FZE is a Qualifying Free Zone Person. For the tax period 1 Jan–31 Dec 2025, its total revenue is AED 140 million, of which AED 6 million is non-qualifying revenue.",
+    "prompt": "What happens under the de minimis rule?",
+    "options": [
+      "It passes, because AED 6 million is below 5% of its revenue (AED 7 million)",
+      "It passes, but the AED 6 million is taxed at 9%",
+      "It fails, because the limit is the lower of 5% and AED 5 million, so it loses Qualifying Free Zone Person status for 2025 and the next four tax periods",
+      "It fails, but keeps its status as long as it passes next year"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Non-qualifying revenue must not exceed the lower of 5% of total revenue and AED 5 million. A Qualifying Free Zone Person that fails loses the status for that period and the following four.",
+      "why": "5% of AED 140 million is AED 7 million, but the limit is the lower figure, AED 5 million. AED 6 million is above it, so the test is failed. All of its taxable income is then taxed at the standard rates for 2025 and the next four tax periods, five in all.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 18; Cabinet Decision No. 100 of 2023 (de minimis requirement)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Confirm the article of Cabinet Decision No. 100 of 2023 for the de minimis rule, and that no 2025-2026 amendment changed the 5% / AED 5 million limits."
+    }
+  },
+  {
+    "id": "ct-b1-017",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "advanced",
+    "topic": "interest_limitation",
+    "prompt": "Sandstone Software Studio LLC, a UAE-resident company that is not a bank or insurer, has net interest expenditure of AED 14 million and adjusted EBITDA of AED 30 million for the tax period 1 Jan–31 Dec 2025. Under the general interest deduction limitation rule, what can it deduct?",
+    "options": [
+      "AED 12 million now, with AED 2 million carried forward",
+      "AED 9 million now, with AED 5 million carried forward",
+      "All AED 14 million, because it is under 50% of EBITDA",
+      "AED 9 million now, with AED 5 million lost permanently"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Net interest expenditure is deductible up to the higher of 30% of adjusted EBITDA and AED 12 million. Any excess can be carried forward for up to 10 tax periods.",
+      "why": "30% of AED 30 million is AED 9 million. That is lower than the AED 12 million de minimis amount, so the cap is AED 12 million. AED 14 million − 12 million leaves AED 2 million disallowed now, to be carried forward. The AED 9 million options forget the de minimis amount.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 30; Ministerial Decision No. 126 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Medium-high confidence: confirm the cap is the higher of 30% of adjusted EBITDA and the AED 12 million de minimis amount (not a cliff test), and the 10-period carry-forward."
+    }
+  },
+  {
+    "id": "ct-b1-018",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "advanced",
+    "topic": "tax_losses",
+    "scenario": "Extract from a draft tax-loss working for Coral Dhow Events LLC, tax period ended 31 December 2025. Its ownership hasn't changed.",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Taxable income for 2025 before loss relief: AED 800,000",
+      "Tax losses brought forward from 2024: AED 700,000",
+      "Losses used in 2025: AED 600,000, the 75% limit",
+      "Losses left to carry forward: AED 100,000, usable only in the next five tax periods"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Tax losses brought forward can offset up to 75% of a period's taxable income. Unused losses carry forward with no time limit, as long as the ownership or business continuity conditions are met.",
+      "why": "75% of AED 800,000 is AED 600,000, so the losses-used line is right, and AED 700,000 − 600,000 leaves AED 100,000. The error is the five-period limit: unused tax losses have no expiry date.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 37 and 39"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-019",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_losses",
+    "scenario": "Bluewave Pool Services LLC and Seashell Villas Hotel LLC are each 80% owned by the same UAE parent. Both are UAE-resident, neither is exempt or a Qualifying Free Zone Person, they aren't in a Tax Group, and they share a 31 December year-end and accounting standards. For 2025, Bluewave has an unused tax loss of AED 500,000 and Seashell has taxable income of AED 400,000.",
+    "prompt": "What is the most of Bluewave's loss that Seashell can use in 2025?",
+    "options": [
+      "AED 400,000, all of Seashell's taxable income",
+      "AED 375,000, the 0% band",
+      "AED 300,000, which is 75% of Seashell's taxable income",
+      "Nothing, because the companies aren't in a Tax Group"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Tax losses can be transferred between resident companies with at least 75% common ownership. The company receiving them can offset no more than 75% of its own taxable income.",
+      "why": "80% common ownership passes the 75% test, so no Tax Group is needed. Seashell can use up to 75% × 400,000 = AED 300,000 of Bluewave's loss. The remaining AED 200,000 stays with Bluewave to carry forward.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 37 and 38"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Medium-high confidence: confirm the 75% of taxable income cap applies to the receiving company under Articles 37-38, and the remaining conditions for loss transfer."
+    }
+  },
+  {
+    "id": "ct-b1-020",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "taxable_persons",
+    "scenario": "Lagoon Ventures Ltd is incorporated in the British Virgin Islands. Its board meets in Dubai, and all key management and commercial decisions are made there. It earns income from customers in several countries.",
+    "prompt": "How is it treated for UAE Corporate Tax?",
+    "options": [
+      "As a resident person, taxed on its worldwide income, because it is effectively managed and controlled in the UAE",
+      "As a non-resident, because it is incorporated outside the UAE",
+      "As a resident person, but taxed only on its UAE-source income",
+      "As a non-resident, unless it also has a permanent establishment in the UAE"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A company incorporated abroad is a UAE resident person if it is effectively managed and controlled in the UAE. Resident persons are taxed on their worldwide income.",
+      "why": "Lagoon Ventures' board meets in Dubai and its key decisions are made there, so it is effectively managed and controlled in the UAE. That makes it resident despite foreign incorporation, and residents are taxed on income from every country, not just the UAE. Relief for any foreign tax comes through the foreign tax credit.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11(3)(b), 12(1) and 47"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-021",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "exempt_income",
+    "scenario": "Palmfield Holdings LLC borrows AED 10 million from a bank to buy shares in Palmfield Office Supplies LLC, a UAE-resident company. Its only income from the shares will be dividends from that company. The interest for 2025 is AED 600,000.",
+    "prompt": "How much of the AED 600,000 interest can Palmfield Holdings deduct for 2025?",
+    "options": [
+      "All AED 600,000, because interest on bank loans is deductible",
+      "AED 180,000, which is 30% of the interest",
+      "AED 300,000, half of the interest",
+      "Nothing, because the cost is incurred to earn exempt income"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Expenditure incurred to earn exempt income isn't deductible. Dividends from UAE-resident companies are exempt income.",
+      "why": "The loan pays for shares whose only return is UAE dividends, which are exempt. So the interest relates entirely to exempt income and none of it is deductible. The interest limitation rule only matters for interest that would otherwise be deductible.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 22 and 28"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  },
+  {
+    "id": "ct-b1-022",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "basics",
+    "scenario": "Oasis Thread Tailoring LLC is UAE-resident, not a Qualifying Free Zone Person, and hasn't elected for Small Business Relief. Its accounting profit for the tax period 1 Jan–31 Dec 2025 is AED 2,400,000. That profit includes a dividend of AED 300,000 from a UAE-resident company, and is after charging a regulator's fine of AED 50,000 and AED 80,000 of client entertainment.",
+    "prompt": "What is its Corporate Tax for 2025?",
+    "options": ["AED 182,250", "AED 163,350", "AED 166,950", "AED 197,100"],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Start from accounting profit, take out exempt income, add back non-deductible costs, then apply 0% to the first AED 375,000 and 9% to the rest.",
+      "why": "Taxable income = 2,400,000 − 300,000 (exempt UAE dividend) + 50,000 (fine) + 40,000 (50% of entertainment) = AED 2,190,000. Tax = 9% × (2,190,000 − 375,000) = 9% × 1,815,000 = AED 163,350. AED 182,250 skips the adjustments, AED 166,950 adds back all of the entertainment, and AED 197,100 forgets the 0% band.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3, 22, 32 and 33"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-01"
+    }
+  }
+]

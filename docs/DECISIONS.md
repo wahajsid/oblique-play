@@ -40,7 +40,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 | --- | --- | --- |
 | 1–3 | Wed 21 – Fri 23 Oct | Module 1 core, Shifts 1–3. **Done on Mon 19 Oct.** |
 | 4–5 | Sat 24 – Sun 25 Oct | Email-code sign-in, Resend, consent, Supabase to HubSpot. **Code done on Mon 19 Oct; waiting on account setup (docs/SETUP.md).** |
-| 6–7 | Mon 26 – Tue 27 Oct | Module 2: daily quiz |
+| 6–7 | Mon 26 – Tue 27 Oct | Module 2: daily quiz. **Engine built on Tue 20 Oct; question bank in progress.** |
 | 8 | Wed 28 Oct | Sharing, share cards, challenge links |
 | 9 | Thu 29 Oct | Shifts 4–6, daily document, streaks, leaderboard, certificate |
 | 10 | Fri 30 Oct | Polish: home-screen install, dark mode, accessibility |
@@ -61,6 +61,16 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 - **Only confirmed emails become players**, so unverified sign-ups never reach HubSpot.
 - **Leaderboard names:** players start as anonymous (a random name such as "Patient Heron 57") and can switch to their display name after their first round.
 - **Brand** taken from obliqueconsult.com: navy, aqua, cream paper, Satoshi, the ob/co mark.
+
+### Daily quiz
+
+- **Sets are picked ahead of time, not at midnight.** `npm run quiz:schedule` writes upcoming days to `src/content/quiz/schedule.json` and never changes a day once it's there. The app shows the set for today's UAE date and hides future days. This replaces the plan's midnight Supabase job: the tax team can preview upcoming sets, the archive and challenge links never change, and there's no job that can fail at midnight.
+- **Selection rules:** 5 foundation, 10 intermediate, 5 advanced per track; nothing repeated within 14 days; least recently used first; at most 3 per topic where the bank allows; only questions whose rule applies on that date (for example, Small Business Relief items stop after 31 Dec 2026). Only approved questions, unless a preview is asked for.
+- **"Both" track:** Corporate Tax gives 3 / 5 / 2 and VAT gives 2 / 5 / 3 from that day's sets, so the mix stays 5 / 10 / 5.
+- **One scored attempt per track per day**, enforced by the database. Replays and past days are practice. An unfinished scored round can be picked up but not restarted, so nobody can preview the questions and then try again for the score.
+- **Answer by tapping, then "Check answer".** One extra tap avoids mis-taps on a phone.
+- **Time counts only while a question waits for an answer**, as in the document game.
+- **Starting bank:** PassDrill's 47 verified UAE questions, converted and still marked draft (they are also public on passdrill.org), plus new batches. Every question is blind-checked by a separate AI verifier before tax review.
 
 ## Risks to act on
 

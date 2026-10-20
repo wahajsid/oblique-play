@@ -36,8 +36,9 @@ type WebhookPayload = {
 const LABELS: Record<string, string> = {
   document_review: "Document game",
   daily_quiz: "Daily quiz",
-  corporate_tax: "Corporate Tax",
+  ct: "Corporate Tax",
   vat: "VAT",
+  both: "Both",
 };
 
 // HubSpot date properties take a plain YYYY-MM-DD date.
