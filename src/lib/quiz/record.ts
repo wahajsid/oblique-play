@@ -1,5 +1,6 @@
 import "server-only";
 
+import { validChallengeFor } from "@/lib/challenge-check";
 import { authEnabled } from "@/lib/supabase/config";
 import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 import { uaeToday } from "./dates";
@@ -19,13 +20,15 @@ export async function recordQuizAnswer(input: {
   questionId: string;
   correct: boolean;
   timeMs: unknown;
+  // The challenge link this round was opened from, if any.
+  challengeCode?: unknown;
 }): Promise<{ correct: boolean; scored: boolean } | null> {
   if (!authEnabled || typeof input.attemptId !== "string" || !UUID.test(input.attemptId)) return null;
   const player = await getSignedInPlayer();
   if (!player) return null;
 
   const db = createAdminClient();
-  const attempt = await ensureAttempt(db, input.attemptId, player.id, input.track, input.date);
+  const attempt = await ensureAttempt(db, input.attemptId, player.id, input.track, input.date, input.challengeCode);
   if (!attempt) return null;
 
   const timeMs = Math.min(MAX_TIME_MS, Math.max(0, Math.round(Number(input.timeMs) || 0)));
@@ -75,7 +78,7 @@ export async function finishQuizAttempt(attemptId: unknown, total: number) {
 }
 
 // Today's set, first time on this track: scored. Anything else: practice.
-async function ensureAttempt(db: Db, id: string, playerId: string, track: PlayTrack, date: string) {
+async function ensureAttempt(db: Db, id: string, playerId: string, track: PlayTrack, date: string, challengeCode: unknown) {
   const { data: existing } = await db
     .from("quiz_attempts")
     .select("player_id, track, set_date, scored, completed_at")
@@ -86,7 +89,8 @@ async function ensureAttempt(db: Db, id: string, playerId: string, track: PlayTr
     return same && !existing.completed_at ? existing : null;
   }
 
-  const row = { id, player_id: playerId, track, set_date: date };
+  const challenge_code = await validChallengeFor(challengeCode, playerId, { kind: "quiz", track, date });
+  const row = { id, player_id: playerId, track, set_date: date, challenge_code };
   if (date === uaeToday()) {
     const { error } = await db.from("quiz_attempts").insert({ ...row, scored: true });
     if (!error) return { scored: true };

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
+import { ChallengeBanner, type ChallengeInfo } from "@/components/share/Challenge";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   clearRun,
@@ -36,9 +37,11 @@ type Props = {
   // When sign-in is switched on, a player must be signed in to start.
   needsSignIn: boolean;
   profile: PlayerProfile | null;
+  // Set when the shift was opened from someone's challenge link.
+  challenge: ChallengeInfo | null;
 };
 
-export function ShiftGame({ shift, documents, needsSignIn, profile }: Props) {
+export function ShiftGame({ shift, documents, needsSignIn, profile, challenge }: Props) {
   const total = documents.length;
   const [phase, setPhase] = useState<Phase>("intro");
   const [index, setIndex] = useState(0);
@@ -98,7 +101,10 @@ export function ShiftGame({ shift, documents, needsSignIn, profile }: Props) {
 
   const start = (resume: boolean) => {
     if (needsSignIn) {
-      window.location.assign(`/signin?next=${encodeURIComponent(`/review/${shift.number}`)}`);
+      // From a challenge, sign-in returns through the challenge so it isn't lost.
+      window.location.assign(
+        challenge ? `/c/${challenge.code}/play` : `/signin?next=${encodeURIComponent(`/review/${shift.number}`)}`,
+      );
       return;
     }
     if (resume && savedRun) {
@@ -125,7 +131,14 @@ export function ShiftGame({ shift, documents, needsSignIn, profile }: Props) {
       const res = await fetch("/api/review/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ docId: doc.id, verdict, targetId, attemptId, deskMs: Math.round(thisDocMs) }),
+        body: JSON.stringify({
+          docId: doc.id,
+          verdict,
+          targetId,
+          attemptId,
+          deskMs: Math.round(thisDocMs),
+          challengeCode: challenge?.code,
+        }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const checked = (await res.json()) as CheckResult;
@@ -175,6 +188,7 @@ export function ShiftGame({ shift, documents, needsSignIn, profile }: Props) {
         total={total}
         resumeAt={savedRun ? savedRun.answers.length + 1 : null}
         needsSignIn={needsSignIn}
+        challenge={challenge}
         onStart={start}
       />
     );
@@ -188,6 +202,8 @@ export function ShiftGame({ shift, documents, needsSignIn, profile }: Props) {
         deskMs={doneMs}
         isBest={isBest}
         profile={profile}
+        attemptId={attemptId}
+        challenge={challenge}
         onReplay={() => start(false)}
       />
     );
@@ -321,12 +337,14 @@ function Intro({
   total,
   resumeAt,
   needsSignIn,
+  challenge,
   onStart,
 }: {
   shift: ShiftInfo;
   total: number;
   resumeAt: number | null;
   needsSignIn: boolean;
+  challenge: ChallengeInfo | null;
   onStart: (resume: boolean) => void;
 }) {
   return (
@@ -344,6 +362,7 @@ function Intro({
         <p className="text-sm font-semibold tracking-wide text-accent uppercase">Shift {shift.number}</p>
         <h1 className="mt-1 text-3xl font-semibold tracking-tight">{shift.title}</h1>
         <p className="mt-2 text-base text-muted">{shift.summary}</p>
+        {challenge && <ChallengeBanner challenge={challenge} />}
 
         <ol className="mt-6 flex flex-col gap-3 rounded-2xl border border-line bg-surface p-4 text-sm">
           <li><span className="font-semibold">1.</span> A document lands on your desk.</li>

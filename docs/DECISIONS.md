@@ -41,7 +41,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 | 1–3 | Wed 21 – Fri 23 Oct | Module 1 core, Shifts 1–3. **Done on Mon 19 Oct.** |
 | 4–5 | Sat 24 – Sun 25 Oct | Email-code sign-in, Resend, consent, Supabase to HubSpot. **Code done on Mon 19 Oct; waiting on account setup (docs/SETUP.md).** |
 | 6–7 | Mon 26 – Tue 27 Oct | Module 2: daily quiz. **Engine built on Tue 20 Oct; question bank in progress.** |
-| 8 | Wed 28 Oct | Sharing, share cards, challenge links |
+| 8 | Wed 28 Oct | Sharing, share cards, challenge links. **Built on Tue 20 Oct.** |
 | 9 | Thu 29 Oct | Shifts 4–6, daily document, streaks, leaderboard, certificate |
 | 10 | Fri 30 Oct | Polish: home-screen install, dark mode, accessibility |
 | 11 | Sat 31 Oct | Device testing |
@@ -71,6 +71,21 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 - **Answer by tapping, then "Check answer".** One extra tap avoids mis-taps on a phone.
 - **Time counts only while a question waits for an answer**, as in the document game.
 - **Starting bank:** PassDrill's 47 verified UAE questions, converted and still marked draft (they are also public on passdrill.org), plus new batches. Every question is blind-checked by a separate AI verifier before tax review.
+
+### Sharing and challenges
+
+- **Every share is a challenge link** (play.obliqueconsult.com/c/AbC123xY), so every shared score carries its own card in link previews.
+- **Challenge cards can't show a made-up score.** The server makes a link only from the player's own finished, recorded attempt and copies the score from the database.
+- **Cards in three sizes**, drawn on request in Oblique's style: wide 1200×630 (LinkedIn and link previews), square 1080×1080, tall 1080×1920 (Stories and Status).
+- **The share panel:** on phones, "Share…" opens the phone's own menu and "Share image" sends the tall card itself. On every device there are LinkedIn, WhatsApp, Email and Copy link buttons, plus "Save card" in all three sizes.
+- **Names on cards:** the player's display name, or "A friend". The share panel offers to add a name, which also becomes their display name.
+- **The friend's journey:** the challenge page previews the first question or document; "Take the challenge" signs them in if needed (recording the source as "challenge" and who referred them), then opens the same set in the same order. They see "You beat Sara" side by side, and can send a rematch, whose card shows both scores.
+- **You can't challenge yourself:** opening your own link plays the set normally.
+- Challenge links need sign-in, so they work once Supabase is set up. Without it, sharing falls back to a plain link to the set.
+
+### Local testing
+
+A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, and 31 for the database rules.
 
 ## Risks to act on
 

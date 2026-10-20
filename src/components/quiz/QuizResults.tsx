@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ChallengeResult, shareMessage, type ChallengeInfo } from "@/components/share/Challenge";
+import { ShareSheet } from "@/components/share/ShareSheet";
+import type { PlayerProfile } from "@/lib/players";
 import { longDate } from "@/lib/quiz/dates";
 import { localStreak, type QuizAnswer } from "@/lib/quiz/progress";
 import type { PlayTrack } from "@/lib/quiz/types";
@@ -28,13 +31,16 @@ export function QuizResults(props: {
   answers: QuizAnswer[];
   timeMs: number;
   scored: boolean;
+  attemptId: string;
+  profile: PlayerProfile | null;
+  challenge: ChallengeInfo | null;
   onReplay: () => void;
 }) {
-  const { track, trackTitle, date, isToday, questions, answers, timeMs, scored, onReplay } = props;
+  const { track, trackTitle, date, isToday, questions, answers, timeMs, scored, attemptId, profile, challenge, onReplay } = props;
   const total = questions.length;
   const score = answers.filter((a) => a.correct).length;
   const [streak, setStreak] = useState(0);
-  const [shareNote, setShareNote] = useState<string | null>(null);
+  const [sharing, setSharing] = useState(false);
   useEffect(() => setStreak(localStreak()), []);
 
   // Topic breakdown, e.g. "Free zones 4/4"
@@ -48,23 +54,12 @@ export function QuizResults(props: {
   }
   const breakdown = [...topics.entries()].sort((a, b) => b[1].of - a[1].of || a[0].localeCompare(b[0]));
 
-  // Challenge links and share cards come on build day 8; for now the
-  // phone's share menu, or copy on desktop.
-  const share = async () => {
-    const when = isToday ? "today's" : `the ${longDate(date)}`;
-    const text = `I scored ${score}/${total} on ${when} UAE ${SHARE_NAME[track]} quiz by Oblique. Can you beat me?`;
-    const url = `${window.location.origin}/quiz/${track}/${date}`;
-    try {
-      if (navigator.share) {
-        await navigator.share({ title: "UAE Tax Daily Quiz by Oblique", text, url });
-        return;
-      }
-      await navigator.clipboard.writeText(`${text} ${url}`);
-      setShareNote("Message and link copied.");
-    } catch (e) {
-      if ((e as Error).name !== "AbortError") setShareNote("Couldn't share from this browser.");
-    }
-  };
+  const message = shareMessage({
+    score,
+    total,
+    what: `${isToday ? "today's" : `the ${longDate(date)}`} UAE ${SHARE_NAME[track]} quiz`,
+    challenge,
+  });
 
   return (
     <>
@@ -87,6 +82,8 @@ export function QuizResults(props: {
           <Stat label="Day streak" value={String(streak)} />
         </div>
 
+        {challenge && <ChallengeResult you={{ score, total, timeMs }} them={challenge} />}
+
         <section className="mt-6 rounded-2xl border border-line bg-surface p-4" aria-labelledby="breakdown-title">
           <h2 id="breakdown-title" className="text-sm font-semibold">
             By topic
@@ -104,14 +101,9 @@ export function QuizResults(props: {
         </section>
 
         <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
-          <button type="button" onClick={share} className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold">
-            Share my score
+          <button type="button" onClick={() => setSharing(true)} className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold">
+            {challenge ? "Send a rematch" : "Challenge someone"}
           </button>
-          {shareNote && (
-            <p role="status" className="text-center text-sm text-muted">
-              {shareNote}
-            </p>
-          )}
           <div className="grid grid-cols-2 gap-2">
             <button type="button" onClick={onReplay} className="min-h-12 rounded-full border border-line text-sm font-semibold">
               Practise again
@@ -123,6 +115,18 @@ export function QuizResults(props: {
         </div>
       </main>
       <SiteFooter />
+      {sharing && (
+        <ShareSheet
+          kind="quiz"
+          attemptId={attemptId}
+          canChallenge={!!profile}
+          fallbackUrl={`${typeof window === "undefined" ? "" : window.location.origin}/quiz/${track}/${date}`}
+          message={message}
+          subject="UAE Tax Daily Quiz by Oblique"
+          hasName={!!profile?.displayName}
+          onClose={() => setSharing(false)}
+        />
+      )}
     </>
   );
 }

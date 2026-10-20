@@ -1,5 +1,6 @@
 import "server-only";
 
+import { validChallengeFor } from "@/lib/challenge-check";
 import { authEnabled } from "@/lib/supabase/config";
 import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 
@@ -16,13 +17,15 @@ export async function recordAnswer(input: {
   docId: string;
   correct: boolean;
   deskMs: unknown;
+  // The challenge link this shift was opened from, if any.
+  challengeCode?: unknown;
 }): Promise<{ correct: boolean } | null> {
   if (!authEnabled || typeof input.attemptId !== "string" || !UUID.test(input.attemptId)) return null;
   const player = await getSignedInPlayer();
   if (!player) return null;
 
   const db = createAdminClient();
-  const attempt = await ensureAttempt(db, input.attemptId, player.id, input.shift);
+  const attempt = await ensureAttempt(db, input.attemptId, player.id, input.shift, input.challengeCode);
   if (!attempt) return null;
 
   const deskMs = Math.min(MAX_DESK_MS, Math.max(0, Math.round(Number(input.deskMs) || 0)));
@@ -71,13 +74,20 @@ export async function finishAttempt(attemptId: unknown, total: number) {
   return { score, total, deskMs };
 }
 
-async function ensureAttempt(db: ReturnType<typeof createAdminClient>, id: string, playerId: string, shift: number) {
+async function ensureAttempt(
+  db: ReturnType<typeof createAdminClient>,
+  id: string,
+  playerId: string,
+  shift: number,
+  challengeCode: unknown,
+) {
   const { data: existing } = await db.from("review_attempts").select("player_id, shift, completed_at").eq("id", id).maybeSingle();
   if (existing) {
     // Someone else's attempt, a different shift, or already finished: don't record.
     return existing.player_id === playerId && existing.shift === shift && !existing.completed_at ? existing : null;
   }
-  const { error } = await db.from("review_attempts").insert({ id, player_id: playerId, shift });
+  const challenge_code = await validChallengeFor(challengeCode, playerId, { kind: "review", shift });
+  const { error } = await db.from("review_attempts").insert({ id, player_id: playerId, shift, challenge_code });
   if (error && error.code !== "23505") throw error;
   return { player_id: playerId, shift, completed_at: null };
 }

@@ -1,16 +1,20 @@
 import { notFound } from "next/navigation";
 import { ShiftGame } from "@/components/review/ShiftGame";
+import { challengeInfoFor } from "@/lib/challenges";
 import { getShift, getShiftDocuments } from "@/lib/review/content";
 import { getProfile } from "@/lib/players";
 import { authEnabled } from "@/lib/supabase/config";
 import { getSignedInPlayer } from "@/lib/supabase/server";
 
-export default async function ShiftPage({ params }: { params: Promise<{ shift: string }> }) {
-  const { shift: param } = await params;
+type Props = { params: Promise<{ shift: string }>; searchParams: Promise<{ c?: string }> };
+
+export default async function ShiftPage({ params, searchParams }: Props) {
+  const [{ shift: param }, { c }] = await Promise.all([params, searchParams]);
   const shift = getShift(Number(param));
   if (!shift || !shift.available) notFound();
 
   const [player, profile] = await Promise.all([getSignedInPlayer(), getProfile()]);
+  const challenge = await challengeInfoFor(c, player?.id ?? null, { kind: "review", shift: shift.number });
 
   // Only the answer-free version of each document is sent to the browser.
   return (
@@ -19,6 +23,7 @@ export default async function ShiftPage({ params }: { params: Promise<{ shift: s
       documents={getShiftDocuments(shift.number)}
       needsSignIn={authEnabled && !player}
       profile={profile}
+      challenge={challenge}
     />
   );
 }

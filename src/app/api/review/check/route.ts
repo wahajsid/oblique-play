@@ -4,11 +4,11 @@ import { recordAnswer } from "@/lib/review/record";
 import type { CheckRequest } from "@/lib/review/types";
 
 // POST /api/review/check
-// Body: { docId, verdict: "right" | "off", targetId?, attemptId?, deskMs? }
+// Body: { docId, verdict: "right" | "off", targetId?, attemptId?, deskMs?, challengeCode? }
 // Returns whether the answer was right, plus the explanation. For signed-in
 // players the answer is also recorded against their attempt.
 export async function POST(request: Request) {
-  let body: Partial<CheckRequest> & { attemptId?: unknown; deskMs?: unknown };
+  let body: Partial<CheckRequest> & { attemptId?: unknown; deskMs?: unknown; challengeCode?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -34,6 +34,7 @@ export async function POST(request: Request) {
     docId,
     correct: result.correct,
     deskMs: body.deskMs,
+    challengeCode: body.challengeCode,
   });
 
   return NextResponse.json({ ...result, correct: recorded?.correct ?? result.correct });

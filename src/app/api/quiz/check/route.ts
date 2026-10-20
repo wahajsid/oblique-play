@@ -29,6 +29,7 @@ export async function POST(request: Request) {
     questionId,
     correct: result.correct,
     timeMs: body.timeMs,
+    challengeCode: body.challengeCode,
   });
 
   return NextResponse.json({

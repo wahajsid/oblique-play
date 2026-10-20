@@ -20,7 +20,12 @@ The plan keeps the game separate from Oblique OS. That protects the firm's produ
 1. Create a project named `oblique-play`. Pick the region closest to the UAE that Supabase offers (Mumbai is closer than Singapore).
    - Free organisations allow two active projects. If Oblique OS and PassDrill are in the same organisation, this needs the Pro plan ($25/month).
    - Pro is worth it anyway for a public launch: backups, and no pausing after 7 idle days.
-2. **SQL Editor:** paste and run `supabase/migrations/20261019000001_players_and_review.sql`.
+2. **SQL Editor:** paste and run each file in `supabase/migrations/`, in name order:
+   1. `20261019000001_players_and_review.sql`
+   2. `20261020000001_daily_quiz.sql`
+   3. `20261020000002_challenges.sql`
+
+   Or, from a laptop with the CLI linked to the project: `npx supabase db push`.
 3. **Authentication → URL configuration**
    - Site URL: `https://play.obliqueconsult.com`
    - Redirect URLs: `https://play.obliqueconsult.com/**` and `http://localhost:3000/**`
@@ -86,6 +91,10 @@ Then go to **Database → Webhooks → Create**:
 2. Add the three Supabase variables from step 1.8, plus `NEXT_PUBLIC_SITE_URL=https://play.obliqueconsult.com`.
 3. **Domains:** add `play.obliqueconsult.com`. In Hover, add the `CNAME` record Vercel shows (usually `cname.vercel-dns.com`). The main site on Framer is unaffected.
 4. **Plan:** Vercel's Hobby plan is for non-commercial use. A public marketing game for Oblique needs **Pro** ($20/month).
+
+## Testing everything locally
+
+Needs Docker. `npx supabase start` runs a local copy of Supabase with the same sign-in settings as production (`supabase/config.toml`) and applies all migrations. Sign-in emails land in a local inbox at http://127.0.0.1:54324. `npx supabase status` shows the local keys for `.env.local`.
 
 ## Running it on a laptop
 

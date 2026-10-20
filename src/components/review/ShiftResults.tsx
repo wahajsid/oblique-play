@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { ProfileCard } from "@/components/ProfileCard";
+import { ChallengeResult, shareMessage, type ChallengeInfo } from "@/components/share/Challenge";
+import { ShareSheet } from "@/components/share/ShareSheet";
 import { SiteFooter } from "@/components/SiteFooter";
 import type { PlayerProfile } from "@/lib/players";
 import { formatTime, type AnswerRecord } from "@/lib/review/progress";
@@ -22,6 +24,8 @@ export function ShiftResults({
   deskMs,
   isBest,
   profile,
+  attemptId,
+  challenge,
   onReplay,
 }: {
   shift: ShiftInfo;
@@ -29,29 +33,20 @@ export function ShiftResults({
   deskMs: number;
   isBest: boolean;
   profile: PlayerProfile | null;
+  attemptId: string;
+  challenge: ChallengeInfo | null;
   onReplay: () => void;
 }) {
   const total = answers.length;
   const score = answers.filter((a) => a.correct).length;
   const accuracy = total ? Math.round((score / total) * 100) : 0;
-  const [shareNote, setShareNote] = useState<string | null>(null);
-
-  // Full share cards and challenge links arrive on build day 8. For now this
-  // uses the phone's own share menu, or copies the message on desktop.
-  const share = async () => {
-    const text = `I scored ${score}/${total} on Shift ${shift.number} (${shift.title}) of Oblique's UAE tax learning game. Can you beat me?`;
-    const url = `${window.location.origin}/review/${shift.number}`;
-    try {
-      if (navigator.share) {
-        await navigator.share({ title: "UAE Tax Learning Game by Oblique", text, url });
-        return;
-      }
-      await navigator.clipboard.writeText(`${text} ${url}`);
-      setShareNote("Message and link copied.");
-    } catch (e) {
-      if ((e as Error).name !== "AbortError") setShareNote("Couldn't share from this browser.");
-    }
-  };
+  const [sharing, setSharing] = useState(false);
+  const message = shareMessage({
+    score,
+    total,
+    what: `Shift ${shift.number} (${shift.title}) of Oblique's UAE tax game`,
+    challenge,
+  });
 
   return (
     <>
@@ -87,22 +82,19 @@ export function ShiftResults({
           ))}
         </ol>
 
+        {challenge && <ChallengeResult you={{ score, total, timeMs: deskMs }} them={challenge} />}
+
         {/* Asked after the first round, until the player has filled it in or skipped. */}
         {profile && !profile.displayName && !profile.role && <ProfileCard profile={profile} />}
 
         <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
           <button
             type="button"
-            onClick={share}
+            onClick={() => setSharing(true)}
             className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold"
           >
-            Share my score
+            {challenge ? "Send a rematch" : "Challenge someone"}
           </button>
-          {shareNote && (
-            <p role="status" className="text-center text-sm text-muted">
-              {shareNote}
-            </p>
-          )}
           <div className="grid grid-cols-2 gap-2">
             <button type="button" onClick={onReplay} className="min-h-12 rounded-full border border-line text-sm font-semibold">
               Play again
@@ -117,6 +109,18 @@ export function ShiftResults({
         </div>
       </main>
       <SiteFooter />
+      {sharing && (
+        <ShareSheet
+          kind="review"
+          attemptId={attemptId}
+          canChallenge={!!profile}
+          fallbackUrl={`${typeof window === "undefined" ? "" : window.location.origin}/review/${shift.number}`}
+          message={message}
+          subject="UAE Tax Learning Game by Oblique"
+          hasName={!!profile?.displayName}
+          onClose={() => setSharing(false)}
+        />
+      )}
     </>
   );
 }

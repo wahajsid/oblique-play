@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
+import { ChallengeBanner, type ChallengeInfo } from "@/components/share/Challenge";
+import type { PlayerProfile } from "@/lib/players";
 import { SiteFooter } from "@/components/SiteFooter";
 import { longDate } from "@/lib/quiz/dates";
 import {
@@ -49,10 +51,13 @@ type Props = {
   // From the server, for signed-in players: today's scored round on this
   // track was already started (maybe on another device) or finished.
   serverScored: "none" | "started" | "finished";
+  profile: PlayerProfile | null;
+  // Set when the quiz was opened from someone's challenge link.
+  challenge: ChallengeInfo | null;
 };
 
 export function QuizGame(props: Props) {
-  const { track, trackTitle, date, isToday, questions, needsSignIn, signedIn, draft, serverScored } = props;
+  const { track, trackTitle, date, isToday, questions, needsSignIn, signedIn, draft, serverScored, profile, challenge } = props;
   const key = runKey(track, date);
   const total = questions.length;
   const [phase, setPhase] = useState<Phase>("intro");
@@ -105,7 +110,10 @@ export function QuizGame(props: Props) {
 
   const start = (resume: boolean) => {
     if (needsSignIn) {
-      window.location.assign(`/signin?next=${encodeURIComponent(`/quiz/${track}/${date}`)}`);
+      // From a challenge, sign-in returns through the challenge so it isn't lost.
+      window.location.assign(
+        challenge ? `/c/${challenge.code}/play` : `/signin?next=${encodeURIComponent(`/quiz/${track}/${date}`)}`,
+      );
       return;
     }
     if (resume && savedRun) {
@@ -133,7 +141,15 @@ export function QuizGame(props: Props) {
       const res = await fetch("/api/quiz/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ date, track, questionId: q.id, choice, attemptId, timeMs: Math.round(timeMs) }),
+        body: JSON.stringify({
+          date,
+          track,
+          questionId: q.id,
+          choice,
+          attemptId,
+          timeMs: Math.round(timeMs),
+          challengeCode: challenge?.code,
+        }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const r = (await res.json()) as CheckReply;
@@ -184,6 +200,7 @@ export function QuizGame(props: Props) {
         canRestart={!(isToday && savedRun && !alreadyScoredFinished(key))}
         needsSignIn={needsSignIn}
         draft={draft}
+        challenge={challenge}
         onStart={start}
       />
     );
@@ -200,6 +217,9 @@ export function QuizGame(props: Props) {
         answers={answers}
         timeMs={doneMs}
         scored={!!scored}
+        attemptId={attemptId}
+        profile={profile}
+        challenge={challenge}
         onReplay={() => start(false)}
       />
     );
@@ -358,9 +378,10 @@ function Intro(props: {
   needsSignIn: boolean;
   draft: boolean;
   canRestart: boolean;
+  challenge: ChallengeInfo | null;
   onStart: (resume: boolean) => void;
 }) {
-  const { trackTitle, date, isToday, total, resumeAt, practice, needsSignIn, draft, canRestart, onStart } = props;
+  const { trackTitle, date, isToday, total, resumeAt, practice, needsSignIn, draft, canRestart, challenge, onStart } = props;
   return (
     <>
       <header className="flex h-14 items-center justify-between px-4">
@@ -378,6 +399,8 @@ function Intro(props: {
           {total} questions: 5 foundation, 10 intermediate and 5 advanced. After each one you&apos;ll see the rule and why it
           applies.
         </p>
+
+        {challenge && <ChallengeBanner challenge={challenge} />}
 
         {draft && (
           <p className="mt-4 rounded-xl bg-notquite-soft px-3 py-2 text-sm text-notquite">
