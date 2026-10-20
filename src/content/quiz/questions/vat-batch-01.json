@@ -18,7 +18,13 @@
       "why": "A Dubai to London flight is international passenger transport, so it is zero-rated. Rent on a flat that has been let before is exempt, which is not the same as zero-rated. The restaurant meal and the office lease are standard-rated at 5%.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (zero-rating); Article 46 for residential rent"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-002",
@@ -27,14 +33,24 @@
     "difficulty": "foundation",
     "topic": "exemptions",
     "prompt": "A business that makes only exempt supplies can recover the VAT it pays on its costs.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "VAT on costs (input tax) can be recovered only when the costs are used to make taxable supplies, including zero-rated ones. Costs used for exempt supplies carry no right of recovery.",
       "why": "A business making only exempt supplies, such as a landlord letting existing residential flats, charges no VAT and can't recover the VAT on its costs, so that VAT is a real cost to it. This is the key difference between exempt and zero-rated supplies.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 46 and 54"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Edge case only: input tax is recoverable for some 'exempt-type' supplies, such as financial services treated as supplied outside the State to recipients outside the State (Decree-Law Art 54(1)(c); Exec Reg Art 52(1)). The general statement is false. Source: Decree-Law Art 54(1); Exec Reg Art 52, 55(6)(b)"
+    }
   },
   {
     "id": "vat-b1-003",
@@ -43,14 +59,23 @@
     "difficulty": "foundation",
     "topic": "exemptions",
     "prompt": "A bus ticket from Abu Dhabi to Dubai is an exempt supply.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "Local passenger transport, meaning passenger journeys within the UAE, is exempt from VAT.",
       "why": "A bus journey between two emirates is still within the UAE, so it is local passenger transport and exempt. Compare a flight from Dubai to London: that is international passenger transport, which is zero-rated.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46 (local passenger transport)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-004",
@@ -71,7 +96,13 @@
       "why": "An office unit is commercial property, so the landlord charges 5% VAT on the rent. Only residential property (after its first supply) and bare land are exempt, and leases are supplies just as sales are.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46; VAT Executive Regulation, Article 37 (residential buildings)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-005",
@@ -94,7 +125,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 30 (place of supply: services connected with real estate); VAT Executive Regulation, Articles 31 and 37"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Rule: high confidence. Please confirm the article numbers for the real-estate place-of-supply rule (Decree-Law Art. 30) and the export-of-services exclusion (Exec. Reg. Art. 31)."
     }
   },
@@ -118,7 +153,13 @@
       "why": "Delivery on 28 October came first, before the invoice (3 November) and the payment (30 November). So the date of supply is 28 October, and the VAT goes in the October return even though the invoice and the cash came later.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 25 (date of supply)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-007",
@@ -140,7 +181,13 @@
       "why": "The AED 10,500 deposit arrived on 25 September, so the AED 500 of VAT inside it is due in the September return, not October. The AED 1,000 of VAT on the balance belongs to October, when the event took place and the balance was invoiced.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 25 (date of supply)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-008",
@@ -162,7 +209,13 @@
       "why": "The US supplier isn't registered for UAE VAT, so it can't charge UAE VAT: Sandstone pays it AED 20,000. Sandstone then declares 5% of AED 20,000 = AED 1,000 of output tax under the reverse charge and, because it uses the licence for taxable supplies, recovers the same AED 1,000 as input tax. The net cost is nil.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48 (reverse charge)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-009",
@@ -185,7 +238,11 @@
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 37 (residential buildings); VAT Decree-Law, Article 46"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Please confirm the current wording of Exec. Reg. Art. 37 on serviced accommodation (excluded from 'residential building' where services are provided in addition to accommodation)."
     }
   },
@@ -196,7 +253,10 @@
     "difficulty": "intermediate",
     "topic": "profit_margin",
     "prompt": "Under the profit margin scheme, if a dealer sells a second-hand item for less than it paid for it, no VAT is due on that sale.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "Under the profit margin scheme, VAT is charged only on the dealer's margin: the selling price minus the purchase price. If there is no margin, there is no VAT.",
@@ -204,7 +264,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 43 (profit margin scheme); VAT Executive Regulation, Article 29"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Please confirm the article numbers for the profit margin scheme (Decree-Law Art. 43, Exec. Reg. Art. 29)."
     }
   },
@@ -215,14 +279,24 @@
     "difficulty": "intermediate",
     "topic": "tax_groups",
     "prompt": "Supplies between members of the same VAT tax group are disregarded for VAT, so no VAT is charged on them.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "A tax group is treated as a single taxable person. Supplies between its members are disregarded; only supplies to and from people outside the group count.",
       "why": "If Marina Coffee Trading LLC and its sister company are in one tax group, coffee supplied from one to the other carries no VAT. VAT applies when a group member supplies someone outside the group, and the group files one return.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 14 (tax groups)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): Minor: the English text of Exec Reg Art 12(1)(b) says intra-group supplies 'may be disregarded'. The general proposition is correct. Source: Exec Reg Art 12(1)(b); Decree-Law Art 14"
+    }
   },
   {
     "id": "vat-b1-012",
@@ -231,14 +305,23 @@
     "difficulty": "intermediate",
     "topic": "zero_rating",
     "prompt": "Purely cosmetic treatment at a clinic, which isn't needed for medical reasons, is zero-rated as healthcare.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "Preventive and basic healthcare services are zero-rated. Services that are cosmetic and not needed for medical reasons are excluded, and are standard-rated at 5%.",
       "why": "A purely cosmetic treatment isn't basic healthcare, so the clinic charges 5% VAT on it. The same clinic's diagnosis and treatment of an illness or injury would be zero-rated.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (healthcare); VAT Executive Regulation, Article 41"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-013",
@@ -261,8 +344,12 @@
       "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 53"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
-      "reviewNotes": "Medium confidence on detail: please confirm the employee-benefit block and its legal-obligation exception in Exec. Reg. Art. 53 as amended by Cabinet Decision No. 100 of 2024, and that employee health insurance required by law falls within the exception."
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "Medium confidence on detail: please confirm the employee-benefit block and its legal-obligation exception in Exec. Reg. Art. 53 as amended by Cabinet Decision No. 100 of 2024, and that employee health insurance required by law falls within the exception. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Explanation nuance: since CD 100/2024, Exec Reg Art 53(1)(c)(3) allows recovery on employee health insurance (including enhanced cover and family members) whether or not the law requires it, so 'because the law requires it' is not the only basis. Art 53(1)(c)(2) also allows recovery on employee benefits under a contractual obligation or documented policy. FTA Decision 17/2026 (from 1 Oct 2026) limits that to transport, remote-area food, work accommodation, phones and data, and parking, so gym memberships stay blocked and the answer is unchanged. Source: Exec Reg Art 53(1)(c) as amended by CD 100/2024 and CD 149/2026; FTA Decision No. 17 of 2026 https://tax.gov.ae/Datafolder/Files/Pdf/2026/legislation/ (FTA Decision No. 17 of 2026 on ... Employee Expenses)"
     }
   },
   {
@@ -285,7 +372,14 @@
       "why": "Dune Ridge has no sales, but its AED 210,000 of taxable expenses is above the AED 187,500 voluntary threshold, so it may register and recover the VAT on its costs. It doesn't have to, because the mandatory test looks at taxable supplies and imports, not expenses.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 13 and 17; VAT Executive Regulation, Article 7"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: Exec Reg Art 8(6) also requires the person to show it is carrying on business in the State and intends to make taxable supplies. The scenario implies this but does not state it. Source: Decree-Law Art 17(1); Exec Reg Art 8(1),(5),(6)"
+    }
   },
   {
     "id": "vat-b1-015",
@@ -306,7 +400,13 @@
       "why": "If the group doesn't pay, the tax authority can collect the whole amount from any member, not just the representative member, and not only the share linked to that member's own supplies.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 14 (tax groups)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-016",
@@ -327,7 +427,13 @@
       "why": "Only the life policy is exempt. Motor, property and health insurance are all taxed at 5%, even though they are also insurance.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46 (financial services); VAT Executive Regulation, Article 42"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-017",
@@ -348,7 +454,13 @@
       "why": "A 99.9% gold bar of a tradable kind is investment precious metal, so the sale is zero-rated. Gold jewellery is standard-rated at 5%. The domestic reverse charge for gold applies only between registered businesses buying to resell or to make gold products, not to a private investor.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 36 (investment precious metals)"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-018",
@@ -357,7 +469,10 @@
     "difficulty": "intermediate",
     "topic": "designated_zones",
     "prompt": "When goods are moved from a designated zone into the UAE mainland, they are treated for VAT as imported into the UAE.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "A designated zone that meets the legal conditions is treated as outside the UAE for VAT on goods. So goods moving from such a zone into the mainland are treated as imported.",
@@ -365,7 +480,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 51 (designated zones); VAT Executive Regulation, Article 51"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Medium confidence on detail: please confirm that goods released from a designated zone into the mainland are treated as an import, and the article references."
     }
   },
@@ -389,8 +508,13 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 21 (deregistration)"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
-      "reviewNotes": "Please confirm Art. 21 (and any amendment) on the mandatory deregistration test. The item deliberately doesn't state the application deadline."
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm Art. 21 (and any amendment) on the mandatory deregistration test. The item deliberately doesn't state the application deadline. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 4): Possible missing fact: Decree-Law Art 21(1)(b) (as amended by DL 18/2022) requires deregistration only if supplies fall below the voluntary threshold AND the registrant does not meet Art 17(2) (expected supplies or taxable expenses over the next 30 days above AED 187,500). Exec Reg Art 14(2)(b) also looks at taxable expenses over the past 12 months. The question addresses only supplies. Art 23 also stops a voluntary registrant deregistering within 12 months of registration. Consider stating that expenses are also low. Source: Decree-Law Arts 17, 21(1)(b), 23; Exec Reg Art 14(1)-(2)",
+      "hold": "Missing facts: deregistration also depends on taxable expenses, and voluntary registrants cannot deregister in their first 12 months."
     }
   },
   {
@@ -413,7 +537,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 61 and 62; VAT Executive Regulation, Article 60"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Rule: high confidence. Please confirm the article numbers for output tax adjustments and tax credit notes."
     }
   },
@@ -438,8 +566,13 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 62 (tax credit notes); VAT Executive Regulation, Article 60"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
-      "reviewNotes": "Arithmetic checked twice: 441.00 × 0.05 = 22.05; 441.00 × 5/105 = 21.00. Please confirm the article numbers for tax credit notes."
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 441.00 × 0.05 = 22.05; 441.00 × 5/105 = 21.00. Please confirm the article numbers for tax credit notes. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 4): Lines 2 and 3 contradict each other: 5% of AED 441 is AED 22.05, and AED 21 is 441x5/105, so VAT was wrongly extracted from a VAT-exclusive figure. Without the original invoice value, the inconsistency could equally sit in line 2 (e.g. if the true net reduction were AED 420). Line 3 is the natural pick because line 2 is explicitly 'before VAT', but consider giving the original invoice value so only one line can be wrong. Source: Exec Reg Art 60; arithmetic 441x0.05 = 22.05 and 441x5/105 = 21.00",
+      "hold": "Two lines could be the error unless the invoice value is given."
     }
   },
   {
@@ -462,7 +595,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 30 (place of supply: restaurant, hotel and catering services)"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Rule: high confidence. Please confirm the article number for the place of supply of restaurant and catering services."
     }
   },
@@ -487,8 +624,13 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 55; VAT Executive Regulation, Article 55 (input tax apportionment)"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
-      "reviewNotes": "Arithmetic checked twice: 3.6m / 6.0m = 60%, 25,000 × 0.6 = 15,000; distractors 25,000 × 2.6/6 = 10,833.33 and 25,000 × 2.4/6 = 10,000. Please confirm the standard-method formula and any rounding of the recovery percentage in Exec. Reg. Art. 55 (60% is unaffected by rounding to a whole percent)."
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 3.6m / 6.0m = 60%, 25,000 × 0.6 = 15,000; distractors 25,000 × 2.6/6 = 10,833.33 and 25,000 × 2.4/6 = 10,000. Please confirm the standard-method formula and any rounding of the recovery percentage in Exec. Reg. Art. 55 (60% is unaffected by rounding to a whole percent). | VERIFIER (blind check, 20 Oct 2026, low confidence, chose option 3): OUTDATED PREMISE. As of Oct 2026 the UAE 'standard method' (Exec Reg Art 55(7), in force until the first tax year starting after 1 Oct 2027) is input-tax-based: recoverable input tax as a percentage of total input tax, not supply values. With only supply values given, the current standard method cannot be applied. AED 15,000 is right only under a supply-value (outputs) ratio: 3.6m/6.0m = 60%, x 25,000 = 15,000 (check: 25,000 - 25,000x2.4/6 = 15,000). That is the new standard method under CD 149/2026 from tax years starting after 1 Oct 2027, or an FTA-approved special method. Re-word (e.g. 'using a turnover-based method', or set it under the post-2027 rules) or give input-tax figures. Source: Exec Reg Art 55(6)-(7) and footnotes 38-39 (CD 149/2026 amendments effective from the first tax year commencing after 1 Oct 2027), tax.gov.ae consolidated ER Sep 2026; Deloitte/PwC summaries of CD 149/2026",
+      "hold": "May be out of date: the standard apportionment method was reportedly changed by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026)."
     }
   },
   {
@@ -512,8 +654,12 @@
       "reference": "Cabinet Decision No. 25 of 2018 on the treatment of gold and diamonds; VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
-      "reviewNotes": "Please confirm the conditions in Cabinet Decision No. 25 of 2018 (including the buyer's declaration) and its effective date for meta.appliesFrom, and that B2B sales of 21-carat jewellery for resale are within scope."
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "Please confirm the conditions in Cabinet Decision No. 25 of 2018 (including the buyer's declaration) and its effective date for meta.appliesFrom, and that B2B sales of 21-carat jewellery for resale are within scope. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Depends on the current regime: Cabinet Decision 127 of 2024 (in force Feb 2025, repealing CD 25/2018) extends the reverse charge to jewellery whose precious-metal or stone value exceeds its other components. It applies where the registered buyer intends to resell and gives the supplier written declarations before supply. Line 2 implies these, so VAT should not be charged on the invoice. The 5% arithmetic (10,500) is itself correct. Source: Cabinet Decision No. 127 of 2024, Arts 1-2: https://mof.gov.ae/wp-content/uploads/2025/02/CD-127-of-2024-on-Reverse-Charge-Mechanism-for-Precious-Metals-and-Precious-Stones-among-Registrants-in-the-State-for-the-Purposes-of-Value-Adde.pdf"
     }
   },
   {
@@ -523,7 +669,10 @@
     "difficulty": "advanced",
     "topic": "zero_rating",
     "prompt": "Tuition fees charged by a private university that receives no government funding are zero-rated.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "Tuition at nurseries, pre-schools and schools is zero-rated. Higher education is zero-rated only at institutions owned by the government or receiving more than 50% of their annual funding from it.",
@@ -531,7 +680,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (education); VAT Executive Regulation, Article 40"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Please confirm the higher-education condition in Exec. Reg. Art. 40 (government-owned or more than 50% government-funded) after the 2024 amendments."
     }
   },
@@ -555,7 +708,13 @@
       "why": "The January 2026 lease is the first supply of that flat and comes 10 months after completion, so it is zero-rated. The January 2027 lease is a later supply, so it is exempt, even though it is still within three years of completion.",
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45 (first supply of residential buildings) and Article 46"
     },
-    "meta": { "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01" }
+    "meta": {
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01"
+    }
   },
   {
     "id": "vat-b1-027",
@@ -577,7 +736,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 43; VAT Executive Regulation, Article 29"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Please confirm the eligible-purchase conditions in Exec. Reg. Art. 29 (including goods bought before registration, not used in this item)."
     }
   },
@@ -601,7 +764,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 11 (deemed supplies)"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Rule: high confidence. Please confirm the Art. 11 paragraph and how the deemed supply is valued (market value), which the item deliberately leaves out."
     }
   },
@@ -626,8 +793,12 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 43; VAT Executive Regulation, Article 29"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
-      "reviewNotes": "Arithmetic checked twice: 10,500 × 5/105 = 500 and 10,500 − 10,500/1.05 = 500. Distractors: 8,500 × 5/105 = 404.76 (repairs deducted), 5% × 10,500 = 525, 40,500 × 5/105 = 1,928.57. Medium-high confidence: please confirm that repair costs are excluded from the margin (Exec. Reg. Art. 29) and that the VAT on them is recoverable."
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
+      "reviewNotes": "Arithmetic checked twice: 10,500 × 5/105 = 500 and 10,500 − 10,500/1.05 = 500. Distractors: 8,500 × 5/105 = 404.76 (repairs deducted), 5% × 10,500 = 525, 40,500 × 5/105 = 1,928.57. Medium-high confidence: please confirm that repair costs are excluded from the margin (Exec. Reg. Art. 29) and that the VAT on them is recoverable. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Note: Exec Reg Art 29(5), amended by CD 149/2026 from 1 Oct 2026, now puts costs incurred to purchase the goods into the purchase price only where their input tax is not recoverable. Post-purchase repairs with recoverable VAT stay excluded, so the answer is unchanged. Source: Exec Reg Art 29(4)-(5) (CD 149/2026); (40,500-30,000)x5/105 = 500; check 10,500/1.05 = 10,000 x 5% = 500"
     }
   },
   {
@@ -651,7 +822,11 @@
       "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 48 and 55; VAT Executive Regulation, Article 55"
     },
     "meta": {
-      "appliesFrom": "2018-01-01", "status": "draft", "reviewer": null, "reviewedOn": null, "source": "oblique:vat-batch-01",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:vat-batch-01",
       "reviewNotes": "Arithmetic checked twice: 100,000 × 5% = 5,000; 5,000 × 60% = 3,000; 5,000 − 3,000 = 2,000 (equivalently 5,000 × 40%)."
     }
   }

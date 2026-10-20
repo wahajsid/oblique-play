@@ -42,7 +42,8 @@ const useDrafts = args.includes("--drafts");
 const questions = readdirSync(join(quizDir, "questions"))
   .filter((f) => f.endsWith(".json"))
   .flatMap((f) => JSON.parse(readFileSync(join(quizDir, "questions", f), "utf8")))
-  .filter((q) => useDrafts || q.meta.status === "approved");
+  // Held items (for example, where the blind verifier disagreed) are never used.
+  .filter((q) => !q.meta.hold && (useDrafts || q.meta.status === "approved"));
 
 const schedule = existsSync(schedulePath) ? JSON.parse(readFileSync(schedulePath, "utf8")) : [];
 

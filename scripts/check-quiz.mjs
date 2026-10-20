@@ -77,6 +77,7 @@ for (const file of files) {
     if (m.appliesUntil !== undefined && !isDate(m.appliesUntil)) fail(at, "meta.appliesUntil must be YYYY-MM-DD");
     if (!["draft", "approved"].includes(m.status)) fail(at, `meta.status "${m.status}"`);
     if (m.status === "approved" && (!m.reviewer || !isDate(m.reviewedOn))) fail(at, "approved items need a reviewer and reviewedOn date");
+    if (m.status === "approved" && m.hold) fail(at, "an item on hold can't be approved; fix it and remove the hold first");
     if (!m.source?.trim()) fail(at, "missing meta.source");
 
     const key = norm(`${q.scenario ?? ""} ${q.prompt}`);
@@ -106,11 +107,15 @@ for (const track of TRACKS) {
 // Bank totals against the daily mix
 for (const track of TRACKS) {
   const qs = [...byId.values()].filter((q) => q.track === track);
-  const by = Object.fromEntries(DIFFICULTIES.map((d) => [d, qs.filter((q) => q.difficulty === d).length]));
+  // Held items can't be scheduled, so they don't count towards days of sets.
+  const usable = qs.filter((q) => !q.meta?.hold);
+  const by = Object.fromEntries(DIFFICULTIES.map((d) => [d, usable.filter((q) => q.difficulty === d).length]));
   const approved = qs.filter((q) => q.meta?.status === "approved").length;
+  const held = qs.filter((q) => q.meta?.hold);
+  if (held.length) console.log(`${track}: ${held.length} on hold: ${held.map((q) => q.id).join(", ")}`);
   const days = Math.min(...DIFFICULTIES.map((d) => Math.floor(by[d] / DAILY_MIX[d])));
   console.log(
-    `${track}: ${qs.length} questions (${by.foundation} foundation / ${by.intermediate} intermediate / ${by.advanced} advanced), ` +
+    `${track}: ${qs.length} questions, ${usable.length} usable (${by.foundation} foundation / ${by.intermediate} intermediate / ${by.advanced} advanced), ` +
       `${approved} approved, enough for ${days} day(s) of unique sets`,
   );
 }
@@ -141,6 +146,7 @@ if (existsSync(schedulePath)) {
         if (q.meta.appliesFrom > day.date || (q.meta.appliesUntil && q.meta.appliesUntil < day.date)) {
           fail(`${day.date} ${track}`, `${id} doesn't apply on this date`);
         }
+        if (q.meta.hold) fail(`${day.date} ${track}`, `${id} is on hold: ${q.meta.hold}`);
         lastUsed.set(id, dayNum);
       }
       if (new Set(ids).size !== ids.length) fail(`${day.date} ${track}`, "a question appears twice");

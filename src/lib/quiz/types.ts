@@ -40,6 +40,9 @@ export type QuizQuestion = {
     source: string;
     // Notes for the reviewer: uncertain references, verifier disagreements.
     reviewNotes?: string;
+    // Set when an item must not be used until fixed (for example, the blind
+    // verifier disagreed with the answer). Held items are never scheduled.
+    hold?: string;
   };
 };
 

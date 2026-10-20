@@ -6,7 +6,10 @@
     "difficulty": "foundation",
     "topic": "basics",
     "prompt": "Marina Coffee Trading LLC is a UAE-resident company and not a Qualifying Free Zone Person. Its taxable income for the tax period 1 Jan–31 Dec 2025 is exactly AED 375,000. True or false: it has no Corporate Tax to pay for that period.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "Corporate Tax is 0% on the first AED 375,000 of taxable income and 9% on the part above it.",
@@ -57,7 +60,10 @@
     "difficulty": "foundation",
     "topic": "penalties_admin",
     "prompt": "Coral Dhow Events LLC's tax period ended on 31 December 2025. True or false: it must file its Corporate Tax return by 31 March 2026.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "A Corporate Tax return must be filed, and the tax paid, within 9 months of the end of the tax period.",
@@ -164,7 +170,10 @@
     "difficulty": "intermediate",
     "topic": "registration",
     "prompt": "Marina Coffee Trading LLC had revenue of AED 2.5 million in each of its tax periods ending 31 December 2024 and 31 December 2025. True or false: if it elects for Small Business Relief for 2025, it must still be registered for Corporate Tax and file a tax return for 2025.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "Small Business Relief treats an eligible business as having no taxable income, but it doesn't remove the duty to register and file. The election is made in the tax return.",
@@ -242,7 +251,10 @@
     "difficulty": "intermediate",
     "topic": "tax_losses",
     "prompt": "Coral Dhow Events LLC has unused tax losses. Its owners sell 80% of the shares to a new investor, and the company carries on exactly the same events business. True or false: the change of ownership means the company loses its tax losses.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "Tax losses carry forward only if at least 50% of the ownership stays the same, unless the company continues the same or a similar business after the change.",
@@ -265,7 +277,10 @@
     "difficulty": "intermediate",
     "topic": "transfer_pricing",
     "prompt": "True or false: for UAE transfer pricing, two companies count as Related Parties only if one owns at least 75% of the other.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "Companies are Related Parties if one owns 50% or more of the other, if the same person owns 50% or more of both, or if one controls the other.",
@@ -371,7 +386,10 @@
     "difficulty": "intermediate",
     "topic": "reliefs",
     "prompt": "Two UAE-resident companies are 80% owned by the same parent. Neither is exempt or a Qualifying Free Zone Person, and both use the same year-end and accounting standards. True or false: if they elect for Qualifying Group Relief, an asset can move between them at its net book value, so no gain or loss arises on the transfer.",
-    "options": ["True", "False"],
+    "options": [
+      "True",
+      "False"
+    ],
     "answerIndex": 0,
     "explanation": {
       "what": "Qualifying Group Relief lets assets and liabilities move between companies with at least 75% common ownership at net book value, so no gain or loss is taxed when they move.",
@@ -553,7 +571,9 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): SERIOUS: the likely intended answer (index 3, 'Nothing, because the cost is incurred to earn exempt income') is WRONG. Art 29 provides that interest is deductible 'notwithstanding paragraph (b) of Clause 2 of Article 28' (the exempt-income disallowance). The FTA Interest Deduction Limitation guide s.4.2.3 states that a company borrowing to invest in a venture generating exempt dividends 'would be entitled to deduct the Interest expenditure', subject to the GIDLR/SIDLR. Here it's a bank loan (SIDLR n/a) and NIE of AED 600,000 is below the AED 12m de minimis, so all AED 600,000 is deductible (option 0). Option 0's stated reason ('because interest on bank loans is deductible') is too simplistic. Rewrite option 0 to cite Art 29 and the de minimis, or rewrite the question. Source: Art 28(2)(b), Art 29, Art 30 FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); FTA Interest Deduction Limitation guide s.4.2.3 https://tax.gov.ae/Datafolder/Files/Guides/CT/Interest-Deduction-guide.pdf; FTA Exempt Income guide CTGEXI1 ('Interest paid in relation to Exempt Income... is prima facie deductible')",
+      "hold": "Verifier disagrees with the answer key: Article 29 may make this interest deductible (subject to interest limitation) despite the exempt-income rule."
     }
   },
   {
@@ -564,7 +584,12 @@
     "topic": "basics",
     "scenario": "Oasis Thread Tailoring LLC is UAE-resident, not a Qualifying Free Zone Person, and hasn't elected for Small Business Relief. Its accounting profit for the tax period 1 Jan–31 Dec 2025 is AED 2,400,000. That profit includes a dividend of AED 300,000 from a UAE-resident company, and is after charging a regulator's fine of AED 50,000 and AED 80,000 of client entertainment.",
     "prompt": "What is its Corporate Tax for 2025?",
-    "options": ["AED 182,250", "AED 163,350", "AED 166,950", "AED 197,100"],
+    "options": [
+      "AED 182,250",
+      "AED 163,350",
+      "AED 166,950",
+      "AED 197,100"
+    ],
     "answerIndex": 1,
     "explanation": {
       "what": "Start from accounting profit, take out exempt income, add back non-deductible costs, then apply 0% to the first AED 375,000 and 9% to the rest.",

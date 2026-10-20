@@ -54,7 +54,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "passdrill:tax-uae-tax-010",
-      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: the reverse charge on imported goods also depends on the Exec Reg Art 48(1) conditions (e.g. the importer's own customs registration number), otherwise VAT is paid before release under Art 50. Since 1 Jan 2026 (Decree-Law 16/2025) no self-invoice is required; the option is still correct. Source: Decree-Law Art 48(1); Exec Reg Art 48(1),(4); Art 50(1) (tax.gov.ae consolidated texts)"
     }
   },
   {
@@ -83,7 +83,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "passdrill:tax-uae-tax-011",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor wording: since Cabinet Decision 100/2024, Exec Reg Art 30(1)(b) asks for a customs declaration plus Commercial Evidence (e.g. an air waybill), or a Shipping Certificate plus Official Evidence. Option 3's 'official and commercial evidence' is a loose paraphrase, but the scenario's customs export document plus air waybill satisfies the rule. Source: Exec Reg Art 30(1),(4),(9) as amended by CD 100/2024 (tax.gov.ae consolidated ER, Sep 2026)"
     }
   },
   {
@@ -170,7 +170,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "passdrill:tax-uae-tax-020",
-      "reviewNotes": "Article 14 and the control test were amended (Federal Decree-Law No. 18 of 2022, from 1 Jan 2023, as I understand it); confirm the 60%/55% facts still meet the current test. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Article 14 and the control test were amended (Federal Decree-Law No. 18 of 2022, from 1 Jan 2023, as I understand it); confirm the 60%/55% facts still meet the current test. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): Minor: Exec Reg Art 9(1)(a) defines related parties through 50%+ voting or market-value interests or control by other means. Group members must also be legal persons (Art 10(5)(c)), which the companies here are. Source: Decree-Law Art 14(1) (as amended by DL 18/2022); Exec Reg Arts 9, 10(5)"
     }
   },
   {
@@ -257,7 +257,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "passdrill:tax-uae-tax-029",
-      "reviewNotes": "PassDrill also cited Article 19 for the mandatory threshold; as I understand it mandatory registration is Article 13, with the amounts in Executive Regulation Article 7. Confirm. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "PassDrill also cited Article 19 for the mandatory threshold; as I understand it mandatory registration is Article 13, with the amounts in Executive Regulation Article 7. Confirm. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: since CD 100/2024, Exec Reg Art 8(6) also requires proof of carrying on business in the State and an intention to make taxable supplies. This is implied by the scenario. Source: Decree-Law Art 17; Exec Reg Art 8(1),(6)"
     }
   },
   {
@@ -344,7 +344,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "passdrill:tax-uae-tax-032",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Minor wording: Exec Reg Art 51 does contain service rules (cl. 6-8). Cl. 6 says services with a place of supply in a Designated Zone are inside the State, and cl. 7 has a narrow exception for some e-commerce shipping or delivery services. So 'apply only to goods' is loose, but the answer's substance is correct. Source: Decree-Law Arts 50-52; Exec Reg Art 51(5)-(7)"
     }
   },
   {
@@ -460,7 +460,8 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "passdrill:tax-uae-tax-047",
-      "reviewNotes": "Date-sensitive: as I understand it Article 31 was amended by Cabinet Decision No. 100 of 2024 (effective 15 Nov 2024), including how the 'outside the State' condition applies to business recipients and their representatives. Confirm the answer under the current text. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Date-sensitive: as I understand it Article 31 was amended by Cabinet Decision No. 100 of 2024 (effective 15 Nov 2024), including how the 'outside the State' condition applies to business recipients and their representatives. Confirm the answer under the current text. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 4): The answer (No) is the best option, but its reasoning is incomplete. Exec Reg Art 31(2) treats a person as 'outside the State' if present for under 30 days and the presence is not effectively connected with the supply. A two-week stay is under 30 days, so the result turns entirely on 'effectively connected' (likely yes, since the project lead is here for the whole project), not on the bare fact of presence. Whether an employee's presence counts as the legal-person recipient's presence also needs guidance. Art 31(1)(a)(1) actually requires no place of residence in any GCC Implementing State, while the scenario only rules out a UAE establishment. Consider adding the 30-day / effectively-connected point to the scenario or explanation. Source: Exec Reg Art 31(1)(a), 31(2) (as amended by CD 46/2020), 31(3) (CD 100/2024)",
+      "hold": "Explanation misses Exec. Reg. Art. 31(2) (\"effectively connected\" presence test); GCC residence condition not covered."
     }
   }
 ]
