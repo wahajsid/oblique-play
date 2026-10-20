@@ -10,6 +10,7 @@ import vatPassdrill from "./vat-passdrill.json";
 import vatBatch01 from "./vat-batch-01.json";
 import vatBatch02 from "./vat-batch-02.json";
 import vatBatch03 from "./vat-batch-03.json";
+import vatBatch04 from "./vat-batch-04.json";
 
 export const allQuestions = [
   ...ctPassdrill,
@@ -21,4 +22,5 @@ export const allQuestions = [
   ...vatBatch01,
   ...vatBatch02,
   ...vatBatch03,
+  ...vatBatch04,
 ] as QuizQuestion[];
