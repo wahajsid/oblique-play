@@ -244,7 +244,8 @@
       "verdict": "off",
       "targets": [
         "vat",
-        "total"
+        "total",
+        "line-1"
       ],
       "targetLabel": "VAT charged"
     },
@@ -1336,7 +1337,8 @@
     "answer": {
       "verdict": "off",
       "targets": [
-        "vat"
+        "vat",
+        "line-1"
       ],
       "targetLabel": "VAT amount"
     },

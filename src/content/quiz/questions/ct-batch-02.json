@@ -815,7 +815,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:ct-batch-02",
-      "reviewNotes": "Confirm the lists in Ministerial Decision No. 265 of 2023, and whether it has been replaced or amended since."
+      "reviewNotes": "Confirm the lists in Ministerial Decision No. 265 of 2023, and whether it has been replaced or amended since. | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
     }
   },
   {
@@ -844,7 +844,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:ct-batch-02",
-      "reviewNotes": "Confirm that logistics fees from mainland customers are Qualifying Income under Ministerial Decision No. 265 of 2023 (or any replacement)."
+      "reviewNotes": "Confirm that logistics fees from mainland customers are Qualifying Income under Ministerial Decision No. 265 of 2023 (or any replacement). | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
     }
   },
   {
@@ -872,7 +872,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-02"
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
     }
   },
   {
@@ -897,7 +898,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-02"
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "REFERENCE: Ministerial Decision No. 84 of 2025 reportedly replaced No. 82 of 2023 (audited financial statements) for periods from 1 Jan 2025; update the reference if confirmed."
     }
   },
   {
@@ -926,7 +928,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:ct-batch-02",
-      "reviewNotes": "Confirm the outsourcing conditions for substance (provider in a free zone, adequate supervision)."
+      "reviewNotes": "Confirm the outsourcing conditions for substance (provider in a free zone, adequate supervision). | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
     }
   },
   {
@@ -983,7 +985,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:ct-batch-02",
-      "reviewNotes": "Confirm the immovable property rules for Qualifying Free Zone Persons (commercial property in a free zone, Free Zone Person tenants), and whether non-qualifying property income is left out of the de minimis test."
+      "reviewNotes": "Confirm the immovable property rules for Qualifying Free Zone Persons (commercial property in a free zone, Free Zone Person tenants), and whether non-qualifying property income is left out of the de minimis test. | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
     }
   },
   {
@@ -1186,7 +1188,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:ct-batch-02",
-      "reviewNotes": "Confirm Ministerial Decision No. 73 of 2023's artificial separation rule and its penalty consequences. Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+      "reviewNotes": "Confirm Ministerial Decision No. 73 of 2023's artificial separation rule and its penalty consequences. Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm. | VERIFIER (blind check, medium confidence, chose option 2): MD 73 Art 6 treats artificial separation as a GAAR (Art 50) arrangement so the relief can be counteracted/denied; neither MD 73 nor the law sets a specific penalty for it, so 'apply penalties' relies on general CD 75/2023 penalties for the resulting tax understatement. Defensible and still the only correct option, but consider 'deny the relief and adjust the tax due (penalties may follow)'. Source: MD No. 73 of 2023 Art 6; FDL 47/2022 Art 50; CD No. 75 of 2023"
     }
   },
   {
@@ -1238,7 +1240,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-02"
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "REFERENCE: Ministerial Decision No. 84 of 2025 reportedly replaced No. 82 of 2023 (audited financial statements) for periods from 1 Jan 2025; update the reference if confirmed."
     }
   },
   {
@@ -1322,7 +1325,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-02"
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "REFERENCE: Ministerial Decision No. 84 of 2025 reportedly replaced No. 82 of 2023 (audited financial statements) for periods from 1 Jan 2025; update the reference if confirmed."
     }
   },
   {

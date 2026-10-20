@@ -239,7 +239,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the AED 3.15bn and AED 200m thresholds in MD 97/2023 are unchanged for 2025."
+      "reviewNotes": "Confirm the AED 3.15bn and AED 200m thresholds in MD 97/2023 are unchanged for 2025. | VERIFIER (blind check, high confidence, chose option 2): Minor nuance only: MD 97 excludes most domestic transactions from the Local File, but the Master File/Local File obligation itself is triggered by the AED 3.15bn group threshold, so option D is still wrong. Source: MD No. 97 of 2023 on TP documentation (AED 200m revenue or AED 3.15bn MNE group revenue); CT Law Art 55"
     }
   },
   {

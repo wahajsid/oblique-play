@@ -129,7 +129,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-02",
-      "reviewNotes": "Medium-high confidence. Confirm the capital-assets exclusion and its article (Art. 19 recalled; may sit in Exec. Reg. Art. 7)."
+      "reviewNotes": "Medium-high confidence. Confirm the capital-assets exclusion and its article (Art. 19 recalled; may sit in Exec. Reg. Art. 7). | VERIFIER (blind check, high confidence, chose option 2): Minor: the law defines Capital Assets as business assets for long-term use (Art 1), but ER Art 57 sets an AED 5m definition for the Capital Assets Scheme. CD 149/2026 ties the Art 57 definition to the Scheme, so an old van still counts as a capital asset under Art 20. A pedant could raise this; the answer still holds. Source: FDL 8/2017 Art 20: supply of Capital Assets is excluded from the mandatory and voluntary threshold tests"
     }
   },
   {
@@ -908,7 +908,8 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-02",
-      "reviewNotes": "The export evidence wording was amended (Cabinet Decision No. 100 of 2024, and reportedly No. 149 of 2026). Confirm the current conditions."
+      "reviewNotes": "The export evidence wording was amended (Cabinet Decision No. 100 of 2024, and reportedly No. 149 of 2026). Confirm the current conditions. | VERIFIER (blind check, medium confidence, chose option 4): Possible second correct option. The stem says Palmfield exports 'directly' (a Direct Export: the supplier arranges transport). Under ER Art 30(1) a direct export needs only (a) physical export within 90 days and (b) customs declaration plus commercial evidence. The 'not used or altered' condition (option 3) appears only for Indirect Exports in ER Art 30(2)(c). So option 3 is arguably also NOT a condition. Fix: make it an indirect export, or replace option 3. Source: ER Art 1 (Direct/Indirect Export definitions); ER Art 30(1)-(2) as amended by CD 100/2024",
+      "hold": "Possible second correct option: for a direct export, the \"not used or altered before export\" condition applies only to indirect exports (Exec. Reg. Art. 30(2)(c)). Make it an indirect export or replace that option."
     }
   },
   {
@@ -937,7 +938,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-02",
-      "reviewNotes": "Confirm the current Cabinet Decision number for the medicines list, and that the supplements described would be standard-rated."
+      "reviewNotes": "Confirm the current Cabinet Decision number for the medicines list, and that the supplements described would be standard-rated. | VERIFIER (blind check, high confidence, chose option 2): Minor currency note: from 1 Oct 2026, CD 149/2026 merges ER Art 41(4)(a)-(b) into a single 'medical products' category to be specified by a Cabinet Decision. 'Cabinet's list of zero-rated medicines' remains accurate. Source: ER Art 41(4) (as amended by CD 100/2024 and CD 149/2026)"
     }
   },
   {
@@ -1127,7 +1128,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:vat-batch-02"
+      "source": "oblique:vat-batch-02",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 4): Minor: assumes the rents are VAT-exclusive (otherwise 30,000x5/105=1,428.57). Consider adding 'before VAT'. Calculation: 30,000x5%=1,500, checked as 30,000/20. The residential 90,000 is exempt (building completed 2015). Source: FDL Art 46(2); ER Art 43"
     }
   },
   {
@@ -1317,7 +1319,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-02",
-      "reviewNotes": "Confirm the import timing for goods entering a designated zone from abroad."
+      "reviewNotes": "Confirm the import timing for goods entering a designated zone from abroad. | VERIFIER (blind check, medium confidence, chose option 1): Wording: 'Only' overstates the rule. Under ER Art 51(9), goods in a DZ on which no tax was paid are also treated as imported if the owner consumes them or there is a shortage. Option 1 is still clearly the best answer on these facts. Suggest dropping 'Only'. Source: ER Art 47(1)(a) (customs suspension), Art 51(9); FDL Art 50"
     }
   },
   {

@@ -326,7 +326,8 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm no general waiver applies to tax invoices for zero-rated exports of goods."
+      "reviewNotes": "Confirm no general waiver applies to tax invoices for zero-rated exports of goods. | VERIFIER (blind check, low confidence, chose option 1): CONFLICT WITH ER: Art 59(3) ER says a Registrant is NOT required to issue a tax invoice for a wholly zero-rated supply if sufficient records exist (disapplied only for e-invoice issuers, Art 59(16); e-invoicing not mandatory for anyone until 2027). The likely intended answer 'False' is contradicted by the Regulation; 'True' is also imperfect (omits the records condition, wrong reason). Rewrite or drop. Source: VAT Executive Regulation (CD 52/2017, consolidated 18-09-2025, tax.gov.ae) Art 59(3), (16)",
+      "hold": "Blind verifier chose option 1, the key says option 2: CONFLICT WITH ER: Art 59(3) ER says a Registrant is NOT required to issue a tax invoice for a wholly zero-rated supply if sufficient records exist (disapplied only for e-invoice issuers, Art 59(16); e"
     }
   },
   {
@@ -1144,7 +1145,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "The verifier noted the Executive Regulation's English text says intra-group supplies 'may be disregarded'; confirm the wording."
+      "reviewNotes": "The verifier noted the Executive Regulation's English text says intra-group supplies 'may be disregarded'; confirm the wording. | VERIFIER (blind check, medium confidence, chose option 3): Minor: line 2 says all three companies (incl. Holdings itself) are wholly owned by Palmfield Holdings - literally odd; consider 'the other two are wholly owned by'. Line 3 is still the clear error. Source: ER Art 12(1)(b): intra-group supplies disregarded"
     }
   },
   {
@@ -1444,7 +1445,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm a first supply made after the three-year window is exempt, and how completion is evidenced."
+      "reviewNotes": "Confirm a first supply made after the three-year window is exempt, and how completion is evidenced. | VERIFIER (blind check, medium confidence, chose option 3): Minor: line 3 assumes the date of supply of the first lease is 1 Feb 2027; if rent were invoiced/paid before 10 Jan 2027 the date-of-supply rules could pull part of it into the 3-year window. Line 4 omits the >6-month/Emirates ID condition of ER Art 43. Line 3 is still the intended error; consider 'first rent due and invoiced Feb 2027'. Source: Art 45(9) Decree-Law: first supply within 3 years of completion (10 Jan 2027)"
     }
   }
 ]

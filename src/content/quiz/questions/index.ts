@@ -5,6 +5,7 @@ import ctPassdrill from "./ct-passdrill.json";
 import ctBatch01 from "./ct-batch-01.json";
 import ctBatch02 from "./ct-batch-02.json";
 import ctBatch03 from "./ct-batch-03.json";
+import ctBatch04 from "./ct-batch-04.json";
 import vatPassdrill from "./vat-passdrill.json";
 import vatBatch01 from "./vat-batch-01.json";
 import vatBatch02 from "./vat-batch-02.json";
@@ -15,6 +16,7 @@ export const allQuestions = [
   ...ctBatch01,
   ...ctBatch02,
   ...ctBatch03,
+  ...ctBatch04,
   ...vatPassdrill,
   ...vatBatch01,
   ...vatBatch02,
