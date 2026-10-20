@@ -96,7 +96,7 @@ A full local Supabase (`npx supabase start`) now runs the real sign-in emails, d
 | Shift documents (6 shifts) | 60 | 60 | 60 |
 | Daily documents | 30 | 30 | 30 |
 
-Every item was answered blind by a separate AI verifier. The verifiers agreed with 405 of 408 question keys and all 90 document answers. Nine questions are on hold until a reviewer fixes them (see the Hold column in the review workbooks). Nothing is approved yet: every item needs a named reviewer.
+Every question, and every document in Shifts 4–6 and the daily pool, was answered blind by a separate AI verifier. The verifiers agreed with 406 of 408 question keys and all 60 of those document answers. Shifts 1–3 (30 documents) were checked by the arithmetic checker and by hand; their blind check is under way. Nine questions are on hold until a reviewer fixes them (see the Hold column in the review workbooks). Nothing is approved yet: every item needs a named reviewer.
 
 **Review workbooks:** `npm run review:export` writes `review/oblique-play-review-ct.xlsx` (Ashta, Pranay) and `review/oblique-play-review-vat.xlsx` (Aidarous, Arslan). Reviewers edit the yellow cells and choose Approve / Needs changes / Reject. `npm run review:import -- <file>` applies their work.
 
