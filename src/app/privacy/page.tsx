@@ -27,7 +27,8 @@ export default function PrivacyPage() {
         <li>To run the game: sign-in, saving progress, scores, challenges and leaderboards.</li>
         <li>
           To keep a record of you as a player in our customer system (HubSpot). If you tell us you&apos;re a business
-          owner, we may contact you once about a free 30-minute tax diagnostic.
+          owner, we may contact you once about a free 30-minute tax diagnostic. If you book one, your name and email are
+          passed to our booking page so you don&apos;t have to type them.
         </li>
         <li>To send you new shifts and tax updates, but only if you ticked the box to receive them.</li>
         <li>To understand which topics players find hardest, using combined figures that don&apos;t identify you.</li>
@@ -41,8 +42,8 @@ export default function PrivacyPage() {
 
       <h2>Who processes it for us</h2>
       <p>
-        Supabase (database and sign-in), Vercel (hosting), Resend (sign-in emails), HubSpot (customer records) and
-        PostHog (usage analytics). They process data only on our instructions. Some of these services store data
+        Supabase (database and sign-in), Vercel (hosting), Resend (sign-in emails), HubSpot (customer records),
+        PostHog (usage analytics) and Calendly (booking a diagnostic, if you choose to). They process data only on our instructions. Some of these services store data
         outside the UAE.
       </p>
 

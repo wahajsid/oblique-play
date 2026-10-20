@@ -90,7 +90,8 @@ Then go to **Database → Webhooks → Create**:
 1. Import the GitHub repo `wahajsid/oblique-play` as a new Vercel project.
 2. Add the three Supabase variables from step 1.8, plus `NEXT_PUBLIC_SITE_URL=https://play.obliqueconsult.com`.
 3. **Domains:** add `play.obliqueconsult.com`. In Hover, add the `CNAME` record Vercel shows (usually `cname.vercel-dns.com`). The main site on Framer is unaffected.
-4. **Plan:** Vercel's Hobby plan is for non-commercial use. A public marketing game for Oblique needs **Pro** ($20/month).
+4. **Diagnostic bookings** go to `https://calendly.com/alina-obliqueconsult/30min` (from the Contact page). To use another Calendly event, set `DIAGNOSTIC_BOOKING_URL` in Vercel. The player's name and email are prefilled, and bookings are tagged `utm_source=oblique-play` for Calendly's reports.
+5. **Plan:** Vercel's Hobby plan is for non-commercial use. A public marketing game for Oblique needs **Pro** ($20/month).
 
 ## Testing everything locally
 
