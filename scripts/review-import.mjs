@@ -58,8 +58,9 @@ const tally = { approved: 0, changes: 0, rejected: 0, edited: 0, skipped: 0 };
 const problems = [];
 
 for (const ws of wb.worksheets.filter((w) => w.name !== "How to review")) {
-  const headers = ws.getRow(1).values.map((h) => text(h));
-  const col = (name) => headers.findIndex((h) => h.startsWith(name));
+  const headers = Array.from(ws.getRow(1).values, (h) => text(h));
+  // Row values start at index 1, so index 0 is empty.
+  const col = (name) => headers.findIndex((h) => typeof h === "string" && h.startsWith(name));
   ws.eachRow((row, n) => {
     if (n === 1) return;
     const get = (name) => (col(name) > 0 ? text(row.getCell(col(name)).value).trim() : undefined);
@@ -138,7 +139,8 @@ for (const ws of wb.worksheets.filter((w) => w.name !== "How to review")) {
       item.meta.reviewer = null;
       item.meta.reviewedOn = null;
       item.meta.hold = `${decision === "Reject" ? "Rejected" : "Needs changes"} (${who}, ${today}): ${comments || "no comment given"}`;
-      decision === "Reject" ? tally.rejected++ : tally.changes++;
+      if (decision === "Reject") tally.rejected++;
+      else tally.changes++;
     } else if (decision) {
       problems.push(`${id}: decision "${decision}" not understood`);
     } else if (!edited) {
