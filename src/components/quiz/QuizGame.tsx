@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { ChallengeBanner, type ChallengeInfo } from "@/components/share/Challenge";
-import type { PlayerProfile } from "@/lib/players";
+import type { PlayerProfile, PlayerStats } from "@/lib/players";
 import { SiteFooter } from "@/components/SiteFooter";
 import { longDate } from "@/lib/quiz/dates";
 import {
@@ -71,6 +71,7 @@ export function QuizGame(props: Props) {
   const [error, setError] = useState<string | null>(null);
   const [savedRun, setSavedRun] = useState<QuizRun | null>(null);
   const [alreadyScored, setAlreadyScored] = useState(false);
+  const [stats, setStats] = useState<PlayerStats | null>(null);
 
   // Time counts only while a question is waiting for an answer.
   const qStart = useRef(0);
@@ -181,7 +182,10 @@ export function QuizGame(props: Props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ attemptId, date, track }),
       keepalive: true,
-    }).catch(() => {});
+    })
+      .then((r) => r.json())
+      .then((d) => setStats(d.stats ?? null))
+      .catch(() => {});
     setPhase("done");
     window.scrollTo({ top: 0 });
   };
@@ -220,6 +224,7 @@ export function QuizGame(props: Props) {
         attemptId={attemptId}
         profile={profile}
         challenge={challenge}
+        stats={stats}
         onReplay={() => start(false)}
       />
     );

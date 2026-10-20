@@ -1,0 +1,1521 @@
+[
+  {
+    "id": "s5-01",
+    "shift": 5,
+    "kind": "commercial_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Thistle Cloud Software Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "14 Rose Street, Edinburgh, United Kingdom"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Sandstone Software Studio LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Floor 6, Innovation Square, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100326471950003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "TCS-4471",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "8 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (USD)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "6,000.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "6,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Not charged. Reverse charge: the customer accounts for UAE VAT."
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "USD",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Project software, annual licence, 25 users",
+          "quantity": "25",
+          "unitPrice": "240.00",
+          "vatRate": "Not charged",
+          "amount": "6,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "When a VAT-registered UAE business buys services from a supplier abroad, the supplier doesn't charge UAE VAT. The customer accounts for it in its own VAT return: the reverse charge.",
+      "why": "Thistle Cloud is in the UK with no UAE TRN, so its invoice rightly shows no VAT on the USD 6,000.00 licence. Sandstone Software Studio declares 5% VAT on the AED value in its return, and can normally recover it there as input tax.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48"
+    },
+    "meta": {
+      "topic": "Imported services",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-02",
+    "shift": 5,
+    "kind": "commercial_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Kestrel Analytics Inc.",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "88 Maple Quay, Toronto, Canada"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Marina Coffee Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Shop 7, Harbour Walk, Dubai"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100384729160003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "KA-2026-219",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "9 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "18,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "UAE VAT at 5%",
+            "value": "900.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "18,900.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Customer research study, UAE coffee market",
+          "quantity": "1",
+          "unitPrice": "18,000.00",
+          "vatRate": "5%",
+          "amount": "18,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "total"
+      ],
+      "targetLabel": "VAT charged"
+    },
+    "explanation": {
+      "what": "A supplier outside the UAE that isn't registered for UAE VAT can't charge it. The UAE business customer accounts for the VAT itself, under the reverse charge.",
+      "why": "Kestrel Analytics is in Canada and shows no UAE TRN, yet it adds AED 900.00 of UAE VAT. Marina Coffee Trading should pay AED 18,000.00 and declare the AED 900.00 in its own VAT return instead.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48"
+    },
+    "meta": {
+      "topic": "Imported services",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-03",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Palmfield Office Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Warehouse 21, Al Quoz Industrial 3, Dubai"
+          },
+          {
+            "id": "importer-trn",
+            "label": "Importer TRN",
+            "value": "100248613570003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Ridgeway Furniture Manufacturing Co., Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "No. 6 Lianhua Road, Foshan, China"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-55821",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "9 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "China"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-PFS-2210",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "40,000.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "2,000.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "42,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "2,100.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Reverse charge: declared in the importer's VAT return"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Ergonomic office chair",
+          "quantity": "100",
+          "unitPrice": "400.00",
+          "vatRate": "5%",
+          "amount": "40,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "VAT on imported goods is 5% of the customs value plus customs duty. A VAT-registered importer accounts for it in its VAT return under the reverse charge, instead of paying at customs.",
+      "why": "Customs value AED 40,000.00 plus duty AED 2,000.00 gives AED 42,000.00, and 5% of that is AED 2,100.00. Palmfield is registered, so it declares the AED 2,100.00 in its return and can normally recover it there.",
+      "reference": "VAT Decree-Law, Articles 48 and 50"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-04",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Qamar Ridge Bakery LLC",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Unit 12, Old Souk Lane, Sharjah"
+          },
+          {
+            "id": "importer-trn",
+            "label": "Importer TRN",
+            "value": "100527364190003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Torino Macchine Forni SRL",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "Via dei Fornai 21, Turin, Italy"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-56107",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "12 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "Italy"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-QRB-1184",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "60,000.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "3,000.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "60,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "3,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Reverse charge: declared in the importer's VAT return"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Deck oven, 3 decks",
+          "quantity": "2",
+          "unitPrice": "30,000.00",
+          "vatRate": "5%",
+          "amount": "60,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat-base",
+        "vat"
+      ],
+      "targetLabel": "Value for VAT"
+    },
+    "explanation": {
+      "what": "The value for VAT on an import is the customs value plus customs duty (and any excise tax).",
+      "why": "Customs duty of AED 3,000.00 has been left out. The value for VAT should be AED 63,000.00, so the VAT is AED 3,150.00, not AED 3,000.00.",
+      "reference": "VAT Decree-Law, Articles 48 and 50"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-05",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Little Fig Home Bakery",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Villa 22, Al Nahda, Sharjah"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Torino Macchine Forni SRL",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "Via dei Fornai 21, Turin, Italy"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-56390",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "14 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "Italy"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-LFB-0912",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "7,200.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "360.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "7,560.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "378.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Paid at customs before release"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Countertop proving cabinet",
+          "quantity": "1",
+          "unitPrice": "7,200.00",
+          "vatRate": "5%",
+          "amount": "7,200.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "An importer that isn't VAT registered can't use the reverse charge. It pays the import VAT to customs before the goods are released.",
+      "why": "Little Fig Home Bakery has no TRN, so it pays the AED 378.00 (5% of AED 7,560.00) at customs. As it isn't registered, it can't recover that VAT later.",
+      "reference": "VAT Decree-Law, Articles 48, 49 and 50"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "import_paid_at_customs"
+    }
+  },
+  {
+    "id": "s5-06",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Amber Wick Candles",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Shop 5, Craft Lane, Ajman"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Lantern Quay Trading Pte Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "12 Quay Lane, Singapore"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-56522",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "15 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "Singapore"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-AWC-0377",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "4,200.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "210.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "4,410.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "220.50",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Reverse charge: declared in the importer's VAT return"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Soy wax, 20 kg sack",
+          "quantity": "30",
+          "unitPrice": "140.00",
+          "vatRate": "5%",
+          "amount": "4,200.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat-treatment"
+      ],
+      "targetLabel": "VAT treatment"
+    },
+    "explanation": {
+      "what": "Only a VAT-registered importer can account for import VAT under the reverse charge.",
+      "why": "Amber Wick Candles shows no TRN, so it isn't registered. It must pay the AED 220.50 of VAT (5% of AED 4,410.00) at customs before the wax is released.",
+      "reference": "VAT Decree-Law, Articles 48 and 49"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "import_paid_at_customs"
+    }
+  },
+  {
+    "id": "s5-07",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Saffron Shore Interiors LLC",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Showroom 2, Marina Promenade, Ajman"
+          },
+          {
+            "id": "importer-trn",
+            "label": "Importer TRN",
+            "value": "10073519246003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Andalus Loom Textiles SL",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "Calle del Telar 8, Valencia, Spain"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-56781",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "16 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "Spain"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-SSI-3051",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "13,800.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "690.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "14,490.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "724.50",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Reverse charge: declared in the importer's VAT return"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Upholstery fabric, 50 m roll",
+          "quantity": "12",
+          "unitPrice": "1,150.00",
+          "vatRate": "5%",
+          "amount": "13,800.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "importer-trn"
+      ],
+      "targetLabel": "Importer TRN"
+    },
+    "explanation": {
+      "what": "A TRN is always 15 digits. For the reverse charge on imports, the importer's TRN must be right, so the import links to its VAT registration.",
+      "why": "The TRN here has only 14 digits, so it can't be valid: a digit was dropped. Saffron Shore Interiors' TRN on its earlier invoices is 100735192460003. With the wrong TRN, the import can't be matched to its VAT return.",
+      "reference": "VAT Executive Regulation, Article 48"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-08",
+    "shift": 5,
+    "kind": "commercial_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Lantern Quay Media Pte Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "30 Harbour Lane, Singapore"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Coral Dhow Events LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Villa 9, Corniche Road, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100691827340003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "LQM-0614",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "20 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "18,000.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "18,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Not charged. Reverse charge: the customer accounts for UAE VAT."
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Social media campaign, Oct 2026",
+          "quantity": "1",
+          "unitPrice": "18,000.00",
+          "vatRate": "Not charged",
+          "amount": "18,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Services bought from a supplier abroad carry no UAE VAT on the supplier's invoice. A VAT-registered UAE customer accounts for it under the reverse charge.",
+      "why": "Lantern Quay Media is in Singapore with no UAE TRN, so no VAT is added to the AED 18,000.00. Coral Dhow Events declares VAT of AED 900.00 in its own return, and can normally recover the same amount there.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 48"
+    },
+    "meta": {
+      "topic": "Imported services",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-09",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Bluewave Pool Services LLC",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Unit 5, Palm Grove Business Park, Ras Al Khaimah"
+          },
+          {
+            "id": "importer-trn",
+            "label": "Importer TRN",
+            "value": "100412958360003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Kessler Pumpenwerk GmbH",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "Werkstrasse 4, Stuttgart, Germany"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-57044",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "19 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "Germany"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-BPS-0468",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "33,600.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "1,680.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "35,280.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Reverse charge: declared in the importer's VAT return"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Pool pump unit",
+          "quantity": "12",
+          "unitPrice": "2,800.00",
+          "vatRate": "0%",
+          "amount": "33,600.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat"
+      ],
+      "targetLabel": "VAT amount"
+    },
+    "explanation": {
+      "what": "Under the reverse charge, import VAT is still due at 5%. The importer declares it in its own VAT return instead of paying it at customs.",
+      "why": "Pool pumps aren't zero-rated goods, so the VAT should be 5% of AED 35,280.00: AED 1,764.00, declared by Bluewave in its return (and normally recovered there too). Showing 0% means no VAT is declared at all.",
+      "reference": "VAT Decree-Law, Articles 48 and 50"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "advanced",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  },
+  {
+    "id": "s5-10",
+    "shift": 5,
+    "kind": "import_declaration",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "IMPORT DECLARATION"
+    },
+    "blocks": [
+      {
+        "id": "importer",
+        "title": "Importer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "importer-name",
+            "label": "Importer name",
+            "value": "Marina Coffee Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "importer-address",
+            "label": "Importer address",
+            "value": "Shop 7, Harbour Walk, Dubai"
+          },
+          {
+            "id": "importer-trn",
+            "label": "Importer TRN",
+            "value": "100384729160003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "exporter",
+        "title": "Exporter",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "exporter-name",
+            "label": "Exporter name",
+            "value": "Torino Macchine Caffè SRL",
+            "style": "strong"
+          },
+          {
+            "id": "exporter-address",
+            "label": "Exporter address",
+            "value": "Via dei Mulini 9, Turin, Italy"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Declaration details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "declaration-number",
+            "label": "Declaration number",
+            "value": "ID-2026-10-57210",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Declaration date",
+            "value": "20 Oct 2026"
+          },
+          {
+            "id": "entry-point",
+            "label": "Entry point",
+            "value": "Dubai sea port"
+          },
+          {
+            "id": "origin",
+            "label": "Country of origin",
+            "value": "Italy"
+          },
+          {
+            "id": "customs-code",
+            "label": "Importer customs code",
+            "value": "AE-MCT-1902",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "valuation",
+        "title": "Valuation (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "customs-value",
+            "label": "Customs value (CIF)",
+            "value": "49,000.00"
+          },
+          {
+            "id": "duty",
+            "label": "Customs duty at 5%",
+            "value": "2,450.00"
+          },
+          {
+            "id": "vat-base",
+            "label": "Value for VAT",
+            "value": "51,450.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "2,527.50",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "vat-notes",
+        "title": "VAT",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-treatment",
+            "label": "VAT treatment",
+            "value": "Reverse charge: declared in the importer's VAT return"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Espresso machine, 2 groups",
+          "quantity": "7",
+          "unitPrice": "7,000.00",
+          "vatRate": "5%",
+          "amount": "49,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat"
+      ],
+      "targetLabel": "VAT amount"
+    },
+    "explanation": {
+      "what": "VAT on an import is 5% of the value for VAT: the customs value plus customs duty.",
+      "why": "5% of AED 51,450.00 is AED 2,572.50, but the declaration shows AED 2,527.50, with two digits swapped. Marina Coffee Trading would under-declare AED 45.00 in its return.",
+      "reference": "VAT Decree-Law, Articles 48 and 50"
+    },
+    "meta": {
+      "topic": "Imports",
+      "difficulty": "advanced",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "reverse_charge"
+    }
+  }
+]

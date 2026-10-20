@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getPlayerStats } from "@/lib/players";
 import { getDailySet, getPlayIds, isPlayTrack } from "@/lib/quiz/content";
 import { finishQuizAttempt } from "@/lib/quiz/record";
 
@@ -20,5 +21,7 @@ export async function POST(request: Request) {
   if (!day) return NextResponse.json({ error: "No set for that date" }, { status: 404 });
 
   const result = await finishQuizAttempt(body.attemptId, getPlayIds(day, track).length);
-  return NextResponse.json({ recorded: !!result, ...result });
+  // Streak and shifts completed after this round, for milestone offers.
+  const stats = result ? await getPlayerStats() : null;
+  return NextResponse.json({ recorded: !!result, ...result, stats });
 }

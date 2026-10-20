@@ -2,13 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 
+// Makes the link to share and the card that goes with it, for example a
+// challenge or a streak milestone. A name, when given, goes on the card.
+export type CreateLink = (name?: string) => Promise<{ url: string; cardPath: string } | null>;
+
 type Props = {
-  kind: "review" | "quiz";
-  attemptId: string;
-  // Signed in: a challenge link with its own score card. Otherwise a plain
-  // link to the same shift or quiz set.
-  canChallenge: boolean;
+  // Signed in: a link with its own card. Without it (signed out), sharing
+  // falls back to a plain link.
+  create: CreateLink | null;
   fallbackUrl: string;
+  title?: string;
   // The message, without the link, e.g. "I scored 17/20 on today's UAE VAT quiz. Can you beat me?"
   message: string;
   subject: string;
@@ -16,10 +19,10 @@ type Props = {
   onClose: () => void;
 };
 
-type Link = { url: string; code: string | null };
+type Link = { url: string; cardPath: string | null };
 
-export function ShareSheet({ kind, attemptId, canChallenge, fallbackUrl, message, subject, hasName, onClose }: Props) {
-  const [link, setLink] = useState<Link | null>(canChallenge ? null : { url: fallbackUrl, code: null });
+export function ShareSheet({ create, fallbackUrl, title = "Share or challenge", message, subject, hasName, onClose }: Props) {
+  const [link, setLink] = useState<Link | null>(create ? null : { url: fallbackUrl, cardPath: null });
   const [name, setName] = useState("");
   const [nameSaved, setNameSaved] = useState(hasName);
   const [version, setVersion] = useState(0);
@@ -28,25 +31,18 @@ export function ShareSheet({ kind, attemptId, canChallenge, fallbackUrl, message
   const closeRef = useRef<HTMLButtonElement>(null);
 
   const requestLink = async (withName?: string) => {
-    try {
-      const res = await fetch("/api/challenge", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ kind, attemptId, ...(withName ? { name: withName } : {}) }),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      const data = (await res.json()) as { code: string; url: string };
-      setLink({ url: data.url, code: data.code });
+    const made = create ? await create(withName).catch(() => null) : null;
+    if (made) {
+      setLink(made);
       return true;
-    } catch {
-      // Still let them share, just without a score card.
-      setLink((l) => l ?? { url: fallbackUrl, code: null });
-      return false;
     }
+    // Still let them share, just without a card.
+    setLink((l) => l ?? { url: fallbackUrl, cardPath: null });
+    return false;
   };
 
   useEffect(() => {
-    if (canChallenge) requestLink();
+    if (create) requestLink();
     closeRef.current?.focus();
     try {
       setCanShareFiles(!!navigator.canShare?.({ files: [new File([""], "x.png", { type: "image/png" })] }));
@@ -58,7 +54,7 @@ export function ShareSheet({ kind, attemptId, canChallenge, fallbackUrl, message
   }, []);
 
   const card = (size: "landscape" | "square" | "tall") =>
-    link?.code ? `/c/${link.code}/card?size=${size}&v=${version}` : null;
+    link?.cardPath ? `${link.cardPath}?size=${size}&v=${version}` : null;
   const full = link ? `${message} ${link.url}` : message;
 
   const shareLink = async () => {
@@ -121,7 +117,7 @@ export function ShareSheet({ kind, attemptId, canChallenge, fallbackUrl, message
       >
         <div className="flex items-center justify-between">
           <h2 id="share-title" className="text-lg font-semibold">
-            Share or challenge
+            {title}
           </h2>
           <button ref={closeRef} type="button" onClick={onClose} className="-mr-2 min-h-11 rounded-full px-3 text-sm font-medium text-muted">
             Close
@@ -131,13 +127,13 @@ export function ShareSheet({ kind, attemptId, canChallenge, fallbackUrl, message
         {card("square") ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={card("square")!} alt="Your score card" width={1080} height={1080} className="mt-3 aspect-square w-full rounded-xl border border-line" />
-        ) : canChallenge && !link ? (
+        ) : create && !link ? (
           <div className="mt-3 flex aspect-square w-full items-center justify-center rounded-xl border border-line text-sm text-muted">
             Making your card…
           </div>
         ) : null}
 
-        {link?.code && !nameSaved && (
+        {link?.cardPath && !nameSaved && (
           <div className="mt-3 flex gap-2">
             <label htmlFor="card-name" className="sr-only">
               Your name on the card
@@ -183,7 +179,7 @@ export function ShareSheet({ kind, attemptId, canChallenge, fallbackUrl, message
           </button>
         </div>
 
-        {link?.code && (
+        {link?.cardPath && (
           <p className="mt-4 text-center text-sm">
             <span className="text-muted">Save card: </span>
             {(

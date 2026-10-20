@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { saveProfile } from "@/app/actions/profile";
+import { DiagnosticOffer } from "@/components/offers/DiagnosticOffer";
 import type { PlayerProfile, PlayerRole } from "@/lib/players";
 
 const ROLES: { value: PlayerRole; label: string }[] = [
@@ -10,28 +11,39 @@ const ROLES: { value: PlayerRole; label: string }[] = [
   { value: "student", label: "Student" },
 ];
 
-// Asked once, after the first round. Every part is optional.
-export function ProfileCard({ profile }: { profile: PlayerProfile }) {
+// "first": asked once after the first round; every part optional, skippable.
+// "edit": the profile page, which also holds the marketing choice.
+export function ProfileCard({ profile, mode = "first" }: { profile: PlayerProfile; mode?: "first" | "edit" }) {
+  const editing = mode === "edit";
   const [name, setName] = useState(profile.displayName ?? "");
   const [role, setRole] = useState<PlayerRole | null>(profile.role);
-  const [mode, setMode] = useState(profile.leaderboardMode);
+  const [board, setBoard] = useState(profile.leaderboardMode);
+  const [marketing, setMarketing] = useState(profile.marketingConsent);
   const [state, setState] = useState<"open" | "saved" | "skipped">("open");
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
   if (state === "skipped") return null;
-  if (state === "saved") {
+  if (state === "saved" && !editing) {
     return (
-      <p role="status" className="mt-6 rounded-2xl bg-ok-soft px-4 py-3 text-sm text-ok">
-        Saved. You can change these any time.
-      </p>
+      <>
+        <p role="status" className="mt-6 rounded-2xl bg-ok-soft px-4 py-3 text-sm text-ok">
+          Saved. You can change these any time on your profile.
+        </p>
+        {role === "business_owner" && <DiagnosticOffer />}
+      </>
     );
   }
 
   const save = () =>
     startTransition(async () => {
       setError(null);
-      const result = await saveProfile({ displayName: name, role, leaderboardMode: mode });
+      const result = await saveProfile({
+        displayName: name,
+        role,
+        leaderboardMode: board,
+        ...(editing ? { marketing } : {}),
+      });
       if (result.ok) setState("saved");
       else setError(result.error ?? null);
     });
@@ -40,15 +52,17 @@ export function ProfileCard({ profile }: { profile: PlayerProfile }) {
     <section className="mt-6 rounded-2xl border border-line bg-surface p-4" aria-labelledby="profile-title">
       <div className="flex items-start justify-between gap-3">
         <h2 id="profile-title" className="text-lg font-semibold">
-          Make it yours
+          {editing ? "Your details" : "Make it yours"}
         </h2>
-        <button
-          type="button"
-          onClick={() => setState("skipped")}
-          className="-mt-2 -mr-2 min-h-11 rounded-full px-3 text-sm font-medium text-muted"
-        >
-          Skip
-        </button>
+        {!editing && (
+          <button
+            type="button"
+            onClick={() => setState("skipped")}
+            className="-mt-2 -mr-2 min-h-11 rounded-full px-3 text-sm font-medium text-muted"
+          >
+            Skip
+          </button>
+        )}
       </div>
 
       <label htmlFor="display-name" className="mt-2 block text-sm font-semibold">
@@ -98,17 +112,35 @@ export function ProfileCard({ profile }: { profile: PlayerProfile }) {
             key={value}
             type="button"
             role="radio"
-            aria-checked={mode === value}
+            aria-checked={board === value}
             disabled={value === "name" && !name.trim()}
-            onClick={() => setMode(value)}
+            onClick={() => setBoard(value)}
             className={`min-h-11 rounded-xl border px-3 text-left text-sm disabled:opacity-50 ${
-              mode === value ? "border-accent font-semibold ring-1 ring-accent" : "border-line"
+              board === value ? "border-accent font-semibold ring-1 ring-accent" : "border-line"
             }`}
           >
             {label}
           </button>
         ))}
       </div>
+
+      {editing && (
+        <label className="mt-4 flex min-h-11 items-start gap-3 text-sm">
+          <input
+            type="checkbox"
+            checked={marketing}
+            onChange={(e) => setMarketing(e.target.checked)}
+            className="mt-0.5 size-5 shrink-0 accent-[#141428]"
+          />
+          <span>Send me new shifts and tax updates from Oblique.</span>
+        </label>
+      )}
+
+      {state === "saved" && editing && (
+        <p role="status" className="mt-3 text-sm text-ok">
+          Saved.
+        </p>
+      )}
 
       {error && (
         <p role="alert" className="mt-3 text-sm text-notquite">

@@ -57,6 +57,7 @@ const properties = [
   yesNo("oblique_play_marketing_consent", "Oblique Play: marketing consent"),
   date("oblique_play_marketing_consent_date", "Oblique Play: marketing consent date"),
   date("oblique_play_signup_date", "Oblique Play: sign-up date"),
+  date("oblique_play_diagnostic_requested", "Oblique Play: asked for a free diagnostic"),
 ];
 
 const group = await api("/crm/v3/properties/contacts/groups", { name: GROUP, label: "Oblique Play" });

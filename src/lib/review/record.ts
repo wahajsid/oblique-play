@@ -91,3 +91,57 @@ async function ensureAttempt(
   if (error && error.code !== "23505") throw error;
   return { player_id: playerId, shift, completed_at: null };
 }
+
+// The daily document: one recorded answer per player per day. The first
+// answer stands; the attempt is finished straight away, which counts towards
+// the streak. Returns null when nothing was recorded.
+export async function recordDailyAnswer(input: {
+  date: string;
+  docId: string;
+  correct: boolean;
+  deskMs: unknown;
+}): Promise<{ correct: boolean } | null> {
+  if (!authEnabled) return null;
+  const player = await getSignedInPlayer();
+  if (!player) return null;
+  const db = createAdminClient();
+
+  const existing = await dailyAttempt(db, player.id, input.date);
+  if (existing) return { correct: existing.score === 1 };
+
+  const id = crypto.randomUUID();
+  const deskMs = Math.min(MAX_DESK_MS, Math.max(0, Math.round(Number(input.deskMs) || 0)));
+  const { error } = await db.from("review_attempts").insert({ id, player_id: player.id, shift: 0, daily_date: input.date });
+  if (error?.code === "23505") {
+    // Answered at the same moment in another tab: the first one stands.
+    const raced = await dailyAttempt(db, player.id, input.date);
+    return raced ? { correct: raced.score === 1 } : null;
+  }
+  if (error) throw error;
+  await db.from("review_answers").insert({ attempt_id: id, doc_id: input.docId, correct: input.correct, desk_ms: deskMs });
+  await db
+    .from("review_attempts")
+    .update({ completed_at: new Date().toISOString(), score: input.correct ? 1 : 0, total: 1, desk_ms: deskMs })
+    .eq("id", id);
+  return { correct: input.correct };
+}
+
+// Has the signed-in player done the daily document for this date?
+export async function getDailyResult(date: string): Promise<{ correct: boolean } | null> {
+  if (!authEnabled) return null;
+  const player = await getSignedInPlayer();
+  if (!player) return null;
+  const attempt = await dailyAttempt(createAdminClient(), player.id, date);
+  return attempt ? { correct: attempt.score === 1 } : null;
+}
+
+async function dailyAttempt(db: ReturnType<typeof createAdminClient>, playerId: string, date: string) {
+  const { data } = await db
+    .from("review_attempts")
+    .select("score, completed_at")
+    .eq("player_id", playerId)
+    .eq("shift", 0)
+    .eq("daily_date", date)
+    .maybeSingle();
+  return data?.completed_at ? data : null;
+}

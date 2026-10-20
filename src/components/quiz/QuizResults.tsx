@@ -4,9 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { SiteFooter } from "@/components/SiteFooter";
+import { DiagnosticOffer } from "@/components/offers/DiagnosticOffer";
+import { MilestoneOffer } from "@/components/offers/MilestoneOffer";
 import { ChallengeResult, shareMessage, type ChallengeInfo } from "@/components/share/Challenge";
 import { ShareSheet } from "@/components/share/ShareSheet";
-import type { PlayerProfile } from "@/lib/players";
+import { challengeLink } from "@/lib/share-client";
+import type { PlayerProfile, PlayerStats } from "@/lib/players";
 import { longDate } from "@/lib/quiz/dates";
 import { localStreak, type QuizAnswer } from "@/lib/quiz/progress";
 import type { PlayTrack } from "@/lib/quiz/types";
@@ -34,9 +37,10 @@ export function QuizResults(props: {
   attemptId: string;
   profile: PlayerProfile | null;
   challenge: ChallengeInfo | null;
+  stats: PlayerStats | null;
   onReplay: () => void;
 }) {
-  const { track, trackTitle, date, isToday, questions, answers, timeMs, scored, attemptId, profile, challenge, onReplay } = props;
+  const { track, trackTitle, date, isToday, questions, answers, timeMs, scored, attemptId, profile, challenge, stats, onReplay } = props;
   const total = questions.length;
   const score = answers.filter((a) => a.correct).length;
   const [streak, setStreak] = useState(0);
@@ -79,10 +83,12 @@ export function QuizResults(props: {
         <div className="mt-6 grid grid-cols-3 gap-2 text-center">
           <Stat label="Score" value={`${score}/${total}`} />
           <Stat label="Time" value={formatTime(timeMs)} />
-          <Stat label="Day streak" value={String(streak)} />
+          <Stat label="Day streak" value={String(stats?.streak ?? streak)} />
         </div>
 
         {challenge && <ChallengeResult you={{ score, total, timeMs }} them={challenge} />}
+        <MilestoneOffer stats={stats} afterShift={false} hasName={!!profile?.displayName} />
+        {profile?.role === "business_owner" && <DiagnosticOffer />}
 
         <section className="mt-6 rounded-2xl border border-line bg-surface p-4" aria-labelledby="breakdown-title">
           <h2 id="breakdown-title" className="text-sm font-semibold">
@@ -117,9 +123,7 @@ export function QuizResults(props: {
       <SiteFooter />
       {sharing && (
         <ShareSheet
-          kind="quiz"
-          attemptId={attemptId}
-          canChallenge={!!profile}
+          create={profile ? challengeLink("quiz", attemptId) : null}
           fallbackUrl={`${typeof window === "undefined" ? "" : window.location.origin}/quiz/${track}/${date}`}
           message={message}
           subject="UAE Tax Daily Quiz by Oblique"

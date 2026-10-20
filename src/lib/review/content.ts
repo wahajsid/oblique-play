@@ -1,9 +1,13 @@
 import "server-only";
 
 import shiftsData from "@/content/review/shifts.json";
+import daily from "@/content/review/daily.json";
 import shift1 from "@/content/review/shift-1.json";
 import shift2 from "@/content/review/shift-2.json";
 import shift3 from "@/content/review/shift-3.json";
+import shift4 from "@/content/review/shift-4.json";
+import shift5 from "@/content/review/shift-5.json";
+import shift6 from "@/content/review/shift-6.json";
 import type {
   CheckRequest,
   CheckResult,
@@ -20,12 +24,33 @@ const documentsByShift: Record<number, ReviewDocument[]> = {
   1: shift1 as ReviewDocument[],
   2: shift2 as ReviewDocument[],
   3: shift3 as ReviewDocument[],
+  4: shift4 as ReviewDocument[],
+  5: shift5 as ReviewDocument[],
+  6: shift6 as ReviewDocument[],
 };
+const dailyPool = daily as ReviewDocument[];
 const documentsById = new Map(
-  Object.values(documentsByShift)
-    .flat()
-    .map((doc) => [doc.id, doc]),
+  [...Object.values(documentsByShift).flat(), ...dailyPool].map((doc) => [doc.id, doc]),
 );
+
+// The daily document: d-001 on launch day, the next one each day after, the
+// same for every player. Before launch it previews d-001. If the pool runs
+// out it starts again from the top (add documents to the end of daily.json;
+// never reorder, so past days stay the same).
+export const DAILY_START = "2026-11-03";
+
+function dailyIndex(date: string): number {
+  const days = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${DAILY_START}T00:00:00Z`)) / 86_400_000);
+  return Math.max(0, days) % dailyPool.length;
+}
+
+export function getDailyDocument(date: string): PublicDocument | null {
+  return dailyPool.length ? toPublic(dailyPool[dailyIndex(date)]) : null;
+}
+
+export function isDailyDocument(docId: string): boolean {
+  return docId.startsWith("d-");
+}
 
 export function getShifts(): ShiftInfo[] {
   return shifts.map((s) => ({ ...s, available: s.available && !!documentsByShift[s.number] }));

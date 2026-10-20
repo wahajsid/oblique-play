@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
+import { DiagnosticOffer } from "@/components/offers/DiagnosticOffer";
+import { MilestoneOffer } from "@/components/offers/MilestoneOffer";
 import { ProfileCard } from "@/components/ProfileCard";
 import { ChallengeResult, shareMessage, type ChallengeInfo } from "@/components/share/Challenge";
 import { ShareSheet } from "@/components/share/ShareSheet";
+import { challengeLink } from "@/lib/share-client";
 import { SiteFooter } from "@/components/SiteFooter";
-import type { PlayerProfile } from "@/lib/players";
+import type { PlayerProfile, PlayerStats } from "@/lib/players";
 import { formatTime, type AnswerRecord } from "@/lib/review/progress";
 import type { ShiftInfo } from "@/lib/review/types";
 
@@ -26,6 +29,7 @@ export function ShiftResults({
   profile,
   attemptId,
   challenge,
+  stats,
   onReplay,
 }: {
   shift: ShiftInfo;
@@ -35,6 +39,7 @@ export function ShiftResults({
   profile: PlayerProfile | null;
   attemptId: string;
   challenge: ChallengeInfo | null;
+  stats: PlayerStats | null;
   onReplay: () => void;
 }) {
   const total = answers.length;
@@ -84,6 +89,9 @@ export function ShiftResults({
 
         {challenge && <ChallengeResult you={{ score, total, timeMs: deskMs }} them={challenge} />}
 
+        <MilestoneOffer stats={stats} afterShift hasName={!!profile?.displayName} />
+        {profile?.role === "business_owner" && <DiagnosticOffer />}
+
         {/* Asked after the first round, until the player has filled it in or skipped. */}
         {profile && !profile.displayName && !profile.role && <ProfileCard profile={profile} />}
 
@@ -111,9 +119,7 @@ export function ShiftResults({
       <SiteFooter />
       {sharing && (
         <ShareSheet
-          kind="review"
-          attemptId={attemptId}
-          canChallenge={!!profile}
+          create={profile ? challengeLink("review", attemptId) : null}
           fallbackUrl={`${typeof window === "undefined" ? "" : window.location.origin}/review/${shift.number}`}
           message={message}
           subject="UAE Tax Learning Game by Oblique"

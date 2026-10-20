@@ -56,6 +56,8 @@ export type ReviewMeta = {
   topic: string;
   difficulty: "foundation" | "intermediate" | "advanced";
   appliesFrom: string;
+  // For the content checker: the VAT treatment the document should have.
+  correctTreatment?: "standard" | "zero" | "exempt" | "reverse_charge" | "import_paid_at_customs";
   status: "draft" | "approved";
   reviewer: string | null;
   reviewedOn: string | null;

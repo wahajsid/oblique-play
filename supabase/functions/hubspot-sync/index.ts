@@ -23,6 +23,7 @@ type Player = {
   shifts_completed: number;
   best_scores: Record<string, number>;
   current_streak: number;
+  diagnostic_clicked_at: string | null;
   created_at: string;
 };
 
@@ -79,6 +80,8 @@ async function toProperties(p: Player): Promise<Record<string, string>> {
     oblique_play_marketing_consent: String(p.marketing_consent),
     oblique_play_marketing_consent_date: day(p.marketing_consent_at),
     oblique_play_signup_date: day(p.created_at),
+    // The player tapped "Book a free diagnostic": a warm lead.
+    oblique_play_diagnostic_requested: day(p.diagnostic_clicked_at),
   };
 }
 
@@ -86,6 +89,7 @@ async function toProperties(p: Player): Promise<Record<string, string>> {
 const SYNCED: (keyof Player)[] = [
   "email", "display_name", "role", "source", "referred_by", "marketing_consent",
   "modules_played", "quiz_tracks_played", "shifts_completed", "best_scores", "current_streak",
+  "diagnostic_clicked_at",
 ];
 
 Deno.serve(async (req) => {

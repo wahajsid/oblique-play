@@ -1,12 +1,12 @@
 import "server-only";
 
-import { randomInt } from "node:crypto";
 import shiftsData from "@/content/review/shifts.json";
 import { longDate } from "@/lib/quiz/dates";
 import { finishQuizAttempt } from "@/lib/quiz/record";
 import { finishAttempt } from "@/lib/review/record";
 import { getDailySet, getPlayIds, isPlayTrack, TRACKS } from "@/lib/quiz/content";
 import { getShiftDocuments } from "@/lib/review/content";
+import { newCode } from "@/lib/milestones";
 import { authEnabled, siteUrl } from "@/lib/supabase/config";
 import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 import type { PlayTrack } from "@/lib/quiz/types";
@@ -42,7 +42,6 @@ type Row = {
 };
 
 const CODE = /^[A-Za-z0-9]{8}$/;
-const ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789";
 const shifts = shiftsData as { number: number; title: string }[];
 
 const toChallenge = (r: Row, replyTo: Challenge | null = null): Challenge => ({
@@ -156,7 +155,7 @@ export async function createChallenge(input: {
     reply_to: attempt.challenge_code ?? null,
   };
   for (let tries = 0; tries < 5; tries++) {
-    const code = Array.from({ length: 8 }, () => ALPHABET[randomInt(ALPHABET.length)]).join("");
+    const code = newCode();
     const { error } = await db.from("challenges").insert({ code, ...row });
     if (!error) return { code };
     if (error.code !== "23505") throw error;

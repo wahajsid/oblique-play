@@ -1,0 +1,1422 @@
+[
+  {
+    "id": "s4-01",
+    "shift": 4,
+    "kind": "invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Corniche Homes Properties LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Office 2, Corniche Towers, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100293847560003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Reem Khalfan",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Apartment 1204, Corniche Towers, Abu Dhabi"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "CHP-R-2026-311",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "1 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "22,500.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "22,500.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Exempt supply: residential rent. No VAT charged."
+          },
+          {
+            "id": "building-completed",
+            "label": "Building completed",
+            "value": "2014"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Rent, Apartment 1204, Oct–Dec 2026 (residential lease renewal)",
+          "quantity": "1",
+          "unitPrice": "22,500.00",
+          "vatRate": "Exempt",
+          "amount": "22,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Renting out a home is exempt from VAT, except its first supply within three years of the building's completion, which is zero-rated.",
+      "why": "This is a lease renewal in a building completed in 2014, so it's exempt. No VAT is charged and the tenant pays AED 22,500.00. With no VAT, an ordinary invoice is fine.",
+      "reference": "VAT Decree-Law, Articles 45 and 46; VAT Executive Regulation, Article 37"
+    },
+    "meta": {
+      "topic": "Residential rent",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "exempt"
+    }
+  },
+  {
+    "id": "s4-02",
+    "shift": 4,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Lagoon View Residences LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Building 3, Lagoon View, Ajman"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100516283940003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Daniel Mensah",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Apartment 507, Lagoon View, Ajman"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "LVR-1077",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "1 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "6,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "300.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "6,300.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "building-completed",
+            "label": "Building completed",
+            "value": "2017"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Rent, Apartment 507, Oct 2026 (residential lease renewal)",
+          "quantity": "1",
+          "unitPrice": "6,000.00",
+          "vatRate": "5%",
+          "amount": "6,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "lines"
+      ],
+      "targetLabel": "VAT charged"
+    },
+    "explanation": {
+      "what": "Renting out a home is exempt from VAT, except its first supply within three years of the building's completion.",
+      "why": "The building was completed in 2017 and this is a renewal, so the rent is exempt. No VAT should be charged: the tenant is overcharged AED 300.00 and should pay AED 6,000.00.",
+      "reference": "VAT Decree-Law, Articles 45 and 46; VAT Executive Regulation, Article 37"
+    },
+    "meta": {
+      "topic": "Residential rent",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "exempt"
+    }
+  },
+  {
+    "id": "s4-03",
+    "shift": 4,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Creekside Tower Properties LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Management Office, Creekside Tower, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100752913640003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Falcon Lane Print Studio LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Office 304, Creekside Tower, Dubai"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100184639270003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "CTP-INV-2290",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "1 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "30,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "1,500.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "31,500.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Office rent, Office 304, Oct–Dec 2026",
+          "quantity": "1",
+          "unitPrice": "30,000.00",
+          "vatRate": "5%",
+          "amount": "30,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Commercial property, such as offices, shops and warehouses, is standard-rated, so its rent carries 5% VAT. The exemption covers homes and bare land, not business premises.",
+      "why": "This is office rent, so 5% applies: AED 1,500.00 on AED 30,000.00, making AED 31,500.00.",
+      "reference": "VAT Decree-Law, Articles 3 and 46"
+    },
+    "meta": {
+      "topic": "Commercial rent",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "standard"
+    }
+  },
+  {
+    "id": "s4-04",
+    "shift": 4,
+    "kind": "invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Al Quoz Yard Warehousing LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Plot 7, Al Quoz Industrial 2, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100689257140003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Palmfield Office Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Warehouse 21, Al Quoz Industrial 3, Dubai"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100248613570003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "AQY-0458",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "1 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "24,000.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "24,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Exempt supply: no VAT charged."
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Warehouse rent, Unit B, Oct 2026",
+          "quantity": "1",
+          "unitPrice": "24,000.00",
+          "vatRate": "Exempt",
+          "amount": "24,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "lines",
+        "totals",
+        "notes",
+        "heading"
+      ],
+      "targetLabel": "VAT treatment"
+    },
+    "explanation": {
+      "what": "Commercial property is standard-rated: rent for offices, shops and warehouses carries 5% VAT. Only homes and bare land are exempt.",
+      "why": "A warehouse is commercial property, so the rent isn't exempt. The landlord should issue a tax invoice charging VAT of AED 1,200.00, making AED 25,200.00.",
+      "reference": "VAT Decree-Law, Articles 3 and 46"
+    },
+    "meta": {
+      "topic": "Commercial rent",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "standard"
+    }
+  },
+  {
+    "id": "s4-05",
+    "shift": 4,
+    "kind": "invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Dune Ride Taxi LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Depot 4, Mussafah, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100418762930003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Sandstone Software Studio LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Floor 6, Innovation Square, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100326471950003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "DRT-ACC-1026",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "31 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "1,771.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "1,771.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Exempt supply: local passenger transport."
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Taxi journeys within Abu Dhabi, Oct 2026",
+          "quantity": "46",
+          "unitPrice": "38.50",
+          "vatRate": "Exempt",
+          "amount": "1,771.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Local passenger transport within the UAE, such as taxi, bus and metro journeys, is exempt from VAT.",
+      "why": "These are taxi rides within Abu Dhabi, so no VAT is charged: 46 journeys at AED 38.50 come to AED 1,771.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46"
+    },
+    "meta": {
+      "topic": "Passenger transport",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "exempt"
+    }
+  },
+  {
+    "id": "s4-06",
+    "shift": 4,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Gulf Shield Life Insurance PJSC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Floor 12, Shield House, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100937164820003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Coral Dhow Events LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Villa 9, Corniche Road, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100691827340003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "GSL-P-88213",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "5 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "2,220.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "111.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "2,331.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Group life cover, 12 employees, Oct 2026",
+          "quantity": "12",
+          "unitPrice": "185.00",
+          "vatRate": "5%",
+          "amount": "2,220.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "lines"
+      ],
+      "targetLabel": "VAT charged"
+    },
+    "explanation": {
+      "what": "Life insurance is an exempt financial service. Other insurance, such as health, motor and property cover, is standard-rated.",
+      "why": "This premium is for life cover, so no VAT should be charged. Coral Dhow Events should pay AED 2,220.00, not AED 2,331.00.",
+      "reference": "VAT Decree-Law, Article 46; VAT Executive Regulation, Article 42"
+    },
+    "meta": {
+      "topic": "Financial services",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "exempt"
+    }
+  },
+  {
+    "id": "s4-07",
+    "shift": 4,
+    "kind": "invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Sandbar Land Holdings LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Office 9, Al Hamra Business Centre, Ras Al Khaimah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100561839270003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Palmfield Holdings LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Floor 3, Warehouse 21, Al Quoz Industrial 3, Dubai"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100648291730003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "SLH-S-0031",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "12 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "1,850,000.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "1,850,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Exempt supply: bare land."
+          },
+          {
+            "id": "plot-description",
+            "label": "Plot description",
+            "value": "Bare land: no buildings, partly built structures or civil engineering works"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Plot RK-218, Al Ghail Industrial Area, 12,000 sq ft",
+          "quantity": "1",
+          "unitPrice": "1,850,000.00",
+          "vatRate": "Exempt",
+          "amount": "1,850,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "The sale or lease of bare land, meaning land with no buildings, partly built structures or civil engineering works, is exempt from VAT.",
+      "why": "The plot is described as bare land, so the sale is exempt: no VAT is charged and the price is AED 1,850,000.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 46"
+    },
+    "meta": {
+      "topic": "Bare land",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "exempt"
+    }
+  },
+  {
+    "id": "s4-08",
+    "shift": 4,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Corniche Homes Properties LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Office 2, Corniche Towers, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100293847560003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Nadia Farouk",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Apartment 803, Corniche Towers, Abu Dhabi"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "CHP-R-2026-318",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "1 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "19,500.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "19,500.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "building-completed",
+            "label": "Building completed",
+            "value": "2014"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Rent, Apartment 803, Oct–Dec 2026 (residential lease renewal)",
+          "quantity": "1",
+          "unitPrice": "19,500.00",
+          "vatRate": "0%",
+          "amount": "19,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "lines"
+      ],
+      "targetLabel": "VAT treatment"
+    },
+    "explanation": {
+      "what": "Only the first supply of a home within three years of the building's completion is zero-rated. Later leases and sales are exempt.",
+      "why": "The building was completed in 2014, so this renewal is exempt, not zero-rated. The tenant still pays AED 19,500.00, but the difference matters to the landlord: zero-rated supplies allow input tax recovery, exempt ones don't.",
+      "reference": "VAT Decree-Law, Articles 45 and 46; VAT Executive Regulation, Article 37"
+    },
+    "meta": {
+      "topic": "Zero-rated or exempt",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "exempt"
+    }
+  },
+  {
+    "id": "s4-09",
+    "shift": 4,
+    "kind": "invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Meadow Crescent Developments LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Sales Centre, Meadow Crescent, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100827364150003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Imran Qureshi",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Villa 14, Meadow Crescent, Dubai"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "MCD-SALE-014",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "15 Oct 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "15 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "2,400,000.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "2,400,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "vat-note",
+            "label": "VAT",
+            "value": "Exempt supply: residential property."
+          },
+          {
+            "id": "building-completed",
+            "label": "Building completed",
+            "value": "12 Jun 2026"
+          },
+          {
+            "id": "supply-type",
+            "label": "Supply",
+            "value": "First sale of a newly built villa"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Villa 14, Meadow Crescent (new build, first sale)",
+          "quantity": "1",
+          "unitPrice": "2,400,000.00",
+          "vatRate": "Exempt",
+          "amount": "2,400,000.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "lines",
+        "totals",
+        "notes"
+      ],
+      "targetLabel": "VAT treatment"
+    },
+    "explanation": {
+      "what": "The first supply of a new home, by sale or lease, within three years of its completion is zero-rated (0%), not exempt.",
+      "why": "The villa was completed on 12 Jun 2026 and sold on 15 Oct 2026, so this first sale is zero-rated. The price stays AED 2,400,000.00, but showing it at 0% lets the developer recover the VAT on its building costs.",
+      "reference": "VAT Decree-Law, Articles 45 and 46; VAT Executive Regulation, Article 37"
+    },
+    "meta": {
+      "topic": "Zero-rated or exempt",
+      "difficulty": "advanced",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "correctTreatment": "zero"
+    }
+  },
+  {
+    "id": "s4-10",
+    "shift": 4,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Harbour Crescent Bank PJSC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Head Office, Harbour Crescent, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100374926510003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Saffron Shore Interiors LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Showroom 2, Marina Promenade, Ajman"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100735192460003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "HCB-LN-77104",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "31 Oct 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "13,900.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "695.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "14,595.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Loan interest, Oct 2026",
+          "quantity": "1",
+          "unitPrice": "12,400.00",
+          "vatRate": "Exempt",
+          "amount": "12,400.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Loan arrangement fee",
+          "quantity": "1",
+          "unitPrice": "1,500.00",
+          "vatRate": "5%",
+          "amount": "1,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "total"
+      ],
+      "targetLabel": "VAT amount"
+    },
+    "explanation": {
+      "what": "Interest on a loan is an exempt financial service, but a fee charged for a financial service, such as an arrangement fee, is standard-rated.",
+      "why": "VAT applies only to the AED 1,500.00 fee: 5% is AED 75.00, so the total should be AED 13,975.00. The invoice charges 5% on everything, AED 695.00.",
+      "reference": "VAT Decree-Law, Article 46; VAT Executive Regulation, Article 42"
+    },
+    "meta": {
+      "topic": "Financial services",
+      "difficulty": "advanced",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  }
+]

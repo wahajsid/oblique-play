@@ -54,9 +54,14 @@ export function TrackPicker({ today, tracks }: { today: string; tracks: TrackInf
       </ul>
       <div className="mt-4 flex items-center justify-between gap-3 text-sm">
         <p className="text-muted">{next !== null && <>Next set in {untilNext(next)}</>}</p>
-        <Link href="/quiz/archive" className="inline-flex min-h-11 items-center font-medium underline underline-offset-2">
-          Past sets
-        </Link>
+        <span className="flex gap-4">
+          <Link href="/quiz/leaderboard" className="inline-flex min-h-11 items-center font-medium underline underline-offset-2">
+            Leaderboard
+          </Link>
+          <Link href="/quiz/archive" className="inline-flex min-h-11 items-center font-medium underline underline-offset-2">
+            Past sets
+          </Link>
+        </span>
       </div>
     </>
   );

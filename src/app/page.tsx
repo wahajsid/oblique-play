@@ -10,11 +10,9 @@ export default async function Home() {
     <>
       <AppHeader>
         {player ? (
-          <form action="/auth/signout" method="post">
-            <button type="submit" className="min-h-11 rounded-full px-3 text-sm font-medium text-muted">
-              Sign out
-            </button>
-          </form>
+          <Link href="/profile" className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-medium">
+            Profile
+          </Link>
         ) : (
           authEnabled && (
             <Link href="/signin" className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-medium">

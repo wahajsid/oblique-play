@@ -1,0 +1,1383 @@
+[
+  {
+    "id": "ct-b2-001",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "prompt": "Which accounting standards does a UAE company generally use for the financial statements its Corporate Tax is based on?",
+    "options": [
+      "IFRS, or IFRS for SMEs if its revenue doesn't exceed AED 50 million",
+      "Any standard its auditor agrees to, as long as it's applied consistently",
+      "A UAE-only standard published each year with the tax return",
+      "US GAAP, unless the tax authority approves something else"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Taxable income starts from financial statements prepared under IFRS. Businesses with revenue of AED 50 million or less may use IFRS for SMEs instead.",
+      "why": "Corporate Tax is calculated from accounting net profit, so the figures must follow a recognised standard: IFRS, with IFRS for SMEs allowed for smaller businesses. There's no free choice of standards and no separate UAE standard for Corporate Tax.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 20; Ministerial Decision No. 114 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Ministerial Decision No. 114 of 2023 is the decision on accounting standards and the AED 50 million limit for IFRS for SMEs."
+    }
+  },
+  {
+    "id": "ct-b2-002",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "prompt": "True or false: Corporate Tax is worked out from a company's accounting net profit, adjusted under the Corporate Tax rules, not from its revenue.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Taxable income is the accounting net profit in the financial statements, adjusted for items the law treats differently, such as exempt income and non-deductible costs.",
+      "why": "Corporate Tax is a tax on profit, not on sales. A company with large revenue but small profit pays little, and the starting point is always the net profit in its accounts.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 20"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-003",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "basics",
+    "scenario": "Falcon Lane Print Studio LLC is a UAE-resident company. It isn't a Qualifying Free Zone Person and hasn't elected Small Business Relief. Its taxable income for the tax period 1 Jan–31 Dec 2025 is AED 2,000,000.",
+    "prompt": "How much Corporate Tax is due for 2025?",
+    "options": [
+      "AED 33,750",
+      "AED 146,250",
+      "AED 213,750",
+      "AED 180,000"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Taxable income up to AED 375,000 is taxed at 0%, and the part above it at 9%.",
+      "why": "The part above the 0% band is 2,000,000 − 375,000 = AED 1,625,000, and 9% of that is AED 146,250. (Check: 9% of the full 2,000,000 is 180,000, less the 33,750 saved by the 0% band, also gives 146,250.) AED 180,000 forgets the 0% band, AED 213,750 adds the saving instead of taking it off, and AED 33,750 is only the saving itself.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 3; Cabinet Decision No. 116 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-004",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "basics",
+    "scenario": "Extract from a draft Corporate Tax computation for Coral Dhow Events LLC, a UAE-resident company that isn't a Qualifying Free Zone Person, tax period ended 31 December 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Accounting net profit: AED 900,000",
+      "Included in that profit: a dividend of AED 100,000 from a UAE-resident company",
+      "Taxable income: AED 900,000 + AED 100,000 = AED 1,000,000",
+      "Rates: 0% on the first AED 375,000 of taxable income, 9% on the rest"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Dividends from UAE-resident companies are exempt income, so they're taken out of accounting profit when working out taxable income.",
+      "why": "The dividend is already inside the AED 900,000 profit. Because it's exempt, it should be deducted: 900,000 − 100,000 = AED 800,000 of taxable income. The draft added it instead, overstating taxable income by AED 200,000. Tax on the right figure is 9% × (800,000 − 375,000) = AED 38,250.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 20 and 22"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-005",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "basics",
+    "prompt": "Sandstone Software Studio LLC made an accounting loss of AED 50,000 for 2025, after charging AED 500,000 of fines paid to a government regulator. True or false: because it made a loss, it can't have any Corporate Tax to pay for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Taxable income is accounting profit or loss adjusted under the tax rules. Costs that aren't deductible, such as fines, are added back, which can turn an accounting loss into taxable income.",
+      "why": "Fines aren't deductible, so the AED 500,000 is added back: −50,000 + 500,000 = AED 450,000 of taxable income. Tax is 9% × (450,000 − 375,000) = AED 6,750. An accounting loss doesn't guarantee a tax loss.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3, 20 and 33"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-006",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "basics",
+    "scenario": "Palmfield Holdings LLC and Palmfield Office Supplies LLC form a valid Tax Group for 2025. On their own, each would have taxable income of AED 300,000 for 2025, so the group's taxable income is AED 600,000. Neither is a Qualifying Free Zone Person.",
+    "prompt": "How much Corporate Tax does the Tax Group pay for 2025?",
+    "options": [
+      "AED 27,000",
+      "AED 54,000",
+      "AED 0",
+      "AED 20,250"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Tax Group is treated as a single taxable person, so it gets one AED 375,000 0% band, not one for each member.",
+      "why": "The group's AED 600,000 is taxed as one figure: 9% × (600,000 − 375,000) = AED 20,250. AED 0 assumes each member keeps its own 0% band, which a Tax Group doesn't. AED 54,000 ignores the band entirely, and AED 27,000 taxes one company's AED 300,000 in full.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3 and 40; Cabinet Decision No. 116 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm that a Tax Group gets a single AED 375,000 band for the group as a whole."
+    }
+  },
+  {
+    "id": "ct-b2-007",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "advanced",
+    "topic": "basics",
+    "prompt": "When may a business prepare its financial statements on the cash basis, rather than the accrual basis, for Corporate Tax?",
+    "options": [
+      "When its revenue doesn't exceed AED 3 million, or in exceptional circumstances the tax authority approves",
+      "When its revenue doesn't exceed AED 50 million",
+      "Only if it is a Qualifying Free Zone Person",
+      "Whenever its financial statements aren't audited"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The accrual basis is the norm. The cash basis is allowed for businesses with revenue of AED 3 million or less, or in exceptional circumstances on application.",
+      "why": "AED 50 million is the limit for using IFRS for SMEs, not the cash basis. Being unaudited doesn't change the basis, and Qualifying Free Zone Persons must have audited accounts, so the free zone option is wrong too.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 20; Ministerial Decision No. 114 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the AED 3 million cash-basis limit and the exceptional-circumstances route in Ministerial Decision No. 114 of 2023."
+    }
+  },
+  {
+    "id": "ct-b2-008",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "registration",
+    "prompt": "True or false: a Qualifying Free Zone Person that pays 0% on its qualifying income doesn't need to register for Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Every Taxable Person must register for Corporate Tax, including Qualifying Free Zone Persons, even when most or all of their income is taxed at 0%.",
+      "why": "The 0% rate is about how much tax is due, not whether you're in the system. A Qualifying Free Zone Person is still a resident Taxable Person, so it must register and file a return each tax period.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11, 18 and 51"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-009",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "registration",
+    "prompt": "Which of these must register for Corporate Tax?",
+    "options": [
+      "A visitor who sells a car privately while in the UAE",
+      "An individual who earns AED 2 million a year from shares held in their own name, with no business licence",
+      "A UAE mainland LLC with revenue of AED 400,000",
+      "An employee whose only income is a salary of AED 1.5 million"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Every UAE-incorporated company is a resident Taxable Person and must register, whatever its revenue. Salaries and an individual's personal investment income aren't business income for Corporate Tax.",
+      "why": "The LLC must register even though its revenue is small. Employment income is outside Corporate Tax, an individual's personal investment income isn't a business activity, and a one-off private sale isn't a business either.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11 and 51; Cabinet Decision No. 49 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-010",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "scenario": "Hana is a UAE resident with a licence for her interior-design business, which had turnover of AED 900,000 in 2025. She also received AED 300,000 of rent in 2025 from two flats she owns personally and lets without a business licence.",
+    "prompt": "Does Hana need to register for Corporate Tax for 2025?",
+    "options": [
+      "Yes: any rental income means she must register",
+      "No: only her AED 900,000 of business turnover counts, and it's below AED 1 million",
+      "Yes: her total income of AED 1.2 million is over AED 1 million",
+      "No: individuals are never subject to Corporate Tax"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "An individual is a Taxable Person only if their business turnover exceeds AED 1 million in a calendar year. Wages, personal investment income and personal real estate investment income don't count.",
+      "why": "Rent from flats she owns and lets personally, without a licence, is personal real estate investment income, so it's left out. That leaves AED 900,000 of business turnover, under the AED 1 million threshold. Individuals can be taxable, so the last option is wrong too.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 11; Cabinet Decision No. 49 of 2023; Ministerial Decision on real estate investment by natural persons"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Insert the number of the Ministerial Decision on real estate investment by natural persons, and confirm that such income is left out of the AED 1 million turnover test."
+    }
+  },
+  {
+    "id": "ct-b2-011",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "prompt": "Palmfield Holdings LLC is a UAE company whose only income is dividends from other UAE companies, all of them exempt. True or false: it still needs to register for Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Exempt income and Exempt Persons are different things. A company with only exempt income is still a resident Taxable Person and must register.",
+      "why": "Exempt Persons are specific categories, such as Government Entities and listed public benefit entities, and a holding company isn't one of them. Its dividends are exempt, so it may owe no tax, but it must still register and file a return.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4, 22 and 51"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-012",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "scenario": "Nordkai Property GmbH is a German company with no office, staff or agent in the UAE. It owns an office building in Dubai and earns rent from it.",
+    "prompt": "Does it need to register for UAE Corporate Tax?",
+    "options": [
+      "Yes: income from UAE real estate gives a non-resident a nexus in the UAE",
+      "No: rent from property is exempt income",
+      "Only once the rent exceeds AED 375,000 a year",
+      "No: only resident companies register"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A non-resident company that earns income from immovable property in the UAE has a nexus here and is a Taxable Person for that income.",
+      "why": "Nordkai has no Permanent Establishment, but earning from Dubai property is enough to create a nexus, so it must register. Non-residents can be Taxable Persons, rent isn't exempt income, and the AED 375,000 band affects the tax due, not registration.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 11; Cabinet Decision No. 56 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-013",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "registration",
+    "scenario": "Dune Gate Logistics FZE was incorporated in a UAE free zone on 10 March 2025.",
+    "prompt": "By when must it apply to register for Corporate Tax?",
+    "options": [
+      "Only when its taxable income first exceeds AED 375,000",
+      "By the end of its first tax period, 31 December 2025",
+      "Within 9 months after its first tax period ends",
+      "Within 3 months of incorporation, so by 10 June 2025"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A company incorporated in the UAE on or after 1 March 2024 must apply to register for Corporate Tax within 3 months of its incorporation date.",
+      "why": "Dune Gate was incorporated on 10 March 2025, so its deadline is 10 June 2025. The 9-month deadline is for filing returns, and the AED 375,000 band has nothing to do with registration. Missing the deadline can bring an administrative penalty.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 51; the tax authority's Decision No. 3 of 2024"
+    },
+    "meta": {
+      "appliesFrom": "2024-03-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the 3-month registration deadline for juridical persons incorporated on or after 1 March 2024 (the tax authority's Decision No. 3 of 2024)."
+    }
+  },
+  {
+    "id": "ct-b2-014",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "advanced",
+    "topic": "registration",
+    "prompt": "Ravi is a UAE-resident freelance photographer with a licence. His business turnover first went over AED 1 million in calendar year 2025. True or false: he must register for Corporate Tax by 31 March 2026.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A resident individual whose business turnover exceeds AED 1 million in a calendar year must register by 31 March of the following year.",
+      "why": "His turnover crossed the threshold in 2025, so 2025 is his first year as a Taxable Person and his registration deadline is 31 March 2026.",
+      "reference": "Cabinet Decision No. 49 of 2023; the tax authority's Decision No. 3 of 2024"
+    },
+    "meta": {
+      "appliesFrom": "2024-03-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the 31 March deadline for resident natural persons (the tax authority's Decision No. 3 of 2024)."
+    }
+  },
+  {
+    "id": "ct-b2-015",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "prompt": "True or false: a salary paid to an employee in the UAE is subject to Corporate Tax in the employee's hands.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Corporate Tax applies to business income. Wages and salaries from employment aren't business income, so employees don't pay Corporate Tax on them.",
+      "why": "An employee earning a salary isn't carrying on a business, so there's nothing to register or file for that income, however large it is.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 11; Cabinet Decision No. 49 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-016",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "taxable_persons",
+    "scenario": "Brightleaf Engineering GmbH, a German company, is building a water treatment plant in Abu Dhabi. The construction project lasts eight months. It has no other presence in the UAE.",
+    "prompt": "Does Brightleaf Engineering have a Permanent Establishment in the UAE?",
+    "options": [
+      "No: only an office with its own employees counts",
+      "Yes: a construction project lasting more than six months is a Permanent Establishment",
+      "No: a construction site is never a Permanent Establishment",
+      "Not until the project has lasted more than 12 months"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A building site or construction project in the UAE that lasts more than six months is a Permanent Establishment of the foreign company carrying it out.",
+      "why": "Eight months is over the six-month limit, so the project is a Permanent Establishment and the profit attributable to it is subject to UAE Corporate Tax. Twelve months is the period used in some tax treaties, not the UAE law's own test.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 14"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 14's six-month test for construction projects. A tax treaty with the foreign company's country may give a different result."
+    }
+  },
+  {
+    "id": "ct-b2-017",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "taxable_persons",
+    "scenario": "Savile Lane Outfitters Ltd is a UK company with no office in the UAE. A Dubai-based agent who works only for it habitually signs contracts with UAE customers in its name.",
+    "prompt": "Does Savile Lane have a Permanent Establishment in the UAE?",
+    "options": [
+      "Yes: a dependent agent who habitually concludes contracts on its behalf creates one",
+      "No: agents never create a Permanent Establishment",
+      "No: it has no fixed place of business in the UAE",
+      "Only if the agent is on its payroll as an employee"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A foreign company can have a Permanent Establishment through a person in the UAE who habitually concludes contracts on its behalf, even with no office here.",
+      "why": "The agent works only for Savile Lane and habitually signs contracts in its name, so the agent is a dependent agent and creates a Permanent Establishment, employee or not. An independent agent acting in the ordinary course of their own business generally wouldn't.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 14"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-018",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "taxable_persons",
+    "prompt": "A foreign company registers a branch on the Dubai mainland. How is it taxed under UAE Corporate Tax?",
+    "options": [
+      "Not at all, because a branch isn't a separate legal person",
+      "At 0%, because its head office is abroad",
+      "As a resident, on its worldwide income",
+      "As a non-resident, on the income attributable to the branch"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A branch of a foreign company is a Permanent Establishment. The foreign company is a non-resident Taxable Person, taxed on the income attributable to that branch.",
+      "why": "Registering a branch doesn't make the foreign company resident, so its worldwide income isn't taxed. But the branch is a fixed place of business, so its profits are taxed at the normal rates. Not being a separate legal person doesn't take it outside the law.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11, 12 and 14"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-019",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "prompt": "True or false: a foreign company that sells to UAE customers online from abroad, with no office, staff, agent or property in the UAE, has a Permanent Establishment in the UAE.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Permanent Establishment needs a fixed place of business, or a dependent agent, in the UAE. Selling to UAE customers from abroad isn't enough on its own.",
+      "why": "With no office, staff, agent or property here, there's no fixed place of business and no one concluding contracts for it in the UAE, so there's no Permanent Establishment and no nexus.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11 and 14"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-020",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "taxable_persons",
+    "scenario": "The Qamar Family Foundation is a UAE foundation set up only to hold and manage a family's personal investments for the family's benefit. It meets the conditions in Article 17 and applies to be treated as an Unincorporated Partnership.",
+    "prompt": "If the application is approved, what does it mean for Corporate Tax?",
+    "options": [
+      "The foundation becomes an Exempt Person, and its income is never taxed anywhere",
+      "The foundation is treated as a Qualifying Free Zone Person",
+      "The foundation is tax transparent: its income is treated as that of its founders or beneficiaries",
+      "The foundation pays Corporate Tax at 9% on all its income"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A family foundation that meets the conditions can apply to be treated as an Unincorporated Partnership. It's then tax transparent, so its income is looked at in the hands of the people behind it.",
+      "why": "Transparency moves the tax question to the founders or beneficiaries. If they're individuals holding personal investments, that income generally isn't business income. That isn't the same as being an Exempt Person, and it has nothing to do with free zone status.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 16 and 17"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 17's conditions for family foundations and the transparency effect of an approved application."
+    }
+  },
+  {
+    "id": "ct-b2-021",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "taxable_persons",
+    "scenario": "Extract from a training note on who is a Taxable Person for UAE Corporate Tax in 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "A UAE mainland LLC: resident Taxable Person",
+      "A foreign company with a branch in Dubai: non-resident Taxable Person for the branch's income",
+      "A UAE-resident individual with AED 600,000 of licensed business turnover in 2025: Taxable Person",
+      "A company incorporated in a UAE free zone: resident Taxable Person"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Companies incorporated in the UAE, including in free zones, are resident. A foreign company's UAE branch is taxed as a Permanent Establishment. Individuals are taxable only above AED 1 million of business turnover.",
+      "why": "The individual's turnover is AED 600,000, below the AED 1 million threshold, so they aren't a Taxable Person for 2025. The other three lines are right.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11 and 14; Cabinet Decision No. 49 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-022",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "taxable_persons",
+    "scenario": "Andes Home Studio SA, a Peruvian furniture company, rents a small warehouse in Dubai used only to store and display its own goods. Every sale is agreed and concluded in Lima, and no one in the UAE negotiates or signs contracts.",
+    "prompt": "Does the warehouse create a Permanent Establishment in the UAE?",
+    "options": [
+      "No: using a place only to store and display the company's own goods is a preparatory or auxiliary activity",
+      "No, because the warehouse is rented, not owned",
+      "Yes, because the goods are physically in the UAE",
+      "Yes: any fixed place in the UAE is a Permanent Establishment"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A fixed place used only for preparatory or auxiliary activities, such as storing or displaying the company's own goods, isn't a Permanent Establishment.",
+      "why": "The warehouse is a fixed place, but its only use is storage and display, and every sale is concluded abroad, so the preparatory-or-auxiliary exception applies, provided activities aren't split up to get round the rules. Renting rather than owning makes no difference.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 14"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 14's preparatory-or-auxiliary exception and its anti-fragmentation wording."
+    }
+  },
+  {
+    "id": "ct-b2-023",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "exempt_persons",
+    "prompt": "True or false: a charity becomes a Qualifying Public Benefit Entity, exempt from Corporate Tax, just by being set up for charitable purposes.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "To be a Qualifying Public Benefit Entity, a body must meet the conditions in the law and be listed in a Cabinet Decision.",
+      "why": "Charitable purposes are necessary but not enough. Exemption follows from meeting the Article 9 conditions and appearing on the Cabinet's list. A charity that isn't listed is a Taxable Person.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4 and 9; Cabinet Decision No. 37 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Cabinet Decision No. 37 of 2023 is the list of Qualifying Public Benefit Entities, and any later amendments."
+    }
+  },
+  {
+    "id": "ct-b2-024",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "scenario": "A department of an Emirate's government, which is a Government Entity, also runs a hotel under a commercial licence, competing with private hotels.",
+    "prompt": "How is the hotel treated for Corporate Tax?",
+    "options": [
+      "It's exempt, because the owner is a Government Entity",
+      "It's taxable: a Government Entity is a Taxable Person for business it conducts under a licence",
+      "It's exempt as long as the profits go to the government",
+      "Only half of its profit is taxable"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Government Entities are Exempt Persons, but a business they carry on under a licence is taxed like any other business.",
+      "why": "Running a licensed hotel is a commercial activity, so the Government Entity is a Taxable Person for that business. Where the profits end up doesn't change this, and there's no 50% rule.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4 and 5"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 5's wording on business conducted by a Government Entity under a licence."
+    }
+  },
+  {
+    "id": "ct-b2-025",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "prompt": "A Government Controlled Entity is listed in a Cabinet Decision. True or false: it's exempt only for its mandated activities, and any business it carries on outside its mandate is taxable.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Government Controlled Entity is exempt only for the activities it's mandated to carry out. Other business activities are taxable.",
+      "why": "The exemption follows the mandate, not the owner. Activities outside the mandate are taxed like any other business.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4 and 6"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 6's treatment of non-mandated activities."
+    }
+  },
+  {
+    "id": "ct-b2-026",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "prompt": "Which of these is NOT a category of Exempt Person under UAE Corporate Tax law?",
+    "options": [
+      "An Extractive Business that meets the conditions",
+      "A Government Entity",
+      "A Qualifying Public Benefit Entity",
+      "A company that pays all its profits to a family's charitable foundation"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Exempt Persons are specific categories listed in the law. How a company chooses to use its profits doesn't make it one.",
+      "why": "Government Entities, Qualifying Public Benefit Entities and qualifying Extractive Businesses are all listed categories. A company that gives its profits to a foundation is still an ordinary Taxable Person, though some donations to listed public benefit entities may be deductible.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 4"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-027",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "scenario": "Extract from a draft memo on whether the Coral Coast Science Trust can be a Qualifying Public Benefit Entity",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "To be exempt, it must be listed in a Cabinet Decision as a Qualifying Public Benefit Entity.",
+      "It must operate only for charitable, scientific or other public-benefit purposes.",
+      "Its income and assets must be used for its purpose, not for anyone's private benefit.",
+      "Once it's listed, it no longer needs to meet these conditions."
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Qualifying Public Benefit Entity must keep meeting the conditions to stay exempt. Being listed isn't a one-off pass.",
+      "why": "The first three lines describe the conditions. The last is wrong: an entity that stops meeting them can lose its exempt status and become a Taxable Person.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4 and 9"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm how loss of Qualifying Public Benefit Entity status works (Article 9 and any Cabinet Decision)."
+    }
+  },
+  {
+    "id": "ct-b2-028",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "advanced",
+    "topic": "exempt_persons",
+    "prompt": "What does a government-owned company need to be exempt as a Government Controlled Entity?",
+    "options": [
+      "To be wholly owned and controlled by a Government Entity and listed in a Cabinet Decision; it's then exempt only for its mandated activities",
+      "Nothing: any company more than 50% owned by the government is exempt automatically",
+      "An application to the tax authority each tax period",
+      "Revenue below AED 3 million"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Government Controlled Entity is exempt only if it's listed in a Cabinet Decision, and only for the activities it's mandated to carry out.",
+      "why": "Government ownership alone isn't enough, and there's no 50% rule. The route is listing by Cabinet Decision, not a yearly application. AED 3 million is the Small Business Relief limit, which is unrelated.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 4 and 6"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 6's ownership test (wholly owned and controlled, directly or indirectly) and the listing requirement."
+    }
+  },
+  {
+    "id": "ct-b2-029",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "free_zones",
+    "prompt": "True or false: every company set up in a UAE free zone automatically pays 0% Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Only a Qualifying Free Zone Person can pay 0%, and only on its Qualifying Income. It must meet conditions such as adequate substance and audited accounts.",
+      "why": "A free zone company that doesn't meet the conditions, or earns income that isn't Qualifying Income, pays the normal rates on it. Location alone doesn't give 0%.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3 and 18; Cabinet Decision No. 100 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-030",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "scenario": "Extract from Lagoon Leisure Supplies FZE's list of the activities it claims are Qualifying Activities for 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Logistics services",
+      "Holding shares and other securities for investment",
+      "Retail sales to individual consumers in the UAE",
+      "Manufacturing goods"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Qualifying Activities are listed by Ministerial Decision and include manufacturing, logistics services and holding shares. Transactions with individuals are generally an Excluded Activity.",
+      "why": "Selling to individual consumers is a transaction with natural persons, which is generally excluded, so that income isn't Qualifying Income. The other three lines are on the list of Qualifying Activities.",
+      "reference": "Cabinet Decision No. 100 of 2023; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the lists in Ministerial Decision No. 265 of 2023, and whether it has been replaced or amended since."
+    }
+  },
+  {
+    "id": "ct-b2-031",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "scenario": "Dune Gate Logistics FZE is a Qualifying Free Zone Person that meets all the conditions. In 2025 it earns fees for logistics services provided to a trading company on the Dubai mainland.",
+    "prompt": "How are those fees treated?",
+    "options": [
+      "Exempt income, outside Corporate Tax altogether",
+      "Qualifying Income at 0%, because logistics services are a Qualifying Activity and not an Excluded Activity",
+      "Taxed at 9%, because the customer is on the mainland",
+      "Taxed at 9% only on the part above AED 375,000"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Income from a Qualifying Activity that isn't an Excluded Activity is Qualifying Income, even when the customer is outside the free zone.",
+      "why": "Logistics services are on the list of Qualifying Activities, so the fees are Qualifying Income at 0% whoever the customer is. The customer's location matters for other income, such as services that aren't Qualifying Activities.",
+      "reference": "Cabinet Decision No. 100 of 2023; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm that logistics fees from mainland customers are Qualifying Income under Ministerial Decision No. 265 of 2023 (or any replacement)."
+    }
+  },
+  {
+    "id": "ct-b2-032",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "scenario": "Dhow Byte Labs FZ-LLC is a Qualifying Free Zone Person. In 2025 it earns consulting fees from a company on the Dubai mainland. Consulting isn't one of the Qualifying Activities.",
+    "prompt": "How are the consulting fees treated?",
+    "options": [
+      "As Qualifying Income, as long as they're invoiced from the free zone",
+      "As Qualifying Income at 0%, because the company is a Qualifying Free Zone Person",
+      "As Non-Qualifying Revenue, which counts towards the de minimis limit",
+      "As exempt income"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Income from a non-free-zone customer for an activity that isn't a Qualifying Activity is Non-Qualifying Revenue. Too much of it can cost the company its Qualifying Free Zone Person status.",
+      "why": "The customer is on the mainland and consulting isn't a Qualifying Activity, so the fees are Non-Qualifying Revenue. If they stay within the de minimis limit, the status is kept; above it, the company loses its Qualifying Free Zone Person status. Where the invoice is issued from doesn't matter.",
+      "reference": "Cabinet Decision No. 100 of 2023; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-033",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "prompt": "True or false: a Qualifying Free Zone Person must prepare audited financial statements, whatever its revenue.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Audited financial statements are a condition of being a Qualifying Free Zone Person, whatever its size.",
+      "why": "For most companies, Corporate Tax requires an audit only above AED 50 million of revenue. Qualifying Free Zone Persons are different: every one of them needs audited accounts.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 54; Ministerial Decision No. 82 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-034",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "free_zones",
+    "scenario": "Coral Coast Trading FZE wants Qualifying Free Zone Person status. It has no staff or premises of its own in the free zone. All its core trading work is done by an unrelated company on the Dubai mainland under an outsourcing contract.",
+    "prompt": "Can it meet the substance condition?",
+    "options": [
+      "No: its core income-generating activities must be carried out in a free zone, so outsourcing them to the mainland doesn't count",
+      "Yes: substance is only needed above AED 50 million of revenue",
+      "Yes, as long as it files its tax return on time",
+      "Yes: outsourcing is always allowed if there's a contract"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person must carry out its core income-generating activities in a free zone, with adequate assets, staff and spending. Outsourced work counts only if done in a free zone and adequately supervised.",
+      "why": "Here everything happens on the mainland, so the free zone has none of the substance the rules require. Outsourcing can help, but only to a provider in a free zone, with proper supervision. There's no revenue limit for the substance test.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 18; Cabinet Decision No. 100 of 2023; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the outsourcing conditions for substance (provider in a free zone, adequate supervision)."
+    }
+  },
+  {
+    "id": "ct-b2-035",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "scenario": "Extract from Marina Freight Services FZE's checklist for keeping Qualifying Free Zone Person status in 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "We have adequate staff, premises and spending in the free zone.",
+      "We've elected Small Business Relief, so all our income is at 0% whatever the de minimis result.",
+      "Our related-party transactions are at arm's length, with transfer pricing documentation.",
+      "Our financial statements are audited."
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person can't use Small Business Relief. Its 0% rate depends on meeting the free zone conditions, including the de minimis test.",
+      "why": "Small Business Relief isn't available to Qualifying Free Zone Persons, so it can't override the de minimis result. The other three lines are real conditions: substance, arm's length dealings with documentation, and audited accounts.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 18 and 21; Ministerial Decision No. 73 of 2023; Cabinet Decision No. 100 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-036",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "free_zones",
+    "scenario": "Harbour Bake House FZCO is a Qualifying Free Zone Person. It owns two commercial units in its free zone. It rents one to another Free Zone Person and the other to a company based on the mainland.",
+    "prompt": "How is the rental income treated?",
+    "options": [
+      "Both rents are taxed at 9%",
+      "Rent from the Free Zone Person tenant is Qualifying Income; rent from the mainland tenant is taxed at 9%",
+      "Both rents are Qualifying Income at 0%",
+      "Both rents are exempt income"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "For a Qualifying Free Zone Person, income from commercial property in a free zone is Qualifying Income only when it comes from transactions with Free Zone Persons.",
+      "why": "The unit let to the Free Zone Person earns Qualifying Income at 0%. Rent from the mainland tenant isn't Qualifying Income, so it's taxed at 9%. Property income isn't exempt income.",
+      "reference": "Cabinet Decision No. 100 of 2023; Ministerial Decision No. 265 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the immovable property rules for Qualifying Free Zone Persons (commercial property in a free zone, Free Zone Person tenants), and whether non-qualifying property income is left out of the de minimis test."
+    }
+  },
+  {
+    "id": "ct-b2-037",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "small_business_relief",
+    "prompt": "Qamar Ridge Bakery LLC's revenue was exactly AED 3,000,000 for 2025, and lower in every earlier tax period. True or false: it can elect Small Business Relief for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Small Business Relief is available when revenue doesn't exceed AED 3 million in the current tax period and every earlier one.",
+      "why": "The limit is 'doesn't exceed', so exactly AED 3,000,000 still qualifies. One dirham more and it wouldn't.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-038",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "small_business_relief",
+    "prompt": "What does electing Small Business Relief do for an eligible business?",
+    "options": [
+      "It lets the business pay its tax a year later",
+      "It halves the Corporate Tax rate to 4.5%",
+      "It removes the need to register for Corporate Tax",
+      "It's treated as having no taxable income for that tax period"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "An eligible business that elects Small Business Relief is treated as having no taxable income for that tax period, so no Corporate Tax is due.",
+      "why": "The relief works by treating taxable income as nil. It doesn't change the rate, and the business must still register and file a return, in which it makes the election.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-039",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "prompt": "Bluewave Pool Services LLC had revenue of AED 2 million and taxable income of AED 1.5 million for 2025, and revenue under AED 3 million in every earlier period. True or false: it can still elect Small Business Relief for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The Small Business Relief test looks at revenue, not profit or taxable income.",
+      "why": "Bluewave's revenue of AED 2 million is under AED 3 million, and so was every earlier period's. Its high profit doesn't matter: it can elect, and its taxable income for 2025 is then treated as nil.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-040",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "small_business_relief",
+    "scenario": "Qamar Ridge Bakery LLC elects Small Business Relief for 2025, a year in which it made a tax loss of AED 200,000. In 2026 its revenue goes above AED 3 million, so it can no longer elect.",
+    "prompt": "Can it use the 2025 loss against its 2026 taxable income?",
+    "options": [
+      "No: tax losses from a period in which Small Business Relief is elected can't be carried forward",
+      "Yes, in full, because losses carry forward indefinitely",
+      "Yes, but only if it elects the relief again for 2026",
+      "Yes, but only up to 75% of its 2026 taxable income"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Tax losses incurred in a tax period for which Small Business Relief is elected can't be carried forward to later periods.",
+      "why": "Electing treats 2025's taxable income as nil, and the 2025 loss can't be used later. The 75% cap is the general loss rule, which doesn't help here, and it can't re-elect for 2026 because its revenue is over the limit. A business expecting a loss may prefer not to elect.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 21 and 37; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm that Ministerial Decision No. 73 of 2023 bars carrying forward losses from Small Business Relief periods. Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-041",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "scenario": "Extract from Bluewave Pool Services LLC's working for its Small Business Relief test, tax period 1 Jan–31 Dec 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Revenue in our 2025 financial statements: AED 2,950,000",
+      "Revenue in 2024: AED 2,700,000",
+      "The test: revenue mustn't exceed AED 3,000,000 in this or any earlier tax period.",
+      "We'll test our gross profit of AED 1,100,000 instead, as it's lower."
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "The AED 3 million test uses revenue as shown in the financial statements under the accounting standards, not profit.",
+      "why": "Gross profit isn't revenue, so the last line is wrong. On the right figure, AED 2,950,000, Bluewave is still under the limit, and 2024 was under it too.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-042",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "scenario": "Extract from Oasis Thread Tailoring LLC's notes on Small Business Relief for 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Our revenue was AED 2.4 million in 2025 and AED 2.1 million in 2024.",
+      "We aren't part of a multinational group, and we aren't a Qualifying Free Zone Person.",
+      "We have to elect at the start of 2025; we can't decide when we file the return.",
+      "If we elect, our taxable income for 2025 is treated as nil."
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Small Business Relief is elected in the tax return for the period, so a business can decide once it knows its figures.",
+      "why": "The election is made when the return is filed, not at the start of the year. The other lines are right: revenue is under AED 3 million in both years, it's not in a multinational group or a free zone, and electing makes taxable income nil.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the election is made in the tax return under Ministerial Decision No. 73 of 2023. Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-043",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "small_business_relief",
+    "scenario": "The owner of Sandbar Catering LLC splits its single catering business into three new companies, each with revenue just under AED 3 million, only so that each can elect Small Business Relief.",
+    "prompt": "What can happen?",
+    "options": [
+      "The relief is shared, giving each company a third of it",
+      "The tax authority can treat it as an artificial separation, deny the relief and apply penalties",
+      "Each company gets relief only on its first AED 375,000",
+      "Nothing: each company is a separate legal person, so each qualifies"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "If a business is artificially split so that each part stays under the AED 3 million limit, the tax authority can deny Small Business Relief.",
+      "why": "The rules look at substance: one business split up only to claim the relief is an artificial separation, so the relief can be refused and penalties may apply. Being separate legal persons doesn't protect the arrangement.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 21 and 50; Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "appliesUntil": "2026-12-31",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Ministerial Decision No. 73 of 2023's artificial separation rule and its penalty consequences. Small Business Relief was reportedly extended to tax periods ending on or before 31 Dec 2029 (Ministerial Decision No. 131 of 2026, unconfirmed); appliesUntil kept at 2026-12-31 until reviewers confirm."
+    }
+  },
+  {
+    "id": "ct-b2-044",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "penalties_admin",
+    "prompt": "For how long must a company keep the records and documents that support its Corporate Tax return?",
+    "options": [
+      "3 years after the return is filed",
+      "5 years after the end of the tax period",
+      "7 years after the end of the tax period they relate to",
+      "Until the next tax return is filed"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Records and supporting documents must be kept for 7 years after the end of the tax period they relate to.",
+      "why": "Seven years gives the tax authority time to review past periods. Five or three years is too short, and keeping records only until the next return isn't enough.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 56"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-045",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "prompt": "Marina Coffee Trading LLC is a mainland company with revenue of AED 40 million for 2025. True or false: Corporate Tax requires it to have audited financial statements.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Corporate Tax requires audited financial statements from a company with revenue above AED 50 million, and from every Qualifying Free Zone Person.",
+      "why": "AED 40 million is below the AED 50 million threshold, and Marina Coffee isn't a Qualifying Free Zone Person, so Corporate Tax doesn't require an audit, although one may be needed for other reasons.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 54; Ministerial Decision No. 82 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-046",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "scenario": "Seashell Villas Hotel LLC's financial year has always ended on 31 December. It now wants to change its year-end to 31 March to match its parent company.",
+    "prompt": "What does it need to do for Corporate Tax?",
+    "options": [
+      "Nothing it can do: a tax period can never change",
+      "Tell the tax authority within 9 months after the change",
+      "Nothing: it just changes the date in its accounts",
+      "Apply to the tax authority, which must approve the change"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Taxable Person can change its tax period only by applying to the tax authority and getting its approval.",
+      "why": "The tax period follows the financial year, but changing it needs approval in advance, so the company must apply. Changes are possible for reasons such as matching a group's year-end, so 'never' is wrong.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 57 and 58"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 58's approval requirement and any conditions set by the tax authority for changing a tax period."
+    }
+  },
+  {
+    "id": "ct-b2-047",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "prompt": "Coral Dhow Events LLC's tax period runs from 1 April 2025 to 31 March 2026. By when must it file its Corporate Tax return and pay the tax due?",
+    "options": [
+      "By 31 December 2026",
+      "By 30 June 2026",
+      "By 30 September 2026",
+      "By 31 March 2027"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The Corporate Tax return must be filed, and the tax paid, within 9 months of the end of the tax period.",
+      "why": "The period ends on 31 March 2026, and 9 months later is 31 December 2026. 30 September 2026 would be right for a year ending 31 December 2025. 30 June 2026 is only 3 months after, and 31 March 2027 is a full year.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 48 and 53"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-048",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "advanced",
+    "topic": "penalties_admin",
+    "scenario": "Extract from Falcon Lane Print Studio LLC's Corporate Tax calendar. It's a mainland company with revenue of AED 12 million, and its tax period ended 31 December 2025.",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "File the Corporate Tax return by 30 September 2026.",
+      "Pay the Corporate Tax due by 30 September 2026.",
+      "Keep the records for 2025 until 31 December 2030.",
+      "No audit is needed for Corporate Tax: revenue is under AED 50 million and we're not in a free zone."
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "The return and payment are due 9 months after the period ends, records are kept for 7 years after it, and audit is required above AED 50 million of revenue or for Qualifying Free Zone Persons.",
+      "why": "Records must be kept for 7 years after the end of the tax period: 31 December 2025 plus 7 years is 31 December 2032, not 2030. The other lines are right: the return and payment are due by 30 September 2026, and at AED 12 million of revenue outside a free zone, Corporate Tax doesn't require an audit.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 48, 53, 54 and 56; Ministerial Decision No. 82 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02"
+    }
+  },
+  {
+    "id": "ct-b2-049",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "advanced",
+    "topic": "penalties_admin",
+    "prompt": "True or false: under Cabinet Decision No. 75 of 2023, a company that files its Corporate Tax return late faces a penalty of AED 500 for each month, or part of a month, that it's late, for the first 12 months.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Filing a Corporate Tax return late attracts a monthly administrative penalty, which rises after the first year.",
+      "why": "For the first 12 months the penalty is AED 500 for each month or part of a month, and it goes up after that. Filing on time, within 9 months of the end of the period, avoids it.",
+      "reference": "Cabinet Decision No. 75 of 2023 (administrative penalties for Corporate Tax)"
+    },
+    "meta": {
+      "appliesFrom": "2024-08-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm the amounts (AED 500 a month for the first 12 months, AED 1,000 a month after) and that Cabinet Decision No. 129 of 2025 didn't change Corporate Tax penalties."
+    }
+  },
+  {
+    "id": "ct-b2-050",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "scenario": "Palmfield Office Supplies LLC stops trading and is being liquidated in 2026.",
+    "prompt": "What must it do about its Corporate Tax registration?",
+    "options": [
+      "Apply to deregister within 9 months of the end of its last tax period",
+      "Apply to deregister within 3 months of stopping its business, after filing its returns and paying any tax due",
+      "Keep the registration open for 7 years",
+      "Nothing: the registration ends automatically when trading stops"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Taxable Person that stops its business must apply to deregister within 3 months. It's deregistered once its returns are filed and its tax is paid.",
+      "why": "Deregistration isn't automatic. The 3-month deadline runs from when the business stops. It's the 7-year record-keeping rule, not the registration, that lasts long after.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 52"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-02",
+      "reviewNotes": "Confirm Article 52's 3-month deregistration deadline and the conditions for deregistration."
+    }
+  }
+]

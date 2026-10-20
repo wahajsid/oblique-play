@@ -15,7 +15,7 @@ import {
   type ShiftRun,
 } from "@/lib/review/progress";
 import type { CheckResult, PublicDocument, ShiftInfo, Verdict } from "@/lib/review/types";
-import type { PlayerProfile } from "@/lib/players";
+import type { PlayerProfile, PlayerStats } from "@/lib/players";
 import { FeedbackSheet } from "./FeedbackSheet";
 import { ShiftResults } from "./ShiftResults";
 import { TaxDocument, type DocMode, type Stamp } from "./TaxDocument";
@@ -55,6 +55,7 @@ export function ShiftGame({ shift, documents, needsSignIn, profile, challenge }:
   const [zoom, setZoom] = useState<ZoomContent | null>(null);
   const [savedRun, setSavedRun] = useState<ShiftRun | null>(null);
   const [isBest, setIsBest] = useState(false);
+  const [stats, setStats] = useState<PlayerStats | null>(null);
 
   // Desk time counts only while a document is waiting for a decision.
   // Reading the explanation doesn't count against the player.
@@ -167,7 +168,10 @@ export function ShiftGame({ shift, documents, needsSignIn, profile, challenge }:
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ attemptId, shift: shift.number }),
       keepalive: true,
-    }).catch(() => {});
+    })
+      .then((r) => r.json())
+      .then((d) => setStats(d.stats ?? null))
+      .catch(() => {});
     setPhase("done");
     window.scrollTo({ top: 0 });
   };
@@ -204,6 +208,7 @@ export function ShiftGame({ shift, documents, needsSignIn, profile, challenge }:
         profile={profile}
         attemptId={attemptId}
         challenge={challenge}
+        stats={stats}
         onReplay={() => start(false)}
       />
     );

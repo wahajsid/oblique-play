@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { checkAnswer } from "@/lib/review/content";
-import { recordAnswer } from "@/lib/review/record";
+import { uaeToday } from "@/lib/quiz/dates";
+import { checkAnswer, getDailyDocument, isDailyDocument } from "@/lib/review/content";
+import { recordAnswer, recordDailyAnswer } from "@/lib/review/record";
 import type { CheckRequest } from "@/lib/review/types";
 
 // POST /api/review/check
@@ -23,8 +24,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 
+  // The daily document can only be answered on its day, so nobody can look
+  // ahead to tomorrow's answer.
+  const today = uaeToday();
+  const daily = isDailyDocument(docId);
+  if (daily && getDailyDocument(today)?.id !== docId) {
+    return NextResponse.json({ error: "Not today's document" }, { status: 404 });
+  }
+
   const result = checkAnswer({ docId, verdict, targetId });
   if (!result) return NextResponse.json({ error: "Document not found" }, { status: 404 });
+
+  if (daily) {
+    const recorded = await recordDailyAnswer({ date: today, docId, correct: result.correct, deskMs: body.deskMs });
+    return NextResponse.json({ ...result, correct: recorded?.correct ?? result.correct });
+  }
 
   // Document ids start with their shift number, e.g. "s1-03".
   const shift = Number(docId.match(/^s(\d+)-/)?.[1]);

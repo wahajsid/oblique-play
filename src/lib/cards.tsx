@@ -142,3 +142,97 @@ export async function renderChallengeCard(c: Challenge, size: CardSize) {
     { width, height, fonts: await loadFonts(), headers: { "Cache-Control": "public, max-age=300, s-maxage=3600" } },
   );
 }
+
+type MilestoneCard = { kind: "streak" | "certificate"; value: number; name: string | null; createdAt: string };
+
+// Streak cards (7, 30, 100 days) and the certificate for all six shifts.
+export async function renderMilestoneCard(m: MilestoneCard, size: CardSize) {
+  const { width, height } = CARD_SIZES[size];
+  const s = width / 1200;
+  const wide = size === "landscape";
+  const tall = size === "tall";
+  const who = m.name || "A player";
+  const cert = m.kind === "certificate";
+  const fg = cert ? NAVY : CREAM;
+  const date = new Date(m.createdAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Dubai" });
+  const mark = (h: number) => (
+    <svg width={(h * 1011.81) / 386.23} height={h} viewBox={OBCO_VIEWBOX}>
+      <path d={OBCO_PATH} fill={fg} />
+    </svg>
+  );
+
+  const body = cert ? (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+      <div style={{ display: "flex", fontSize: (wide ? 26 : 30) * s, letterSpacing: 4, fontWeight: 700, color: "#3c3c7f" }}>
+        CERTIFICATE OF COMPLETION
+      </div>
+      <div style={{ display: "flex", marginTop: (wide ? 24 : 40) * s, fontSize: 28 * s, opacity: 0.75 }}>Awarded to</div>
+      <div style={{ display: "flex", marginTop: 6 * s, fontSize: (wide ? 72 : 84) * s, fontWeight: 700, lineHeight: 1.05 }}>{who}</div>
+      <div style={{ display: "flex", marginTop: (wide ? 18 : 30) * s, fontSize: (wide ? 28 : 32) * s, maxWidth: 900 * s, justifyContent: "center" }}>
+        for completing all six shifts of the UAE VAT Document Review
+      </div>
+      <div style={{ display: "flex", marginTop: (wide ? 22 : 40) * s, fontSize: 26 * s, fontWeight: 700 }}>Awarded by Oblique · {date}</div>
+    </div>
+  ) : (
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", alignItems: "baseline" }}>
+        <span style={{ fontSize: (wide ? 190 : 260) * s, fontWeight: 700, color: AQUA, lineHeight: 1 }}>{m.value}</span>
+        <span style={{ fontSize: (wide ? 56 : 72) * s, fontWeight: 700, marginLeft: 16 * s }}>days in a row</span>
+      </div>
+      <div style={{ display: "flex", marginTop: 18 * s, fontSize: (wide ? 40 : 48) * s, fontWeight: 700 }}>
+        {who} is on a {m.value}-day streak.
+      </div>
+    </div>
+  );
+
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width,
+          height,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: cert ? "center" : "stretch",
+          background: cert ? CREAM : NAVY,
+          color: fg,
+          padding: (tall ? 110 : wide ? 50 : 64) * s,
+          fontFamily: "Satoshi",
+          position: "relative",
+          // A thick outer rule frames the certificate (the image renderer
+          // has no "double" border, so the thin inner rule is a second box).
+          border: cert ? `${10 * s}px solid ${NAVY}` : "none",
+        }}
+      >
+        {cert && (
+          <div
+            style={{
+              position: "absolute",
+              top: 14 * s,
+              left: 14 * s,
+              right: 14 * s,
+              bottom: 14 * s,
+              border: `${2 * s}px solid ${NAVY}`,
+              display: "flex",
+            }}
+          />
+        )}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: cert ? "center" : "flex-start" }}>
+          {mark((wide ? 38 : 44) * s)}
+          <div style={{ display: "flex", marginTop: 14 * s, fontSize: (wide ? 22 : 26) * s, fontWeight: 700, letterSpacing: 1, color: cert ? "#3c3c7f" : AQUA }}>
+            UAE TAX LEARNING GAME
+          </div>
+        </div>
+        {body}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: cert ? "center" : "flex-start", fontSize: (wide ? 20 : 24) * s }}>
+          <span style={{ fontWeight: 700 }}>play.obliqueconsult.com</span>
+          <span style={{ opacity: 0.65, marginTop: 4 * s }}>
+            {cert ? "For learning purposes only. Not a professional qualification." : "A learning game by Oblique. Not tax advice."}
+          </span>
+        </div>
+      </div>
+    ),
+    { width, height, fonts: await loadFonts(), headers: { "Cache-Control": "public, max-age=300, s-maxage=3600" } },
+  );
+}

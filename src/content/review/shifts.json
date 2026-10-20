@@ -21,18 +21,18 @@
     "number": 4,
     "title": "Exempt supplies",
     "summary": "Supplies with no VAT at all, and how they differ from 0%.",
-    "available": false
+    "available": true
   },
   {
     "number": 5,
     "title": "Reverse charge on imports",
     "summary": "When the buyer accounts for the VAT instead of the seller.",
-    "available": false
+    "available": true
   },
   {
     "number": 6,
     "title": "Mixed review",
     "summary": "Everything so far, all on one desk.",
-    "available": false
+    "available": true
   }
 ]

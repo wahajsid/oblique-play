@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getPlayerStats } from "@/lib/players";
 import { getShiftDocuments } from "@/lib/review/content";
 import { finishAttempt } from "@/lib/review/record";
 
@@ -17,5 +18,7 @@ export async function POST(request: Request) {
   if (!total) return NextResponse.json({ error: "Invalid request" }, { status: 400 });
 
   const result = await finishAttempt(body.attemptId, total);
-  return NextResponse.json({ recorded: !!result, ...result });
+  // Streak and shifts completed after this round, for milestone offers.
+  const stats = result ? await getPlayerStats() : null;
+  return NextResponse.json({ recorded: !!result, ...result, stats });
 }

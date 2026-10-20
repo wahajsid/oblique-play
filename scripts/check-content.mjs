@@ -49,21 +49,34 @@ const SIMPLIFIED_LIMIT = 10_000_00; // AED 10,000 in fils
 const EXPORT_DAYS = 90;
 const days = (later, earlier) => (parseDate(later) - parseDate(earlier)) / 86_400_000;
 
+// Rate labels a line can carry. "Not charged" is for invoices from suppliers
+// outside the UAE, where the UAE customer accounts for VAT (reverse charge).
+const TEXT_RATES = new Set(["Exempt", "Not charged"]);
+const isForeign = (address) => address !== undefined && !UAE_PLACE.test(address);
+
 function checkDocument(doc) {
   const problems = []; // { id, message }
   const value = (id) => findField(doc, id)?.field.value;
   const has = (id) => value(id) !== undefined;
+  const correct = doc.meta?.correctTreatment; // checker-only: never sent to the browser
+  const isImport = doc.kind === "import_declaration";
+  const supplierAddress = doc.blocks.find((b) => b.id === "supplier")?.fields.find((f) => f.label.includes("address"))?.value;
+  const foreignSupplier = isForeign(supplierAddress);
 
-  // One VAT rate per document: 5% standard or 0% zero-rated
+  // Rates: one rate per document (5%, 0%, Exempt or Not charged), or a
+  // mixed invoice of 5% and Exempt lines (such as loan interest and a fee).
   const rates = new Set(doc.lines.rows.map((r) => r.vatRate));
+  const mixed = rates.size === 2 && rates.has("5%") && rates.has("Exempt");
   const rateText = doc.lines.rows[0]?.vatRate;
-  const rate = Number.parseFloat(rateText);
-  if (rates.size > 1 || ![0, VAT_PERCENT].includes(rate)) {
+  const textual = rates.size === 1 && TEXT_RATES.has(rateText);
+  const rate = mixed ? VAT_PERCENT : Number.parseFloat(rateText);
+  if (!mixed && (rates.size > 1 || (!textual && ![0, VAT_PERCENT].includes(rate)))) {
     problems.push({ id: doc.lines.id, message: `unexpected VAT rates: ${[...rates].join(", ")}` });
   }
 
   // Line amounts
   let lineSum = 0;
+  let standardSum = 0;
   for (const row of doc.lines.rows) {
     const qty = Number(row.quantity.replace(/,/g, ""));
     const expected = qty * toFils(row.unitPrice);
@@ -71,21 +84,60 @@ function checkDocument(doc) {
       problems.push({ id: row.id, message: `${row.quantity} x ${row.unitPrice} = ${show(expected)}, shown ${row.amount}` });
     }
     lineSum += toFils(row.amount);
+    if (row.vatRate === "5%") standardSum += toFils(row.amount);
   }
 
-  if (!has("vat")) {
-    problems.push({ id: "totals", message: "no VAT amount shown" });
+  if (!has("vat") && !textual) {
+    problems.push({ id: isImport ? "valuation" : "totals", message: "no VAT amount shown" });
+  }
+  // No VAT may be charged on a line marked Exempt or Not charged.
+  if (textual && has("vat") && toFils(value("vat")) !== 0) {
+    problems.push({ id: "vat", message: `VAT ${value("vat")} charged on lines marked "${rateText}"` });
   }
   // Net amount before VAT, used for the simplified-invoice limit
   let net = null;
 
-  if (has("subtotal")) {
+  if (isImport) {
+    // Import declarations: VAT is due on the customs value plus customs duty
+    // (and any excise tax), whether paid at customs or by reverse charge.
+    const customsValue = toFils(value("customs-value"));
+    if (lineSum !== customsValue) {
+      problems.push({ id: "customs-value", message: `goods add to ${show(lineSum)}, customs value shown ${value("customs-value")}` });
+    }
+    let base = customsValue;
+    if (has("duty")) {
+      const dutyLabel = findField(doc, "duty").field.label;
+      const pct = Number(dutyLabel.match(/([\d.]+)%/)?.[1]);
+      const duty = toFils(value("duty"));
+      if (pct && percentOf(customsValue, pct) !== duty) {
+        problems.push({ id: "duty", message: `${pct}% of ${show(customsValue)} = ${show(percentOf(customsValue, pct))}, shown ${value("duty")}` });
+      }
+      base += duty;
+    }
+    if (has("excise")) base += toFils(value("excise"));
+    if (toFils(value("vat-base")) !== base) {
+      problems.push({ id: "vat-base", message: `customs value + duty${has("excise") ? " + excise" : ""} = ${show(base)}, shown ${value("vat-base")}` });
+    }
+    if (has("vat")) {
+      const expectedVat = percentOf(toFils(value("vat-base")), rate);
+      if (toFils(value("vat")) !== expectedVat) {
+        problems.push({ id: "vat", message: `${rate}% of ${value("vat-base")} = ${show(expectedVat)}, shown ${value("vat")}` });
+      }
+    }
+    // Reverse charge on imports is for VAT-registered importers only.
+    const reverse = /reverse charge/i.test(value("vat-treatment") ?? "");
+    const importerTrn = doc.blocks.find((b) => b.id === "importer")?.fields.find((f) => f.label.includes("TRN"));
+    if (reverse && !importerTrn) {
+      problems.push({ id: "vat-treatment", message: "reverse charge shown, but the importer has no TRN (not VAT registered)" });
+    }
+  } else if (has("subtotal")) {
     // Prices before VAT: subtotal, optional discount, VAT added on top
     if (lineSum !== toFils(value("subtotal"))) {
       problems.push({ id: "subtotal", message: `lines add to ${show(lineSum)}, subtotal shown ${value("subtotal")}` });
     }
     let taxable = toFils(value("subtotal"));
     if (has("discount")) {
+      if (mixed) problems.push({ id: "discount", message: "discounts on mixed-rate invoices aren't supported by the checker" });
       const afterDiscount = taxable + toFils(value("discount"));
       if (has("taxable") && afterDiscount !== toFils(value("taxable"))) {
         problems.push({ id: "taxable", message: `after discount ${show(afterDiscount)}, shown ${value("taxable")}` });
@@ -94,10 +146,12 @@ function checkDocument(doc) {
     }
     net = taxable;
     const vat = has("vat") ? toFils(value("vat")) : 0;
-    if (has("vat")) {
-      const expectedVat = percentOf(taxable, rate);
+    if (has("vat") && !textual) {
+      // On a mixed invoice, VAT is due only on the 5% lines.
+      const vatBase = mixed ? standardSum : taxable;
+      const expectedVat = percentOf(vatBase, rate);
       if (vat !== expectedVat) {
-        problems.push({ id: "vat", message: `${rate}% of ${show(taxable)} = ${show(expectedVat)}, shown ${value("vat")}` });
+        problems.push({ id: "vat", message: `${rate}% of ${show(vatBase)}${mixed ? " (the 5% lines)" : ""} = ${show(expectedVat)}, shown ${value("vat")}` });
       }
     }
     // Total is checked against the VAT as shown, so one wrong VAT figure
@@ -106,8 +160,8 @@ function checkDocument(doc) {
       problems.push({ id: "total", message: `${show(taxable)} + ${show(vat)} = ${show(taxable + vat)}, shown ${value("total")}` });
     }
 
-    // Conversion to AED when the invoice is in another currency
-    if (doc.lines.currency !== "AED") {
+    // Conversion to AED when a UAE VAT invoice is in another currency
+    if (doc.lines.currency !== "AED" && !textual && !mixed) {
       const fx = value("fx-rate");
       if (!fx) {
         problems.push({ id: "totals", message: `${doc.lines.currency} invoice with no exchange rate` });
@@ -132,14 +186,37 @@ function checkDocument(doc) {
     if (lineSum !== total) {
       problems.push({ id: "total", message: `lines add to ${show(lineSum)}, total shown ${value("total")}` });
     }
-    const expectedVat = Math.round((total * rate) / (100 + rate));
+    const expectedVat = textual ? 0 : Math.round((total * rate) / (100 + rate));
     net = total - expectedVat;
-    if (has("vat") && toFils(value("vat")) !== expectedVat) {
+    if (has("vat") && !textual && toFils(value("vat")) !== expectedVat) {
       problems.push({ id: "vat", message: `VAT inside ${show(total)} = ${show(total)} x ${rate}/${100 + rate} = ${show(expectedVat)}, shown ${value("vat")}` });
     }
     if (has("net") && has("vat") && toFils(value("net")) + toFils(value("vat")) !== total) {
       problems.push({ id: "net", message: `${value("net")} + ${value("vat")} does not make ${value("total")}` });
     }
+  }
+
+  // A supplier outside the UAE with no TRN can't charge UAE VAT: the UAE
+  // customer accounts for it instead (reverse charge).
+  const supplierTrn = doc.blocks.find((b) => b.id === "supplier")?.fields.find((f) => f.label.includes("TRN"));
+  if (foreignSupplier && !supplierTrn && !textual && rate > 0) {
+    problems.push({ id: "vat", message: "a supplier outside the UAE with no TRN charges UAE VAT" });
+  }
+
+  // The intended VAT treatment (meta.correctTreatment) against what the
+  // document shows. Mixed invoices are checked line by line above instead.
+  const shownTreatment = isImport
+    ? /reverse charge/i.test(value("vat-treatment") ?? "") ? "reverse_charge" : "import_paid_at_customs"
+    : mixed
+      ? null
+      : textual
+        ? rateText === "Exempt" ? "exempt" : foreignSupplier ? "reverse_charge" : "not_charged"
+        : rate === 0 ? "zero" : "standard";
+  if (correct && shownTreatment && shownTreatment !== correct) {
+    problems.push({
+      id: isImport ? "vat-treatment" : has("vat") ? "vat" : doc.lines.id,
+      message: `shown as ${shownTreatment.replace(/_/g, " ")}, should be ${correct.replace(/_/g, " ")}`,
+    });
   }
 
   // Title
@@ -163,11 +240,11 @@ function checkDocument(doc) {
     }
   }
 
-  // TRNs
+  // TRNs. A UAE supplier must show one; a supplier outside the UAE needn't.
   for (const block of doc.blocks.filter((b) => b.variant === "party")) {
     const trn = block.fields.find((f) => f.label.includes("TRN"));
     if (!trn) {
-      if (block.id === "supplier") problems.push({ id: "supplier", message: "supplier has no TRN" });
+      if (block.id === "supplier" && !foreignSupplier) problems.push({ id: "supplier", message: "supplier has no TRN" });
       continue;
     }
     if (!/^\d{15}$/.test(trn.value)) {
@@ -187,7 +264,8 @@ function checkDocument(doc) {
 
   // Exports: 0% needs goods leaving the UAE, official and commercial
   // evidence, and export within 90 days of supply. A qualifying export
-  // charged at 5% is also a problem.
+  // charged at 5% is also a problem. Zero rating for other reasons (such as
+  // the first supply of a new home) is marked correctTreatment "zero".
   const destination = value("destination");
   const evidenceProblems = [];
   if (destination !== undefined && UAE_PLACE.test(destination)) {
@@ -202,10 +280,10 @@ function checkDocument(doc) {
       if (gap < 0 || gap > EXPORT_DAYS) evidenceProblems.push({ id: "export-date", message: `goods left ${gap} days after supply (limit ${EXPORT_DAYS})` });
     }
   }
-  if (rate === 0) {
-    if (destination === undefined) problems.push({ id: "vat", message: "0% charged with no export details" });
+  if (rate === 0 && !textual) {
+    if (destination === undefined && correct !== "zero") problems.push({ id: "vat", message: "0% charged with no export details" });
     problems.push(...evidenceProblems);
-  } else if (destination !== undefined && evidenceProblems.length === 0) {
+  } else if (destination !== undefined && evidenceProblems.length === 0 && rate > 0) {
     problems.push({ id: "vat", message: `qualifying export to ${destination} charged at ${rate}% instead of 0%` });
   }
 
@@ -225,7 +303,8 @@ function blockOf(doc, id) {
   return findField(doc, id)?.block.id ?? (id.startsWith("line-") ? doc.lines.id : null);
 }
 
-const files = readdirSync(contentDir).filter((f) => /^shift-\d+\.json$/.test(f)).sort();
+// Shift files plus the daily-document pool (daily.json).
+const files = readdirSync(contentDir).filter((f) => /^(shift-\d+|daily)\.json$/.test(f)).sort();
 let errors = 0;
 let warnings = 0;
 const seen = new Set();

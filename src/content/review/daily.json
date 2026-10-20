@@ -1,0 +1,4359 @@
+[
+  {
+    "id": "d-001",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Jebel Trail Bikes LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 8, Hatta Road Retail Park, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100462817390003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Ghaf Tree Landscaping LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Yard 9, Nursery Road, Umm Al Quwain"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100267384510003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "JTB-2026-1103",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "3 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "13,270.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "663.50"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "13,933.50",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Cargo e-bike",
+          "quantity": "2",
+          "unitPrice": "6,450.00",
+          "vatRate": "5%",
+          "amount": "12,900.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Cycle helmet",
+          "quantity": "2",
+          "unitPrice": "185.00",
+          "vatRate": "5%",
+          "amount": "370.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "A full tax invoice shows \"Tax Invoice\", both businesses' names, addresses and TRNs, a unique number, the date, what was sold, and the VAT rate and amount in AED.",
+      "why": "Everything is here and the sums work: 2 × 6,450.00 + 2 × 185.00 = AED 13,270.00, and 5% of that is AED 663.50, so the total is AED 13,933.50.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59(1)"
+    },
+    "meta": {
+      "topic": "Tax invoice contents",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-002",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Wadi Spice Kitchen LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 2, Ras Al Khor Road, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100381946250003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "WSK-R-20481",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "4 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "157.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "7.88"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Lamb machboos",
+          "quantity": "2",
+          "unitPrice": "56.00",
+          "vatRate": "5%",
+          "amount": "112.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Karak tea",
+          "quantity": "3",
+          "unitPrice": "9.50",
+          "vatRate": "5%",
+          "amount": "28.50"
+        },
+        {
+          "id": "line-3",
+          "description": "Luqaimat",
+          "quantity": "1",
+          "unitPrice": "17.00",
+          "vatRate": "5%",
+          "amount": "17.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat"
+      ],
+      "targetLabel": "VAT amount"
+    },
+    "explanation": {
+      "what": "When prices include VAT, the VAT inside the total is total × 5/105, not 5% of the total.",
+      "why": "The receipt total of AED 157.50 already includes VAT. The VAT inside it is 157.50 × 5/105 = AED 7.50, but the receipt shows AED 7.88, which is 5% of the total.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 3; VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "VAT-inclusive prices",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-003",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Pearl Loom Carpets LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Showroom 11, Carpet Souq, Sharjah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100593184270003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Baltic Bay Interiors Oy",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Satamakatu 9, Helsinki, Finland"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "PLC-EX-0118",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "4 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "2 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "28,200.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "28,200.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0633419",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "BL-PLC-261104",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "6 Nov 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Helsinki, Finland"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Hand-knotted wool rug, 3 m × 2 m",
+          "quantity": "6",
+          "unitPrice": "3,950.00",
+          "vatRate": "0%",
+          "amount": "23,700.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Wool runner rug",
+          "quantity": "4",
+          "unitPrice": "1,125.00",
+          "vatRate": "0%",
+          "amount": "4,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Goods exported outside the GCC are zero-rated (VAT at 0%) when the supplier holds official evidence, such as an exit declaration, and commercial evidence, such as a bill of lading.",
+      "why": "The rugs left for Finland 4 days after the date of supply, and both kinds of evidence are listed. So 0% is right, and the total is AED 28,200.00 with no VAT.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": {
+      "topic": "Zero-rated exports",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-004",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Sabkha Solar Installations LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Plot 33, Mussafah Industrial, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "1002749586100003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Seashell Villas Hotel LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Beach Road, Umm Al Quwain"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100863047210003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "SSI-0907",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "5 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "28,910.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "1,445.50"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "30,355.50",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Solar panel, 550 W",
+          "quantity": "24",
+          "unitPrice": "690.00",
+          "vatRate": "5%",
+          "amount": "16,560.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Inverter, 10 kW",
+          "quantity": "2",
+          "unitPrice": "4,275.00",
+          "vatRate": "5%",
+          "amount": "8,550.00"
+        },
+        {
+          "id": "line-3",
+          "description": "Installation",
+          "quantity": "1",
+          "unitPrice": "3,800.00",
+          "vatRate": "5%",
+          "amount": "3,800.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "supplier-trn"
+      ],
+      "targetLabel": "Supplier TRN"
+    },
+    "explanation": {
+      "what": "A TRN is always exactly 15 digits, and the supplier's TRN must appear on a tax invoice.",
+      "why": "The supplier's TRN here, 1002749586100003, has 16 digits, so it can't be a valid number. An extra 0 has probably crept in. The amounts are fine: 5% of AED 28,910.00 is AED 1,445.50.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59(1)(b)"
+    },
+    "meta": {
+      "topic": "TRN",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-005",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Henna & Honey Salon LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Villa 15, Garden Street, Al Ain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100914637280003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "HHS-R-3307",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "6 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "441.00",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "21.00"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Haircut and blow-dry",
+          "quantity": "1",
+          "unitPrice": "189.00",
+          "vatRate": "5%",
+          "amount": "189.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Henna, both hands",
+          "quantity": "1",
+          "unitPrice": "157.50",
+          "vatRate": "5%",
+          "amount": "157.50"
+        },
+        {
+          "id": "line-3",
+          "description": "Manicure",
+          "quantity": "1",
+          "unitPrice": "94.50",
+          "vatRate": "5%",
+          "amount": "94.50"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "A simplified tax invoice can be issued when the customer isn't VAT registered. It still shows \"Tax Invoice\", the supplier's name, address and TRN, the date, what was supplied, the total and the VAT.",
+      "why": "This salon receipt for a walk-in customer has everything it needs. The prices include VAT, so the VAT inside AED 441.00 is 441.00 × 5/105 = AED 21.00.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-006",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Dhow Point Marine Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Berth 4, Fishermen's Wharf, Ras Al Khaimah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100728415960003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Southern Cross Marine Pty Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "12 Wharf Street, Fremantle, Australia"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "DPM-EX-0052",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "9 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "7 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "13,900.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "13,900.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0641873",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "Not held",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "10 Nov 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Fremantle, Australia"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Marine rope, 200 m coil",
+          "quantity": "10",
+          "unitPrice": "640.00",
+          "vatRate": "0%",
+          "amount": "6,400.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Stainless steel anchor, 25 kg",
+          "quantity": "4",
+          "unitPrice": "1,875.00",
+          "vatRate": "0%",
+          "amount": "7,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "transport-doc"
+      ],
+      "targetLabel": "Bill of lading"
+    },
+    "explanation": {
+      "what": "To zero-rate an export, the supplier needs both official evidence (an exit declaration) and commercial evidence (such as a bill of lading or airway bill).",
+      "why": "There's an exit declaration, but no bill of lading or other transport document is held. Without commercial evidence, the 0% isn't supported, and 5% VAT of AED 695.00 would be due on AED 13,900.00.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 30"
+    },
+    "meta": {
+      "topic": "Export evidence",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-007",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Falaj Water Systems LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Warehouse 6, Industrial Area 2, Sharjah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100649271830003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Bluewave Pool Services LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Unit 5, Palm Grove Business Park, Ras Al Khaimah"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100412958360003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "FWS-1186",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "27 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "9 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "7,500.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "375.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "7,875.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Water filtration unit",
+          "quantity": "2",
+          "unitPrice": "3,240.00",
+          "vatRate": "5%",
+          "amount": "6,480.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Replacement filter cartridge",
+          "quantity": "12",
+          "unitPrice": "85.00",
+          "vatRate": "5%",
+          "amount": "1,020.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "issue-date",
+        "supply-date"
+      ],
+      "targetLabel": "Date of issue"
+    },
+    "explanation": {
+      "what": "A tax invoice should be issued within 14 days of the date of supply.",
+      "why": "The filtration units were supplied on 9 Nov, but the invoice is dated 27 Nov, 18 days later. That's 4 days past the limit, even though 5% of AED 7,500.00 = AED 375.00 is right.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 67(1)"
+    },
+    "meta": {
+      "topic": "Dates",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-008",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Silverkey Locksmiths LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 3, Workshop Lane, Ajman"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100345197620003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Customer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Seashell Villas Hotel LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100863047210003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "SKL-S-0631",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "10 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "15,600.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "780.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "16,380.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Master key system, design and supply",
+          "quantity": "1",
+          "unitPrice": "9,800.00",
+          "vatRate": "5%",
+          "amount": "9,800.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Door lock cylinder",
+          "quantity": "40",
+          "unitPrice": "145.00",
+          "vatRate": "5%",
+          "amount": "5,800.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "heading",
+        "total"
+      ],
+      "targetLabel": "Document type"
+    },
+    "explanation": {
+      "what": "A simplified tax invoice can go to a VAT-registered customer only when the amount doesn't exceed AED 10,000. Above that, a full tax invoice is needed.",
+      "why": "Seashell Villas Hotel is registered (its TRN is shown), and the invoice is for AED 15,600.00 before VAT (AED 16,380.00 with it), well over AED 10,000. A full tax invoice, with the customer's address and more detail, was needed.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-009",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Sandstone Software Studio LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Floor 6, Innovation Square, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100326471950003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Coral Dhow Events LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Villa 9, Corniche Road, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100691827340003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "SSS-INV-0142",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "11 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (EUR)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "3,600.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "180.00"
+          },
+          {
+            "id": "total",
+            "label": "Total",
+            "value": "3,780.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "aed-summary",
+        "title": "Amounts in AED",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "fx-rate",
+            "label": "Exchange rate",
+            "value": "1 EUR = 4.2000 AED"
+          },
+          {
+            "id": "aed-subtotal",
+            "label": "Taxable amount",
+            "value": "15,120.00"
+          },
+          {
+            "id": "aed-vat",
+            "label": "VAT at 5%",
+            "value": "756.00"
+          },
+          {
+            "id": "aed-total",
+            "label": "Total payable",
+            "value": "15,876.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "EUR",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Event ticketing app licence, 12 months",
+          "quantity": "1",
+          "unitPrice": "3,600.00",
+          "vatRate": "5%",
+          "amount": "3,600.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "An invoice can be priced in another currency, but the VAT and the amounts payable must also be shown in AED, with the exchange rate used.",
+      "why": "The invoice is in euros and converts at 4.2000. EUR 3,600.00 is AED 15,120.00, 5% of that is AED 756.00, and the total is AED 15,876.00. Everything checks out.",
+      "reference": "VAT Executive Regulation, Article 59(1)(h), (j) and (k)"
+    },
+    "meta": {
+      "topic": "AED amounts",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-010",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Jebel Trail Bikes LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 8, Hatta Road Retail Park, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100462817390003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Kestrel Outdoor GmbH",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Bergstrasse 4, Munich, Germany"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "JTB-EX-0019",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "12 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "12 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "26,700.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "26,700.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0652207",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Airway bill no.",
+            "value": "AWB 999-61730284",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "15 Nov 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Munich, Germany"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Carbon trail bike",
+          "quantity": "3",
+          "unitPrice": "8,900.00",
+          "vatRate": "0%",
+          "amount": "26,700.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Exported goods can be zero-rated whether they travel by sea or by air. An airway bill is commercial evidence, just like a bill of lading.",
+      "why": "The bikes were flown to Germany 3 days after supply, with an exit declaration and an airway bill on file. So 0% is right and the total is AED 26,700.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": {
+      "topic": "Export evidence",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-011",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Ghaf Tree Landscaping LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Yard 9, Nursery Road, Umm Al Quwain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100267384510003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Customer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Mangrove Flowers Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100471529380003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "GTL-S-0288",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "13 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "2,900.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "145.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "3,045.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Date palm, 2 m",
+          "quantity": "6",
+          "unitPrice": "420.00",
+          "vatRate": "5%",
+          "amount": "2,520.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Drip irrigation fittings",
+          "quantity": "1",
+          "unitPrice": "380.00",
+          "vatRate": "5%",
+          "amount": "380.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "A simplified tax invoice can also go to a VAT-registered customer, as long as the amount doesn't exceed AED 10,000.",
+      "why": "Mangrove Flowers is registered, but the invoice is for AED 2,900.00 before VAT (AED 3,045.00 with it), well under AED 10,000. The VAT is right: 5% of AED 2,900.00 is AED 145.00.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-012",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Lantern Peak Fitness LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Floor 2, Pearl Plaza, Ajman"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100517362940003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Sandstone Software Studio LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Floor 6, Innovation Square, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100326471950003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "LPF-0415",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "16 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "32,400.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "1,620.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "34,020.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Corporate gym membership, 12 months",
+          "quantity": "15",
+          "unitPrice": "1,980.00",
+          "vatRate": "5%",
+          "amount": "27,900.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Personal training pack, 10 sessions",
+          "quantity": "10",
+          "unitPrice": "450.00",
+          "vatRate": "5%",
+          "amount": "4,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "line-1"
+      ],
+      "targetLabel": "Line amount"
+    },
+    "explanation": {
+      "what": "Each line's amount is the quantity times the unit price, and the VAT is worked out on the correct total of the lines.",
+      "why": "15 memberships at AED 1,980.00 come to AED 29,700.00, not AED 27,900.00: two digits have been swapped. The subtotal should be AED 34,200.00, the VAT AED 1,710.00 and the total AED 35,910.00.",
+      "reference": "VAT Executive Regulation, Article 59(1)(h) and (k)"
+    },
+    "meta": {
+      "topic": "5% calculation",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-013",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Golden Frond Dates Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Store 4, Date Market Road, Al Ain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100815264790003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Indigo Coast Retail Pvt Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "45 Marine Drive, Mumbai, India"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "GFD-EX-0233",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "2 Sep 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "28 Aug 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "28,500.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "28,500.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0709931",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "BL-GFD-261203",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "3 Dec 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Mumbai, India"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Medjool dates, 5 kg box",
+          "quantity": "300",
+          "unitPrice": "95.00",
+          "vatRate": "0%",
+          "amount": "28,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "export-date",
+        "supply-date"
+      ],
+      "targetLabel": "Date goods left the UAE"
+    },
+    "explanation": {
+      "what": "To zero-rate an export, the goods must leave the UAE within 90 days of the date of supply (unless the tax authority agrees a longer period).",
+      "why": "The dates were supplied on 28 Aug but didn't leave until 3 Dec, 97 days later. That's 7 days past the limit, so the 0% doesn't hold and 5% VAT of AED 1,425.00 would apply to AED 28,500.00.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 30"
+    },
+    "meta": {
+      "topic": "Export timing",
+      "difficulty": "advanced",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-014",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Pearl Loom Carpets LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Showroom 11, Carpet Souq, Sharjah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100593184270003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Seashell Villas Hotel LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Beach Road, Umm Al Quwain"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100863047210003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "PLC-0741",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "17 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "19,500.00"
+          },
+          {
+            "id": "discount",
+            "label": "Discount (8%)",
+            "value": "-1,560.00"
+          },
+          {
+            "id": "taxable",
+            "label": "Taxable amount",
+            "value": "17,940.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "897.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "18,837.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Corridor carpet, per m²",
+          "quantity": "180",
+          "unitPrice": "95.00",
+          "vatRate": "5%",
+          "amount": "17,100.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Fitting",
+          "quantity": "1",
+          "unitPrice": "2,400.00",
+          "vatRate": "5%",
+          "amount": "2,400.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "When a discount is given on the invoice, VAT is charged on the price after the discount.",
+      "why": "AED 19,500.00 less the 8% discount of AED 1,560.00 leaves AED 17,940.00. 5% of that is AED 897.00, so the total is AED 18,837.00.",
+      "reference": "VAT Executive Regulation, Article 59(1)(i); VAT Decree-Law, Article 36"
+    },
+    "meta": {
+      "topic": "5% calculation",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-015",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Sandgrouse Bookshop LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 5, Old Town Arcade, Fujairah"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "SGB-R-1162",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "18 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "199.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "9.50"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Novel, paperback",
+          "quantity": "3",
+          "unitPrice": "52.50",
+          "vatRate": "5%",
+          "amount": "157.50"
+        },
+        {
+          "id": "line-2",
+          "description": "Bookmark set",
+          "quantity": "2",
+          "unitPrice": "21.00",
+          "vatRate": "5%",
+          "amount": "42.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "supplier"
+      ],
+      "targetLabel": "Supplier TRN"
+    },
+    "explanation": {
+      "what": "Even a simplified tax invoice must show the supplier's TRN.",
+      "why": "The bookshop is charging VAT (AED 9.50 inside AED 199.50), but its TRN isn't printed anywhere. The receipt needs it to be a valid simplified tax invoice.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "Simplified invoice contents",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-016",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Sabkha Solar Installations LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Plot 33, Mussafah Industrial, Abu Dhabi"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100274958610003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Atlas Lane Trading SARL",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "18 Rue des Oliviers, Casablanca, Morocco"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "SSI-EX-0034",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "17 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "16 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "87,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "87,000.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0661540",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "BL-SSI-261120",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "20 Nov 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Casablanca, Morocco"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Solar panel, 550 W",
+          "quantity": "120",
+          "unitPrice": "640.00",
+          "vatRate": "0%",
+          "amount": "76,800.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Roof mounting kit",
+          "quantity": "120",
+          "unitPrice": "85.00",
+          "vatRate": "0%",
+          "amount": "10,200.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "Goods exported outside the GCC are zero-rated when the supplier holds an exit declaration and commercial evidence, and the goods leave within 90 days of supply.",
+      "why": "The panels and kits (76,800.00 + 10,200.00 = AED 87,000.00) were shipped to Morocco 4 days after supply, with both kinds of evidence held. So VAT at 0% is right.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": {
+      "topic": "Zero-rated exports",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-017",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Dhow Point Marine Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Berth 4, Fishermen's Wharf, Ras Al Khaimah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100728415960003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Coral Dhow Events LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Villa 9, Corniche Road, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100691827340003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "DPM-0388",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "19 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "5,100.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 15%",
+            "value": "765.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "5,865.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Life jacket",
+          "quantity": "30",
+          "unitPrice": "120.00",
+          "vatRate": "15%",
+          "amount": "3,600.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Mooring line, 20 m",
+          "quantity": "6",
+          "unitPrice": "250.00",
+          "vatRate": "15%",
+          "amount": "1,500.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "lines",
+        "vat"
+      ],
+      "targetLabel": "VAT rate"
+    },
+    "explanation": {
+      "what": "The standard rate of VAT in the UAE is 5%.",
+      "why": "The invoice charges VAT at 15%, which is the rate in Saudi Arabia, not the UAE. On AED 5,100.00, the VAT should be 5% = AED 255.00 (not AED 765.00), making the total AED 5,355.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 3"
+    },
+    "meta": {
+      "topic": "5% calculation",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-018",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Jebel Trail Bikes LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 8, Hatta Road Retail Park, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100462817390003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "JTB-R-7720",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "20 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "325.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "15.50"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Bike service, full",
+          "quantity": "1",
+          "unitPrice": "262.50",
+          "vatRate": "5%",
+          "amount": "262.50"
+        },
+        {
+          "id": "line-2",
+          "description": "Inner tube",
+          "quantity": "2",
+          "unitPrice": "31.50",
+          "vatRate": "5%",
+          "amount": "63.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "For a customer who isn't VAT registered, a simplified tax invoice is enough. When prices include VAT, the VAT inside is total × 5/105.",
+      "why": "A walk-in customer had their bike serviced. The receipt shows everything it needs, and the VAT inside AED 325.50 is 325.50 × 5/105 = AED 15.50.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 3; VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "VAT-inclusive prices",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-019",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Brass Kettle Cafe Equipment LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 14, Al Qusais Industrial 4, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100492736180003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Maple Ridge Cafes Inc.",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "220 King Street, Toronto, Canada"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "BKC-EX-0071",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "23 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "21 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "38,000.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "1,900.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "39,900.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0670388",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "BL-BKC-261124",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "24 Nov 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Toronto, Canada"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Espresso machine, 2-group",
+          "quantity": "4",
+          "unitPrice": "7,850.00",
+          "vatRate": "5%",
+          "amount": "31,400.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Coffee grinder",
+          "quantity": "4",
+          "unitPrice": "1,650.00",
+          "vatRate": "5%",
+          "amount": "6,600.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "total",
+        "lines"
+      ],
+      "targetLabel": "VAT rate"
+    },
+    "explanation": {
+      "what": "When an export meets the conditions, it is zero-rated, so the supplier shouldn't charge 5%.",
+      "why": "The machines left for Canada 3 days after supply, with an exit declaration and a bill of lading. This is a qualifying export, so VAT should be 0%. Charging 5% overcharges the customer by AED 1,900.00; the total should be AED 38,000.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 45; VAT Executive Regulation, Article 30"
+    },
+    "meta": {
+      "topic": "Zero-rated exports",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-020",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Ghaf Tree Landscaping LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Yard 9, Nursery Road, Umm Al Quwain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100267384510003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Lantern Peak Fitness LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Floor 2, Pearl Plaza, Ajman"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100517362940003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "GTL-0593",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "19 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "6 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "17,920.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "896.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "18,816.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Rooftop garden landscaping, completed",
+          "quantity": "1",
+          "unitPrice": "14,800.00",
+          "vatRate": "5%",
+          "amount": "14,800.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Fibreglass planter",
+          "quantity": "12",
+          "unitPrice": "260.00",
+          "vatRate": "5%",
+          "amount": "3,120.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "When the date of supply is different from the date of issue, the invoice shows both, and it should be issued within 14 days of the date of supply.",
+      "why": "The garden was finished on 6 Nov and invoiced on 19 Nov, 13 days later: just inside the limit. Both dates are shown, and 5% of AED 17,920.00 is AED 896.00.",
+      "reference": "VAT Executive Regulation, Article 59(1)(f); VAT Decree-Law, Article 67(1)"
+    },
+    "meta": {
+      "topic": "Dates",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-021",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Silverkey Locksmiths LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 3, Workshop Lane, Ajman"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100345197620003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "SKL-R-4419",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "115.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "5.50"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Key cutting",
+          "quantity": "4",
+          "unitPrice": "15.75",
+          "vatRate": "5%",
+          "amount": "63.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Brass padlock",
+          "quantity": "1",
+          "unitPrice": "52.50",
+          "vatRate": "5%",
+          "amount": "52.50"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "details"
+      ],
+      "targetLabel": "Date of issue"
+    },
+    "explanation": {
+      "what": "A simplified tax invoice must still show the date it was issued.",
+      "why": "The amounts are fine (VAT inside AED 115.50 is 115.50 × 5/105 = AED 5.50), but the receipt has no date at all. Without it, the supply can't be placed in the right VAT period.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "Simplified invoice contents",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-022",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Falaj Water Systems LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Warehouse 6, Industrial Area 2, Sharjah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100649271830003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Lotus Bay Spa Co., Ltd",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "88 Sukhumvit Soi 11, Bangkok, Thailand"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "FWS-EX-0027",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "10 Sep 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "4 Sep 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "19,440.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "19,440.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "ED 2026-0702264",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "BL-FWS-261202",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "2 Dec 2026"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Bangkok, Thailand"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Spa water filtration unit",
+          "quantity": "6",
+          "unitPrice": "3,240.00",
+          "vatRate": "0%",
+          "amount": "19,440.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "An export is zero-rated when the goods leave the UAE within 90 days of the date of supply and the supplier holds both kinds of evidence.",
+      "why": "The units were supplied on 4 Sep and left on 2 Dec, 89 days later: inside the 90-day limit, if only just. With an exit declaration and a bill of lading on file, 0% on AED 19,440.00 is right.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 30"
+    },
+    "meta": {
+      "topic": "Export timing",
+      "difficulty": "advanced",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-023",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Lantern Peak Fitness LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Floor 2, Pearl Plaza, Ajman"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100517362940003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Coral Dhow Events LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Villa 9, Corniche Road, Abu Dhabi"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100691827340003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "LPF-0431",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "24 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "4,450.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "222.50"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "4,627.50",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Team fitness day, per person",
+          "quantity": "40",
+          "unitPrice": "95.00",
+          "vatRate": "5%",
+          "amount": "3,800.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Equipment hire",
+          "quantity": "1",
+          "unitPrice": "650.00",
+          "vatRate": "5%",
+          "amount": "650.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "total"
+      ],
+      "targetLabel": "Total payable"
+    },
+    "explanation": {
+      "what": "The total payable is the taxable amount plus the VAT.",
+      "why": "The subtotal of AED 4,450.00 and VAT of AED 222.50 are right, but they add up to AED 4,672.50, not AED 4,627.50. Two digits in the total have been swapped.",
+      "reference": "VAT Executive Regulation, Article 59(1)(j) and (k)"
+    },
+    "meta": {
+      "topic": "5% calculation",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-024",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Dhow Point Marine Supplies LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Berth 4, Fishermen's Wharf, Ras Al Khaimah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100728415960003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Customer",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Omar Saleh (private boat owner)",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "DPM-S-0219",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "25 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "2,790.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "139.50"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "2,929.50",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Outboard engine service",
+          "quantity": "1",
+          "unitPrice": "1,850.00",
+          "vatRate": "5%",
+          "amount": "1,850.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Galvanised anchor chain, 15 m",
+          "quantity": "1",
+          "unitPrice": "940.00",
+          "vatRate": "5%",
+          "amount": "940.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "right"
+    },
+    "explanation": {
+      "what": "A simplified tax invoice is allowed for a customer who isn't VAT registered, whether prices are shown before or after VAT.",
+      "why": "The customer is a private boat owner, so a simplified invoice is fine. 5% of AED 2,790.00 is AED 139.50, and the total is AED 2,929.50.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "When a simplified invoice is allowed",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-025",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Brass Kettle Cafe Equipment LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Unit 14, Al Qusais Industrial 4, Dubai"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100492736180003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Maple Ridge Cafes Inc.",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "220 King Street, Toronto, Canada"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "BKC-0082",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "26 Nov 2026"
+          },
+          {
+            "id": "supply-date",
+            "label": "Date of supply",
+            "value": "25 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "15,700.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "15,700.00",
+            "style": "strong"
+          }
+        ]
+      },
+      {
+        "id": "export-evidence",
+        "title": "Export evidence",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "exit-declaration",
+            "label": "Exit declaration no.",
+            "value": "Not applicable",
+            "style": "mono"
+          },
+          {
+            "id": "transport-doc",
+            "label": "Bill of lading no.",
+            "value": "Not applicable",
+            "style": "mono"
+          },
+          {
+            "id": "export-date",
+            "label": "Date goods left the UAE",
+            "value": "Not applicable"
+          },
+          {
+            "id": "destination",
+            "label": "Destination",
+            "value": "Maple Ridge pop-up cafe, Yas Island, Abu Dhabi, UAE"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Espresso machine, 2-group",
+          "quantity": "2",
+          "unitPrice": "7,850.00",
+          "vatRate": "0%",
+          "amount": "15,700.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "destination",
+        "vat",
+        "lines"
+      ],
+      "targetLabel": "VAT rate: the goods stayed in the UAE"
+    },
+    "explanation": {
+      "what": "Zero-rating for exports only applies when the goods leave the UAE. Goods delivered inside the UAE are taxed at 5%, even if the customer is based abroad.",
+      "why": "The customer is Canadian, but the machines were delivered to its pop-up cafe on Yas Island, so they never left the UAE. VAT of 5% = AED 785.00 was due, making the total AED 16,485.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 27 and 45"
+    },
+    "meta": {
+      "topic": "Zero-rated exports",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-026",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Silverkey Locksmiths LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Shop 3, Workshop Lane, Ajman"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100345197620003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Saffron Shore Interiors LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Showroom 2, Marina Promenade, Ajman"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100735192460003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "SKL-0702",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "27 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "25,020.00"
+          },
+          {
+            "id": "discount",
+            "label": "Discount (5%)",
+            "value": "-1,251.00"
+          },
+          {
+            "id": "taxable",
+            "label": "Taxable amount",
+            "value": "23,679.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "1,183.95"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "24,862.95",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Smart door lock",
+          "quantity": "18",
+          "unitPrice": "1,240.00",
+          "vatRate": "5%",
+          "amount": "22,320.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Installation, per door",
+          "quantity": "18",
+          "unitPrice": "150.00",
+          "vatRate": "5%",
+          "amount": "2,700.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "taxable",
+        "vat",
+        "total"
+      ],
+      "targetLabel": "Taxable amount"
+    },
+    "explanation": {
+      "what": "VAT is charged on the price after any discount, so the taxable amount must be worked out correctly first.",
+      "why": "AED 25,020.00 less the 5% discount of AED 1,251.00 is AED 23,769.00, not AED 23,679.00. So the VAT should be AED 1,188.45 and the total AED 24,957.45.",
+      "reference": "VAT Executive Regulation, Article 59(1)(i); VAT Decree-Law, Article 36"
+    },
+    "meta": {
+      "topic": "5% calculation",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-027",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Henna & Honey Salon LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Villa 15, Garden Street, Al Ain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100914637280003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "HHS-R-3391",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "28 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "238.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "13.50"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Haircut and blow-dry",
+          "quantity": "1",
+          "unitPrice": "189.00",
+          "vatRate": "5%",
+          "amount": "189.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Manicure",
+          "quantity": "1",
+          "unitPrice": "94.50",
+          "vatRate": "5%",
+          "amount": "94.50"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "total",
+        "vat"
+      ],
+      "targetLabel": "Total"
+    },
+    "explanation": {
+      "what": "The total on a receipt must be the sum of the items charged. When prices include VAT, the VAT inside is total × 5/105.",
+      "why": "The two services add up to AED 283.50, but the receipt total says AED 238.50: two digits have been swapped. The VAT shown, AED 13.50, matches the correct total of AED 283.50 (283.50 × 5/105).",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Article 3; VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "VAT-inclusive prices",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-028",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Golden Frond Dates Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Store 4, Date Market Road, Al Ain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100815264790003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Marina Coffee Trading LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Shop 7, Harbour Walk, Dubai"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100384729160003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "GFD-0517",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "30 Nov 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "3,800.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 0%",
+            "value": "0.00"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "3,800.00",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Medjool dates, 5 kg box",
+          "quantity": "40",
+          "unitPrice": "95.00",
+          "vatRate": "0%",
+          "amount": "3,800.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "vat",
+        "lines",
+        "total"
+      ],
+      "targetLabel": "VAT rate"
+    },
+    "explanation": {
+      "what": "Food sold in the UAE is taxed at the standard 5% rate. Basic food is not on the list of zero-rated supplies.",
+      "why": "These dates were sold to a cafe in Dubai, so they aren't an export and food isn't zero-rated in the UAE. VAT of 5% = AED 190.00 was due on AED 3,800.00, making the total AED 3,990.00.",
+      "reference": "VAT Decree-Law (Federal Decree-Law No. 8 of 2017), Articles 3 and 45"
+    },
+    "meta": {
+      "topic": "Zero rating",
+      "difficulty": "intermediate",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-029",
+    "shift": 0,
+    "kind": "tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "TAX INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Pearl Loom Carpets LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Showroom 11, Carpet Souq, Sharjah"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100593184270003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "customer",
+        "title": "Bill to",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "customer-name",
+            "label": "Customer name",
+            "value": "Saffron Shore Interiors LLC",
+            "style": "strong"
+          },
+          {
+            "id": "customer-address",
+            "label": "Customer address",
+            "value": "Showroom 2, Marina Promenade, Ajman"
+          },
+          {
+            "id": "customer-trn",
+            "label": "Customer TRN",
+            "value": "100735192460003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Invoice details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Invoice number",
+            "value": "PLC-0768",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "subtotal",
+            "label": "Subtotal",
+            "value": "18,950.00"
+          },
+          {
+            "id": "vat",
+            "label": "VAT at 5%",
+            "value": "947.50"
+          },
+          {
+            "id": "total",
+            "label": "Total payable",
+            "value": "19,897.50",
+            "style": "strong"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Silk rug, 2.5 m × 3.5 m",
+          "quantity": "1",
+          "unitPrice": "18,500.00",
+          "vatRate": "5%",
+          "amount": "18,500.00"
+        },
+        {
+          "id": "line-2",
+          "description": "Rug underlay",
+          "quantity": "1",
+          "unitPrice": "450.00",
+          "vatRate": "5%",
+          "amount": "450.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "details"
+      ],
+      "targetLabel": "Date of issue"
+    },
+    "explanation": {
+      "what": "A tax invoice must show the date it was issued.",
+      "why": "The amounts are right (5% of AED 18,950.00 is AED 947.50), but there's no date anywhere on the invoice. The customer can't tell which VAT period it belongs to, and it isn't a valid tax invoice without one.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59(1)(e)"
+    },
+    "meta": {
+      "topic": "Tax invoice contents",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  },
+  {
+    "id": "d-030",
+    "shift": 0,
+    "kind": "simplified_tax_invoice",
+    "heading": {
+      "id": "heading",
+      "label": "Document title",
+      "value": "SIMPLIFIED INVOICE"
+    },
+    "blocks": [
+      {
+        "id": "supplier",
+        "title": "From",
+        "variant": "party",
+        "fields": [
+          {
+            "id": "supplier-name",
+            "label": "Supplier name",
+            "value": "Ghaf Tree Landscaping LLC",
+            "style": "strong"
+          },
+          {
+            "id": "supplier-address",
+            "label": "Supplier address",
+            "value": "Yard 9, Nursery Road, Umm Al Quwain"
+          },
+          {
+            "id": "supplier-trn",
+            "label": "Supplier TRN",
+            "value": "100267384510003",
+            "style": "mono"
+          }
+        ]
+      },
+      {
+        "id": "details",
+        "title": "Receipt details",
+        "variant": "details",
+        "fields": [
+          {
+            "id": "invoice-number",
+            "label": "Receipt number",
+            "value": "GTL-R-0915",
+            "style": "mono"
+          },
+          {
+            "id": "issue-date",
+            "label": "Date of issue",
+            "value": "1 Dec 2026"
+          }
+        ]
+      },
+      {
+        "id": "totals",
+        "title": "Totals (AED)",
+        "variant": "totals",
+        "fields": [
+          {
+            "id": "total",
+            "label": "Total (incl. VAT)",
+            "value": "346.50",
+            "style": "strong"
+          },
+          {
+            "id": "vat",
+            "label": "VAT included at 5%",
+            "value": "16.50"
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Note",
+        "variant": "notes",
+        "fields": [
+          {
+            "id": "receipt-note",
+            "label": "Prices",
+            "value": "All prices include VAT"
+          }
+        ]
+      }
+    ],
+    "lines": {
+      "id": "lines",
+      "currency": "AED",
+      "rows": [
+        {
+          "id": "line-1",
+          "description": "Potted bougainvillea",
+          "quantity": "6",
+          "unitPrice": "47.25",
+          "vatRate": "5%",
+          "amount": "283.50"
+        },
+        {
+          "id": "line-2",
+          "description": "Potting soil, 50 L",
+          "quantity": "3",
+          "unitPrice": "21.00",
+          "vatRate": "5%",
+          "amount": "63.00"
+        }
+      ]
+    },
+    "answer": {
+      "verdict": "off",
+      "targets": [
+        "heading"
+      ],
+      "targetLabel": "Document title"
+    },
+    "explanation": {
+      "what": "Even a simplified tax invoice must clearly show the words \"Tax Invoice\".",
+      "why": "The receipt is titled \"Simplified Invoice\", leaving out the word \"Tax\". The amounts are fine: the VAT inside AED 346.50 is 346.50 × 5/105 = AED 16.50.",
+      "reference": "VAT Executive Regulation (Cabinet Decision No. 52 of 2017, as amended), Article 59 (simplified tax invoices)"
+    },
+    "meta": {
+      "topic": "Simplified invoice contents",
+      "difficulty": "foundation",
+      "appliesFrom": "2018-01-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null
+    }
+  }
+]
