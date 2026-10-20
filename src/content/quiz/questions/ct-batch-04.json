@@ -60,7 +60,7 @@
     "prompt": "Does the dividend qualify for the participation exemption?",
     "options": [
       "Yes, because the stake is over 5% and has been held for over 12 months",
-      "No, because the Gulf trading company isn't subject to corporate tax at 9% or more",
+      "No, because the trading company isn't subject to corporate tax at 9% or more",
       "Yes, but only half of the dividend is exempt",
       "No, because only dividends from UAE companies can be exempt"
     ],
@@ -75,7 +75,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-04"
+      "source": "oblique:ct-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 2): Minor wording: option 1 refers to 'the Gulf trading company' but the scenario never says the company is in the Gulf; reword to 'the trading company'. Source: FDL 47/2022 Art 23(2)(b) (subject to tax at not less than 9%); Art 23(3) holding-company exception not applicable to a trading company"
     }
   },
   {
@@ -385,7 +386,7 @@
     "format": "scenario",
     "difficulty": "intermediate",
     "topic": "foreign_income",
-    "scenario": "Oasis Thread Tailoring LLC owns 3% of a listed European textile company, bought for AED 1 million. In 2025 it receives a dividend of AED 400,000, after the European country withheld tax of 5% (AED 20,000). Oasis Thread's other taxable income is already over AED 375,000.",
+    "scenario": "Oasis Thread Tailoring LLC owns 3% of a listed European textile company, bought for AED 1 million. In 2025 it is paid a gross dividend of AED 400,000, from which the European country withholds tax of 5% (AED 20,000). Oasis Thread's other taxable income is already over AED 375,000.",
     "prompt": "How is the dividend treated for UAE Corporate Tax?",
     "options": [
       "Exempt, because tax has already been withheld abroad",
@@ -404,7 +405,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:ct-batch-04"
+      "source": "oblique:ct-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 2): Minor wording: 'receives a dividend of AED 400,000, after ... withheld tax of 5% (AED 20,000)' reads as if 400,000 is net, yet 5% of 400,000 = 20,000 implies 400,000 is gross. Answer unaffected (credit = lower of 20,000 and 9% of gross), but consider 'a gross dividend of AED 400,000, from which ... withheld 5%'. Source: FDL 47/2022 Art 23(2) (5% threshold; MD 116/2023 AED 4m acquisition-cost alternative not met at AED 1m); Art 47(2); Art 33(8) foreign income tax not deductible"
     }
   },
   {

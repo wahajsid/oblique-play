@@ -42,7 +42,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 | 4–5 | Sat 24 – Sun 25 Oct | Email-code sign-in, Resend, consent, Supabase to HubSpot. **Code done on Mon 19 Oct; waiting on account setup (docs/SETUP.md).** |
 | 6–7 | Mon 26 – Tue 27 Oct | Module 2: daily quiz. **Engine built on Tue 20 Oct; question bank in progress.** |
 | 8 | Wed 28 Oct | Sharing, share cards, challenge links. **Built on Tue 20 Oct.** |
-| 9 | Thu 29 Oct | Shifts 4–6, daily document, streaks, leaderboard, certificate |
+| 9 | Thu 29 Oct | Shifts 4–6, daily document, streaks, leaderboard, certificate. **Built on Tue 20 Oct.** |
 | 10 | Fri 30 Oct | Polish: home-screen install, dark mode, accessibility |
 | 11 | Sat 31 Oct | Device testing |
 | 12–13 | Sun 1 – Mon 2 Nov | Final content sign-off, soft launch with 20–30 testers |
@@ -86,6 +86,27 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 ### Local testing
 
 A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, and 31 for the database rules.
+
+### Content status (20 Oct 2026)
+
+| Content | Drafted | Usable now | Target |
+| --- | --- | --- | --- |
+| Corporate Tax questions | 202 | 200 (50 / 100 / 50) | 200 |
+| VAT questions | 206 | 199 (50 / 99 / 50) | 200 |
+| Shift documents (6 shifts) | 60 | 60 | 60 |
+| Daily documents | 30 | 30 | 30 |
+
+Every item was answered blind by a separate AI verifier. The verifiers agreed with 405 of 408 question keys and all 90 document answers. Nine questions are on hold until a reviewer fixes them (see the Hold column in the review workbooks). Nothing is approved yet: every item needs a named reviewer.
+
+**Review workbooks:** `npm run review:export` writes `review/oblique-play-review-ct.xlsx` (Ashta, Pranay) and `review/oblique-play-review-vat.xlsx` (Aidarous, Arslan). Reviewers edit the yellow cells and choose Approve / Needs changes / Reject. `npm run review:import -- <file>` applies their work.
+
+### Before launch day
+
+1. Import the reviewed workbooks and run both checkers.
+2. **Reset the preview schedule**, then build the real one from approved questions only:
+   `echo '[]' > src/content/quiz/schedule.json && npm run quiz:schedule -- --from 2026-11-03 --days 10`.
+   The current schedule is a draft preview from 20 Oct. If it were kept, its questions would count against the 14-day no-repeat rule.
+3. The first weekly batch of new questions must be approved and scheduled by quiz day 8 (Tue 10 Nov).
 
 ## Risks to act on
 

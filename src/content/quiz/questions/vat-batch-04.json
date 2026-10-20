@@ -392,7 +392,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Insert the exact Article 59 paragraph for simplified tax invoices (Module 1 Shift 2 asks the same). Amounts chosen to be under AED 10,000 both before and after VAT."
+      "reviewNotes": "Insert the exact Article 59 paragraph for simplified tax invoices (Module 1 Shift 2 asks the same). Amounts chosen to be under AED 10,000 both before and after VAT. | VERIFIER (blind check, high confidence, chose option 3): Minor shelf-life note: simplified invoices are disapplied for registrants on e-invoicing (Art 59(16)); voluntary/pilot now, mandatory for large businesses from 2027. Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 59(5)(b): registrant recipient and consideration not exceeding AED 10,000"
     }
   },
   {
@@ -421,7 +421,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Insert the exact Article 59 paragraph for simplified tax invoices (Module 1 Shift 2 asks the same). Also confirm line 4: no amount limit when the customer isn't registered."
+      "reviewNotes": "Insert the exact Article 59 paragraph for simplified tax invoices (Module 1 Shift 2 asks the same). Also confirm line 4: no amount limit when the customer isn't registered. | VERIFIER (blind check, high confidence, chose option 1): Minor: line 4 ('whatever the amount') is correct only subject to reverse-charge, FTA-specified (Art 59(15)) and e-invoicing (Art 59(16)) exceptions. Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 59(2)(b): simplified invoice must show supplier's name, address and TRN; Art 59(2)(a),(e); Art 59(5)(a)"
     }
   },
   {
@@ -535,7 +535,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the Art. 30 paragraph for catering, and that export-of-services zero-rating can't apply to catering performed in the UAE."
+      "reviewNotes": "Confirm the Art. 30 paragraph for catering, and that export-of-services zero-rating can't apply to catering performed in the UAE. | VERIFIER (blind check, high confidence, chose option 2): 24,000 x 5% = 1,200 (check: 24,000/20). Source: FDL 8/2017 (FTA consolidated text) Art 30(5): catering supplied where actually performed"
     }
   },
   {
@@ -592,7 +592,8 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Medium-high confidence: confirm the Art. 25 rule for goods supplied with assembly or installation."
+      "reviewNotes": "Medium-high confidence: confirm the Art. 25 rule for goods supplied with assembly or installation. | VERIFIER (blind check, medium confidence, chose option 3): Literal wording risk: Art 25 says date of supply is the EARLIEST of listed dates, and Art 25(1) (transfer under supplier's supervision, 3 March) is earlier than Art 25(3) (installation completed, 18 March). FTA practice/guides treat completion of installation as the tax point for installed goods, so 18 March is the intended/accepted answer, but option A is arguable on a literal reading. Suggest rewording (e.g. delivery and installation same day, or ask only about installation-vs-invoice-vs-payment). Source: FDL 8/2017 (FTA consolidated text) Art 25(1),(3),(7)",
+      "hold": "Legal ambiguity: Decree-Law Art 25 takes the earliest of the listed dates, and delivery under the supplier's supervision (3 March) comes before installation is finished (18 March). The accepted view is the completion date, but a literal reading supports the earlier one. Reviewer to decide or reword."
     }
   },
   {
@@ -601,7 +602,7 @@
     "format": "mcq",
     "difficulty": "intermediate",
     "topic": "date_of_supply",
-    "prompt": "Marina Coffee Trading LLC takes a coffee machine worth AED 4,000 from its stock, on which it recovered input tax, and gives it to a charity free of charge on 14 May. What is the date of supply of this deemed supply?",
+    "prompt": "Marina Coffee Trading LLC takes a coffee machine worth AED 4,000 from its stock, on which it recovered input tax, and gives it to a charity free of charge on 14 May. Its gifts to this charity over the past 12 months already carry more than AED 2,000 of VAT, so the exception for small gifts doesn't apply. What is the date of supply of this deemed supply?",
     "options": [
       "14 May, when the machine is given away",
       "The date the machine was originally bought",
@@ -620,7 +621,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the date-of-supply paragraph for deemed supplies, and the business gifts exception (believed to be AED 500 per recipient per year) in the Executive Regulation."
+      "reviewNotes": "Confirm the date-of-supply paragraph for deemed supplies, and the business gifts exception (believed to be AED 500 per recipient per year) in the Executive Regulation. | VERIFIER (blind check, medium confidence, chose option 1): Stem calls it a deemed supply, but under FDL Art 12(5) and Exec Reg Art 5(2)(a) (CD 100/2024) deemed supplies are only taxed once total output tax on deemed supplies exceeds AED 2,000 per 12 months; this gift carries ~AED 200 VAT, so on these facts it may not be a taxable deemed supply at all. Option D's stated reason (no payment) is still wrong, so A remains the only defensible answer to the date question, but the stem should state the AED 2,000 cap is already exceeded (or drop the 'deemed supply' premise). Source: FDL 8/2017 (FTA consolidated text) Arts 11(1), 12(4)-(5), 26(3); Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 5 | Added the AED 2,000 fact after the blind check (Decree-Law Art 12(5); Exec. Reg. Art 5(2)(a)); worded so it holds whether the limit is per recipient or in total."
     }
   },
   {
@@ -702,7 +703,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm against Art. 51 of the Decree-Law and Exec. Reg. Art. 51 (the verifier noted Exec. Reg. Art. 51 has clauses on services)."
+      "reviewNotes": "Confirm against Art. 51 of the Decree-Law and Exec. Reg. Art. 51 (the verifier noted Exec. Reg. Art. 51 has clauses on services). | VERIFIER (blind check, high confidence, chose option 3): 18,000 x 5% = 900. Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 51(6): services in a DZ are supplied inside the State"
     }
   },
   {
@@ -811,7 +812,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:vat-batch-04"
+      "source": "oblique:vat-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 1): Intra-group 4,000 disregarded; 6,000 x 5% = 300. Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 12(1)(b)"
     }
   },
   {
@@ -865,7 +867,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:vat-batch-04"
+      "source": "oblique:vat-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 4): Minor: line 1 assumes the 'third year running' lease is not a first supply within 3 years of completion (which would be zero-rated); reads fine as written. Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 42(3)-(4) (explicit fees taxable), Art 43, Art 45; FDL Art 46"
     }
   },
   {
@@ -972,7 +975,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:vat-batch-04"
+      "source": "oblique:vat-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 2): 800 x 0% + 1,200 x 5% = 60 (check: 1,200/20 = 60). Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 41(1),(3)(b)"
     }
   },
   {
@@ -1027,7 +1031,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the client-entertainment block in Exec. Reg. Art. 53 is unchanged after Cabinet Decisions No. 100 of 2024 and No. 149 of 2026 and Decision No. 17 of 2026."
+      "reviewNotes": "Confirm the client-entertainment block in Exec. Reg. Art. 53 is unchanged after Cabinet Decisions No. 100 of 2024 and No. 149 of 2026 and Decision No. 17 of 2026. | VERIFIER (blind check, high confidence, chose option 4): Correct total 2,000 + 0 + 300 = 2,300, not 2,450 (2,450 wrongly includes the blocked 150). Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 53(1)(a),(2)(a): entertainment of potential customers blocked"
     }
   },
   {
@@ -1083,7 +1087,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm Art. 69 as the currency conversion article."
+      "reviewNotes": "Confirm Art. 69 as the currency conversion article. | VERIFIER (blind check, high confidence, chose option 4): 4,000 x 3.6725 = 14,690.00; 14,690 x 5% = 734.50 (not 743.50; check 14,690/20 = 734.5). Source: FDL 8/2017 (FTA consolidated text) Art 69; Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 59(1)(k)"
     }
   },
   {
@@ -1111,7 +1115,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:vat-batch-04"
+      "source": "oblique:vat-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 4): 2,100 - 210 = 1,890; VAT fraction 1,890 x 5/105 = 90.00 (check 1,890/21 = 90), not 94.50. Source: FDL 8/2017 (FTA consolidated text) Art 38; Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Arts 28, 59(2)(e)"
     }
   },
   {
@@ -1140,7 +1145,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the article for the 14-day rule (cited as Art. 67(1) in Module 1)."
+      "reviewNotes": "Confirm the article for the 14-day rule (cited as Art. 67(1) in Module 1). | VERIFIER (blind check, high confidence, chose option 4): Invoice issued 20 days after supply (>14 days). Source: FDL 8/2017 (FTA consolidated text) Arts 25(6), 67(1); Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 59(13)"
     }
   },
   {
@@ -1168,7 +1173,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the Art. 30 paragraph for passenger transport, and the zero rate for international passenger transport."
+      "reviewNotes": "Confirm the Art. 30 paragraph for passenger transport, and the zero rate for international passenger transport. | VERIFIER (blind check, high confidence, chose option 1): Minor nuance: Exec Reg Art 22(1) treats multi-stop trips that are multiple supplies leg by leg; a single return ticket is normally treated as one international transport supply starting in the UAE. Other options are clearly wrong. Source: FDL 8/2017 (FTA consolidated text) Arts 30(8), 45(2); Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Arts 22, 33(1)"
     }
   },
   {
@@ -1309,7 +1314,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm that safe-deposit box rental fees are standard-rated (explicit fee)."
+      "reviewNotes": "Confirm that safe-deposit box rental fees are standard-rated (explicit fee). | VERIFIER (blind check, high confidence, chose option 1): 40,000 interest exempt; (6,000 + 2,000) x 5% = 400. Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 42(2)-(4); safe-deposit rental is not an exempt financial service and is an explicit fee in any case"
     }
   },
   {
@@ -1338,7 +1343,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the 90-day rule and that 5% is due when it's missed, after the 2024 amendments (the verifier noted export evidence is now a customs declaration plus commercial evidence)."
+      "reviewNotes": "Confirm the 90-day rule and that 5% is due when it's missed, after the 2024 amendments (the verifier noted export evidence is now a customs declaration plus commercial evidence). | VERIFIER (blind check, high confidence, chose option 3): 25,000 x 5% = 1,250 + 8,400 x 5/105 = 400 -> 1,650 (check 8,400/21 = 400). Source: Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Art 30(1),(7),(9); FDL Art 38"
     }
   },
   {
@@ -1396,7 +1401,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Confirm the Art. 64 conditions, and that Federal Decree-Law No. 16 of 2025 didn't change bad debt relief."
+      "reviewNotes": "Confirm the Art. 64 conditions, and that Federal Decree-Law No. 16 of 2025 didn't change bad debt relief. | VERIFIER (blind check, high confidence, chose option 1): Unpaid half: 1,000 x 10,500/21,000 = 500 (check 10,500 x 5/105 = 500). Source: FDL 8/2017 (FTA consolidated text) Art 64(1),(3)"
     }
   },
   {
@@ -1424,7 +1429,8 @@
       "status": "draft",
       "reviewer": null,
       "reviewedOn": null,
-      "source": "oblique:vat-batch-04"
+      "source": "oblique:vat-batch-04",
+      "reviewNotes": "VERIFIER (blind check, high confidence, chose option 4): Villa 0%; shop 1,050,000 x 5/105 = 50,000 (check 1,050,000/21). Source: FDL 8/2017 (FTA consolidated text) Art 45(9); FDL Art 38"
     }
   },
   {
@@ -1481,7 +1487,7 @@
       "reviewer": null,
       "reviewedOn": null,
       "source": "oblique:vat-batch-04",
-      "reviewNotes": "Written by Claude to fill the last advanced slot. Arithmetic checked two ways: 3,600,000 x 5% = 180,000 = 3,600,000 / 20. Confirm the Article 45 paragraph for the first supply of residential buildings, and that a whole-building sale to an investor still counts as a first supply of the flats."
+      "reviewNotes": "Written by Claude to fill the last advanced slot. Arithmetic checked two ways: 3,600,000 x 5% = 180,000 = 3,600,000 / 20. Confirm the Article 45 paragraph for the first supply of residential buildings, and that a whole-building sale to an investor still counts as a first supply of the flats. | VERIFIER (blind check, high confidence, chose option 2): Residential 8.4m zero-rated (first supply within 3 years); shops 3.6m x 5% = 180,000 (check 3,600,000/20). Not a single composite supply under amended Exec Reg Art 4 (components separately priced and separable). Source: FDL 8/2017 (FTA consolidated text) Art 45(9) ('in whole or in part'); Exec. Reg. (Cabinet Decision 52/2017 consolidated to CD 149/2026, tax.gov.ae) Arts 4, 37, 46"
     }
   }
 ]
