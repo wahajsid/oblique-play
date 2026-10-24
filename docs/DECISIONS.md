@@ -84,6 +84,13 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 - **You can't challenge yourself:** opening your own link plays the set normally.
 - Challenge links need sign-in, so they work once Supabase is set up. Without it, sharing falls back to a plain link to the set.
 
+### Spot the error on the website
+
+- **The puzzle lives in the game, not in Framer**, at `play.obliqueconsult.com/spot-the-error`, and the website links to it. It changes by itself every day, and needs no Framer updates. See `docs/marketing/WEBSITE.md`.
+- **No sign-in on the public page.** Answers there aren't stored; the in-game daily document still needs sign-in. The daily document doesn't count for prizes, so trying it publicly first gains nothing.
+- **Only `/embed/*` can be shown inside another site** (obliqueconsult.com and Framer). Every other page sends `frame-ancestors 'none'`.
+- **Before launch** the public page doesn't show the launch-day document (unless `SPOT_PREVIEW=true` locally).
+
 ### Local testing
 
 A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, 36 for prizes and referrals, and 63 for the database rules (31 earlier + 32 for prizes).

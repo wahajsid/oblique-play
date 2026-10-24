@@ -40,9 +40,13 @@ type Props = {
   needsSignIn: boolean;
   // From the server: the signed-in player's result for today, if done.
   doneToday: { correct: boolean } | null;
+  // "web": the public puzzle page linked from obliqueconsult.com
+  // (/spot-the-error). No sign-in; its own header and next steps.
+  variant?: "app" | "web";
 };
 
-export function DailyGame({ date, doc, needsSignIn, doneToday }: Props) {
+export function DailyGame({ date, doc, needsSignIn, doneToday, variant = "app" }: Props) {
+  const web = variant === "web";
   const [phase, setPhase] = useState<Phase>(doneToday ? "done" : "deciding");
   const [correct, setCorrect] = useState<boolean | null>(doneToday?.correct ?? null);
   const [selected, setSelected] = useState<{ id: string; label: string } | null>(null);
@@ -107,7 +111,16 @@ export function DailyGame({ date, doc, needsSignIn, doneToday }: Props) {
     else if (phase !== "checking") setZoom(describeTarget(doc, id, label));
   };
 
-  const header = (
+  const header = web ? (
+    <header className="flex h-14 items-center justify-between px-4">
+      <a href="https://obliqueconsult.com" className="inline-flex min-h-11 items-center text-ink" aria-label="Oblique Consult">
+        <ObliqueMark height={20} />
+      </a>
+      <Link href="/?utm_source=spot-the-error" className="inline-flex min-h-10 items-center rounded-full btn-primary px-4 text-sm font-semibold">
+        Play the full game
+      </Link>
+    </header>
+  ) : (
     <header className="flex h-14 items-center justify-between px-4">
       <Link href="/review" className="-ml-2 inline-flex min-h-11 min-w-11 items-center gap-1 rounded-lg px-2 text-sm font-medium text-muted">
         <span aria-hidden="true">←</span> Shifts
@@ -115,6 +128,7 @@ export function DailyGame({ date, doc, needsSignIn, doneToday }: Props) {
       <ObliqueMark height={16} />
     </header>
   );
+  const sharePath = web ? "/spot-the-error" : "/review/daily";
 
   if (phase === "done") {
     const message = `I checked today's UAE tax document in Oblique's learning game${correct ? " and spotted it" : ""}. Can you?`;
@@ -128,25 +142,49 @@ export function DailyGame({ date, doc, needsSignIn, doneToday }: Props) {
             A new document arrives at midnight UAE time{next !== null && <>, in {untilTomorrow(next)}</>}. Same document for
             everyone, so you can compare.
           </p>
-          <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
-            <button type="button" onClick={() => setSharing(true)} className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold">
-              Share today&apos;s document
-            </button>
-            <div className="grid grid-cols-2 gap-2">
-              <Link href="/review" className="inline-flex min-h-12 items-center justify-center rounded-full border border-line text-sm font-semibold">
-                Play a shift
+          {web ? (
+            <div className="mt-8 flex flex-col gap-3 pb-safe">
+              <Link href="/?utm_source=spot-the-error" className="rounded-2xl border border-line bg-surface p-5">
+                <p className="text-xs font-semibold tracking-wide text-accent uppercase">Free · no app to install</p>
+                <h2 className="mt-1 text-xl font-semibold">Play the full game</h2>
+                <p className="mt-1 text-sm text-muted">
+                  20 new Corporate Tax and VAT questions every day, three-minute document shifts, streaks and a leaderboard.
+                </p>
+                <span className="mt-4 inline-flex min-h-11 items-center rounded-full btn-primary px-4 text-sm font-semibold">Start playing</span>
               </Link>
-              <Link href="/quiz" className="inline-flex min-h-12 items-center justify-center rounded-full border border-line text-sm font-semibold">
-                Daily quiz
-              </Link>
+              <button type="button" onClick={() => setSharing(true)} className="min-h-12 rounded-full border border-line px-4 text-sm font-semibold">
+                Challenge a colleague
+              </button>
+              <form action="/diagnostic" method="post" target="_blank" className="rounded-2xl bg-accent-soft p-4 text-sm">
+                <p>
+                  <b>Questions about your own VAT?</b> Book a free 30-minute call with Oblique&apos;s tax team.
+                </p>
+                <button type="submit" className="mt-2 min-h-11 font-semibold underline underline-offset-2">
+                  Book a free call
+                </button>
+              </form>
             </div>
-          </div>
+          ) : (
+            <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
+              <button type="button" onClick={() => setSharing(true)} className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold">
+                Share today&apos;s document
+              </button>
+              <div className="grid grid-cols-2 gap-2">
+                <Link href="/review" className="inline-flex min-h-12 items-center justify-center rounded-full border border-line text-sm font-semibold">
+                  Play a shift
+                </Link>
+                <Link href="/quiz" className="inline-flex min-h-12 items-center justify-center rounded-full border border-line text-sm font-semibold">
+                  Daily quiz
+                </Link>
+              </div>
+            </div>
+          )}
         </main>
         <SiteFooter />
         {sharing && (
           <ShareSheet
             create={null}
-            fallbackUrl={`${window.location.origin}/review/daily`}
+            fallbackUrl={`${window.location.origin}${sharePath}`}
             title="Share today's document"
             message={message}
             subject="Today's UAE tax document, by Oblique"
@@ -165,8 +203,21 @@ export function DailyGame({ date, doc, needsSignIn, doneToday }: Props) {
     <>
       {header}
       <main className={`flex-1 px-4 pt-2 ${phase === "feedback" ? "pb-[80dvh]" : "pb-56"}`}>
-        <p className="text-sm font-semibold tracking-wide text-accent uppercase">Today&apos;s document · {longDate(date)}</p>
-        <p className="mt-1 mb-4 text-sm text-muted">Everyone gets this one today. Does it look right, or is something off?</p>
+        {web ? (
+          <>
+            <p className="text-sm font-semibold tracking-wide text-accent uppercase">Spot the error · {longDate(date)}</p>
+            <h1 className="mt-1 text-2xl font-semibold tracking-tight text-balance">Today&apos;s UAE tax document. Right, or is something off?</h1>
+            <p className="mt-2 mb-4 text-sm text-muted">
+              A free daily puzzle from Oblique. Check it like an auditor would: tap any part to look closer. Everyone gets the
+              same document, and a new one arrives at midnight UAE time.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="text-sm font-semibold tracking-wide text-accent uppercase">Today&apos;s document · {longDate(date)}</p>
+            <p className="mt-1 mb-4 text-sm text-muted">Everyone gets this one today. Does it look right, or is something off?</p>
+          </>
+        )}
         <div className="anim-slide-in">
           <TaxDocument doc={doc} mode={mode} selectedId={selected?.id ?? null} revealIds={revealIds} stamp={stamp} onTap={onTap} />
         </div>

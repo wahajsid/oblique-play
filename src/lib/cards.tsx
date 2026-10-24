@@ -33,6 +33,81 @@ function loadFonts() {
 }
 
 // Who's ahead in a rematch: higher score, then faster time.
+// The "spot the error" page's link preview: a navy card with a paper
+// document, one line flagged.
+export async function renderSpotCard() {
+  const width = 1200;
+  const height = 630;
+  const line = (w: number, flagged = false) => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        height: 34,
+        padding: "0 10px",
+        marginTop: 8,
+        borderRadius: 6,
+        border: flagged ? "3px dashed #8a4b00" : "3px solid transparent",
+        background: flagged ? "#fbeedc" : "transparent",
+      }}
+    >
+      <div style={{ display: "flex", width: w, height: 10, borderRadius: 5, background: "#d8d2c4" }} />
+      <div style={{ display: "flex", width: 70, height: 10, borderRadius: 5, background: flagged ? "#8a4b00" : "#b9b2a2" }} />
+    </div>
+  );
+  return new ImageResponse(
+    (
+      <div style={{ display: "flex", width, height, background: NAVY, fontFamily: "Satoshi", position: "relative", padding: 56 }}>
+        <div style={{ display: "flex", flexDirection: "column", width: 640, justifyContent: "space-between" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <svg width={(38 * 1011.81) / 386.23} height={38} viewBox={OBCO_VIEWBOX}>
+              <path d={OBCO_PATH} fill={CREAM} />
+            </svg>
+            <div style={{ display: "flex", marginTop: 40, fontSize: 26, color: AQUA, fontWeight: 700, letterSpacing: 2 }}>SPOT THE ERROR</div>
+            <div style={{ display: "flex", marginTop: 14, fontSize: 64, lineHeight: 1.05, color: "white", fontWeight: 700 }}>
+              Today&apos;s UAE tax document. Right, or is something off?
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", fontSize: 24, color: "#c9cadb" }}>
+            <div style={{ display: "flex", color: "white", fontWeight: 700 }}>A new one every day. Free.</div>
+            <div style={{ display: "flex", marginTop: 6 }}>play.obliqueconsult.com · A learning game by Oblique</div>
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "absolute",
+            right: 70,
+            top: 70,
+            width: 380,
+            height: 500,
+            background: CREAM,
+            borderRadius: 16,
+            padding: 26,
+            transform: "rotate(4deg)",
+          }}
+        >
+          <div style={{ display: "flex", justifyContent: "center", fontSize: 22, letterSpacing: 6, fontWeight: 700, color: NAVY }}>TAX INVOICE</div>
+          <div style={{ display: "flex", height: 2, background: "#e6e0d3", marginTop: 14, marginBottom: 6 }} />
+          {line(170)}
+          {line(210)}
+          {line(140)}
+          <div style={{ display: "flex", height: 2, background: "#e6e0d3", marginTop: 10, marginBottom: 6 }} />
+          {line(190)}
+          {line(120, true)}
+          {line(160)}
+          <div style={{ display: "flex", height: 2, background: "#e6e0d3", marginTop: 10, marginBottom: 6 }} />
+          {line(150)}
+          {line(180)}
+        </div>
+      </div>
+    ),
+    { width, height, fonts: await loadFonts(), headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" } },
+  );
+}
+
 export function winner(a: Pick<Challenge, "score" | "timeMs">, b: Pick<Challenge, "score" | "timeMs">): "a" | "b" | "tie" {
   if (a.score !== b.score) return a.score > b.score ? "a" : "b";
   if (a.timeMs !== b.timeMs) return a.timeMs < b.timeMs ? "a" : "b";
