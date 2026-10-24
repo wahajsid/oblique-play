@@ -28,6 +28,15 @@ export default function TermsPage() {
       </ul>
       <p>We may remove names, scores or accounts that break these rules.</p>
 
+      <h2>Monthly prizes</h2>
+      <p>
+        When monthly prizes are running, the{" "}
+        <a href="/prizes/rules" className="underline underline-offset-2">
+          prize rules
+        </a>{" "}
+        also apply.
+      </p>
+
       <h2>The game itself</h2>
       <p>
         The game is free and provided as it is. We may change it, pause it or end it. The content, design and Oblique

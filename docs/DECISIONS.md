@@ -14,6 +14,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 | App store versions | Phase two. |
 | Build team | Wahaj and Claude only. |
 | Game title | On hold. |
+| Monthly prizes | **One combined board each month; the top 3 win AED 2,000 / 1,000 / 500** (AED 3,500 a month). Points: correct answers in the daily Corporate Tax and VAT quizzes, plus **10 per referred friend who signs up and finishes a quiz, up to 10 a month**. Winners must be UAE residents aged 18+; no staff, reviewers or their families. Hidden until the rules are legally cleared (`PRIZES_ENABLED`). See `docs/PRIZES.md`. |
 
 ## Corrected numbers (each checked twice)
 
@@ -85,7 +86,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 ### Local testing
 
-A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, and 31 for the database rules.
+A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, 36 for prizes and referrals, and 63 for the database rules (31 earlier + 32 for prizes).
 
 ### Content status (20 Oct 2026)
 
@@ -107,6 +108,7 @@ Every question and every document was answered blind by a separate AI verifier. 
    `echo '[]' > src/content/quiz/schedule.json && npm run quiz:schedule -- --from 2026-11-03 --days 10`.
    The current schedule is a draft preview from 20 Oct. If it were kept, its questions would count against the 14-day no-repeat rule.
 3. The first weekly batch of new questions must be approved and scheduled by quiz day 8 (Tue 10 Nov).
+4. **Prizes:** legal check on whether a promotion permit is needed, approve `/prizes/rules`, exclude reviewers by email, then set `PRIZES_ENABLED=true` (`docs/PRIZES.md`).
 
 ## Risks to act on
 
@@ -115,3 +117,5 @@ Every question and every document was answered blind by a separate AI verifier. 
 3. **Diagnostic booking.** Add a booking button on results screens for business owners.
 4. **HubSpot cost.** Players without marketing consent go in as non-marketing contacts.
 5. **In-app browsers** (LinkedIn, WhatsApp) can't add to home screen. Show "Open in Safari / Chrome" first.
+6. **Prize permit.** Prize competitions in the UAE may need a permit (in Dubai, from the Department of Economy and Tourism). Confirm with a lawyer before switching prizes on.
+7. **Referral farming.** Cash makes fake sign-ups worth trying. Defences: friends must finish a quiz, email aliases are merged, 10 a month at most, and winners' referrals are checked by hand before payment.

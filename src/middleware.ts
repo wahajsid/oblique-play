@@ -6,7 +6,7 @@ import { authEnabled, supabasePublishableKey, supabaseUrl } from "@/lib/supabase
 // session token if needed and writes the new cookie back.
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next({ request });
-  if (!authEnabled) return response;
+  if (!authEnabled) return rememberSource(request, response);
 
   const supabase = createServerClient(supabaseUrl, supabasePublishableKey, {
     cookies: {
@@ -20,6 +20,23 @@ export async function middleware(request: NextRequest) {
     },
   });
   await supabase.auth.getClaims();
+  return rememberSource(request, response);
+}
+
+// Keeps the first ?utm_source= of a visit (e.g. "website" or "linkedin")
+// for 30 days, so the sign-in page can record where a new player came from
+// even after they've clicked around.
+function rememberSource(request: NextRequest, response: NextResponse) {
+  const utm = request.nextUrl.searchParams.get("utm_source")?.replace(/[^\w.-]/g, "").slice(0, 40);
+  if (utm && !request.cookies.has("ob_src")) {
+    response.cookies.set("ob_src", utm, {
+      maxAge: 60 * 60 * 24 * 30,
+      httpOnly: true,
+      sameSite: "lax",
+      path: "/",
+      secure: request.nextUrl.protocol === "https:",
+    });
+  }
   return response;
 }
 

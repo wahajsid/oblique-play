@@ -24,6 +24,8 @@ The plan keeps the game separate from Oblique OS. That protects the firm's produ
    1. `20261019000001_players_and_review.sql`
    2. `20261020000001_daily_quiz.sql`
    3. `20261020000002_challenges.sql`
+   4. `20261020000003_day9.sql`
+   5. `20261024000001_prizes.sql`
 
    Or, from a laptop with the CLI linked to the project: `npx supabase db push`.
 3. **Authentication → URL configuration**
@@ -88,7 +90,7 @@ Then go to **Database → Webhooks → Create**:
 ## 5. Vercel and the subdomain
 
 1. Import the GitHub repo `wahajsid/oblique-play` as a new Vercel project.
-2. Add the three Supabase variables from step 1.8, plus `NEXT_PUBLIC_SITE_URL=https://play.obliqueconsult.com`.
+2. Add the three Supabase variables from step 1.8, plus `NEXT_PUBLIC_SITE_URL=https://play.obliqueconsult.com`. Leave `PRIZES_ENABLED` unset until the prize rules are cleared (`docs/PRIZES.md`).
 3. **Domains:** add `play.obliqueconsult.com`. In Hover, add the `CNAME` record Vercel shows (usually `cname.vercel-dns.com`). The main site on Framer is unaffected.
 4. **Diagnostic bookings** go to `https://calendly.com/alina-obliqueconsult/30min` (from the Contact page). To use another Calendly event, set `DIAGNOSTIC_BOOKING_URL` in Vercel. The player's name and email are prefilled, and bookings are tagged `utm_source=oblique-play` for Calendly's reports.
 5. **Plan:** Vercel's Hobby plan is for non-commercial use. A public marketing game for Oblique needs **Pro** ($20/month).

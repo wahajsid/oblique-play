@@ -12,7 +12,8 @@
     "check:quiz": "node scripts/check-quiz.mjs",
     "quiz:schedule": "node scripts/schedule-quiz.mjs",
     "review:export": "node scripts/review-export.mjs",
-    "review:import": "node scripts/review-import.mjs"
+    "review:import": "node scripts/review-import.mjs",
+    "prizes:close": "node scripts/prizes-close.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
