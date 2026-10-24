@@ -70,7 +70,9 @@ export function QuizGame(props: Props) {
   const [scored, setScored] = useState<boolean | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [savedRun, setSavedRun] = useState<QuizRun | null>(null);
-  const [alreadyScored, setAlreadyScored] = useState(false);
+  // A finished scored round is known on the server, so the first render
+  // already says "practice" instead of flashing "Start quiz".
+  const [alreadyScored, setAlreadyScored] = useState(serverScored === "finished");
   const [stats, setStats] = useState<PlayerStats | null>(null);
 
   // Time counts only while a question is waiting for an answer.

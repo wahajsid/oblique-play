@@ -13,9 +13,12 @@ type Props = {
   revealIds?: string[];
   stamp: Stamp;
   onTap: (id: string, label: string) => void;
+  // Draw only the top (title, parties, details) or bottom (items, totals),
+  // for the "spot the error" slides. The game always draws the whole thing.
+  part?: "top" | "bottom";
 };
 
-export function TaxDocument({ doc, mode, selectedId, revealIds = [], stamp, onTap }: Props) {
+export function TaxDocument({ doc, mode, selectedId, revealIds = [], stamp, onTap, part }: Props) {
   const isRevealed = (id: string) => mode === "reveal" && revealIds.includes(id);
 
   const tapClass = (id: string, extra = "") => {
@@ -117,26 +120,38 @@ export function TaxDocument({ doc, mode, selectedId, revealIds = [], stamp, onTa
       className="relative overflow-hidden rounded-xl border border-paper-line bg-paper p-3 text-paper-ink shadow-[0_1px_0_rgba(0,0,0,0.04),0_12px_32px_-12px_rgba(0,0,0,0.25)]"
       aria-label="Document under review"
     >
-      {fieldButton(
-        doc.heading,
-        <span className="flex min-h-12 items-center justify-center text-lg font-bold tracking-[0.2em]">
-          {doc.heading.value}
-        </span>,
-        "text-center",
+      {part !== "bottom" && (
+        <>
+          {fieldButton(
+            doc.heading,
+            <span className="flex min-h-12 items-center justify-center text-lg font-bold tracking-[0.2em]">
+              {doc.heading.value}
+            </span>,
+            "text-center",
+          )}
+
+          <div className="mt-1 border-t border-paper-line">{parties.map(renderBlock)}</div>
+          <div className="border-t border-paper-line">{details.map(renderBlock)}</div>
+        </>
       )}
 
-      <div className="mt-1 border-t border-paper-line">{parties.map(renderBlock)}</div>
-      <div className="border-t border-paper-line">{details.map(renderBlock)}</div>
+      {part !== "top" && (
+        <>
+          <section
+            data-part={doc.lines.id}
+            className={`${part === "bottom" ? "" : "border-t border-paper-line"} py-2 ${linesHighlight}`}
+            aria-label="Items"
+          >
+            <h3 className="flex justify-between px-2 text-[11px] font-semibold tracking-widest text-paper-muted uppercase">
+              <span>Items</span>
+              <span>{doc.lines.currency}</span>
+            </h3>
+            <ul>{doc.lines.rows.map(renderLine)}</ul>
+          </section>
 
-      <section data-part={doc.lines.id} className={`border-t border-paper-line py-2 ${linesHighlight}`} aria-label="Items">
-        <h3 className="flex justify-between px-2 text-[11px] font-semibold tracking-widest text-paper-muted uppercase">
-          <span>Items</span>
-          <span>{doc.lines.currency}</span>
-        </h3>
-        <ul>{doc.lines.rows.map(renderLine)}</ul>
-      </section>
-
-      {totals.map(renderBlock)}
+          {totals.map(renderBlock)}
+        </>
+      )}
 
       {stamp && (
         <div

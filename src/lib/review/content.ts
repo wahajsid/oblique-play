@@ -44,6 +44,17 @@ function dailyIndex(date: string): number {
   return Math.max(0, days) % dailyPool.length;
 }
 
+// The whole document, answer included, for the "spot the error" slides
+// (scripts/make-slides.mjs). Only the slides page, which is switched off on
+// the live site, calls this.
+export function getFullDocument(id: string): ReviewDocument | null {
+  return documentsById.get(id) ?? null;
+}
+
+export function getDailyDocumentId(date: string): string | null {
+  return dailyPool.length ? dailyPool[dailyIndex(date)].id : null;
+}
+
 export function getDailyDocument(date: string): PublicDocument | null {
   return dailyPool.length ? toPublic(dailyPool[dailyIndex(date)]) : null;
 }
