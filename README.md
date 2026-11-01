@@ -14,6 +14,10 @@ npm run slides -- 2026-11-03  # "spot the error" LinkedIn slides (docs/marketing
 npm run prizes:close -- 2026-11  # records a month's prize winners (docs/PRIZES.md)
 ```
 
+## The website (obliqueconsult.com on Framer)
+
+The website links to the game and shows two small boxes from it (today's puzzle and the monthly leaderboard). How to set that up in Framer, step by step: **[docs/FRAMER.md](docs/FRAMER.md)**.
+
 ## How the code is organised
 
 If you know Python, think of each folder as a module:

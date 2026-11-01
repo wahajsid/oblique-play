@@ -86,10 +86,11 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 ### Spot the error on the website
 
-- **The puzzle lives in the game, not in Framer**, at `play.obliqueconsult.com/spot-the-error`, and the website links to it. It changes by itself every day, and needs no Framer updates. See `docs/marketing/WEBSITE.md`.
+- **The puzzle lives in the game, not in Framer**, at `play.obliqueconsult.com/spot-the-error`, and the website links to it. It changes by itself every day, and needs no Framer updates. See `docs/FRAMER.md`.
 - **No sign-in on the public page.** Answers there aren't stored; the in-game daily document still needs sign-in. The daily document doesn't count for prizes, so trying it publicly first gains nothing.
 - **Only `/embed/*` can be shown inside another site** (obliqueconsult.com and Framer). Every other page sends `frame-ancestors 'none'`.
-- **Before launch** the public page doesn't show the launch-day document (unless `SPOT_PREVIEW=true` locally).
+- **Leaderboard box** (`/embed/leaderboard`): top 5 this month, cached 5 minutes. With prizes off it ranks Corporate Tax + VAT quiz points for everyone; with prizes on it shows the prize standings. Staff never appear. Dark by default, `?theme=light` for white sections.
+- **Before launch** the public page doesn't show the launch-day document (unless `LAUNCH_PREVIEW=true` locally).
 
 ### Local testing
 

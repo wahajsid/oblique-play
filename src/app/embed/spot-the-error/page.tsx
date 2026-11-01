@@ -1,5 +1,5 @@
 import { longDate, uaeToday } from "@/lib/quiz/dates";
-import { DAILY_START } from "@/lib/review/content";
+import { isLaunched, LAUNCH_DATE } from "@/lib/launch";
 import { siteUrl } from "@/lib/supabase/config";
 
 export const metadata = { title: "Spot the error · Oblique", robots: { index: false } };
@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 // It opens the puzzle in a new tab, because the puzzle works best full-size.
 export default function SpotTheErrorEmbed() {
   const today = uaeToday();
-  const live = today >= DAILY_START || process.env.SPOT_PREVIEW === "true";
+  const live = isLaunched(today);
   return (
     <>
       <style>{`
@@ -33,7 +33,7 @@ export default function SpotTheErrorEmbed() {
             Spot the error{live && ` · ${longDate(today)}`}
           </span>
           <span className="mt-2 block text-xl leading-tight font-semibold text-balance">
-            {live ? "Can you spot what's wrong with today's UAE tax document?" : `A new UAE tax puzzle every day, from ${longDate(DAILY_START)}.`}
+            {live ? "Can you spot what's wrong with today's UAE tax document?" : `A new UAE tax puzzle every day, from ${longDate(LAUNCH_DATE)}.`}
           </span>
         </span>
         <span className="relative mt-4 flex items-center justify-between gap-3">
