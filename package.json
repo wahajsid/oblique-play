@@ -14,7 +14,8 @@
     "review:export": "node scripts/review-export.mjs",
     "review:import": "node scripts/review-import.mjs",
     "prizes:close": "node scripts/prizes-close.mjs",
-    "slides": "node scripts/make-slides.mjs"
+    "slides": "node scripts/make-slides.mjs",
+    "reports": "node scripts/reports.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

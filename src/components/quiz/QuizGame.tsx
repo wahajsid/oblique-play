@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
+import { ReportProblem } from "@/components/ReportProblem";
 import { ChallengeBanner, type ChallengeInfo } from "@/components/share/Challenge";
 import type { PlayerProfile, PlayerStats } from "@/lib/players";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -338,6 +339,7 @@ export function QuizGame(props: Props) {
                   <p className="mt-0.5 text-sm text-muted">{reply.explanation.reference}</p>
                 </section>
               </div>
+              <ReportProblem key={q.id} itemId={q.id} kind="question" signedIn={signedIn} />
             </div>
           )}
         </div>

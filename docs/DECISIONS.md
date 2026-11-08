@@ -92,6 +92,12 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 - **Leaderboard box** (`/embed/leaderboard`): top 5 this month, cached 5 minutes. With prizes off it ranks Corporate Tax + VAT quiz points for everyone; with prizes on it shows the prize standings. Staff never appear. Dark by default, `?theme=light` for white sections.
 - **Before launch** the public page doesn't show the launch-day document (unless `LAUNCH_PREVIEW=true` locally).
 
+### Reporting problems with answers
+
+- **"Report a problem with this answer"** sits under every explanation, including the public puzzle page. Reasons: wrong answer, out of date, unclear or typo, something else (needs a note). See `docs/REPORTS.md`.
+- **Reports go to a database table, not straight to email.** The tax team reads them with `npm run reports` and closes each with what was done, so nothing gets lost in an inbox and there's a record of every fix.
+- **Nothing is pulled automatically.** Three or more "answer is wrong" reports flag an item; a reviewer decides whether to fix it or put it on hold.
+
 ### Local testing
 
 A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, 36 for prizes and referrals, and 63 for the database rules (31 earlier + 32 for prizes).

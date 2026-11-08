@@ -1,17 +1,22 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { ReportProblem } from "@/components/ReportProblem";
 import type { CheckResult } from "@/lib/review/types";
 
 // Gentle feedback: no red, no crosses. Both outcomes get the same explanation.
 export function FeedbackSheet({
+  docId,
   result,
   isLast,
   onNext,
+  signedIn,
 }: {
+  docId: string;
   result: CheckResult;
   isLast: boolean;
   onNext: () => void;
+  signedIn?: boolean;
 }) {
   const [collapsed, setCollapsed] = useState(false);
   const nextRef = useRef<HTMLButtonElement>(null);
@@ -66,6 +71,7 @@ export function FeedbackSheet({
               <h3 className="text-xs font-semibold tracking-wide text-muted uppercase">Reference</h3>
               <p className="mt-0.5 text-sm text-muted">{explanation.reference}</p>
             </section>
+            <ReportProblem key={docId} itemId={docId} kind="document" signedIn={signedIn} />
           </div>
         )}
 

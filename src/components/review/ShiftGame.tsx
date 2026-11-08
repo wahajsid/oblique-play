@@ -329,7 +329,7 @@ export function ShiftGame({ shift, documents, needsSignIn, profile, challenge }:
       )}
 
       {phase === "feedback" && result && (
-        <FeedbackSheet result={result} isLast={index + 1 >= total} onNext={goNext} />
+        <FeedbackSheet docId={doc.id} result={result} isLast={index + 1 >= total} onNext={goNext} signedIn={!needsSignIn} />
       )}
 
       {zoom && <ZoomSheet content={zoom} onClose={() => setZoom(null)} />}

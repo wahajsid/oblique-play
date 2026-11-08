@@ -21,6 +21,10 @@ export default function PrivacyPage() {
         <li>If you enter the monthly prizes: when you entered. If you win: your full name, the result of checking your
           Emirates ID, and the payment record.</li>
         <li>Whether you agreed to receive marketing emails, and when.</li>
+        <li>
+          If you report a problem with an answer: your report and note, and your email if you give it for a reply. We
+          don&apos;t store your IP address, only a scrambled version of it used to stop the form being flooded.
+        </li>
         <li>Basic usage data, such as pages viewed and the device and browser you use.</li>
       </ul>
 
@@ -34,6 +38,7 @@ export default function PrivacyPage() {
         </li>
         <li>To send you new shifts and tax updates, but only if you ticked the box to receive them.</li>
         <li>To understand which topics players find hardest, using combined figures that don&apos;t identify you.</li>
+        <li>To check and correct questions and documents you report, and to reply if you ask us to.</li>
       </ul>
 
       <h2>Monthly prizes</h2>
@@ -74,7 +79,10 @@ export default function PrivacyPage() {
       </ul>
 
       <h2>How long we keep it</h2>
-      <p>We keep your player record while you play, and delete it on request or after two years without activity.</p>
+      <p>
+        We keep your player record while you play, and delete it on request or after two years without activity. Reports
+        about answers are kept until we&apos;ve dealt with them, then for up to a year.
+      </p>
     </LegalPage>
   );
 }

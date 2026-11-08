@@ -12,6 +12,7 @@ npm run build          # what Vercel runs before going live
 npm run hubspot:setup  # one-off: creates the HubSpot contact properties
 npm run slides -- 2026-11-17  # "spot the error" LinkedIn slides (docs/marketing/SPOT-THE-ERROR.md)
 npm run prizes:close -- 2026-11  # records a month's prize winners (docs/PRIZES.md)
+npm run reports        # reports of problems with answers (docs/REPORTS.md)
 ```
 
 ## The website (obliqueconsult.com on Framer)

@@ -26,6 +26,7 @@ The plan keeps the game separate from Oblique OS. That protects the firm's produ
    3. `20261020000002_challenges.sql`
    4. `20261020000003_day9.sql`
    5. `20261024000001_prizes.sql`
+   6. `20261108000001_content_reports.sql`
 
    Or, from a laptop with the CLI linked to the project: `npx supabase db push`.
 3. **Authentication → URL configuration**

@@ -267,7 +267,7 @@ export function DailyGame({ date, doc, needsSignIn, doneToday, variant = "app" }
         </div>
       )}
 
-      {phase === "feedback" && result && <FeedbackSheet result={result} isLast onNext={() => setPhase("done")} />}
+      {phase === "feedback" && result && <FeedbackSheet docId={doc.id} result={result} isLast onNext={() => setPhase("done")} signedIn={!web && !needsSignIn} />}
       {zoom && <ZoomSheet content={zoom} onClose={() => setZoom(null)} />}
     </>
   );

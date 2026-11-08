@@ -82,6 +82,10 @@ export function getPublicQuestions(ids: string[]): (PublicQuestion & { topicLabe
   });
 }
 
+export function isQuestionId(id: string): boolean {
+  return questionsById.has(id);
+}
+
 export function hasDrafts(ids: string[]): boolean {
   return ids.some((id) => questionsById.get(id)?.meta.status !== "approved");
 }
