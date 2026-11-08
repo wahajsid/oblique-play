@@ -1,7 +1,7 @@
 import "server-only";
 
 import { unstable_cache } from "next/cache";
-import { currentMonth, lastDayOf, prizesEnabled } from "@/lib/prizes";
+import { currentMonth, lastDayOf, prizesRunning } from "@/lib/prizes";
 import { authEnabled } from "@/lib/supabase/config";
 import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 import { uaeToday } from "./dates";
@@ -49,13 +49,13 @@ function rankRows<T>(rows: T[], same: (a: T, b: T) => boolean): (T & { rank: num
   });
 }
 
-// This month's top players for the website's leaderboard box. With prizes on,
+// This month's top players for the website's leaderboard box. In a prize month,
 // it's the prize board (entered players, quiz + referral points). Otherwise
 // it's Corporate Tax + VAT quiz points for everyone. Oblique staff and
 // reviewers never appear. Players show under the name they chose.
 async function loadMonthlyTop(month: string, limit: number): Promise<MonthlyTop> {
   const db = createAdminClient();
-  if (prizesEnabled) {
+  if (prizesRunning()) {
     const { data, error } = await db.rpc("prize_board", { p_month: month, p_limit: limit, p_me: null });
     if (error) throw error;
     const rows = (data ?? []) as { rank: number; name: string; points: number }[];
@@ -85,7 +85,7 @@ async function loadMonthlyTop(month: string, limit: number): Promise<MonthlyTop>
 
 export function getMonthlyTop(limit = 5): Promise<MonthlyTop> {
   const month = currentMonth();
-  return unstable_cache(() => loadMonthlyTop(month, limit), ["monthly-top", month, String(limit), String(prizesEnabled)], {
+  return unstable_cache(() => loadMonthlyTop(month, limit), ["monthly-top", month, String(limit), String(prizesRunning())], {
     revalidate: 300,
   })();
 }

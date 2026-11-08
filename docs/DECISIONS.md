@@ -6,7 +6,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 | Topic | Decision |
 | --- | --- |
-| Launch date | **Tue 17 Nov 2026.** First planned for Tue 3 Nov (itself moved from Sun 1 Nov for LinkedIn reach); moved on 8 Nov because accounts and device testing weren't ready. |
+| Launch date | **Tue 1 Dec 2026.** First planned for Tue 3 Nov (itself moved from Sun 1 Nov for LinkedIn reach), then Tue 17 Nov; moved on 8 Nov to 1 Dec so the game starts on the first day of the first prize month, with time for accounts and device testing. |
 | Question bank at launch | **200 reviewed questions per track** (10 days of unique sets), then 100 new per track each week. |
 | Reviewers | Corporate Tax: Ashta and Pranay. VAT (questions and all Module 1 documents): Aidarous and Arslan. |
 | Leaderboard | Players choose how they appear: under their display name, or anonymously under a random name (for example "Swift Falcon 42"). |
@@ -14,7 +14,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 | App store versions | Phase two. |
 | Build team | Wahaj and Claude only. |
 | Game title | On hold. |
-| Monthly prizes | **One combined board each month; the top 3 win AED 2,000 / 1,000 / 500** (AED 3,500 a month). Points: correct answers in the daily Corporate Tax and VAT quizzes, plus **10 per referred friend who signs up and finishes a quiz, up to 10 a month**. Winners must be UAE residents aged 18+; no staff, reviewers or their families. Hidden until the rules are legally cleared (`PRIZES_ENABLED`). See `docs/PRIZES.md`. |
+| Monthly prizes | **For three months (Dec 2026, Jan 2027, Feb 2027), the top 3 each month win gifts: 1st an iPhone or Galaxy S26 (winner's choice), 2nd AirPods, 3rd a power bank.** No cash prizes. Points: correct answers in the daily Corporate Tax and VAT quizzes, plus **10 per referred friend who signs up and finishes a quiz, up to 10 a month**. Winners must be UAE residents aged 18+; no staff, reviewers or their families. Hidden until the rules are legally cleared (`PRIZES_ENABLED`). See `docs/PRIZES.md`. |
 
 ## Corrected numbers (each checked twice)
 
@@ -31,11 +31,11 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 **"Both" track.** 10 of each track's 20 cannot be split 2.5 / 5 / 2.5. Rule: Corporate Tax contributes 3 / 5 / 2 and VAT contributes 2 / 5 / 3, giving 5 / 10 / 5 overall.
 
-**14-day no-repeat rule.** Days 1–10 use all 200 launch questions. The first weekly batch must be live by **quiz day 8 (Tue 24 Nov)**, or the daily set runs short on day 11 (Fri 13 Nov). With a batch every 7 days after that, a simulation never runs short.
+**14-day no-repeat rule.** Days 1–10 use all 200 launch questions. The first weekly batch must be live by **quiz day 8 (Tue 8 Dec)**, or the daily set runs short on day 11 (Fri 13 Nov). With a batch every 7 days after that, a simulation never runs short.
 
 **Midnight UAE time** is 20:00 UTC (the UAE is UTC+4 with no daylight saving). The daily job's schedule is `0 20 * * *`.
 
-## Build schedule (as planned for 3 Nov; launch is now 17 Nov)
+## Build schedule (as planned for 3 Nov; launch is now 1 Dec)
 
 | Days | Dates | Work |
 | --- | --- | --- |
@@ -119,9 +119,9 @@ Every question and every document was answered blind by a separate AI verifier. 
 
 1. Import the reviewed workbooks and run both checkers.
 2. **Reset the preview schedule**, then build the real one from approved questions only:
-   `echo '[]' > src/content/quiz/schedule.json && npm run quiz:schedule -- --from 2026-11-17 --days 10` (done 8 Nov).
+   `echo '[]' > src/content/quiz/schedule.json && npm run quiz:schedule -- --from 2026-12-01 --days 10` (done 8 Nov; covers 1 to 9 Dec, as VAT has 99 intermediate questions).
    The current schedule is a draft preview from 20 Oct. If it were kept, its questions would count against the 14-day no-repeat rule.
-3. The first weekly batch of new questions must be approved and scheduled by quiz day 8 (Tue 24 Nov).
+3. The first weekly batch of new questions must be approved and scheduled by quiz day 8 (Tue 8 Dec).
 4. **Prizes:** legal check on whether a promotion permit is needed, approve `/prizes/rules`, exclude reviewers by email, then set `PRIZES_ENABLED=true` (`docs/PRIZES.md`).
 
 ## Risks to act on
@@ -131,5 +131,5 @@ Every question and every document was answered blind by a separate AI verifier. 
 3. **Diagnostic booking.** Add a booking button on results screens for business owners.
 4. **HubSpot cost.** Players without marketing consent go in as non-marketing contacts.
 5. **In-app browsers** (LinkedIn, WhatsApp) can't add to home screen. Show "Open in Safari / Chrome" first.
-6. **Prize permit.** Prize competitions in the UAE may need a permit (in Dubai, from the Department of Economy and Tourism). Confirm with a lawyer before switching prizes on.
-7. **Referral farming.** Cash makes fake sign-ups worth trying. Defences: friends must finish a quiz, email aliases are merged, 10 a month at most, and winners' referrals are checked by hand before payment.
+6. **Prize permit.** Prize competitions in the UAE may need a permit (in Dubai, from the Department of Economy and Tourism). Confirm with a lawyer before the prizes are announced (planned for Thu 26 Nov) and switched on.
+7. **Referral farming.** An iPhone makes fake sign-ups worth trying. Defences: friends must finish a quiz, email aliases are merged, 10 a month at most, and winners' referrals are checked by hand before payment.

@@ -1,5 +1,6 @@
 {
-  "amountsAed": [2000, 1000, 500],
+  "months": ["2026-12-01", "2027-01-01", "2027-02-01"],
+  "gifts": ["iPhone or Galaxy S26", "AirPods", "Power bank"],
   "referralPoints": 10,
   "referralCap": 10,
   "replyDays": 14

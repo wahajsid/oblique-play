@@ -37,7 +37,7 @@ const documentsById = new Map(
 // same for every player. Before launch it previews d-001. If the pool runs
 // out it starts again from the top (add documents to the end of daily.json;
 // never reorder, so past days stay the same).
-export const DAILY_START = "2026-11-17";
+export const DAILY_START = "2026-12-01";
 
 function dailyIndex(date: string): number {
   const days = Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${DAILY_START}T00:00:00Z`)) / 86_400_000);

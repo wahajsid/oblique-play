@@ -1,7 +1,7 @@
 import { isLaunched, LAUNCH_DATE } from "@/lib/launch";
 import { longDate, uaeToday } from "@/lib/quiz/dates";
 import { getMonthlyTop, type MonthlyTop } from "@/lib/quiz/leaderboard";
-import { currentMonth, formatAed, monthName, PRIZE_RULES } from "@/lib/prizes";
+import { currentMonth, monthName, PRIZE_GIFTS } from "@/lib/prizes";
 import { authEnabled, siteUrl } from "@/lib/supabase/config";
 
 export const metadata = { title: "Leaderboard · Oblique", robots: { index: false } };
@@ -49,7 +49,7 @@ export default async function LeaderboardEmbed({ searchParams }: { searchParams:
             {prizes ? "Monthly prizes" : "Leaderboard"} · {monthName(currentMonth()).split(" ")[0]}
           </span>
           <span className="mt-1 block text-lg leading-tight font-semibold">
-            {prizes ? `${formatAed(PRIZE_RULES.amountsAed[0])} for 1st place` : "Top UAE tax players this month"}
+            {prizes ? `Win an ${PRIZE_GIFTS[0]}` : "Top UAE tax players this month"}
           </span>
         </span>
 

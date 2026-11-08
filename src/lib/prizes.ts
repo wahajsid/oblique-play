@@ -10,12 +10,28 @@ import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 // are recorded either way, so turning prizes on mid-month loses nothing.
 export const prizesEnabled = authEnabled && process.env.PRIZES_ENABLED === "true";
 
-// The points rules themselves live in prize_totals() in
-// supabase/migrations/20261024000001_prizes.sql; keep the two in step.
+// The campaign months and gifts are in src/content/prizes.json. The points
+// rules live in prize_totals() in supabase/migrations/20261024000001_prizes.sql;
+// keep the two in step.
 export const PRIZE_RULES = rules;
+export const PRIZE_GIFTS = rules.gifts;
+export const FIRST_PRIZE_MONTH = rules.months[0];
+export const LAST_PRIZE_MONTH = rules.months[rules.months.length - 1];
 
-export function formatAed(amount: number): string {
-  return `AED ${amount.toLocaleString("en-US")}`;
+export function isPrizeMonth(month: string): boolean {
+  return rules.months.includes(month);
+}
+
+// Where the campaign is today: before its first month, in one of its
+// months, or over.
+export function prizePhase(month = currentMonth()): "before" | "running" | "after" {
+  if (isPrizeMonth(month)) return "running";
+  return month < FIRST_PRIZE_MONTH ? "before" : "after";
+}
+
+// Prizes are switched on and this month is a prize month.
+export function prizesRunning(): boolean {
+  return prizesEnabled && prizePhase() === "running";
 }
 
 // "2026-11-01" for any date in November 2026.
@@ -119,15 +135,15 @@ export async function getMyPrizeStatus(month: string): Promise<MyPrizeStatus | n
   };
 }
 
-export type Winner = { place: number; name: string; amountAed: number; paid: boolean };
+export type Winner = { place: number; name: string; prize: string; delivered: boolean };
 
 export async function getWinners(month: string): Promise<Winner[]> {
   if (!prizesEnabled) return [];
   const { data } = await createAdminClient()
     .from("prize_awards")
-    .select("place, board_name, amount_aed, status")
+    .select("place, board_name, prize, status")
     .eq("month", month)
     .neq("status", "forfeited")
     .order("place");
-  return (data ?? []).map((w) => ({ place: w.place, name: w.board_name, amountAed: w.amount_aed, paid: w.status === "paid" }));
+  return (data ?? []).map((w) => ({ place: w.place, name: w.board_name, prize: w.prize, delivered: w.status === "delivered" }));
 }

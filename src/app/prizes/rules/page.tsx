@@ -1,14 +1,14 @@
 import { LegalPage } from "@/components/LegalPage";
-import { formatAed, PRIZE_RULES } from "@/lib/prizes";
+import { PRIZE_RULES } from "@/lib/prizes";
 
 export const metadata = { title: "Prize rules · by Oblique" };
 
 // DRAFT: to be reviewed by Oblique's lawyer before prizes are switched on,
 // including whether a promotion permit is needed (docs/PRIZES.md).
 export default function PrizeRulesPage() {
-  const { amountsAed, referralPoints, referralCap, replyDays } = PRIZE_RULES;
+  const { referralPoints, referralCap, replyDays } = PRIZE_RULES;
   return (
-    <LegalPage title="Monthly prize rules" updated="24 October 2026">
+    <LegalPage title="Monthly prize rules" updated="8 November 2026">
       <h2>Who runs it</h2>
       <p>
         The monthly prizes are run by Oblique Consult [full legal name, licence number and emirate]. [Permit number, if one
@@ -17,8 +17,8 @@ export default function PrizeRulesPage() {
 
       <h2>When</h2>
       <p>
-        Each calendar month is a separate competition, in UAE time (GMT+4). The first runs from 17 November 2026 to 30
-        November 2026.
+        Prizes run for three months: December 2026, January 2027 and February 2027. Each month is a separate
+        competition, from the 1st to the last day of the month, in UAE time (GMT+4).
       </p>
 
       <h2>Who can win</h2>
@@ -60,23 +60,29 @@ export default function PrizeRulesPage() {
       <h2>Winners and ties</h2>
       <p>
         The 3 players with the most points when the month ends win. If points are tied, the player with more quiz points
-        ranks higher, then the player with the lower total time. If players are still tied, the prizes for their places
-        are added together and shared equally.
+        ranks higher, then the player with the lower total time. If players are still exactly tied, each of them receives
+        the prize for the higher of their places.
       </p>
 
       <h2>Prizes</h2>
+      <p>Each month:</p>
       <ul>
+        <li>1st: an iPhone or a Samsung Galaxy S26, the winner&apos;s choice (the current standard model, base storage).</li>
+        <li>2nd: Apple AirPods (standard model).</li>
+        <li>3rd: a power bank [brand and capacity].</li>
         <li>
-          1st: {formatAed(amountsAed[0])}. 2nd: {formatAed(amountsAed[1])}. 3rd: {formatAed(amountsAed[2])}.
+          Prizes are delivered to an address in the UAE, or collected from Oblique&apos;s office. They can&apos;t be
+          exchanged for cash or transferred to someone else.
         </li>
-        <li>Paid by bank transfer to a UAE bank account in the winner&apos;s own name. Prizes can&apos;t be transferred.</li>
+        <li>If a prize isn&apos;t available, we&apos;ll give one of similar or higher value.</li>
       </ul>
 
       <h2>Claiming a prize</h2>
       <p>
-        We email winners within 7 days of the month ending. To claim, reply within {replyDays} days with your full name
-        and a copy of your Emirates ID so we can check you meet these rules. If a winner doesn&apos;t reply in time or
-        doesn&apos;t meet the rules, the prize places move to the next eligible players in leaderboard order.
+        We email winners within 7 days of the month ending. To claim, reply within {replyDays} days with your full name,
+        a copy of your Emirates ID so we can check you meet these rules, and a UAE delivery address (or ask to collect).
+        We aim to deliver within 30 days of checking. If a winner doesn&apos;t reply in time or doesn&apos;t meet the
+        rules, the prize places move to the next eligible players in leaderboard order.
       </p>
 
       <h2>Fair play</h2>
@@ -95,7 +101,7 @@ export default function PrizeRulesPage() {
       <h2>Changes</h2>
       <p>
         We may change or end the prizes by updating this page. A change never takes away points already earned in the
-        current month, and that month&apos;s prizes will still be paid.
+        current month, and that month&apos;s prizes will still be given.
       </p>
 
       <h2>Your data</h2>

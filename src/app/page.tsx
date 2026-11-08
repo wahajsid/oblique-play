@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AppHeader } from "@/components/AppHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { formatAed, PRIZE_RULES, prizesEnabled } from "@/lib/prizes";
+import { PRIZE_GIFTS, PRIZE_RULES, prizePhase, prizesEnabled } from "@/lib/prizes";
 import { authEnabled } from "@/lib/supabase/config";
 import { getSignedInPlayer } from "@/lib/supabase/server";
 
@@ -56,15 +56,13 @@ export default async function Home() {
             </span>
           </Link>
 
-          {prizesEnabled && (
+          {prizesEnabled && prizePhase() !== "after" && (
             <Link href="/prizes" className="rounded-2xl bg-[#141428] p-5 text-white">
-              <p className="text-xs font-semibold tracking-wide text-[#adebf2] uppercase">Monthly prizes</p>
-              <h2 className="mt-1 text-xl font-semibold">
-                {PRIZE_RULES.amountsAed.map((a) => formatAed(a)).join(" · ")}
-              </h2>
+              <p className="text-xs font-semibold tracking-wide text-[#adebf2] uppercase">Monthly prizes · Dec to Feb</p>
+              <h2 className="mt-1 text-xl font-semibold">Win an {PRIZE_GIFTS[0]}</h2>
               <p className="mt-1 text-sm text-[#c9cadb]">
-                For the top 3 each month. Earn points from the daily quiz, plus {PRIZE_RULES.referralPoints} for each friend you
-                bring. Free to enter.
+                The top player each month wins it; 2nd wins {PRIZE_GIFTS[1]} and 3rd a {PRIZE_GIFTS[2].toLowerCase()}. Earn
+                points from the daily quiz, plus {PRIZE_RULES.referralPoints} for each friend you bring. Free to enter.
               </p>
               <span className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-[#adebf2]">See standings →</span>
             </Link>

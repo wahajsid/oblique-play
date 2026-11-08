@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <li>Your game activity: shifts and quizzes played, answers, scores, times and streaks.</li>
         <li>Who invited you, if you arrived through a challenge or invite link, and which site or post you came from.</li>
         <li>If you enter the monthly prizes: when you entered. If you win: your full name, the result of checking your
-          Emirates ID, and the payment record.</li>
+          Emirates ID, a delivery address, and a record of the prize.</li>
         <li>Whether you agreed to receive marketing emails, and when.</li>
         <li>
           If you report a problem with an answer: your report and note, and your email if you give it for a reply. We
@@ -47,9 +47,9 @@ export default function PrivacyPage() {
         <a href="/prizes/rules" className="underline underline-offset-2">
           prize rules
         </a>{" "}
-        and to pay you. We check your Emirates ID but don&apos;t keep a copy once the check is done. Bank details are
-        used only to make the payment and aren&apos;t stored in the game. Payment records are kept as long as the law
-        requires for financial records. If someone signs up through your link, we tell you how many friends counted, but
+        and to deliver your prize. We check your Emirates ID but don&apos;t keep a copy once the check is done. Your
+        delivery address is used only to send the prize and isn&apos;t stored in the game. A record of each prize is kept
+        as long as the law requires for business records. If someone signs up through your link, we tell you how many friends counted, but
         not who they are.
       </p>
 

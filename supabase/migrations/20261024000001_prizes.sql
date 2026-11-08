@@ -4,7 +4,8 @@
 -- quizzes (the "Both" track reuses the same questions, so it doesn't count)
 -- + 10 points for each friend who signed up with the player's link and
 -- finished their first scored quiz that month, up to 10 friends (100 points).
--- The top 3 players who have entered win; see docs/PRIZES.md.
+-- The top 3 players who have entered win a gift, in the campaign months
+-- set in src/content/prizes.json; see docs/PRIZES.md.
 
 -- 1. Players: prize entry, staff exclusion and a short invite code.
 
@@ -186,22 +187,23 @@ $$;
 
 -- 3. Winners and payments. Rows are written by `npm run prizes:close` and
 -- updated by Oblique in the Supabase table editor as each winner is
--- checked and paid.
+-- checked and their gift delivered.
 create table public.prize_awards (
   id bigint generated always as identity primary key,
   month date not null check (extract(day from month) = 1),
   place int not null check (place between 1 and 3),
-  -- Kept if the player later deletes their account, as a payment record.
+  -- Kept if the player later deletes their account, as a record of the prize.
   player_id uuid references public.players (id) on delete set null,
   email text not null,
   board_name text not null,
   points int not null,
-  amount_aed int not null check (amount_aed > 0),
-  status text not null default 'contacting' check (status in ('contacting', 'verified', 'paid', 'forfeited')),
-  -- Filled in by Oblique after checking ID. Bank details never go here.
+  -- The gift, as worded when the winners were recorded, e.g. "AirPods".
+  prize text not null check (char_length(prize) between 1 and 120),
+  status text not null default 'contacting' check (status in ('contacting', 'verified', 'delivered', 'forfeited')),
+  -- Filled in by Oblique after checking ID. Addresses and ID copies never go here.
   legal_name text,
   notes text,
-  paid_at timestamptz,
+  delivered_at timestamptz,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   unique (month, player_id)
@@ -217,8 +219,8 @@ set search_path = ''
 as $$
 begin
   new.updated_at := now();
-  if new.status = 'paid' and new.paid_at is null then
-    new.paid_at := now();
+  if new.status = 'delivered' and new.delivered_at is null then
+    new.delivered_at := now();
   end if;
   return new;
 end;

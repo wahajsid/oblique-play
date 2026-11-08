@@ -5,7 +5,7 @@ import { isPlayTrack, TRACKS } from "@/lib/quiz/content";
 import { longDate, uaeToday } from "@/lib/quiz/dates";
 import { getLeaderboard, type Period } from "@/lib/quiz/leaderboard";
 import type { PlayTrack } from "@/lib/quiz/types";
-import { prizesEnabled } from "@/lib/prizes";
+import { prizesRunning } from "@/lib/prizes";
 import { formatTime } from "@/lib/review/progress";
 
 export const metadata = { title: "Leaderboard · by Oblique" };
@@ -33,7 +33,7 @@ export default async function LeaderboardPage({ searchParams }: { searchParams: 
           score first; time breaks ties.
         </p>
 
-        {prizesEnabled && (
+        {prizesRunning() && (
           <Link href="/prizes" className="mt-3 inline-flex min-h-11 items-center text-sm font-medium underline underline-offset-2">
             Monthly prize standings →
           </Link>

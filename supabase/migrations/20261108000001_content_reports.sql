@@ -11,7 +11,7 @@ create table public.content_reports (
   -- Only if a signed-out visitor gives it, for a reply.
   contact_email text check (char_length(contact_email) <= 200),
   player_id uuid references public.players (id) on delete set null,
-  -- Where it was sent from, e.g. /quiz/vat/2026-11-17 or /spot-the-error.
+  -- Where it was sent from, e.g. /quiz/vat/2026-12-01 or /spot-the-error.
   page text check (char_length(page) <= 200),
   -- A one-way hash of the sender's IP address, only to limit how many
   -- reports one device can send. The address itself isn't stored.

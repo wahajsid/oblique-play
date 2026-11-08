@@ -9,7 +9,8 @@
 //
 // Safe to run again: after a winner is marked "forfeited" in the table
 // editor, running it again moves the places up to the next eligible players.
-// It never changes a winner already marked "verified" or "paid".
+// It never changes a winner already marked "verified" or "delivered".
+// Only the campaign months in src/content/prizes.json have prizes.
 // See docs/PRIZES.md.
 
 import { createClient } from "@supabase/supabase-js";
@@ -25,7 +26,7 @@ if (existsSync(envFile)) {
     if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
   }
 }
-const { amountsAed } = JSON.parse(readFileSync(join(root, "src/content/prizes.json"), "utf8"));
+const { months, gifts } = JSON.parse(readFileSync(join(root, "src/content/prizes.json"), "utf8"));
 
 const [arg, flag] = process.argv.slice(2);
 if (!/^\d{4}-\d{2}$/.test(arg ?? "")) {
@@ -34,6 +35,10 @@ if (!/^\d{4}-\d{2}$/.test(arg ?? "")) {
 }
 const preview = flag === "--preview";
 const month = `${arg}-01`;
+if (!months.includes(month)) {
+  console.error(`${arg} isn't a prize month. Prize months: ${months.map((m) => m.slice(0, 7)).join(", ")}.`);
+  process.exit(1);
+}
 const end = new Date(`${month}T00:00:00Z`);
 end.setUTCMonth(end.getUTCMonth() + 1, 0);
 const lastDay = end.toISOString().slice(0, 10);
@@ -83,7 +88,7 @@ if (preview) process.exit(0);
 const ties = [0, 1, 2].filter((i) => sameScore(candidates[i], candidates[i + 1]));
 if (ties.length) {
   console.error(`Exact tie between places ${ties.map((i) => `${i + 1} and ${i + 2}`).join(", ")}. Nothing recorded.`);
-  console.error("The rules say tied prizes are added together and shared equally. Record these winners by hand.");
+  console.error("The rules say each exactly tied player gets the prize for the higher place. Record these winners by hand.");
   process.exit(1);
 }
 
@@ -113,15 +118,15 @@ const rows = target
     email: t.row.email,
     board_name: t.row.name,
     points: Number(t.row.points),
-    amount_aed: amountsAed[t.place - 1],
+    prize: gifts[t.place - 1],
   }));
 if (rows.length) {
   const { error } = await db.from("prize_awards").insert(rows);
   if (error) fail("Couldn't record the winners", error);
 }
 
-const { data: final } = await db.from("prize_awards").select("place, board_name, email, points, amount_aed, status").eq("month", month).neq("status", "forfeited").order("place");
+const { data: final } = await db.from("prize_awards").select("place, board_name, email, points, prize, status").eq("month", month).neq("status", "forfeited").order("place");
 console.log(`\nWinners for ${arg}:\n`);
-console.table(final.map((w) => ({ place: w.place, name: w.board_name, email: w.email, points: w.points, "AED": w.amount_aed, status: w.status })));
+console.table(final.map((w) => ({ place: w.place, name: w.board_name, email: w.email, points: w.points, prize: w.prize, status: w.status })));
 if (target.length < 3) console.log(`Only ${target.length} eligible player(s), so only ${target.length} prize(s) this month.`);
 console.log("\nNext: email each winner using the template in docs/PRIZES.md, then update their row in prize_awards.");
