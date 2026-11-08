@@ -7,7 +7,7 @@ import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 // and email already filled in, tagged as coming from the game.
 // Set DIAGNOSTIC_BOOKING_URL to use a different Calendly event.
 // POST only, so link previews and prefetching can't record a click.
-const BOOKING_URL = process.env.DIAGNOSTIC_BOOKING_URL || "https://calendly.com/alina-obliqueconsult/30min";
+const BOOKING_URL = process.env.DIAGNOSTIC_BOOKING_URL || "https://calendly.com/obco";
 
 export async function POST() {
   const url = new URL(BOOKING_URL);
