@@ -3,7 +3,7 @@
 One command turns any document from the game into a ready-to-post LinkedIn carousel.
 
 ```bash
-npm run slides -- 2026-11-03    # that day's daily document
+npm run slides -- 2026-11-17    # that day's daily document
 npm run slides -- s1-03         # any document by id
 ```
 

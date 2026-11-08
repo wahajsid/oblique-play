@@ -10,7 +10,7 @@ npm run dev            # http://localhost:3000, reloads as you edit
 npm run check:content  # re-checks every document's arithmetic and rules
 npm run build          # what Vercel runs before going live
 npm run hubspot:setup  # one-off: creates the HubSpot contact properties
-npm run slides -- 2026-11-03  # "spot the error" LinkedIn slides (docs/marketing/SPOT-THE-ERROR.md)
+npm run slides -- 2026-11-17  # "spot the error" LinkedIn slides (docs/marketing/SPOT-THE-ERROR.md)
 npm run prizes:close -- 2026-11  # records a month's prize winners (docs/PRIZES.md)
 ```
 

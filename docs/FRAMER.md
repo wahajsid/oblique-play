@@ -63,7 +63,7 @@ In Framer: **Insert, then Embed**. In the Embed's settings choose **URL** (not H
 | On mobile | Same box, full width of the column, height 340. |
 
 What it shows:
-- Before launch (until 3 Nov 2026): "The leaderboard opens on 3 Nov 2026".
+- Before launch (until 17 Nov 2026): "The leaderboard opens on 17 Nov 2026".
 - After launch: the top 5 players this month by Corporate Tax and VAT quiz points, under the name each player chose (their name or a random anonymous name). Oblique staff never appear.
 - Once monthly prizes are switched on: the prize standings instead, headed "Monthly prizes · AED 2,000 for 1st place".
 - Numbers refresh every 5 minutes. Clicking anywhere opens the game in a new tab.
@@ -76,7 +76,7 @@ What it shows:
 | Size | Width 360 to 600, height **200 to 220** (fixed). Suits a band under the homepage hero, or the VAT service page. |
 | Corner radius | As above: its own 16px corners, Embed background transparent. |
 
-It shows today's date and "Can you spot what's wrong with today's UAE tax document?". Clicking opens the puzzle in a new tab. Before launch it says the first puzzle arrives on 3 Nov 2026.
+It shows today's date and "Can you spot what's wrong with today's UAE tax document?". Clicking opens the puzzle in a new tab. Before launch it says the first puzzle arrives on 17 Nov 2026.
 
 ### Where these boxes may be shown
 
@@ -103,7 +103,7 @@ After publishing the Framer site:
 | --- | --- |
 | A box is blank or shows a "refused to connect" icon | The page showing it isn't on an allowed address (see above). Check the domain, or ask for it to be added. |
 | A game page is blank inside an Embed | Full game pages can't be framed, by design. Use a link instead. Only the two `/embed/...` addresses work as Embeds. |
-| "Opens on 3 Nov 2026" after launch | The game's clock uses UAE time; it switches at midnight UAE time on 3 Nov. If it persists, the game may not be deployed; check https://play.obliqueconsult.com. |
+| "Opens on 17 Nov 2026" after launch | The game's clock uses UAE time; it switches at midnight UAE time on 17 Nov. If it persists, the game may not be deployed; check https://play.obliqueconsult.com. |
 | The leaderboard looks a few minutes old | It refreshes every 5 minutes, on purpose, so the website never slows the game down. |
 | Scrollbars inside a box | The Embed is smaller than the sizes above. Make it taller. |
 | The box text is the wrong colour for the section | Use the light version (`?theme=light`) on white sections and the dark version elsewhere. |

@@ -18,10 +18,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -46,11 +47,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm Article 39 is the value-of-imported-goods article."
+      "reviewNotes": "Confirm Article 39 is the value-of-imported-goods article. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -72,11 +73,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm imported services count towards the mandatory registration threshold under Article 13."
+      "reviewNotes": "Medium-high: confirm imported services count towards the mandatory registration threshold under Article 13. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -101,10 +102,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -129,11 +131,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm Article 50 covers payment of VAT on imports by persons who aren't registered."
+      "reviewNotes": "Confirm Article 50 covers payment of VAT on imports by persons who aren't registered. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -158,11 +160,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm the Executive Regulation conditions, including whether a customs registration number is also needed (as the verifier noted for vat-pd-010)."
+      "reviewNotes": "Medium-high: confirm the Executive Regulation conditions, including whether a customs registration number is also needed (as the verifier noted for vat-pd-010). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -187,10 +189,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -215,11 +218,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm Article 69 is the currency conversion article."
+      "reviewNotes": "Confirm Article 69 is the currency conversion article. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -241,11 +244,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm how an error with no tax effect should be corrected (voluntary disclosure or the next return)."
+      "reviewNotes": "Confirm how an error with no tax effect should be corrected (voluntary disclosure or the next return). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -267,11 +270,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm Article 65 is the right reference for who may issue tax invoices."
+      "reviewNotes": "Confirm Article 65 is the right reference for who may issue tax invoices. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -296,11 +299,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm the article for the 14-day rule (also used in Module 1)."
+      "reviewNotes": "Confirm the article for the 14-day rule (also used in Module 1). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -352,11 +355,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm the article numbers for adjusting output tax and tax credit notes (as for vat-b1-020)."
+      "reviewNotes": "Confirm the article numbers for adjusting output tax and tax credit notes (as for vat-b1-020). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -380,11 +383,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm Article 69 and the date-of-supply timing for the rate."
+      "reviewNotes": "Confirm Article 69 and the date-of-supply timing for the rate. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -408,10 +411,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -436,10 +440,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -461,10 +466,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -488,11 +494,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm the five-year period, the longer real-estate period, and the article references."
+      "reviewNotes": "Medium-high: confirm the five-year period, the longer real-estate period, and the article references. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -514,10 +520,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -542,11 +549,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm the article for the six-month payment rule and the return in which the reversal is made."
+      "reviewNotes": "Confirm the article for the six-month payment rule and the return in which the reversal is made. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -568,11 +575,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium: confirm the article and conditions for pre-registration input tax (for example any time limit for capital assets, and services)."
+      "reviewNotes": "Medium: confirm the article and conditions for pre-registration input tax (for example any time limit for capital assets, and services). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -597,10 +604,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -622,10 +630,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -650,11 +659,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm Article 53's block on entertaining non-employees is unchanged after the 2024 and 2026 amendments (the employee-expense changes in Decision No. 17 of 2026 aren't relied on here)."
+      "reviewNotes": "Confirm Article 53's block on entertaining non-employees is unchanged after the 2024 and 2026 amendments (the employee-expense changes in Decision No. 17 of 2026 aren't relied on here). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -678,11 +687,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm the evidence required for recovering VAT on imported goods."
+      "reviewNotes": "Medium-high: confirm the evidence required for recovering VAT on imported goods. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -706,10 +715,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -734,10 +744,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -761,11 +772,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged."
+      "reviewNotes": "Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -787,10 +798,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -815,11 +827,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged."
+      "reviewNotes": "Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -841,11 +853,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm the margin-scheme invoice rules (VAT not shown; buyer can't recover). Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged."
+      "reviewNotes": "Medium-high: confirm the margin-scheme invoice rules (VAT not shown; buyer can't recover). Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -870,10 +882,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -898,11 +911,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm margins are worked out per item with no setting-off of losses. Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged."
+      "reviewNotes": "Confirm margins are worked out per item with no setting-off of losses. Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -924,11 +937,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged."
+      "reviewNotes": "Exec. Reg. Art. 29 was reportedly amended by Cabinet Decision No. 149 of 2026 (from 1 Oct 2026); confirm this point is unchanged. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -950,10 +963,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -977,10 +991,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1002,11 +1017,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium: confirm the legal-person requirement and the Executive Regulation article, including after Federal Decree-Law No. 18 of 2022."
+      "reviewNotes": "Medium: confirm the legal-person requirement and the Executive Regulation article, including after Federal Decree-Law No. 18 of 2022. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1031,11 +1046,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm members' own TRNs are replaced by the group TRN."
+      "reviewNotes": "Medium-high: confirm members' own TRNs are replaced by the group TRN. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1059,10 +1074,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1087,10 +1103,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1112,11 +1129,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm the evasion ground and its exact wording after Federal Decree-Law No. 18 of 2022."
+      "reviewNotes": "Confirm the evasion ground and its exact wording after Federal Decree-Law No. 18 of 2022. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1141,11 +1158,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "The verifier noted the Executive Regulation's English text says intra-group supplies 'may be disregarded'; confirm the wording. | VERIFIER (blind check, medium confidence, chose option 3): Minor: line 2 says all three companies (incl. Holdings itself) are wholly owned by Palmfield Holdings - literally odd; consider 'the other two are wholly owned by'. Line 3 is still the clear error. Source: ER Art 12(1)(b): intra-group supplies disregarded"
+      "reviewNotes": "The verifier noted the Executive Regulation's English text says intra-group supplies 'may be disregarded'; confirm the wording. | VERIFIER (blind check, medium confidence, chose option 3): Minor: line 2 says all three companies (incl. Holdings itself) are wholly owned by Palmfield Holdings - literally odd; consider 'the other two are wholly owned by'. Line 3 is still the clear error. Source: ER Art 12(1)(b): intra-group supplies disregarded | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1167,11 +1184,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm the 'treated as made by the representative member' wording."
+      "reviewNotes": "Medium-high: confirm the 'treated as made by the representative member' wording. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1196,10 +1213,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1221,10 +1239,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1249,10 +1268,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1277,10 +1297,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1302,11 +1323,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium-high: confirm the charitable-buildings zero rate in Article 45 and which charities qualify."
+      "reviewNotes": "Medium-high: confirm the charitable-buildings zero rate in Article 45 and which charities qualify. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1331,10 +1352,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1359,11 +1381,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Medium: confirm conversions count for the first-supply zero rate, and what counts as completion of a conversion."
+      "reviewNotes": "Medium: confirm conversions count for the first-supply zero rate, and what counts as completion of a conversion. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1385,10 +1407,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1413,10 +1436,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:vat-batch-03"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:vat-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1441,11 +1465,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:vat-batch-03",
-      "reviewNotes": "Confirm a first supply made after the three-year window is exempt, and how completion is evidenced. | VERIFIER (blind check, medium confidence, chose option 3): Minor: line 3 assumes the date of supply of the first lease is 1 Feb 2027; if rent were invoiced/paid before 10 Jan 2027 the date-of-supply rules could pull part of it into the 3-year window. Line 4 omits the >6-month/Emirates ID condition of ER Art 43. Line 3 is still the intended error; consider 'first rent due and invoiced Feb 2027'. Source: Art 45(9) Decree-Law: first supply within 3 years of completion (10 Jan 2027)"
+      "reviewNotes": "Confirm a first supply made after the three-year window is exempt, and how completion is evidenced. | VERIFIER (blind check, medium confidence, chose option 3): Minor: line 3 assumes the date of supply of the first lease is 1 Feb 2027; if rent were invoiced/paid before 10 Jan 2027 the date-of-supply rules could pull part of it into the 3-year window. Line 4 omits the >6-month/Emirates ID condition of ER Art 43. Line 3 is still the intended error; consider 'first rent due and invoiced Feb 2027'. Source: Art 45(9) Decree-Law: first supply within 3 years of completion (10 Jan 2027) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

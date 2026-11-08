@@ -153,9 +153,10 @@
       "topic": "Zero-rated exports",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -321,10 +322,10 @@
       "topic": "Zero-rated exports",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "VERIFIER (blind check): agrees off. The export-evidence block is now also accepted as a tap."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "VERIFIER (blind check): agrees off. The export-evidence block is now also accepted as a tap. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -481,9 +482,10 @@
       "topic": "Export evidence",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -637,10 +639,10 @@
       "topic": "Export evidence",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "VERIFIER (blind check): agrees off at export-evidence. Caveat: the 90-day window from the 1 Oct supply is still open and Exec. Reg. Art. 30 lets evidence follow, so a pedant could call 0% provisionally valid. Consider dating the document so the 90 days have passed."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "VERIFIER (blind check): agrees off at export-evidence. Caveat: the 90-day window from the 1 Oct supply is still open and Exec. Reg. Art. 30 lets evidence follow, so a pedant could call 0% provisionally valid. Consider dating the document so the 90 days have passed. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -805,9 +807,10 @@
       "topic": "The 90-day export window",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -970,9 +973,10 @@
       "topic": "Zero-rated exports",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1134,9 +1138,10 @@
       "topic": "The 90-day export window",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1301,9 +1306,10 @@
       "topic": "Zero-rated exports",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1471,9 +1477,10 @@
       "topic": "Export evidence",
       "difficulty": "advanced",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1634,9 +1641,10 @@
       "topic": "Zero-rated exports",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

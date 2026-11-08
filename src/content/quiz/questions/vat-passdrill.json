@@ -21,11 +21,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-009",
-      "reviewNotes": "The threshold amounts sit in the VAT Executive Regulation (Article 7 as I understand it); consider adding to the reference. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "The threshold amounts sit in the VAT Executive Regulation (Article 7 as I understand it); consider adding to the reference. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -50,11 +50,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-010",
-      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: the reverse charge on imported goods also depends on the Exec Reg Art 48(1) conditions (e.g. the importer's own customs registration number), otherwise VAT is paid before release under Art 50. Since 1 Jan 2026 (Decree-Law 16/2025) no self-invoice is required; the option is still correct. Source: Decree-Law Art 48(1); Exec Reg Art 48(1),(4); Art 50(1) (tax.gov.ae consolidated texts)"
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: the reverse charge on imported goods also depends on the Exec Reg Art 48(1) conditions (e.g. the importer's own customs registration number), otherwise VAT is paid before release under Art 50. Since 1 Jan 2026 (Decree-Law 16/2025) no self-invoice is required; the option is still correct. Source: Decree-Law Art 48(1); Exec Reg Art 48(1),(4); Art 50(1) (tax.gov.ae consolidated texts) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -79,11 +79,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-011",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor wording: since Cabinet Decision 100/2024, Exec Reg Art 30(1)(b) asks for a customs declaration plus Commercial Evidence (e.g. an air waybill), or a Shipping Certificate plus Official Evidence. Option 3's 'official and commercial evidence' is a loose paraphrase, but the scenario's customs export document plus air waybill satisfies the rule. Source: Exec Reg Art 30(1),(4),(9) as amended by CD 100/2024 (tax.gov.ae consolidated ER, Sep 2026)"
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor wording: since Cabinet Decision 100/2024, Exec Reg Art 30(1)(b) asks for a customs declaration plus Commercial Evidence (e.g. an air waybill), or a Shipping Certificate plus Official Evidence. Option 3's 'official and commercial evidence' is a loose paraphrase, but the scenario's customs export document plus air waybill satisfies the rule. Source: Exec Reg Art 30(1),(4),(9) as amended by CD 100/2024 (tax.gov.ae consolidated ER, Sep 2026) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -108,11 +108,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-012",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -137,11 +137,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-019",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -166,11 +166,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-020",
-      "reviewNotes": "Article 14 and the control test were amended (Federal Decree-Law No. 18 of 2022, from 1 Jan 2023, as I understand it); confirm the 60%/55% facts still meet the current test. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): Minor: Exec Reg Art 9(1)(a) defines related parties through 50%+ voting or market-value interests or control by other means. Group members must also be legal persons (Art 10(5)(c)), which the companies here are. Source: Decree-Law Art 14(1) (as amended by DL 18/2022); Exec Reg Arts 9, 10(5)"
+      "reviewNotes": "Article 14 and the control test were amended (Federal Decree-Law No. 18 of 2022, from 1 Jan 2023, as I understand it); confirm the 60%/55% facts still meet the current test. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): Minor: Exec Reg Art 9(1)(a) defines related parties through 50%+ voting or market-value interests or control by other means. Group members must also be legal persons (Art 10(5)(c)), which the companies here are. Source: Decree-Law Art 14(1) (as amended by DL 18/2022); Exec Reg Arts 9, 10(5) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -195,11 +195,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-021",
-      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -224,11 +224,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-022",
-      "reviewNotes": "Article 26 was amended by Federal Decree-Law No. 18 of 2022 (from 1 Jan 2023, as I understand it); confirm the 12-month backstop still applies to this case. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Article 26 was amended by Federal Decree-Law No. 18 of 2022 (from 1 Jan 2023, as I understand it); confirm the 12-month backstop still applies to this case. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -253,11 +253,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-029",
-      "reviewNotes": "PassDrill also cited Article 19 for the mandatory threshold; as I understand it mandatory registration is Article 13, with the amounts in Executive Regulation Article 7. Confirm. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: since CD 100/2024, Exec Reg Art 8(6) also requires proof of carrying on business in the State and an intention to make taxable supplies. This is implied by the scenario. Source: Decree-Law Art 17; Exec Reg Art 8(1),(6)"
+      "reviewNotes": "PassDrill also cited Article 19 for the mandatory threshold; as I understand it mandatory registration is Article 13, with the amounts in Executive Regulation Article 7. Confirm. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: since CD 100/2024, Exec Reg Art 8(6) also requires proof of carrying on business in the State and an intention to make taxable supplies. This is implied by the scenario. Source: Decree-Law Art 17; Exec Reg Art 8(1),(6) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -282,11 +282,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-030",
-      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm no change from the VAT amendments effective 1 Jan 2026. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -311,11 +311,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-031",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -340,11 +340,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-032",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Minor wording: Exec Reg Art 51 does contain service rules (cl. 6-8). Cl. 6 says services with a place of supply in a Designated Zone are inside the State, and cl. 7 has a narrow exception for some e-commerce shipping or delivery services. So 'apply only to goods' is loose, but the answer's substance is correct. Source: Decree-Law Arts 50-52; Exec Reg Art 51(5)-(7)"
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Minor wording: Exec Reg Art 51 does contain service rules (cl. 6-8). Cl. 6 says services with a place of supply in a Designated Zone are inside the State, and cl. 7 has a narrow exception for some e-commerce shipping or delivery services. So 'apply only to goods' is loose, but the answer's substance is correct. Source: Decree-Law Arts 50-52; Exec Reg Art 51(5)-(7) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -369,11 +369,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-041",
-      "reviewNotes": "Confirm the article number (Article 57 or 58) after the 2024 amendments, and the scheme's value threshold. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm the article number (Article 57 or 58) after the 2024 amendments, and the scheme's value threshold. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -398,11 +398,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-042",
-      "reviewNotes": "Confirm the Article 64 conditions after the VAT amendments effective 1 Jan 2026. No exact topic key for bad debt relief; filed under input_tax. Consider adding an 'adjustments' topic. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm the Article 64 conditions after the VAT amendments effective 1 Jan 2026. No exact topic key for bad debt relief; filed under input_tax. Consider adding an 'adjustments' topic. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -427,11 +427,11 @@
     },
     "meta": {
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-043",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {

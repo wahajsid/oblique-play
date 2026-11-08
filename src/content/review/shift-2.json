@@ -116,10 +116,10 @@
       "topic": "When a simplified invoice is allowed",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -237,10 +237,10 @@
       "topic": "What a simplified invoice still needs",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -372,10 +372,10 @@
       "topic": "When a simplified invoice is allowed",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -499,10 +499,10 @@
       "topic": "VAT inside a VAT-inclusive price",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -640,10 +640,10 @@
       "topic": "When a simplified invoice is allowed",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "VERIFIER (blind check): agrees off. The customer block is now also accepted as a tap. | E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "VERIFIER (blind check): agrees off. The customer block is now also accepted as a tap. | E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -768,10 +768,10 @@
       "topic": "When a simplified invoice is allowed",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -883,10 +883,10 @@
       "topic": "What a simplified invoice still needs",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1003,10 +1003,10 @@
       "topic": "VAT inside a VAT-inclusive price",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1117,10 +1117,10 @@
       "topic": "What a simplified invoice still needs",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1244,10 +1244,10 @@
       "topic": "What a simplified invoice still needs",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then."
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "E-invoicing (from 1 Jan 2027 for the first businesses) removes simplified invoices for e-invoices; review the Shift 2 set before then. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

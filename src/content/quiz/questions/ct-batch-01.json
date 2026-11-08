@@ -18,11 +18,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Confirm Cabinet Decision No. 116 of 2023 is the decision that sets the AED 375,000 threshold."
+      "reviewNotes": "Confirm Cabinet Decision No. 116 of 2023 is the decision that sets the AED 375,000 threshold. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -46,11 +46,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Confirm article numbers: tax period (Art. 57) and effective date (Art. 69)."
+      "reviewNotes": "Confirm article numbers: tax period (Art. 57) and effective date (Art. 69). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -72,10 +72,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -100,10 +101,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -128,10 +130,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -156,11 +159,11 @@
     "meta": {
       "appliesFrom": "2023-06-01",
       "appliesUntil": "2026-12-31",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Confirm the multinational-group exclusion and the AED 3.15 billion threshold (multinational group as defined for country-by-country reporting) as they apply under Ministerial Decision No. 73 of 2023."
+      "reviewNotes": "Confirm the multinational-group exclusion and the AED 3.15 billion threshold (multinational group as defined for country-by-country reporting) as they apply under Ministerial Decision No. 73 of 2023. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -183,10 +186,11 @@
     "meta": {
       "appliesFrom": "2023-06-01",
       "appliesUntil": "2026-12-31",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -210,11 +214,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "REFERENCE: Ministerial Decision No. 84 of 2025 reportedly replaced No. 82 of 2023 (audited financial statements) for periods from 1 Jan 2025; update the reference if confirmed."
+      "reviewNotes": "REFERENCE: Ministerial Decision No. 84 of 2025 reportedly replaced No. 82 of 2023 (audited financial statements) for periods from 1 Jan 2025; update the reference if confirmed. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -239,10 +243,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -264,11 +269,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Medium confidence on detail: confirm how Article 39 applies the same-or-similar-business exception, and whether any further conditions (for example in a Ministerial Decision) apply to this example."
+      "reviewNotes": "Medium confidence on detail: confirm how Article 39 applies the same-or-similar-business exception, and whether any further conditions (for example in a Ministerial Decision) apply to this example. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -290,10 +295,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -318,10 +324,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -346,10 +353,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -373,11 +381,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Medium-high confidence: confirm Article 4(2) lists Qualifying Investment Funds among the persons that are exempt only on application and approval."
+      "reviewNotes": "Medium-high confidence: confirm Article 4(2) lists Qualifying Investment Funds among the persons that are exempt only on application and approval. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -399,10 +407,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -427,11 +436,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Confirm the article of Cabinet Decision No. 100 of 2023 for the de minimis rule, and that no 2025-2026 amendment changed the 5% / AED 5 million limits."
+      "reviewNotes": "Confirm the article of Cabinet Decision No. 100 of 2023 for the de minimis rule, and that no 2025-2026 amendment changed the 5% / AED 5 million limits. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -455,11 +464,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Medium-high confidence: confirm the cap is the higher of 30% of adjusted EBITDA and the AED 12 million de minimis amount (not a cliff test), and the 10-period carry-forward."
+      "reviewNotes": "Medium-high confidence: confirm the cap is the higher of 30% of adjusted EBITDA and the AED 12 million de minimis amount (not a cliff test), and the 10-period carry-forward. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -484,10 +493,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -512,11 +522,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-01",
-      "reviewNotes": "Medium-high confidence: confirm the 75% of taxable income cap applies to the receiving company under Articles 37-38, and the remaining conditions for loss transfer."
+      "reviewNotes": "Medium-high confidence: confirm the 75% of taxable income cap applies to the receiving company under Articles 37-38, and the remaining conditions for loss transfer. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -541,10 +551,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -599,10 +610,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-01"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-01",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

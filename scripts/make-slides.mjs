@@ -2,7 +2,7 @@
 // (upload it as a LinkedIn "document"), the same slides as 1080×1350 PNGs,
 // and a caption with the answer for the first comment.
 //
-//   npm run slides -- 2026-11-03     the daily document for that date
+//   npm run slides -- 2026-11-17     the daily document for that date
 //   npm run slides -- s1-03          any document by id
 //
 // Files go to slides/<date or id>/. First time on a laptop, also run:
@@ -28,7 +28,7 @@ if (!id || !/^(\d{4}-\d{2}-\d{2}|[a-z0-9-]+)$/.test(id)) {
 const read = (f) => JSON.parse(readFileSync(join(root, "src/content/review", f), "utf8"));
 const daily = read("daily.json");
 const all = [...daily, ...[1, 2, 3, 4, 5, 6].flatMap((n) => read(`shift-${n}.json`))];
-const DAILY_START = "2026-11-03";
+const DAILY_START = "2026-11-17";
 let date = null;
 let doc;
 if (/^\d{4}-\d{2}-\d{2}$/.test(id)) {

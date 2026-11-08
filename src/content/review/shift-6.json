@@ -148,10 +148,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "standard"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "standard",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -313,9 +314,10 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -455,10 +457,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "zero"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "zero",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -604,10 +607,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "exempt"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "exempt",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -769,10 +773,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "standard"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "standard",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -928,10 +933,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1074,10 +1080,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "standard"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "standard",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1212,10 +1219,11 @@
       "topic": "Mixed review",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "standard"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "standard",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1360,10 +1368,11 @@
       "topic": "Mixed review",
       "difficulty": "advanced",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "standard"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "standard",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1523,10 +1532,11 @@
       "topic": "Mixed review",
       "difficulty": "advanced",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

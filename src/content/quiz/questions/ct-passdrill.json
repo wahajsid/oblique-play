@@ -21,11 +21,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-001",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -51,11 +51,11 @@
     "meta": {
       "appliesFrom": "2023-06-01",
       "appliesUntil": "2026-12-31",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-002",
-      "reviewNotes": "Small Business Relief covers tax periods ending on or before 31 Dec 2026; retire or rewrite this item for 2027. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Minor: scenario frames eligibility as periods 'ending on or before 31 December 2026', but Ministerial Decision 131 of 2026 (29 July 2026) extended SBR to tax periods ending on or before 31 Dec 2029. Not wrong (2026 is still inside the window), but the 2026 cut-off framing is out of date. The scenario also doesn't say the company isn't an MNE-group member (also a condition). Source: Art 21(1) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); MD 73/2023 Art 2; MD 131/2026 https://mof.gov.ae/wp-content/uploads/2026/08/Ministerial-Decision-No.-131-of-2026-Amending-Certain-Provisions-of-Ministerial-Decision-No.-73-of-2023-on-Small-Business-Relief-for-the-Purposes-of-Federal-Decree-Law-No.-47-of-2022-EN.pdf"
+      "reviewNotes": "Small Business Relief covers tax periods ending on or before 31 Dec 2026; retire or rewrite this item for 2027. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 2): Minor: scenario frames eligibility as periods 'ending on or before 31 December 2026', but Ministerial Decision 131 of 2026 (29 July 2026) extended SBR to tax periods ending on or before 31 Dec 2029. Not wrong (2026 is still inside the window), but the 2026 cut-off framing is out of date. The scenario also doesn't say the company isn't an MNE-group member (also a condition). Source: Art 21(1) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); MD 73/2023 Art 2; MD 131/2026 https://mof.gov.ae/wp-content/uploads/2026/08/Ministerial-Decision-No.-131-of-2026-Amending-Certain-Provisions-of-Ministerial-Decision-No.-73-of-2023-on-Small-Business-Relief-for-the-Purposes-of-Federal-Decree-Law-No.-47-of-2022-EN.pdf | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -80,11 +80,11 @@
     },
     "meta": {
       "appliesFrom": "2024-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-003",
-      "reviewNotes": "appliesFrom set to 1 Jan 2024, when natural persons' first Corporate Tax period began as I understand it; confirm. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "appliesFrom set to 1 Jan 2024, when natural persons' first Corporate Tax period began as I understand it; confirm. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -109,11 +109,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-004",
-      "reviewNotes": "REFERENCE TO CONFIRM: as I understand it the de minimis requirement is set out in Cabinet Decision No. 100 of 2023, not Ministerial Decision No. 265 of 2023. Also confirm whether either decision was replaced in 2025. Also live on passdrill.org (public), so the answer can be searched. | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
+      "reviewNotes": "REFERENCE TO CONFIRM: as I understand it the de minimis requirement is set out in Cabinet Decision No. 100 of 2023, not Ministerial Decision No. 265 of 2023. Also confirm whether either decision was replaced in 2025. Also live on passdrill.org (public), so the answer can be searched. | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -138,11 +138,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-005",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -167,11 +167,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-006",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -196,11 +196,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-007",
-      "reviewNotes": "Confirm the carry-forward period for disallowed interest (10 years as I understand it) if the 'what' is expanded. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm the carry-forward period for disallowed interest (10 years as I understand it) if the 'what' is expanded. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -225,11 +225,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-008",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 1): Minor: the scenario doesn't say whether the company has any related-party transactions. A purely standalone company may have little or nothing to put in a Local File, but the MD 97/2023 revenue trigger (AED 200m) applies on its own wording. No 2025-26 amendment to the thresholds found. Source: MD 97/2023 Art 2 (Master File/Local File if revenue >= AED 200m, or MNE group constituent with consolidated revenue >= AED 3.15bn); FTA Transfer Pricing Guide"
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 1): Minor: the scenario doesn't say whether the company has any related-party transactions. A purely standalone company may have little or nothing to put in a Local File, but the MD 97/2023 revenue trigger (AED 200m) applies on its own wording. No 2025-26 amendment to the thresholds found. Source: MD 97/2023 Art 2 (Master File/Local File if revenue >= AED 200m, or MNE group constituent with consolidated revenue >= AED 3.15bn); FTA Transfer Pricing Guide | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -254,11 +254,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-013",
-      "reviewNotes": "Confirm the exact paragraph (Article 4(2) as I understand it) and that Government Entity subsidiaries use this application route. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Confirm the exact paragraph (Article 4(2) as I understand it) and that Government Entity subsidiaries use this application route. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -283,11 +283,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-014",
-      "reviewNotes": "The rate can be changed by Cabinet Decision; confirm it is still 0% for Nov 2026. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): The keyed option's reasoning cites the wrong article. The 0% rate (or any other rate the Cabinet specifies) is set in Article 45(1). Article 46 is the Withholding Tax Credit and prescribes no rate. Suggest rewording to 'Article 45 sets 0% and no other rate has been prescribed by Cabinet Decision'. No change from 0% found as of 2026. Source: Art 45(1), Art 46 FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); PwC Tax Summaries UAE WHT (reviewed Mar 2026)"
+      "reviewNotes": "The rate can be changed by Cabinet Decision; confirm it is still 0% for Nov 2026. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 1): The keyed option's reasoning cites the wrong article. The 0% rate (or any other rate the Cabinet specifies) is set in Article 45(1). Article 46 is the Withholding Tax Credit and prescribes no rate. Suggest rewording to 'Article 45 sets 0% and no other rate has been prescribed by Cabinet Decision'. No change from 0% found as of 2026. Source: Art 45(1), Art 46 FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); PwC Tax Summaries UAE WHT (reviewed Mar 2026) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -312,11 +312,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-015",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -341,11 +341,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-016",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -370,11 +370,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-017",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -399,11 +399,11 @@
     },
     "meta": {
       "appliesFrom": "2024-03-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-018",
-      "reviewNotes": "Date-sensitive: penalty amounts and the waiver initiative; confirm the position for Nov 2026. appliesFrom set to 1 Mar 2024 (effective date of Cabinet Decision No. 10 of 2024 as I understand it). Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor context: the FTA waiver initiative (refunds/credits the AED 10,000 if the first CT return is filed within 7 months of the first tax period end) may be worth a note. Cabinet Decision 129/2025 (in force 14 Apr 2026) amends CD 40/2017 (VAT/Excise/TPL penalties), not the CT late-registration penalty. Source: Cabinet Decision 75/2023 as amended by Cabinet Decision 10/2024 (AED 10,000); FTA news on CD 129/2025 https://tax.gov.ae/en/media.centre/news/federal.tax.authority.announces.entry.into.force.of.the.decision.amending.administrative.penalties.imposed.for.violations.of.tax.legislation.and.calls.on.registrants.to.benefit.from.the.advantages.of.the.new.decision.aspx"
+      "reviewNotes": "Date-sensitive: penalty amounts and the waiver initiative; confirm the position for Nov 2026. appliesFrom set to 1 Mar 2024 (effective date of Cabinet Decision No. 10 of 2024 as I understand it). Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor context: the FTA waiver initiative (refunds/credits the AED 10,000 if the first CT return is filed within 7 months of the first tax period end) may be worth a note. Cabinet Decision 129/2025 (in force 14 Apr 2026) amends CD 40/2017 (VAT/Excise/TPL penalties), not the CT late-registration penalty. Source: Cabinet Decision 75/2023 as amended by Cabinet Decision 10/2024 (AED 10,000); FTA news on CD 129/2025 https://tax.gov.ae/en/media.centre/news/federal.tax.authority.announces.entry.into.force.of.the.decision.amending.administrative.penalties.imposed.for.violations.of.tax.legislation.and.calls.on.registrants.to.benefit.from.the.advantages.of.the.new.decision.aspx | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -428,11 +428,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-023",
-      "reviewNotes": "Confirm Ministerial Decision No. 265 of 2023 is still the current decision (it may have been replaced in 2025) and where 'Beneficial Recipient' is defined. Also live on passdrill.org (public), so the answer can be searched. | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
+      "reviewNotes": "Confirm Ministerial Decision No. 265 of 2023 is still the current decision (it may have been replaced in 2025) and where 'Beneficial Recipient' is defined. Also live on passdrill.org (public), so the answer can be searched. | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -457,11 +457,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-024",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -486,11 +486,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-025",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -515,11 +515,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-026",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor: the keyed option says the Participation Exemption ownership/holding tests 'apply only to Participating Interests in foreign juridical persons'. That's too broad: per the FTA Exempt Income guide, capital gains on disposal of shares in a UAE-resident company are exempt only if the Participation Exemption conditions are met. It's accurate for dividends, which is what the question is about. Source: Art 22(1) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); FTA guide CTGEXI1 (resident dividends exempt 'with no further conditions') https://tax.gov.ae/Datafolder/Files/Guides/CT/CT%20-%20Exempt%20Income%20-%20Dividends%20and%20Participation%20Exemption%20-%2016%2010%202023.pdf"
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 4): Minor: the keyed option says the Participation Exemption ownership/holding tests 'apply only to Participating Interests in foreign juridical persons'. That's too broad: per the FTA Exempt Income guide, capital gains on disposal of shares in a UAE-resident company are exempt only if the Participation Exemption conditions are met. It's accurate for dividends, which is what the question is about. Source: Art 22(1) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); FTA guide CTGEXI1 (resident dividends exempt 'with no further conditions') https://tax.gov.ae/Datafolder/Files/Guides/CT/CT%20-%20Exempt%20Income%20-%20Dividends%20and%20Participation%20Exemption%20-%2016%2010%202023.pdf | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -544,11 +544,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-027",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -573,11 +573,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-028",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -601,11 +601,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-033",
-      "reviewNotes": "REFERENCE TO CONFIRM: the 0%/9% split for Qualifying Free Zone Persons is set out in Cabinet Decision No. 100 of 2023 as I understand it. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor wording: the 9% applies to the taxable income derived from Non-Qualifying Revenue, not the revenue itself. Source: Cabinet Decision 100/2023 Art 3 (0% on Qualifying Income; 9% on Taxable Income that is not Qualifying Income); FTA Free Zone Persons guide | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed."
+      "reviewNotes": "REFERENCE TO CONFIRM: the 0%/9% split for Qualifying Free Zone Persons is set out in Cabinet Decision No. 100 of 2023 as I understand it. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor wording: the 9% applies to the taxable income derived from Non-Qualifying Revenue, not the revenue itself. Source: Cabinet Decision 100/2023 Art 3 (0% on Qualifying Income; 9% on Taxable Income that is not Qualifying Income); FTA Free Zone Persons guide | REFERENCE: Ministerial Decision No. 229 of 2025 reportedly replaced No. 265 of 2023 (Qualifying Activities); update the reference if confirmed. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -631,11 +631,11 @@
     "meta": {
       "appliesFrom": "2023-06-01",
       "appliesUntil": "2026-12-31",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-034",
-      "reviewNotes": "Small Business Relief covers tax periods ending on or before 31 Dec 2026; retire or rewrite this item for 2027. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 1): The keyed option attributes the lasting bar to 'Article 21'. It actually comes from Art 21(1)(a) plus MD 73/2023 Art 2 (revenue for the relevant AND previous tax periods must not exceed AED 3m each). 'Permanently... every subsequent tax period' overstates things, because SBR itself only runs to periods ending on or before 31 Dec 2029 (MD 131/2026). The scenario also doesn't state that the AED 3.2m period was a CT tax period starting on or after 1 June 2023. The answer is right but needs tighter wording. Source: Art 21(1)(a) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); MD 73/2023 Art 2; MD 131/2026"
+      "reviewNotes": "Small Business Relief covers tax periods ending on or before 31 Dec 2026; retire or rewrite this item for 2027. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 1): The keyed option attributes the lasting bar to 'Article 21'. It actually comes from Art 21(1)(a) plus MD 73/2023 Art 2 (revenue for the relevant AND previous tax periods must not exceed AED 3m each). 'Permanently... every subsequent tax period' overstates things, because SBR itself only runs to periods ending on or before 31 Dec 2029 (MD 131/2026). The scenario also doesn't state that the AED 3.2m period was a CT tax period starting on or after 1 June 2023. The answer is right but needs tighter wording. Source: Art 21(1)(a) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf); MD 73/2023 Art 2; MD 131/2026 | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -690,11 +690,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-036",
-      "reviewNotes": "Confirm how the 9% test applies to headline versus effective rates under Ministerial Decision No. 302 of 2024. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 2): 'Non-Qualifying Foreign Permanent Establishment' isn't a term used in Art 24. The statute just says the exemption applies only to FPEs taxed at not less than 9% (Art 24(6)-(7)). Practitioner commentary (PwC) notes the 9% test may also be met if the FPE's effective rate recomputed under UAE CT rules reaches 9%. The scenario gives only the headline rate, which is a small edge case. Suggest dropping the coined term. Source: Art 24(6)-(7) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf)"
+      "reviewNotes": "Confirm how the 9% test applies to headline versus effective rates under Ministerial Decision No. 302 of 2024. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, medium confidence, chose option 2): 'Non-Qualifying Foreign Permanent Establishment' isn't a term used in Art 24. The statute just says the exemption applies only to FPEs taxed at not less than 9% (Art 24(6)-(7)). Practitioner commentary (PwC) notes the 9% test may also be met if the FPE's effective rate recomputed under UAE CT rules reaches 9%. The scenario gives only the headline rate, which is a small edge case. Suggest dropping the coined term. Source: Art 24(6)-(7) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -719,11 +719,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-037",
-      "reviewNotes": "POSSIBLE ERROR (explanation, not the answer key): PassDrill's explanation says Company B 'bears the consequences' of the clawback. As I understand Article 26, the clawback gain arises to the transferor (Company A) in the period of the clawback event, with Company B's cost base uplifted to market value. The 'why' here avoids saying who bears it; please confirm and complete. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "POSSIBLE ERROR (explanation, not the answer key): PassDrill's explanation says Company B 'bears the consequences' of the clawback. As I understand Article 26, the clawback gain arises to the transferor (Company A) in the period of the clawback event, with Company B's cost base uplifted to market value. The 'why' here avoids saying who bears it; please confirm and complete. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -748,11 +748,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-038",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -777,11 +777,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-039",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -806,11 +806,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-040",
-      "reviewNotes": "Confirm whether the 9% lender test is a deeming rule or one way of showing the main-purpose exception. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: Art 31(3) deems no tax advantage where the related party is taxed 'on the Interest' at not less than 9%. The scenario says Company N is 'taxed at home at 11%' and doesn't say expressly that the interest income is taxed at that rate. Suggest 'Company N is taxed at 11% on the interest it receives'. Source: Art 31(1)-(3) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf)"
+      "reviewNotes": "Confirm whether the 9% lender test is a deeming rule or one way of showing the main-purpose exception. Also live on passdrill.org (public), so the answer can be searched. | VERIFIER (blind check, 20 Oct 2026, high confidence, chose option 3): Minor: Art 31(3) deems no tax advantage where the related party is taxed 'on the Interest' at not less than 9%. The scenario says Company N is 'taxed at home at 11%' and doesn't say expressly that the interest income is taxed at that rate. Suggest 'Company N is taxed at 11% on the interest it receives'. Source: Art 31(1)-(3) FDL 47/2022 (MoF unofficial EN text, https://mof.gov.ae/wp-content/uploads/2022/12/Federal-Decree-Law-No.-47-of-2022-EN.pdf) | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -835,11 +835,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-044",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -864,11 +864,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-045",
-      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -892,11 +892,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "passdrill:tax-uae-tax-046",
-      "reviewNotes": "Article 53 covers the return; payment timing may sit in Article 48. Confirm the reference. Also live on passdrill.org (public), so the answer can be searched."
+      "reviewNotes": "Article 53 covers the return; payment timing may sit in Article 48. Confirm the reference. Also live on passdrill.org (public), so the answer can be searched. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

@@ -17,7 +17,7 @@ export default function PrizeRulesPage() {
 
       <h2>When</h2>
       <p>
-        Each calendar month is a separate competition, in UAE time (GMT+4). The first runs from 3 November 2026 to 30
+        Each calendar month is a separate competition, in UAE time (GMT+4). The first runs from 17 November 2026 to 30
         November 2026.
       </p>
 

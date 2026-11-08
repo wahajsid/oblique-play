@@ -1,7 +1,7 @@
 // Picks the daily quiz sets ahead of time and saves them to
 // src/content/quiz/schedule.json.
 //
-// Run with: npm run quiz:schedule -- --days 14 [--from 2026-11-03] [--drafts]
+// Run with: npm run quiz:schedule -- --days 14 [--from 2026-11-17] [--drafts]
 //
 // Days already in the schedule are never changed, so past sets (and any
 // challenge links to them) stay the same. New days are added after the last

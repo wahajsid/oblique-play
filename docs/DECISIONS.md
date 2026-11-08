@@ -6,7 +6,7 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 | Topic | Decision |
 | --- | --- |
-| Launch date | **Tue 3 Nov 2026** (moved from Sun 1 Nov: a weekday gets more LinkedIn reach, and 1 Nov was only 13 days from the plan date). |
+| Launch date | **Tue 17 Nov 2026.** First planned for Tue 3 Nov (itself moved from Sun 1 Nov for LinkedIn reach); moved on 8 Nov because accounts and device testing weren't ready. |
 | Question bank at launch | **200 reviewed questions per track** (10 days of unique sets), then 100 new per track each week. |
 | Reviewers | Corporate Tax: Ashta and Pranay. VAT (questions and all Module 1 documents): Aidarous and Arslan. |
 | Leaderboard | Players choose how they appear: under their display name, or anonymously under a random name (for example "Swift Falcon 42"). |
@@ -31,11 +31,11 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 
 **"Both" track.** 10 of each track's 20 cannot be split 2.5 / 5 / 2.5. Rule: Corporate Tax contributes 3 / 5 / 2 and VAT contributes 2 / 5 / 3, giving 5 / 10 / 5 overall.
 
-**14-day no-repeat rule.** Days 1–10 use all 200 launch questions. The first weekly batch must be live by **quiz day 8 (Tue 10 Nov)**, or the daily set runs short on day 11 (Fri 13 Nov). With a batch every 7 days after that, a simulation never runs short.
+**14-day no-repeat rule.** Days 1–10 use all 200 launch questions. The first weekly batch must be live by **quiz day 8 (Tue 24 Nov)**, or the daily set runs short on day 11 (Fri 13 Nov). With a batch every 7 days after that, a simulation never runs short.
 
 **Midnight UAE time** is 20:00 UTC (the UAE is UTC+4 with no daylight saving). The daily job's schedule is `0 20 * * *`.
 
-## Build schedule (day 14 = Tue 3 Nov)
+## Build schedule (as planned for 3 Nov; launch is now 17 Nov)
 
 | Days | Dates | Work |
 | --- | --- | --- |
@@ -113,9 +113,9 @@ Every question and every document was answered blind by a separate AI verifier. 
 
 1. Import the reviewed workbooks and run both checkers.
 2. **Reset the preview schedule**, then build the real one from approved questions only:
-   `echo '[]' > src/content/quiz/schedule.json && npm run quiz:schedule -- --from 2026-11-03 --days 10`.
+   `echo '[]' > src/content/quiz/schedule.json && npm run quiz:schedule -- --from 2026-11-17 --days 10` (done 8 Nov).
    The current schedule is a draft preview from 20 Oct. If it were kept, its questions would count against the 14-day no-repeat rule.
-3. The first weekly batch of new questions must be approved and scheduled by quiz day 8 (Tue 10 Nov).
+3. The first weekly batch of new questions must be approved and scheduled by quiz day 8 (Tue 24 Nov).
 4. **Prizes:** legal check on whether a promotion permit is needed, approve `/prizes/rules`, exclude reviewers by email, then set `PRIZES_ENABLED=true` (`docs/PRIZES.md`).
 
 ## Risks to act on

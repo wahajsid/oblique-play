@@ -126,10 +126,11 @@
       "topic": "Imported services",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -258,10 +259,11 @@
       "topic": "Imported services",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -417,10 +419,11 @@
       "topic": "Imports",
       "difficulty": "foundation",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -581,10 +584,11 @@
       "topic": "Imports",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -734,10 +738,11 @@
       "topic": "Imports",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "import_paid_at_customs"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "import_paid_at_customs",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -891,10 +896,11 @@
       "topic": "Imports",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "import_paid_at_customs"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "import_paid_at_customs",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1054,10 +1060,11 @@
       "topic": "Imports",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1187,10 +1194,11 @@
       "topic": "Imported services",
       "difficulty": "intermediate",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1351,10 +1359,11 @@
       "topic": "Imports",
       "difficulty": "advanced",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1514,10 +1523,11 @@
       "topic": "Imports",
       "difficulty": "advanced",
       "appliesFrom": "2018-01-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "correctTreatment": "reverse_charge"
+      "status": "approved",
+      "reviewer": "Aidarous, Arslan",
+      "reviewedOn": "2026-11-08",
+      "correctTreatment": "reverse_charge",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

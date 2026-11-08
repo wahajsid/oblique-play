@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 // The "spot the error" slides for one document, answer included. Made by
 // `npm run slides` on a laptop; switched off on the live site, so nobody can
 // read a future daily document's answer here.
-//   /slides/2026-11-03  the daily document for that date
+//   /slides/2026-11-17  the daily document for that date
 //   /slides/s1-03       any document by id
 export default async function SlidesPage({ params }: { params: Promise<{ id: string }> }) {
   if (process.env.SLIDES_ENABLED !== "true") notFound();

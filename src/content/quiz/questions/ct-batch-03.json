@@ -18,10 +18,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -45,10 +46,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -73,10 +75,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -98,10 +101,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -126,11 +130,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the indirect-holding test (through another member) as worded in Article 40 and the Tax Groups guide."
+      "reviewNotes": "Confirm the indirect-holding test (through another member) as worded in Article 40 and the Tax Groups guide. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -154,11 +158,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the paragraph of Article 40 on joint and several liability, and any limit the tax authority can agree for a member."
+      "reviewNotes": "Confirm the paragraph of Article 40 on joint and several liability, and any limit the tax authority can agree for a member. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -180,10 +184,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -207,10 +212,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -235,11 +241,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the AED 3.15bn and AED 200m thresholds in MD 97/2023 are unchanged for 2025. | VERIFIER (blind check, high confidence, chose option 2): Minor nuance only: MD 97 excludes most domestic transactions from the Local File, but the Master File/Local File obligation itself is triggered by the AED 3.15bn group threshold, so option D is still wrong. Source: MD No. 97 of 2023 on TP documentation (AED 200m revenue or AED 3.15bn MNE group revenue); CT Law Art 55"
+      "reviewNotes": "Confirm the AED 3.15bn and AED 200m thresholds in MD 97/2023 are unchanged for 2025. | VERIFIER (blind check, high confidence, chose option 2): Minor nuance only: MD 97 excludes most domestic transactions from the Local File, but the Master File/Local File obligation itself is triggered by the AED 3.15bn group threshold, so option D is still wrong. Source: MD No. 97 of 2023 on TP documentation (AED 200m revenue or AED 3.15bn MNE group revenue); CT Law Art 55 | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -264,10 +270,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -292,10 +299,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -319,11 +327,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the 30-day period in Article 55, and whether the tax authority may allow longer."
+      "reviewNotes": "Confirm the 30-day period in Article 55, and whether the tax authority may allow longer. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -347,10 +355,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -375,11 +384,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the AED 12 million threshold in MD 126/2023."
+      "reviewNotes": "Confirm the AED 12 million threshold in MD 126/2023. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -401,10 +410,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -429,10 +439,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -457,11 +468,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the EBITDA build-up and the exclusion of exempt income in MD 126/2023."
+      "reviewNotes": "Confirm the EBITDA build-up and the exclusion of exempt income in MD 126/2023. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -486,10 +497,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -511,10 +523,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -536,10 +549,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -563,10 +577,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -591,10 +606,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -619,10 +635,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -647,11 +664,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the Article 39 conditions, including any further criteria for 'the same or a similar business'."
+      "reviewNotes": "Confirm the Article 39 conditions, including any further criteria for 'the same or a similar business'. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -673,10 +690,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -701,10 +719,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -726,10 +745,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -753,10 +773,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -781,11 +802,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the treatment of part-cash consideration (Ministerial Decision No. 133 of 2023); this item uses 100% cash to stay clear of that question."
+      "reviewNotes": "Confirm the treatment of part-cash consideration (Ministerial Decision No. 133 of 2023); this item uses 100% cash to stay clear of that question. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -810,10 +831,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -835,11 +857,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the exact clawback triggers and the two-year period in Article 27."
+      "reviewNotes": "Confirm the exact clawback triggers and the two-year period in Article 27. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -864,10 +886,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -891,10 +914,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -919,10 +943,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -944,11 +969,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm how the 'intended to be held' test works for dividends received in the first 12 months."
+      "reviewNotes": "Confirm how the 'intended to be held' test works for dividends received in the first 12 months. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -973,10 +998,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1000,11 +1026,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the AED 4 million acquisition-cost alternative in MD 116/2023."
+      "reviewNotes": "Confirm the AED 4 million acquisition-cost alternative in MD 116/2023. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1026,11 +1052,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm against the tax authority's deductions guidance that employee entertainment is outside the Article 32 limit."
+      "reviewNotes": "Confirm against the tax authority's deductions guidance that employee entertainment is outside the Article 32 limit. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1054,10 +1080,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1081,10 +1108,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1106,10 +1134,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1134,11 +1163,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm no separate tax depreciation rules apply as at Oct 2026 (accounting depreciation is followed)."
+      "reviewNotes": "Confirm no separate tax depreciation rules apply as at Oct 2026 (accounting depreciation is followed). | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1163,10 +1192,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1191,10 +1221,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1216,10 +1247,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1244,10 +1276,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1272,11 +1305,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm the immovable-property nexus rule in Cabinet Decision No. 56 of 2023 for non-resident companies."
+      "reviewNotes": "Confirm the immovable-property nexus rule in Cabinet Decision No. 56 of 2023 for non-resident companies. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1298,10 +1331,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
-      "source": "oblique:ct-batch-03"
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
+      "source": "oblique:ct-batch-03",
+      "reviewNotes": "Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1325,11 +1359,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm that tax on income imposed outside the UAE is in the Article 33 list of non-deductible items."
+      "reviewNotes": "Confirm that tax on income imposed outside the UAE is in the Article 33 list of non-deductible items. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   },
   {
@@ -1354,11 +1388,11 @@
     },
     "meta": {
       "appliesFrom": "2023-06-01",
-      "status": "draft",
-      "reviewer": null,
-      "reviewedOn": null,
+      "status": "approved",
+      "reviewer": "Ashta, Pranay",
+      "reviewedOn": "2026-11-08",
       "source": "oblique:ct-batch-03",
-      "reviewNotes": "Confirm whether profit from selling goods into the UAE is State Source Income under Article 13; the answer holds either way, since Withholding Tax is at 0%."
+      "reviewNotes": "Confirm whether profit from selling goods into the UAE is State Source Income under Article 13; the answer holds either way, since Withholding Tax is at 0%. | Approved by the team; confirmed by Wahaj on 8 Nov 2026."
     }
   }
 ]

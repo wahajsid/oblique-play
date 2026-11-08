@@ -10,7 +10,9 @@ The top 3 players each month win **AED 2,000, AED 1,000 and AED 500**. Amounts a
 - **Ties:** more quiz points, then lower total time. A complete tie means the prizes are shared; the script stops and asks a person.
 - **The prize board** only shows players who have entered (ticked the rules box on `/prizes`), aren't excluded, and have at least one scored round that month.
 
-Worked check for November 2026 (3 to 30 Nov = 28 days): the most quiz points possible is 28 × 40 = 1,120. The referral cap of 100 is 100 ÷ 1,120 ≈ 9% of that, so knowledge still decides who wins.
+Worked check for a full month (December 2026, 31 days): the most quiz points possible is 31 × 40 = 1,240. The referral cap of 100 is 100 ÷ 1,240 ≈ 8% of that, so knowledge still decides who wins.
+
+The first month is short: launch is 17 Nov, so November has 14 quiz days (17 to 30 Nov). The most quiz points is 14 × 40 = 560, and the 100-point referral cap is 100 ÷ 560 ≈ 18% of that, so referrals count for about twice as much as in a full month. If that matters, either treat November as a warm-up with no prizes, or lower the cap for November only.
 
 ## Before switching prizes on
 
