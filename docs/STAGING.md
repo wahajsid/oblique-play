@@ -33,7 +33,9 @@ The test project uses Supabase's built-in email, which **only sends to people on
 
 ## Updating it with new code
 
-The copy was uploaded from the repository with the Railway command-line tool (`railway up`), so pushing to GitHub doesn't update it. Either ask Claude to redeploy, or in Railway connect the service to the GitHub repo `wahajsid/oblique-play` (Settings, Source) so every push to `main` redeploys it.
+The Railway service is connected to the GitHub repo `wahajsid/oblique-play`, branch `main`: **every push to `main` redeploys the test copy** (about 3 minutes). Check progress in Railway, project `oblique-play-test`, service `web`, **Deployments**.
+
+When the live site is set up on Vercel from the same repo, one push will update both. If a build fails with a download error (for example a 504 fetching a build tool), it's on Railway's side: press **Redeploy** on that deployment.
 
 ## When testing is done
 
