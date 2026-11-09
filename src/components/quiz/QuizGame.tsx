@@ -65,6 +65,8 @@ export function QuizGame(props: Props) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [attemptId, setAttemptId] = useState("");
+  const attemptRef = useRef("");
+  const [serverTimeMs, setServerTimeMs] = useState<number | null>(null);
   const [startedAt, setStartedAt] = useState(0);
   const [choice, setChoice] = useState<number | null>(null);
   const [reply, setReply] = useState<CheckReply | null>(null);
@@ -84,7 +86,7 @@ export function QuizGame(props: Props) {
   useEffect(() => {
     const run = getQuizRun(key);
     if (run?.attemptId && run.answers.length > 0 && run.answers.length < total) setSavedRun(run);
-    setAlreadyScored(!!getQuizResult(key)?.scored || serverScored !== "none");
+    setAlreadyScored(!!getQuizResult(key)?.scored || serverScored === "finished");
   }, [key, total, serverScored]);
 
   useEffect(() => {
@@ -101,7 +103,35 @@ export function QuizGame(props: Props) {
   const doneMs = answers.reduce((s, a) => s + a.timeMs, 0);
   const elapsed = doneMs + (phase === "answering" && tick ? Math.max(0, tick - qStart.current) : 0);
 
-  const showQuestion = (i: number) => {
+  // The server can answer with a different attempt id: an unfinished scored
+  // round carries on, whichever device asks.
+  const adoptAttempt = (id: unknown, run: QuizAnswer[]) => {
+    if (typeof id !== "string" || id === attemptRef.current) return;
+    attemptRef.current = id;
+    setAttemptId(id);
+    saveQuizRun(key, { attemptId: id, answers: run, startedAt: startedAt || Date.now() });
+  };
+
+  // Posts to the quiz API. A session that is a fraction of a second old can
+  // be refused once, so "not signed in" is retried before it's believed.
+  const send = async (path: string, body: unknown) => {
+    const go = () => fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    let res = await go();
+    if (res.status === 401) {
+      await new Promise((r) => setTimeout(r, 900));
+      res = await go();
+    }
+    return res;
+  };
+
+  // Sign-in has lapsed, or the mixed quiz isn't open yet: leave the round.
+  const leaveIfBlocked = (status: number) => {
+    if (status === 401) window.location.assign(`/signin?next=${encodeURIComponent(`/quiz/${track}/${date}`)}`);
+    else if (status === 403) window.location.assign("/quiz");
+    return status === 401 || status === 403;
+  };
+
+  const showQuestion = (i: number, run: QuizAnswer[] = answers) => {
     setIndex(i);
     setChoice(null);
     setReply(null);
@@ -110,6 +140,16 @@ export function QuizGame(props: Props) {
     qStart.current = performance.now();
     setTick(0);
     window.scrollTo({ top: 0 });
+    // Starts this question's clock on the server (and the attempt, on its
+    // first question). The time that counts is measured there.
+    if (signedIn) {
+      send("/api/quiz/shown", { date, track, questionId: questions[i].id, attemptId: attemptRef.current, challengeCode: challenge?.code })
+        .then(async (res) => {
+          if (leaveIfBlocked(res.status)) return;
+          if (res.ok) adoptAttempt((await res.json()).attemptId, run);
+        })
+        .catch(() => {});
+    }
   };
 
   const start = (resume: boolean) => {
@@ -122,16 +162,18 @@ export function QuizGame(props: Props) {
     }
     if (resume && savedRun) {
       setAnswers(savedRun.answers);
+      attemptRef.current = savedRun.attemptId;
       setAttemptId(savedRun.attemptId);
       setStartedAt(savedRun.startedAt);
-      showQuestion(savedRun.answers.length);
+      showQuestion(savedRun.answers.length, savedRun.answers);
     } else {
       clearQuizRun(key);
       setAnswers([]);
-      setAttemptId(crypto.randomUUID());
+      attemptRef.current = crypto.randomUUID();
+      setAttemptId(attemptRef.current);
       setStartedAt(Date.now());
       setScored(null);
-      showQuestion(0);
+      showQuestion(0, []);
     }
     setSavedRun(null);
   };
@@ -142,24 +184,28 @@ export function QuizGame(props: Props) {
     setPhase("checking");
     buzz();
     try {
-      const res = await fetch("/api/quiz/check", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          date,
-          track,
-          questionId: q.id,
-          choice,
-          attemptId,
-          timeMs: Math.round(timeMs),
-          challengeCode: challenge?.code,
-        }),
+      const res = await send("/api/quiz/check", {
+        date,
+        track,
+        questionId: q.id,
+        choice,
+        attemptId: attemptRef.current,
+        challengeCode: challenge?.code,
       });
+      if (leaveIfBlocked(res.status)) return;
+      if (res.status === 409) {
+        // This attempt is already finished on the server (say, in another tab).
+        clearQuizRun(key);
+        setError("This round has already been finished. Go back and start a new one.");
+        setPhase("answering");
+        return;
+      }
       if (!res.ok) throw new Error(String(res.status));
-      const r = (await res.json()) as CheckReply;
+      const r = (await res.json()) as CheckReply & { attemptId?: string };
       const next = [...answers, { questionId: q.id, choice, correct: r.correct, timeMs }];
       setAnswers(next);
-      saveQuizRun(key, { attemptId, answers: next, startedAt });
+      adoptAttempt(r.attemptId, next);
+      saveQuizRun(key, { attemptId: attemptRef.current, answers: next, startedAt });
       if (r.scored !== null) setScored(r.scored);
       setReply(r);
       setPhase("feedback");
@@ -171,7 +217,7 @@ export function QuizGame(props: Props) {
 
   const goNext = () => {
     if (index + 1 < total) {
-      showQuestion(index + 1);
+      showQuestion(index + 1, answers);
       return;
     }
     // Signed in: the server said whether this attempt counts. Otherwise the
@@ -183,11 +229,15 @@ export function QuizGame(props: Props) {
     fetch("/api/quiz/finish", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ attemptId, date, track }),
+      body: JSON.stringify({ attemptId: attemptRef.current, date, track }),
       keepalive: true,
     })
       .then((r) => r.json())
-      .then((d) => setStats(d.stats ?? null))
+      .then((d) => {
+        setStats(d.stats ?? null);
+        // The time that counts is the server's.
+        if (typeof d.timeMs === "number") setServerTimeMs(d.timeMs);
+      })
       .catch(() => {});
     setPhase("done");
     window.scrollTo({ top: 0 });
@@ -204,6 +254,7 @@ export function QuizGame(props: Props) {
         // A scored round in progress can only be picked up, not restarted:
         // restarting would mean seeing the questions before a second try.
         practice={!isToday || (alreadyScored && !savedRun)}
+        pickUp={isToday && serverScored === "started" && !savedRun}
         canRestart={!(isToday && savedRun && !alreadyScoredFinished(key))}
         needsSignIn={needsSignIn}
         draft={draft}
@@ -222,7 +273,7 @@ export function QuizGame(props: Props) {
         isToday={isToday}
         questions={questions}
         answers={answers}
-        timeMs={doneMs}
+        timeMs={serverTimeMs ?? doneMs}
         scored={!!scored}
         attemptId={attemptId}
         profile={profile}
@@ -384,13 +435,15 @@ function Intro(props: {
   total: number;
   resumeAt: number | null;
   practice: boolean;
+  // Today's scored round was started on another device and isn't finished.
+  pickUp: boolean;
   needsSignIn: boolean;
   draft: boolean;
   canRestart: boolean;
   challenge: ChallengeInfo | null;
   onStart: (resume: boolean) => void;
 }) {
-  const { trackTitle, date, isToday, total, resumeAt, practice, needsSignIn, draft, canRestart, challenge, onStart } = props;
+  const { trackTitle, date, isToday, total, resumeAt, practice, pickUp, needsSignIn, draft, canRestart, challenge, onStart } = props;
   return (
     <>
       <header className="flex h-14 items-center justify-between px-4">
@@ -418,7 +471,12 @@ function Intro(props: {
         )}
 
         <div className="mt-6 rounded-2xl border border-line bg-surface p-4 text-sm">
-          {practice ? (
+          {pickUp ? (
+            <p>
+              <span className="font-semibold">Your scored round is already under way.</span> You started it on another
+              device. Carry on here: the answers you&apos;ve already given still stand.
+            </p>
+          ) : practice ? (
             <p>
               <span className="font-semibold">Practice round.</span>{" "}
               {isToday
@@ -428,7 +486,7 @@ function Intro(props: {
           ) : (
             <p>
               <span className="font-semibold">One scored attempt today.</span> One point per correct answer; time breaks ties.
-              Play again as often as you like, as practice.
+              It starts when you tap Start. Once you&apos;ve finished, you can play again as practice.
             </p>
           )}
         </div>
@@ -449,8 +507,13 @@ function Intro(props: {
                   : "min-h-14 rounded-full btn-primary px-4 text-base font-semibold"
               }
             >
-              {needsSignIn ? "Sign in to start" : resumeAt ? "Start again (practice)" : practice ? "Start practice" : "Start quiz"}
+              {needsSignIn ? "Sign in to start" : resumeAt ? "Start again (practice)" : pickUp ? "Carry on" : practice ? "Start practice" : "Start quiz"}
             </button>
+          )}
+          {needsSignIn && (
+            <Link href="/quiz/sample" className="flex min-h-12 items-center justify-center rounded-full border border-line text-sm font-semibold">
+              Try 5 sample questions first
+            </Link>
           )}
         </div>
       </main>

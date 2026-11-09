@@ -1,10 +1,10 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { QuizGame } from "@/components/quiz/QuizGame";
 import { challengeInfoFor } from "@/lib/challenges";
 import { getProfile } from "@/lib/players";
 import { getDailySet, getPlayIds, getPublicQuestions, hasDrafts, isPlayTrack, TRACKS } from "@/lib/quiz/content";
 import { longDate, uaeToday } from "@/lib/quiz/dates";
-import { getScoredState } from "@/lib/quiz/record";
+import { getScoredState, isMixedUnlocked } from "@/lib/quiz/record";
 import { authEnabled } from "@/lib/supabase/config";
 import { getSignedInPlayer } from "@/lib/supabase/server";
 
@@ -16,6 +16,9 @@ export default async function QuizPage({ params, searchParams }: { params: Promi
   // getDailySet returns nothing for future dates, so tomorrow stays private.
   const day = getDailySet(date);
   if (!day) notFound();
+
+  // Today's mixed quiz stays shut until both scored rounds are finished.
+  if (track === "both" && date === uaeToday() && !(await isMixedUnlocked(date))) redirect("/quiz");
 
   const ids = getPlayIds(day, track);
   const [player, serverScored, profile] = await Promise.all([getSignedInPlayer(), getScoredState(track, date), getProfile()]);
@@ -29,7 +32,7 @@ export default async function QuizPage({ params, searchParams }: { params: Promi
       trackTitle={TRACKS[track].title}
       date={date}
       isToday={date === uaeToday()}
-      questions={getPublicQuestions(ids)}
+      questions={getPublicQuestions(ids, player?.id)}
       needsSignIn={authEnabled && !player}
       signedIn={!!player}
       draft={hasDrafts(ids)}

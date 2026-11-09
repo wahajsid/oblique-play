@@ -55,6 +55,11 @@ export default async function Home() {
               Today&apos;s quiz
             </span>
           </Link>
+          {authEnabled && !player && (
+            <Link href="/quiz/sample" className="-mt-1 inline-flex min-h-11 items-center self-start px-1 text-sm font-medium underline underline-offset-2">
+              New here? Try 5 sample questions, no sign-in
+            </Link>
+          )}
 
           {prizesEnabled && prizePhase() !== "after" && (
             <Link href="/prizes" className="rounded-2xl bg-[#141428] p-5 text-white">

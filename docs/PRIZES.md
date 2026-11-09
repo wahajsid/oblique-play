@@ -20,6 +20,21 @@ The months and gifts are in `src/content/prizes.json`; the points rules are in `
 
 Worked check: December and January have 31 days, so the most quiz points possible is 31 × 40 = 1,240, and the 100-point referral cap is 100 ÷ 1,240 ≈ 8% of that. February 2027 has 28 days: 28 × 40 = 1,120, and 100 ÷ 1,120 ≈ 9%. Knowledge still decides who wins.
 
+## Fair play
+
+The server enforces these (see `src/lib/quiz/record.ts`):
+
+- An answer is shown only after it has been stored against the signed-in player's own attempt. Nobody can look answers up first, with or without an account.
+- Today's first attempt on a track is the scored one, and it starts when the first question appears. Until it's finished, no practice round of the same set can be opened.
+- The mixed quiz reuses the day's questions, so it opens only after both scored rounds are finished.
+- Time is measured on the server, from when a question is shown to when its answer arrives.
+- Each player sees multiple-choice options in their own order, so "question 5 is C" can't be passed around.
+
+What the server can't stop: a second person, or a second account, reading out the answers. So:
+
+- `npm run prizes:close` shows a "very fast rounds" count for each candidate (18+ out of 20 in under 80 seconds).
+- The rules let Oblique ask a winner to answer a few questions live on a short call before a gift is sent. Do this for any winner with very fast rounds, and ideally for every first place.
+
 ## Cost (rough; check current UAE prices before buying)
 
 | Gift | Rough price |
@@ -48,10 +63,11 @@ Worked check: December and January have 31 days, so the most quiz points possibl
 1. **See the standings:** `npm run prizes:close -- 2026-12 --preview`
 2. **Record the winners:** `npm run prizes:close -- 2026-12`. This writes the top 3 to the `prize_awards` table with their gift and status `contacting`, and prints their emails. It refuses to run before the month has ended, or for a month that isn't a prize month.
 3. **Email each winner** within 7 days (template below). They have 14 days to reply.
-4. **Check eligibility:** full name matches the Emirates ID, aged 18+, UAE resident, not staff, a reviewer or their family. Then, in the Supabase table editor, open `prize_awards` and set `legal_name`, and `status` to `verified`. Delete the ID copy from your email once it's checked.
-5. **Deliver the gift** to the UAE address the winner gave, or arrange collection from the office; aim for within 30 days. For 1st place, ask which phone they want first (iPhone or Galaxy S26). Keep addresses in your email or courier system only, never in the game's database. Set `status` to `delivered`; the date fills in automatically. A photo of the hand-over (with permission) makes a strong LinkedIn post.
-6. **If a winner doesn't reply in 14 days or isn't eligible:** set their `status` to `forfeited` and add a note. Run step 2 again: places move up to the next eligible players, and the new winners are added for you to contact. The script never moves a winner who is already `verified` or `delivered`; if that would be needed, it stops and asks you to sort it out by hand.
-7. **Announce:** the game shows last month's winners under their leaderboard names. For a LinkedIn post, ask each winner first whether you can use their real name.
+4. **Live check, if needed:** for a winner with "very fast rounds", or any first place, a 5-minute call with 5 questions from the month's quizzes. Someone who scored 19s and 20s all month will get most of them right.
+5. **Check eligibility:** full name matches the Emirates ID, aged 18+, UAE resident, not staff, a reviewer or their family. Then, in the Supabase table editor, open `prize_awards` and set `legal_name`, and `status` to `verified`. Delete the ID copy from your email once it's checked.
+6. **Deliver the gift** to the UAE address the winner gave, or arrange collection from the office; aim for within 30 days. For 1st place, ask which phone they want first (iPhone or Galaxy S26). Keep addresses in your email or courier system only, never in the game's database. Set `status` to `delivered`; the date fills in automatically. A photo of the hand-over (with permission) makes a strong LinkedIn post.
+7. **If a winner doesn't reply in 14 days or isn't eligible:** set their `status` to `forfeited` and add a note. Run step 2 again: places move up to the next eligible players, and the new winners are added for you to contact. The script never moves a winner who is already `verified` or `delivered`; if that would be needed, it stops and asks you to sort it out by hand.
+8. **Announce:** the game shows last month's winners under their leaderboard names. For a LinkedIn post, ask each winner first whether you can use their real name.
 
 ### Checking referrals look genuine
 

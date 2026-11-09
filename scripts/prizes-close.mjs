@@ -67,6 +67,17 @@ if (awardsError) fail("Couldn't read prize_awards", awardsError);
 
 const forfeited = new Set(awards.filter((a) => a.status === "forfeited").map((a) => a.player_id));
 const candidates = board.filter((r) => !forfeited.has(r.player_id));
+// Rounds worth a second look before a gift goes out: 18+ out of 20 in under
+// 80 seconds is 4 seconds a question, including reading it.
+const { data: rounds } = await db
+  .from("quiz_attempts")
+  .select("player_id, score, time_ms")
+  .eq("scored", true)
+  .not("completed_at", "is", null)
+  .gte("set_date", month)
+  .lte("set_date", lastDay)
+  .in("player_id", candidates.slice(0, 10).map((r) => r.player_id));
+const fastRounds = (id) => (rounds ?? []).filter((r) => r.player_id === id && r.score >= 18 && r.time_ms < 80_000).length;
 const sameScore = (a, b) => a && b && a.points === b.points && a.quiz_points === b.quiz_points && a.time_ms === b.time_ms;
 
 console.log(`\nStandings for ${arg} (entered, eligible players${forfeited.size ? `; ${forfeited.size} forfeited left out` : ""}):\n`);
@@ -79,8 +90,12 @@ console.table(
     quiz: Number(r.quiz_points),
     friends: Number(r.referral_points),
     "time (min)": Math.round(Number(r.time_ms) / 600) / 100,
+    "very fast rounds": fastRounds(r.player_id),
   })),
 );
+if (candidates.slice(0, 3).some((r) => fastRounds(r.player_id) > 0)) {
+  console.log('"Very fast rounds" are scores of 18+ in under 80 seconds. Ask those winners for the live check in the prize rules before sending a gift.');
+}
 if (preview) process.exit(0);
 
 // A complete tie (points, quiz points and time) across a prize place is

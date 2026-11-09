@@ -5,21 +5,27 @@ import { TrackPicker } from "@/components/quiz/TrackPicker";
 import { getDailySet, TRACKS } from "@/lib/quiz/content";
 import { longDate, uaeToday } from "@/lib/quiz/dates";
 import { PRIZE_GIFTS, prizesRunning } from "@/lib/prizes";
+import { isMixedUnlocked } from "@/lib/quiz/record";
+import { authEnabled } from "@/lib/supabase/config";
+import { getSignedInPlayer } from "@/lib/supabase/server";
 import type { PlayTrack } from "@/lib/quiz/types";
 
 export const metadata = { title: "Daily quiz · by Oblique" };
 // The page depends on today's date in the UAE, so it's built per request.
 export const dynamic = "force-dynamic";
 
-export default function QuizHome() {
+export default async function QuizHome() {
   const today = uaeToday();
   const available = !!getDailySet(today);
+  // The mixed quiz reuses today's Corporate Tax and VAT questions and shows
+  // their answers, so it opens only after both scored rounds are finished.
+  const [player, mixedOpen] = await Promise.all([getSignedInPlayer(), isMixedUnlocked(today)]);
   const tracks = (Object.keys(TRACKS) as PlayTrack[]).map((id) => ({
     id,
     ...TRACKS[id],
-    // "Both" reuses the Corporate Tax and VAT questions, so it doesn't earn prize points.
-    summary: prizesRunning() && id === "both" ? `${TRACKS[id].summary}. Practice: no prize points` : TRACKS[id].summary,
+    locked: id === "both" && !mixedOpen ? "Opens once you've finished today's Corporate Tax and VAT quizzes. It uses the same questions." : undefined,
   }));
+  const newHere = authEnabled && !player;
 
   return (
     <>
@@ -34,6 +40,14 @@ export default function QuizHome() {
           <Link href="/prizes" className="mt-4 flex min-h-12 items-center justify-between gap-3 rounded-2xl bg-accent-soft px-4 py-3 text-sm">
             <span>
               Corporate Tax and VAT scores count towards this month&apos;s prizes: <b>an {PRIZE_GIFTS[0]}</b> for 1st.
+            </span>
+            <span aria-hidden="true">→</span>
+          </Link>
+        )}
+        {newHere && (
+          <Link href="/quiz/sample" className="mt-3 flex min-h-12 items-center justify-between gap-3 rounded-2xl border border-line bg-surface px-4 py-3 text-sm">
+            <span>
+              <b>New here?</b> Try 5 sample questions first. No sign-in needed.
             </span>
             <span aria-hidden="true">→</span>
           </Link>

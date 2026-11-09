@@ -1,6 +1,7 @@
 import "server-only";
 
 import { allQuestions } from "@/content/quiz/questions";
+import sampleData from "@/content/quiz/sample.json";
 import scheduleData from "@/content/quiz/schedule.json";
 import topicsData from "@/content/quiz/topics.json";
 import { isIsoDate, uaeToday } from "./dates";
@@ -16,7 +17,7 @@ const topics = topicsData as Record<Track, Record<string, string>>;
 export const TRACKS: Record<PlayTrack, { title: string; short: string; summary: string }> = {
   ct: { title: "Corporate Tax", short: "Corporate Tax", summary: "20 Corporate Tax questions" },
   vat: { title: "VAT", short: "VAT", summary: "20 VAT questions" },
-  both: { title: "Corporate Tax and VAT", short: "Both", summary: "10 Corporate Tax and 10 VAT" },
+  both: { title: "Mixed: Corporate Tax and VAT", short: "Mixed", summary: "10 Corporate Tax and 10 VAT, for practice" },
 };
 
 export function isPlayTrack(s: string): s is PlayTrack {
@@ -65,7 +66,36 @@ function interleave(a: string[], b: string[]): string[] {
   return out;
 }
 
-export function getPublicQuestions(ids: string[]): (PublicQuestion & { topicLabel: string })[] {
+// The order a player sees a question's options in. Each player gets their
+// own order for multiple-choice questions, so "question 5 is C" can't be
+// passed around. True/false and spot-the-issue keep their written order, as
+// does any question whose text refers to an option by position.
+const POSITIONAL = /\b(all|none|both) of (the|these) (above|below|options)|\boptions? [A-D]\b|\b(first|second|third|fourth|last|other) (option|answer)s?\b|\b[A-D] (and|or|to) [A-D]\b|\banswers? [A-D]\b/i;
+
+function optionOrder(q: QuizQuestion, seed: string): number[] {
+  const order = q.options.map((_, i) => i);
+  if (!seed || (q.format !== "mcq" && q.format !== "scenario")) return order;
+  if (POSITIONAL.test(`${q.options.join(" | ")} ${q.explanation.what} ${q.explanation.why}`)) return order;
+  // A small seeded shuffle: the same player and question always give the same order.
+  let h = 2166136261;
+  for (const ch of `${seed}:${q.id}`) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  let state = h >>> 0;
+  const random = () => {
+    state = (state + 0x6d2b79f5) >>> 0;
+    let t = state;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  return order;
+}
+
+// `seed` is the player's id; without one the written order is used.
+export function getPublicQuestions(ids: string[], seed = ""): (PublicQuestion & { topicLabel: string })[] {
   return ids.map((id) => {
     const q = questionsById.get(id)!;
     return {
@@ -77,9 +107,30 @@ export function getPublicQuestions(ids: string[]): (PublicQuestion & { topicLabe
       topicLabel: topicLabel(q.track, q.topic),
       scenario: q.scenario,
       prompt: q.prompt,
-      options: q.options,
+      options: optionOrder(q, seed).map((i) => q.options[i]),
     };
   });
+}
+
+// Five fixed sample questions anyone can try without signing in. They come
+// from the PassDrill set, which is already public, so they give nothing away.
+const sampleIds = (sampleData as string[]).filter((id) => questionsById.has(id));
+
+export function getSampleQuestions() {
+  return getPublicQuestions(sampleIds);
+}
+
+export function checkSampleAnswer(questionId: string, choice: number): QuizCheckResult | null {
+  if (!sampleIds.includes(questionId)) return null;
+  return mark(questionsById.get(questionId) as QuizQuestion, choice, "");
+}
+
+function mark(q: QuizQuestion, choice: number, seed: string): QuizCheckResult | null {
+  if (!Number.isInteger(choice) || choice < 0 || choice >= q.options.length) return null;
+  const order = optionOrder(q, seed);
+  // Both the player's choice and the answer we send back are positions in
+  // the order that player sees.
+  return { correct: order[choice] === q.answerIndex, answerIndex: order.indexOf(q.answerIndex), explanation: q.explanation };
 }
 
 export function isQuestionId(id: string): boolean {
@@ -96,10 +147,10 @@ export function checkQuizAnswer(input: {
   track: PlayTrack;
   questionId: string;
   choice: number;
+  // The player's id, to undo their option order.
+  seed?: string;
 }): QuizCheckResult | null {
   const day = getDailySet(input.date);
   if (!day || !getPlayIds(day, input.track).includes(input.questionId)) return null;
-  const q = questionsById.get(input.questionId) as QuizQuestion;
-  if (!Number.isInteger(input.choice) || input.choice < 0 || input.choice >= q.options.length) return null;
-  return { correct: input.choice === q.answerIndex, answerIndex: q.answerIndex, explanation: q.explanation };
+  return mark(questionsById.get(input.questionId) as QuizQuestion, input.choice, input.seed ?? "");
 }

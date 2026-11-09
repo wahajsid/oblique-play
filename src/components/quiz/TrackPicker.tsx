@@ -7,7 +7,9 @@ import { getAllQuizResults, runKey, type QuizResult } from "@/lib/quiz/progress"
 import { formatTime } from "@/lib/review/progress";
 import type { PlayTrack } from "@/lib/quiz/types";
 
-type TrackInfo = { id: PlayTrack; title: string; summary: string };
+// `locked` explains why a track can't be played yet (the mixed quiz, before
+// today's two scored rounds are done).
+type TrackInfo = { id: PlayTrack; title: string; summary: string; locked?: string };
 
 function untilNext(ms: number) {
   const mins = Math.max(1, Math.round(ms / 60_000));
@@ -32,6 +34,14 @@ export function TrackPicker({ today, tracks }: { today: string; tracks: TrackInf
       <ul className="mt-6 flex flex-col gap-3">
         {tracks.map((t) => {
           const r = results[runKey(t.id, today)];
+          if (t.locked) {
+            return (
+              <li key={t.id} className="rounded-2xl border border-dashed border-line p-4" data-testid={`locked-${t.id}`}>
+                <h2 className="text-lg font-semibold text-muted">{t.title}</h2>
+                <p className="mt-0.5 text-sm text-muted">{t.locked}</p>
+              </li>
+            );
+          }
           return (
             <li key={t.id}>
               <Link

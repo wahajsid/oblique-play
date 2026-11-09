@@ -81,8 +81,10 @@ export default function PrizeRulesPage() {
       <p>
         We email winners within 7 days of the month ending. To claim, reply within {replyDays} days with your full name,
         a copy of your Emirates ID so we can check you meet these rules, and a UAE delivery address (or ask to collect).
-        We aim to deliver within 30 days of checking. If a winner doesn&apos;t reply in time or doesn&apos;t meet the
-        rules, the prize places move to the next eligible players in leaderboard order.
+        Before a prize is sent we may also ask the winner to answer a few questions live, on a short call, to confirm
+        the score is their own work. We aim to deliver within 30 days of checking. If a winner doesn&apos;t reply in
+        time, doesn&apos;t meet the rules or doesn&apos;t pass that check, the prize places move to the next eligible
+        players in leaderboard order.
       </p>
 
       <h2>Fair play</h2>
