@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Geist_Mono } from "next/font/google";
+import { siteUrl } from "@/lib/supabase/config";
 import "./globals.css";
 
 // Satoshi is Oblique's typeface (free under the ITF Free Font License, from Fontshare).
@@ -17,7 +18,8 @@ const sans = localFont({
 const mono = Geist_Mono({ variable: "--font-mono-brand", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://play.obliqueconsult.com"),
+  // Link previews use the address the game is served from (the live site or a test copy).
+  metadataBase: new URL(siteUrl),
   title: "UAE Tax Learning Game · by Oblique",
   description: "Spot what's right or off on UAE tax documents, one shift at a time. A free learning game by Oblique.",
 };

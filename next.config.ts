@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/((?!embed/).*)", headers: [{ key: "Content-Security-Policy", value: "frame-ancestors 'none'" }] },
       { source: "/embed/:path*", headers: [{ key: "Content-Security-Policy", value: `frame-ancestors 'self' ${EMBED_HOSTS}` }] },
+      // A test copy (NOINDEX=true) asks search engines not to list any page.
+      ...(process.env.NOINDEX === "true" ? [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }] : []),
     ];
   },
 };

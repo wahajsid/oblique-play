@@ -4,6 +4,10 @@
 const UAE_OFFSET_MS = 4 * 60 * 60 * 1000;
 
 export function uaeToday(now = Date.now()): string {
+  // A test copy can pin "today", e.g. PREVIEW_TODAY=2026-12-01, to play a day
+  // before it comes. Read on the server only; never set it on the live site.
+  const pinned = typeof process !== "undefined" ? process.env.PREVIEW_TODAY : undefined;
+  if (pinned && isIsoDate(pinned)) return pinned;
   return new Date(now + UAE_OFFSET_MS).toISOString().slice(0, 10);
 }
 
