@@ -33,7 +33,10 @@ jobs:
       - run: npm run build
 
   browser:
-    runs-on: ubuntu-latest
+    # Pinned: the browser-testing tool (Playwright) lists the systems it
+    # supports, and "latest" moved to one it doesn't know yet. Move this up
+    # when Playwright is upgraded.
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
