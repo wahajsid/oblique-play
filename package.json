@@ -15,7 +15,11 @@
     "review:import": "node scripts/review-import.mjs",
     "prizes:close": "node scripts/prizes-close.mjs",
     "slides": "node scripts/make-slides.mjs",
-    "reports": "node scripts/reports.mjs"
+    "reports": "node scripts/reports.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:db": "node tests/run-db.mjs",
+    "test:e2e": "node tests/run-e2e.mjs",
+    "test": "npm run test:db"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
@@ -27,6 +31,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.3.10",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

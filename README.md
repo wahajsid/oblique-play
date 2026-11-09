@@ -15,6 +15,10 @@ npm run prizes:close -- 2026-11  # records a month's prize winners (docs/PRIZES.
 npm run reports        # reports of problems with answers (docs/REPORTS.md)
 ```
 
+## Tests
+
+`npm run test:db` and `npm run test:e2e`; both also run on GitHub for every push. See **[tests/README.md](tests/README.md)**.
+
 ## Audit
 
 A full review of security, usability and commercial potential, with a prioritised fix list: **[docs/AUDIT.md](docs/AUDIT.md)** (10 Nov 2026).
