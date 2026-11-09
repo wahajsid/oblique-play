@@ -15,6 +15,10 @@ npm run prizes:close -- 2026-11  # records a month's prize winners (docs/PRIZES.
 npm run reports        # reports of problems with answers (docs/REPORTS.md)
 ```
 
+## Audit
+
+A full review of security, usability and commercial potential, with a prioritised fix list: **[docs/AUDIT.md](docs/AUDIT.md)** (10 Nov 2026).
+
 ## Test copy
 
 A private test copy runs on Railway with its own Supabase project: **[docs/STAGING.md](docs/STAGING.md)**.
