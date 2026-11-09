@@ -9,6 +9,11 @@ export const supabasePublishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHAB
 
 export const authEnabled = Boolean(supabaseUrl && supabasePublishableKey);
 
+// "Continue with LinkedIn" on the sign-in page. Off until LINKEDIN_SIGNIN=true
+// is set and LinkedIn is switched on in Supabase (docs/SETUP.md). Read on the
+// server only, so it can be changed without rebuilding the site.
+export const linkedInEnabled = authEnabled && process.env.LINKEDIN_SIGNIN === "true";
+
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://play.obliqueconsult.com").replace(/\/$/, "");
 
 // Only same-site paths are allowed as a destination after sign-in, so a

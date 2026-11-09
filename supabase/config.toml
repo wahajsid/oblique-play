@@ -329,6 +329,15 @@ max_frequency = "5s"
 # Use an external OAuth provider. The full list of providers are: `apple`, `azure`, `bitbucket`,
 # `discord`, `facebook`, `github`, `gitlab`, `google`, `keycloak`, `linkedin_oidc`, `notion`, `twitch`,
 # `twitter`, `x`, `slack`, `spotify`, `workos`, `zoom`.
+# Sign in with LinkedIn, for local testing only. These are placeholder
+# values, not real credentials: they let the tests check that the game sends
+# players to LinkedIn correctly. The real client ID and secret are entered in
+# the Supabase dashboard for the live project (docs/SETUP.md), never here.
+[auth.external.linkedin_oidc]
+enabled = true
+client_id = "local-test-client"
+secret = "local-test-not-a-secret"
+
 [auth.external.apple]
 enabled = false
 client_id = ""

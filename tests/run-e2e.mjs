@@ -2,7 +2,8 @@
 // Supabase. `npm run test:e2e`   (see tests/README.md for the one-time setup)
 //
 // It starts the app itself on port 3005, pinned to the first scheduled quiz
-// day so there is always a quiz to play, with prizes switched on.
+// day so there is always a quiz to play, with prizes and LinkedIn sign-in
+// switched on.
 import { spawn, spawnSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -23,7 +24,7 @@ if (!firstDay) {
 
 const server = spawn(process.execPath, [join(root, "node_modules/next/dist/bin/next"), "start", "-p", new URL(base).port || "3005"], {
   cwd: root,
-  env: { ...process.env, PREVIEW_TODAY: firstDay, PRIZES_ENABLED: "true" },
+  env: { ...process.env, PREVIEW_TODAY: firstDay, PRIZES_ENABLED: "true", LINKEDIN_SIGNIN: "true" },
   stdio: "ignore",
 });
 const stop = () => server.kill("SIGTERM");

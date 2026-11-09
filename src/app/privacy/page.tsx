@@ -15,6 +15,9 @@ export default function PrivacyPage() {
       <h2>What we collect</h2>
       <ul>
         <li>Your email address, so you can sign in and keep your progress.</li>
+        <li>If you sign in with LinkedIn: the name, email address and profile picture link LinkedIn shares with us. We
+          use the email to recognise your account and offer the name as your display name. We don&apos;t use the picture,
+          and we can&apos;t see or post anything on your LinkedIn account.</li>
         <li>The display name and role you choose to give us (both optional).</li>
         <li>Your game activity: shifts and quizzes played, answers, scores, times and streaks.</li>
         <li>Who invited you, if you arrived through a challenge or invite link, and which site or post you came from.</li>

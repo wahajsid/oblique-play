@@ -35,7 +35,9 @@ export function createAdminClient() {
   });
 }
 
-export type SignedInPlayer = { id: string; email: string };
+// `name` is only present for players who signed in with LinkedIn: it is the
+// name on their LinkedIn profile, used to pre-fill the display name field.
+export type SignedInPlayer = { id: string; email: string; name?: string };
 
 // The signed-in player, or null. getClaims() verifies the session token
 // rather than trusting the cookie as-is.
@@ -45,5 +47,8 @@ export async function getSignedInPlayer(): Promise<SignedInPlayer | null> {
   const { data } = await supabase.auth.getClaims();
   const claims = data?.claims;
   if (!claims?.sub || typeof claims.email !== "string") return null;
-  return { id: claims.sub, email: claims.email };
+  const meta = (claims.user_metadata ?? {}) as { name?: unknown; full_name?: unknown };
+  const raw = typeof meta.name === "string" ? meta.name : typeof meta.full_name === "string" ? meta.full_name : "";
+  const name = raw.trim().replace(/\s+/g, " ").slice(0, 40);
+  return { id: claims.sub, email: claims.email, ...(name ? { name } : {}) };
 }

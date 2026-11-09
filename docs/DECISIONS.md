@@ -98,6 +98,17 @@ Changes to the product plan (dated 20 Oct 2026), agreed 19 Oct 2026.
 - **Reports go to a database table, not straight to email.** The tax team reads them with `npm run reports` and closes each with what was done, so nothing gets lost in an inbox and there's a record of every fix.
 - **Nothing is pulled automatically.** Three or more "answer is wrong" reports flag an item; a reviewer decides whether to fix it or put it on hold.
 
+### Fair play, first visit and leads (decided 9 to 10 Nov 2026, after the audit)
+
+- **Answers are only shown to a signed-in player, after their answer is stored.** Before this, a script could collect a day's 40 answers in 9 seconds without an account. Times are now measured on the server, an unfinished scored round can't be swapped for a practice one, and the mixed quiz is locked until both scored rounds are done. Answer options are shuffled per player.
+- **"Play before sign-in" is a 5-question sample round, not the real quiz.** Letting visitors play today's real questions without an account would hand out the day's answers and reopen the prize cheat. The sample uses questions that are already public, saves nothing, and ends with "Play today's quiz".
+- **Winners pass a short live check before a gift is sent** (in the prize rules). A second account can still see the questions first; this makes it not worth doing.
+- **Players are asked who they are after their first quiz** (name, company, role: all optional), and shown a free-call offer matched to their weakest topic. Students see no offer. The wording for each topic is in `src/content/offers.json`.
+- **Company leaderboards: later.** Company names are collected now so the data is there when it's built.
+- **LinkedIn sign-in is built but switched off** until a LinkedIn app exists (`docs/SETUP.md`, section 7). A new LinkedIn player's source, referrer, terms time and marketing tick are written once, straight after sign-in, and only while the account is new (10 minutes, nothing played), so an existing player can never be moved to a different referrer.
+- **Analytics is PostHog (EU), identified by player id, never email.** Nothing is sent until its key is set.
+- **Tests live in the repository and run on every push** (`tests/README.md`): database rules in an in-memory database, and the game in a real browser against a local Supabase.
+
 ### Local testing
 
 A full local Supabase (`npx supabase start`) now runs the real sign-in emails, database rules and challenges end to end. These checks pass: 26 for sign-in and scoring, 30 for challenges, 20 for the quiz, 36 for prizes and referrals, and 63 for the database rules (31 earlier + 32 for prizes).

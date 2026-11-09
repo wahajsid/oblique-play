@@ -28,9 +28,11 @@ The runner starts the app itself on port 3005, pinned to the first day in the qu
 | --- | --- |
 | `db/players-and-review.test.mjs` | Players are created only from confirmed emails; players can't read or change each other's rows; document shifts and best scores. |
 | `db/daily-quiz.test.mjs` | One scored attempt per player, track and day; streaks; practice doesn't count. |
+| `db/linkedin-signin.test.mjs` | A new LinkedIn player's source, referrer, terms time and marketing tick are recorded once; existing players can't be re-attributed; only the server may do it. |
 | `db/prizes.test.mjs` | Monthly points, the referral cap, email aliases, staff exclusion, the prize board, award records. |
 | `e2e/fair-play.test.mjs` | Answers can't be fetched without an account or before answering; server-side timing; no practice round while a scored round is open; the mixed quiz lock; per-player option order; the sample round. |
 | `e2e/leads-and-sharing.test.mjs` | Name, role and company after a quiz; the offer matched to a weak topic; the pasteable result; link previews; certificates on LinkedIn. |
+| `e2e/linkedin-signin.test.mjs` | The LinkedIn button, the request it sends, and the return page: a valid code signs the player in and records their details; anything else returns them to sign-in with a plain message. LinkedIn itself is stood in for. |
 | `e2e/report-a-problem.test.mjs` | The report form in every place, its limits, and the `npm run reports` command. |
 | `e2e/spot-the-error.test.mjs` | The public puzzle page, its preview image and which sites may embed the boxes. |
 

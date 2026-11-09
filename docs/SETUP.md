@@ -29,6 +29,7 @@ The plan keeps the game separate from Oblique OS. That protects the firm's produ
    6. `20261108000001_content_reports.sql`
    7. `20261110000001_fair_play.sql`
    8. `20261110000002_leads.sql`
+   9. `20261110000003_linkedin_signin.sql`
 
    Or, from a laptop with the CLI linked to the project: `npx supabase db push`.
 3. **Authentication → URL configuration**
@@ -102,6 +103,19 @@ Then go to **Database → Webhooks → Create**:
 
 1. **PostHog** (analytics and error reports): create a project at posthog.com (the EU region is the default here). In Vercel, set `NEXT_PUBLIC_POSTHOG_KEY` to the project API key, and `NEXT_PUBLIC_POSTHOG_HOST` only if the project is not in the EU. Nothing is sent until the key is set. The events are listed at the top of `src/lib/analytics.ts`.
 2. **Uptime alert:** point any uptime monitor (for example UptimeRobot or Better Stack, both have free plans) at `https://play.obliqueconsult.com/api/health`, checking every 5 minutes. It answers 200 when the game can reach its database and has a quiz for today, and 503 otherwise, so it also warns when the question schedule has run out.
+
+## 7. "Continue with LinkedIn" (optional, about 20 minutes)
+
+The sign-in page can offer a LinkedIn button beside the email code. It stays hidden until all three steps below are done. Email sign-in keeps working either way, and a player who uses both with the same email address gets the same account.
+
+1. **Create a LinkedIn app.** At linkedin.com/developers → **Create app**. It must be linked to Oblique's LinkedIn company page (a page admin approves this), and needs a logo and the privacy notice address (`https://play.obliqueconsult.com/privacy`). On the **Products** tab, request **"Sign In with LinkedIn using OpenID Connect"** (approved straight away).
+2. **Tell LinkedIn where to send players back.** On the app's **Auth** tab, under "Authorized redirect URLs", add the address Supabase shows in the next step. It looks like `https://<project-ref>.supabase.co/auth/v1/callback`. Copy the app's **Client ID** and **Client Secret** from the same tab.
+3. **Switch it on in Supabase.** **Authentication → Sign In / Providers → LinkedIn (OIDC)**: enable it and paste the Client ID and Client Secret. Check that **Authentication → URL configuration** allows `https://play.obliqueconsult.com/**` (step 1.3 above already does).
+4. **Show the button.** In Vercel, set `LINKEDIN_SIGNIN` to `true` and redeploy.
+
+Test it once from a phone, ideally by opening the game from inside the LinkedIn app, which is where most players will arrive from. What the game receives from LinkedIn is the player's name, email address and profile picture link; it uses the email (to identify the account) and the name (to pre-fill the display name field, saved only if the player saves it). The picture is not used.
+
+The secret is only ever entered in the Supabase dashboard. It is never put in the code, in Vercel, or in a chat.
 
 ## Testing everything locally
 

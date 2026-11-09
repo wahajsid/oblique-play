@@ -16,7 +16,7 @@ const ROLES: { value: PlayerRole; label: string }[] = [
 // "edit": the profile page, which also holds the marketing choice.
 export function ProfileCard({ profile, mode = "first" }: { profile: PlayerProfile; mode?: "first" | "edit" }) {
   const editing = mode === "edit";
-  const [name, setName] = useState(profile.displayName ?? "");
+  const [name, setName] = useState(profile.displayName ?? profile.suggestedName ?? "");
   const [company, setCompany] = useState(profile.company ?? "");
   const [role, setRole] = useState<PlayerRole | null>(profile.role);
   const [board, setBoard] = useState(profile.leaderboardMode);

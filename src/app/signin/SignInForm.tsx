@@ -2,17 +2,30 @@
 
 import Link from "next/link";
 import { useEffect, useState, useTransition } from "react";
-import { requestCode, verifyCode } from "./actions";
+import { track } from "@/lib/analytics";
+import { requestCode, startLinkedIn, verifyCode } from "./actions";
 
 const RESEND_SECONDS = 60;
 
-export function SignInForm({ next, source, referredBy }: { next: string; source: string; referredBy: string }) {
+export function SignInForm({
+  next,
+  source,
+  referredBy,
+  linkedIn = false,
+  initialError = null,
+}: {
+  next: string;
+  source: string;
+  referredBy: string;
+  linkedIn?: boolean;
+  initialError?: string | null;
+}) {
   const [step, setStep] = useState<"email" | "code">("email");
   const [email, setEmail] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [marketing, setMarketing] = useState(false);
   const [code, setCode] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(initialError);
   const [notice, setNotice] = useState<string | null>(null);
   const [waitUntil, setWaitUntil] = useState(0);
   const [now, setNow] = useState(() => Date.now());
@@ -34,10 +47,24 @@ export function SignInForm({ next, source, referredBy }: { next: string; source:
         setError(result.error ?? null);
         return;
       }
+      if (step === "email") track("signin_code_requested");
       setStep("code");
       setWaitUntil(Date.now() + RESEND_SECONDS * 1000);
       setNow(Date.now());
       if (step === "code") setNotice("A new code is on its way.");
+    });
+
+  const withLinkedIn = () =>
+    startTransition(async () => {
+      setError(null);
+      if (!acceptedTerms) {
+        setError("Please tick the box to agree to the terms and privacy notice first.");
+        return;
+      }
+      track("signin_linkedin_started");
+      // On success the server sends the player on to LinkedIn.
+      const result = await startLinkedIn({ acceptedTerms, marketing, next, source, ref: referredBy });
+      if (result && !result.ok) setError(result.error ?? null);
     });
 
   const verify = () =>
@@ -135,7 +162,7 @@ export function SignInForm({ next, source, referredBy }: { next: string; source:
     >
       <h1 className="text-3xl font-semibold tracking-tight">Sign in to play</h1>
       <p className="mt-2 text-base text-muted">
-        Just your email. We&apos;ll send you a code; no password needed.
+        {linkedIn ? "Use your email or LinkedIn. No password needed." : "Just your email. We'll send you a code; no password needed."}
       </p>
 
       <label htmlFor="email" className="mt-8 text-sm font-semibold">
@@ -203,6 +230,31 @@ export function SignInForm({ next, source, referredBy }: { next: string; source:
         >
           {pending ? "Sending…" : "Email me a code"}
         </button>
+        {linkedIn && (
+          <>
+            <p className="my-3 flex items-center gap-3 text-xs text-muted" aria-hidden="true">
+              <span className="h-px flex-1 bg-line" />
+              or
+              <span className="h-px flex-1 bg-line" />
+            </p>
+            <button
+              type="button"
+              onClick={withLinkedIn}
+              disabled={pending}
+              data-testid="linkedin-signin"
+              className="flex min-h-14 w-full items-center justify-center gap-3 rounded-full border border-line bg-surface px-4 text-base font-semibold"
+            >
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <rect width="24" height="24" rx="4" fill="#0a66c2" />
+                <path
+                  fill="#fff"
+                  d="M7.1 9.6h-3v9.3h3V9.6Zm.2-3A1.7 1.7 0 0 0 5.6 5a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 1.7-1.7Zm11.6 6.6c0-2.8-1.8-3.9-3.5-3.9a3.3 3.3 0 0 0-2.9 1.5V9.6H9.6v9.3h3v-5a2 2 0 0 1 1.8-2.1c1 0 1.6.6 1.6 2.1v5h3v-5.7Z"
+                />
+              </svg>
+              Continue with LinkedIn
+            </button>
+          </>
+        )}
       </div>
     </form>
   );

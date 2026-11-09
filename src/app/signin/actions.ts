@@ -1,7 +1,8 @@
 "use server";
 
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { authEnabled, safeNextPath, siteUrl } from "@/lib/supabase/config";
+import { authEnabled, linkedInEnabled, safeNextPath, siteUrl } from "@/lib/supabase/config";
 import { createClient } from "@/lib/supabase/server";
 
 export type SignInState = { ok: boolean; error?: string };
@@ -68,6 +69,42 @@ export async function verifyCode(input: { email: string; code: string; marketing
   }
 
   redirect(safeNextPath(input.next));
+}
+
+// The other way in: "Continue with LinkedIn". The player is sent to LinkedIn
+// to approve, and comes back to /auth/callback. The details a new player
+// record needs (terms, marketing tick, where they came from, who invited
+// them) wait in a short-lived cookie that only /auth/callback can read.
+export async function startLinkedIn(input: {
+  acceptedTerms: boolean;
+  marketing: boolean;
+  next: string;
+  source: string;
+  ref: string;
+}): Promise<SignInState> {
+  if (!linkedInEnabled) return { ok: false, error: "LinkedIn sign-in isn't switched on yet." };
+  if (!input.acceptedTerms) return { ok: false, error: "Please agree to the terms and privacy notice to continue." };
+
+  const next = safeNextPath(input.next);
+  const jar = await cookies();
+  jar.set(
+    "ob_signup",
+    JSON.stringify({
+      t: new Date().toISOString(),
+      m: input.marketing,
+      s: input.source.slice(0, 40) || "direct",
+      r: input.ref.slice(0, 40),
+    }),
+    { httpOnly: true, sameSite: "lax", secure: siteUrl.startsWith("https:"), maxAge: 600, path: "/auth" },
+  );
+
+  const supabase = await createClient();
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "linkedin_oidc",
+    options: { redirectTo: `${siteUrl}/auth/callback?next=${encodeURIComponent(next)}`, skipBrowserRedirect: true },
+  });
+  if (error || !data.url) return { ok: false, error: "We couldn't reach LinkedIn just now. Try again, or use your email." };
+  redirect(data.url);
 }
 
 function friendlyError(status: number | undefined, message: string): string {

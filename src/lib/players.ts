@@ -7,6 +7,8 @@ export type PlayerRole = "business_owner" | "finance_professional" | "student";
 export type PlayerProfile = {
   email: string;
   displayName: string | null;
+  // The name from LinkedIn, offered in the name field until the player saves their own.
+  suggestedName: string | null;
   company: string | null;
   anonymousName: string;
   leaderboardMode: "name" | "anonymous";
@@ -28,6 +30,7 @@ export async function getProfile(): Promise<PlayerProfile | null> {
   return {
     email: data.email,
     displayName: data.display_name,
+    suggestedName: player.name ?? null,
     company: data.company,
     anonymousName: data.anonymous_name,
     leaderboardMode: data.leaderboard_mode,

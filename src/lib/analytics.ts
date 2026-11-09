@@ -5,6 +5,7 @@
 // The events, so reports can be built on them:
 //   sample_started, sample_finished        the no-sign-in sample round
 //   signin_code_requested                  an email was entered on the sign-in form
+//   signin_linkedin_started                "Continue with LinkedIn" was tapped
 //   quiz_started, quiz_finished            { track, date, scored, score }
 //   result_copied, share_opened            sharing from a results screen
 //   profile_saved                          { has_company, role }

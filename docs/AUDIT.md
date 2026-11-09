@@ -2,6 +2,8 @@
 
 **Date:** 10 Nov 2026 · **Audited:** commit `0ff2fc4` and the live test copy on Railway · **Launch:** Tue 1 Dec 2026
 
+> **Status on 10 Nov 2026 (after the audit):** the five main points below have been acted on. Fixed: the three prize cheats (1.1 to 1.3), option shuffling and the live check for winners (1.4), security headers. Built: a 5-question sample round before sign-in (3.1), "who are you" after the first quiz and offers matched to weak topics (4.1), the pasteable result (4.2 E), a share preview for the main link (4.2 F), "Add to LinkedIn profile" for certificates and LinkedIn sign-in (4.2 B, sign-in switched off until a LinkedIn app is set up), the weekly most-missed email (4.2 D), analytics, a health check and automatic tests (section 2), and 160 more draft questions (section 5, awaiting review). Not yet done: company leaderboards (4.2 A, deferred), and the smaller items in sections 2 and 3. The text below is the audit as written.
+
 ## The short version
 
 The game is well built where players can see it: fast, accessible and consistent. Its weak points are the ones that matter most once an iPhone is on offer and once you want it to bring in clients:
