@@ -48,3 +48,6 @@ next-env.d.ts
 
 # Screenshots from the browser tests
 /tests/e2e/.shots/
+
+# Made by npm run weekly:email
+/emails/

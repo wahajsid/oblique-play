@@ -122,7 +122,6 @@ const B = await player("fair.b");
 const ct = await playUi(B, "ct", 3);
 ok(/17\/20/.test(ct.text) && /Scored round/.test(ct.text), "playing by the correct option's text scores 17/20 (3 wrong on purpose): shuffled options are marked correctly");
 ok(ct.moved >= 5, `options are in a different order from the written one on ${ct.moved} of 20 questions`);
-const orderOf = async (P) => { await P.p.goto(`${base}/quiz/vat/${date}`); return (await P.p.content()).length; };
 const stored = sql(`select score||'|'||scored||'|'||(time_ms > 0) from quiz_attempts where player_id='${B.id}' and track='ct'`);
 ok(stored === "17|true|true", `server record: ${stored}`);
 const serverMs = Number(sql(`select time_ms from quiz_attempts where player_id='${B.id}' and track='ct'`));
@@ -140,7 +139,7 @@ const vat = await playUi(B, "vat", 0);
 ok(/20\/20/.test(vat.text), "VAT played through the screens: 20/20");
 await B.p.goto(`${base}/quiz`);
 ok((await B.p.getByTestId("locked-both").count()) === 0 && (await B.p.locator(`a[href="/quiz/both/${date}"]`).count()) === 1, "mixed quiz unlocks once both scored rounds are finished");
-r = await post(B.ctx, "/api/quiz/shown", { date, track: "both", questionId: day.ct.find((id) => true), attemptId: uuid() });
+r = await post(B.ctx, "/api/quiz/shown", { date, track: "both", questionId: day.ct[0], attemptId: uuid() });
 ok(r.status() === 200 || r.status() === 404, `mixed quiz now accepted by the server (${r.status()})`);
 
 // Two players see different option orders for the same question

@@ -19,7 +19,8 @@
     "typecheck": "tsc --noEmit",
     "test:db": "node tests/run-db.mjs",
     "test:e2e": "node tests/run-e2e.mjs",
-    "test": "npm run test:db"
+    "test": "npm run test:db",
+    "weekly:email": "node scripts/weekly-email.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

@@ -13,6 +13,8 @@ npm run hubspot:setup  # one-off: creates the HubSpot contact properties
 npm run slides -- 2026-12-01  # "spot the error" LinkedIn slides (docs/marketing/SPOT-THE-ERROR.md)
 npm run prizes:close -- 2026-11  # records a month's prize winners (docs/PRIZES.md)
 npm run reports        # reports of problems with answers (docs/REPORTS.md)
+npm run weekly:email   # the "3 most-missed questions" email (docs/WEEKLY-EMAIL.md)
+npm run test:db        # database rule tests; npm run test:e2e for the browser tests (tests/README.md)
 ```
 
 ## Tests

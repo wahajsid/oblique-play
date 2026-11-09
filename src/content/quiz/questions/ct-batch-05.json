@@ -1,0 +1,2173 @@
+[
+  {
+    "id": "ct-b5-001",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "scenario": "Marina Coffee Trading LLC is a UAE-resident company, not a Qualifying Free Zone Person, and hasn't elected Small Business Relief. It trades from a head office in Dubai and from branches in Sharjah and Ajman. For 2025 the head office's share of its taxable income is AED 300,000, the Sharjah branch's AED 250,000 and the Ajman branch's AED 150,000.",
+    "prompt": "How much Corporate Tax does Marina Coffee Trading pay for 2025?",
+    "options": [
+      "AED 0",
+      "AED 63,000",
+      "AED 29,250",
+      "AED 33,750"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A company and its UAE branches are one Taxable Person. Their results are added together, and the 0% band of AED 375,000 applies once to the total.",
+      "why": "Total taxable income is 300,000 + 250,000 + 150,000 = AED 700,000. Tax is 9% × (700,000 − 375,000) = AED 29,250. AED 0 wrongly gives each location its own 0% band. AED 63,000 taxes the whole 700,000 at 9%. AED 33,750 is 9% of the 375,000 band itself.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3(1) and 11(5); Cabinet Decision No. 116 of 2022"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-002",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "prompt": "Lagoon Freight Services LLC keeps its books in US dollars. True or false: it can report its taxable income and Corporate Tax to the tax authority in US dollars.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "For Corporate Tax, all amounts must be stated in UAE dirhams. An amount in another currency is converted at the exchange rate set by the Central Bank of the UAE.",
+      "why": "Whatever currency Lagoon Freight uses in its books, the figures it reports for Corporate Tax must be converted into dirhams. It can't report them in dollars.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 43"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-003",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "basics",
+    "prompt": "A company's accounting standards treat an item one way, but the Corporate Tax law says it must be treated differently. Which treatment is used to work out taxable income?",
+    "options": [
+      "The Corporate Tax law's treatment",
+      "The accounting treatment, because taxable income starts from the accounts",
+      "Whichever treatment gives the lower tax",
+      "Whichever treatment the company's auditor prefers"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Taxable income starts from the accounting profit. But where the Corporate Tax law and the accounting standards conflict, the law prevails.",
+      "why": "The accounts are only the starting point, and the law's adjustments are then made to them. A company can't pick the cheaper treatment, and an auditor's view doesn't override the law.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 20(2) and 20(7)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-004",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "basics",
+    "prompt": "Seashell Villas Hotel LLC and Bluewave Pool Services LLC have the same owner, but they haven't formed a Tax Group. True or false: they can work out one combined taxable income from a single set of combined accounts.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Each Taxable Person works out its own taxable income, from its own standalone financial statements. Only an approved Tax Group is treated as a single Taxable Person.",
+      "why": "Sharing an owner isn't enough. Without an approved Tax Group, each company prepares its own accounts, works out its own taxable income and files its own return.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 20(1) and 40(4)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-005",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "advanced",
+    "topic": "basics",
+    "scenario": "Extract from a draft Corporate Tax computation for Saffron Shore Interiors LLC, tax period ended 31 December 2025. It prepares accrual-basis accounts and hasn't elected to use the realisation basis.",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Accounting net profit per the financial statements: AED 1,600,000",
+      "Less: unrealised fair value gain on an investment property, included in that profit, AED 300,000",
+      "Add back: Corporate Tax expense charged in the accounts, AED 90,000",
+      "Less: dividend received from a UAE-resident company, AED 100,000"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Unrealised gains and losses in the accounts are part of taxable income as they are recognised, unless the company has elected to use the realisation basis.",
+      "why": "Line 2 is wrong. Saffron Shore hasn't elected the realisation basis, so the AED 300,000 gain stays in taxable income. The other lines are right: the computation starts from the accounting profit, Corporate Tax itself isn't deductible, and dividends from UAE-resident companies are exempt.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 20(2), 20(3), 22(1) and 33(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-006",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "scenario": "Qamar Ridge Bakery LLC, a Sharjah mainland company, has traded since 2019. Corporate Tax has applied to it since its tax period that began on 1 January 2024, but it has never applied to register. In 2026 the tax authority finds this out.",
+    "prompt": "What can the tax authority do about its registration?",
+    "options": [
+      "Nothing, until the company chooses to apply",
+      "Register it at the authority's own discretion, effective from the date it became a Taxable Person",
+      "Register it, but only from the date the authority found out",
+      "Treat it as exempt for the periods before it registers"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Every Taxable Person must register for Corporate Tax. If one doesn't, the tax authority can register it at its own discretion, effective from the date it became a Taxable Person.",
+      "why": "Qamar Ridge became a Taxable Person when its first tax period began on 1 January 2024. The authority needn't wait for an application, and the registration isn't limited to the date of discovery. Failing to register never makes a business exempt.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 51(1) and 51(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-007",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "scenario": "Thamesbrook Publishing Ltd is a UK company. It licenses a textbook series to a Dubai school group, which uses it in the UAE, and earns royalties. It has no office, staff, agent or property in the UAE, so it has no Permanent Establishment and no nexus there.",
+    "prompt": "Does Thamesbrook Publishing need to register for UAE Corporate Tax?",
+    "options": [
+      "Yes: anyone who earns income from the UAE must register",
+      "Yes: it must register to pay 9% Withholding Tax on the royalties",
+      "No: royalties paid by a UAE business are never UAE-sourced income",
+      "No: a non-resident that earns only UAE-sourced income, with no Permanent Establishment or nexus, doesn't need to register"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A non-resident that only earns UAE-sourced income, and has no Permanent Establishment or nexus in the UAE, is excepted from Corporate Tax registration.",
+      "why": "The royalties are UAE-sourced income, because the rights are used in the UAE, so it's wrong to say they never are. But with no Permanent Establishment or nexus, Thamesbrook is within the exception. Withholding Tax on such income is currently 0%, not 9%.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 13(2)(f), 45(1) and 51(1); Ministerial Decision No. 43 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05",
+      "reviewNotes": "Confirm that Ministerial Decision No. 43 of 2023 is the decision that excepts a non-resident earning only State Sourced Income (with no Permanent Establishment) from registering. It was not among the law texts available when drafting."
+    }
+  },
+  {
+    "id": "ct-b5-008",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "registration",
+    "prompt": "What does a business obtain from the tax authority when it registers for Corporate Tax?",
+    "options": [
+      "A new trade licence",
+      "A Tax Registration Number for Corporate Tax",
+      "An automatic election for Small Business Relief",
+      "A certificate exempting it from tax audits"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Taxable Person must register for Corporate Tax with the tax authority and obtain a Tax Registration Number.",
+      "why": "Registration gives the business a Tax Registration Number for Corporate Tax. Trade licences come from licensing authorities. Small Business Relief has to be elected by the business, and registering doesn't exempt anyone from audit.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 1 and 51(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-009",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "prompt": "True or false: because it is exempt, a Qualifying Public Benefit Entity can never be required to register for Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The tax authority may require certain Exempt Persons, including Qualifying Public Benefit Entities, to register for Corporate Tax and obtain a Tax Registration Number.",
+      "why": "Being exempt from the tax doesn't put an entity outside the registration rules. The authority can require a Qualifying Public Benefit Entity to register for the purposes of its exemption.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 51(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-010",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "registration",
+    "scenario": "Extract from a Corporate Tax registration checklist for the Palmfield group's UAE businesses",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Palmfield Holdings LLC (mainland; its only income is exempt dividends): must register.",
+      "The Sharjah branch of Palmfield Office Supplies LLC (not a separate company): must register separately from the company.",
+      "Dune Gate Logistics FZE (a Qualifying Free Zone Person): must register.",
+      "Palmfield Office Supplies LLC (will elect Small Business Relief): must register."
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Every Taxable Person must register, whatever tax it expects to pay. A UAE branch of a UAE company is the same Taxable Person as the company, so it doesn't register separately.",
+      "why": "Line 2 is wrong. The Sharjah branch isn't a separate person, so the company's own registration covers it. The other lines are right: a company with only exempt income, a Qualifying Free Zone Person and a company electing Small Business Relief are all Taxable Persons that must register.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11(5) and 51(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-011",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "taxable_persons",
+    "scenario": "Tembo Ridge Tea Ltd is a Kenyan company with no office or staff in the UAE. It sells tea to UAE buyers through Gulf Leaf Brokers LLC, a Dubai commodity broker. Gulf Leaf acts for about 30 unrelated producers in the ordinary course of its own brokerage business, and is legally and economically independent of them all.",
+    "prompt": "Does Gulf Leaf Brokers give Tembo Ridge Tea a Permanent Establishment in the UAE?",
+    "options": [
+      "No, because Gulf Leaf is an independent agent acting in the ordinary course of its own business",
+      "Yes, because any agent who arranges sales in the UAE creates a Permanent Establishment",
+      "Yes, because the tea is delivered to buyers in the UAE",
+      "No, because only an office or a branch can be a Permanent Establishment"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A person who habitually concludes contracts for a non-resident can create a Permanent Establishment. That doesn't apply to an independent agent acting in the ordinary course of its own business, unless it acts only or almost only for that non-resident.",
+      "why": "Gulf Leaf runs its own brokerage for about 30 unrelated producers and is independent of Tembo Ridge, so the independent agent exception applies. Not every agent creates a Permanent Establishment, and delivering goods to UAE buyers doesn't either. A dependent agent can create one, so an office or branch isn't essential.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 14(1)(b), 14(5) and 14(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-012",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "taxable_persons",
+    "prompt": "A Dubai-based agent works only for Alderbrook Outfitters Ltd, a UK company. She habitually negotiates every term of its UAE sales contracts, and the company then signs them in London without material changes. True or false: because the contracts are signed abroad, the company has no Permanent Establishment in the UAE.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Permanent Establishment arises where a person in the UAE habitually negotiates contracts that the non-resident then concludes without material modification. The agent doesn't need to sign them.",
+      "why": "The agent works only for Alderbrook, so she isn't an independent agent, and she habitually negotiates contracts that are signed unchanged. That creates a Permanent Establishment. Where the signature happens doesn't matter.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 14(1)(b), 14(5)(b) and 14(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-013",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "taxable_persons",
+    "scenario": "Coral Dhow Events LLC and Lagoon Stage Rentals LLC run a festival business together as an Unincorporated Partnership. They apply to the tax authority for the partnership to be treated as a Taxable Person in its own right, and the application is approved.",
+    "prompt": "Who is liable for the Corporate Tax on the partnership's business?",
+    "options": [
+      "Only the partnership, so the tax authority can never pursue the partners",
+      "Each partner, only on its own share, exactly as before the application",
+      "The partnership is the Taxable Person, and each partner is jointly and severally liable for its Corporate Tax while a partner",
+      "Only the partner appointed to deal with the tax authority"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Partners can apply for an Unincorporated Partnership to be a Taxable Person. If approved, the partnership is taxed in its own right, but each partner stays jointly and severally liable for its Corporate Tax while a partner.",
+      "why": "After approval the partnership itself is taxed on the festival business, so the partners are no longer taxed on their separate shares of it. Both companies stay jointly and severally liable for that tax. One partner is appointed to handle obligations and proceedings, but that doesn't make it the only one liable.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 16(8) and 16(9)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-014",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "prompt": "Under the Corporate Tax law, every Taxable Person falls into one of two categories. Which two?",
+    "options": [
+      "Mainland person or Free Zone Person",
+      "Company or individual",
+      "Exempt Person or Qualifying Free Zone Person",
+      "Resident Person or Non-Resident Person"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Taxable Person is either a Resident Person or a Non-Resident Person. The category decides which income is taxed.",
+      "why": "A resident company is taxed on income from inside and outside the UAE. A non-resident is taxed only on income linked to the UAE, such as the income of a Permanent Establishment. Free zone companies are Resident Persons, and an Exempt Person isn't a kind of Taxable Person.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11(2) and 12"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-015",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "taxable_persons",
+    "prompt": "Lion Rock Trading LLC is incorporated on the Dubai mainland. All of its shares are owned by investors who live outside the UAE. True or false: it is a Resident Person for UAE Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A company incorporated or established under UAE law is a Resident Person. Who owns it, and where they live, doesn't matter.",
+      "why": "Lion Rock Trading is incorporated in the UAE, so it is a Resident Person, taxed on its income from inside and outside the UAE. Its foreign shareholders don't change that.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 11(3)(a) and 12(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-016",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "exempt_persons",
+    "scenario": "Dune Heritage Properties LLC is wholly owned and controlled by an Emirate's government department, and only holds buildings for that department. It applied to the tax authority and was approved as an Exempt Person. Its tax period is the calendar year. On 1 September 2025 the department sells 30% of the shares to a private investor for good.",
+    "prompt": "From when does Dune Heritage Properties stop being an Exempt Person?",
+    "options": [
+      "From 1 January 2025, the start of the tax period in which it failed the condition",
+      "From 1 September 2025, the date of the share sale",
+      "From 1 January 2026, the start of the next tax period",
+      "It doesn't stop: once approved, the exemption is permanent"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "An Exempt Person that fails a condition of its exemption at any time in a tax period stops being exempt from the beginning of that tax period.",
+      "why": "After the sale the company is no longer wholly owned by a Government Entity, so it fails a condition during 2025 and is taxable from 1 January 2025. It isn't only from the sale date or from the next year. The failure is permanent and isn't caused by liquidation, so no exception for those cases helps.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 4(1)(h), 4(5) and 4(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-017",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "exempt_persons",
+    "prompt": "True or false: an Exempt Person pays no Corporate Tax, so it doesn't need to keep any records for Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "An Exempt Person must keep the records that let the tax authority check its exempt status, for seven years after the end of the tax period they relate to.",
+      "why": "An exemption depends on meeting conditions, and the authority must be able to confirm that they are met. So the duty to keep records still applies, even though no tax is paid.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 56(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-018",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "scenario": "Dune Rig Services LLC supplies drilling crews under contract to an oil producer that is exempt from Corporate Tax as an Extractive Business. Dune Rig holds no government right, concession or licence to extract oil, and it isn't taxed under any Emirate's oil legislation.",
+    "prompt": "Is Dune Rig Services exempt from Corporate Tax on its drilling fees?",
+    "options": [
+      "Yes: any income earned from an exempt Extractive Business is also exempt",
+      "No: the exemption doesn't cover contractors that don't meet the conditions in their own right",
+      "Yes, but only on 5% of its revenue",
+      "No, because businesses in the oil sector can never be exempt"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The Extractive Business exemption doesn't extend to contractors, subcontractors or suppliers used in the business, unless they meet the exemption conditions in their own right.",
+      "why": "Dune Rig has no concession or licence from a Local Government and isn't taxed by an Emirate, so it doesn't qualify itself. Working for an exempt producer doesn't pass the exemption on. The 5% figure is about an exempt producer's own ancillary income, and extractive businesses can be exempt.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 7(1) and 7(7)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-019",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_persons",
+    "scenario": "The Transport Department of an Emirate is a Government Entity. Under a commercial licence it also runs a paid car park business, which is taxable. The department lets the car park business use a plot of government land without charging any rent.",
+    "prompt": "How is the free use of the land treated for Corporate Tax?",
+    "options": [
+      "It is ignored, because both sides are part of the same Government Entity",
+      "As exempt income of the car park business",
+      "As a transaction between Related Parties, which must meet the arm's length standard",
+      "As a non-deductible donation by the car park business"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A Government Entity's licensed business is treated as an independent business. Transactions between it and the entity's other activities count as Related Party transactions and must be at arm's length.",
+      "why": "The car park business is taxed as if it stood alone, with its own financial statements. Its dealings with the rest of the department, including the use of the land, are tested against what independent parties would have agreed. They can't simply be ignored.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 5(2), 5(3), 5(5) and 34"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-020",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "exempt_persons",
+    "scenario": "Qamar Basin Petroleum LLC meets all the conditions to be exempt on its Extractive Business. In 2025 its total revenue is AED 400 million. That includes AED 12 million from hiring out spare drilling equipment, an activity that is incidental to its extraction work.",
+    "prompt": "Is the equipment hire treated as a separate business that is subject to Corporate Tax?",
+    "options": [
+      "Yes, because any income other than extraction income is always taxed separately",
+      "Yes, because the hire income is more than AED 3,000,000",
+      "No, because an exempt person can never have taxable income",
+      "No, because it is incidental and brings in 3% of total revenue, within the 5% limit"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "An exempt Extractive Business isn't treated as earning income from another business if that business is ancillary or incidental and its revenue is no more than 5% of total revenue for the tax period.",
+      "why": "12 million ÷ 400 million = 3%, which is within 5%, and the hire is incidental to extraction, so it isn't taxed as a separate business. Above 5% it would be. AED 3,000,000 is the Small Business Relief limit and has no role here. An exempt extractive company can have other taxable business.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 7(2) and 7(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-021",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "free_zones",
+    "scenario": "Dune Gate Logistics FZE has been a Qualifying Free Zone Person since 2024, with a calendar-year tax period. In 2025 its non-qualifying revenue goes over the de minimis limit, so it fails a condition for that year.",
+    "prompt": "For which tax periods does it lose the 0% rate on Qualifying Income?",
+    "options": [
+      "2025 only",
+      "2025 and the following four tax periods, 2026 to 2029",
+      "Only the part of 2025 after the limit was exceeded",
+      "2026 only, because the failure counts from the next tax period"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person that fails a condition at any time in a tax period loses its status from the start of that period. Under the implementing decision, it also stays out for the next four tax periods.",
+      "why": "Dune Gate fails the de minimis test in 2025, so it isn't a Qualifying Free Zone Person for any of 2025 and can't be one again until 2030. For those five periods it is taxed like an ordinary company: 0% up to AED 375,000 and 9% above.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 18(2) and 18(3); Ministerial Decision No. 265 of 2023, Article 5"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05",
+      "reviewNotes": "Confirm the instrument and article for the five-period exclusion (the tax period of failure plus the next four). It is believed to be Article 5 of Ministerial Decision No. 265 of 2023, since replaced by Ministerial Decision No. 229 of 2025. Neither decision was among the law texts available when drafting."
+    }
+  },
+  {
+    "id": "ct-b5-022",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "free_zones",
+    "prompt": "Lagoon Leisure Supplies FZE is a Qualifying Free Zone Person. Its owners would rather it were taxed like a mainland company, at 0% up to AED 375,000 and 9% above. Does the Corporate Tax law allow that?",
+    "options": [
+      "No: a free zone company is locked into the free zone rates for 50 years",
+      "Yes, but only by moving its registered office to the mainland",
+      "Yes: it can elect to be subject to Corporate Tax at the standard rates",
+      "No: only the tax authority can take away Qualifying Free Zone Person status"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person can elect to be subject to Corporate Tax at the standard rates. The election takes effect from the start of the tax period in which it is made, or of the next one.",
+      "why": "Lagoon Leisure can simply make the election. It doesn't have to move, or wait until it fails a condition. Having elected, it is no longer a Qualifying Free Zone Person. Fifty years is the longest that one tax incentive period can last, not a lock-in.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 18(1)(c), 18(4) and 19"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-023",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "advanced",
+    "topic": "free_zones",
+    "scenario": "Extract from a draft Corporate Tax computation for Marina Freight Services FZE, a Qualifying Free Zone Person, tax period ended 31 December 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Qualifying Income of AED 6,000,000: Corporate Tax at 0%, nil",
+      "Taxable income that isn't Qualifying Income: AED 500,000",
+      "Corporate Tax on that income: 9% × (AED 500,000 − AED 375,000) = AED 11,250",
+      "Tax return and payment due by 30 September 2026"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A Qualifying Free Zone Person pays 0% on Qualifying Income and 9% on its other taxable income. It doesn't get the AED 375,000 band at 0%.",
+      "why": "Line 3 is wrong. The tax is 9% × AED 500,000 = AED 45,000, with nothing taken off for a 0% band. The other lines are right: Qualifying Income is taxed at 0%, other taxable income is shown separately, and the return and payment are due nine months after the period end.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3(2), 48 and 53(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05",
+      "reviewNotes": "VERIFIER (blind check, agreed with the answer) noted: Minor: AED 500,000 of non-qualifying income against AED 6m qualifying could suggest a de minimis breach (over 5%) if read as non-qualifying revenue, which would also make line 0 wrong. Scenario does not say whether it is PE/immovable-property income outside the de minimis test. Line 2 remains the only clear error."
+    }
+  },
+  {
+    "id": "ct-b5-024",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "free_zones",
+    "prompt": "Which of these is a Free Zone Person under the Corporate Tax law?",
+    "options": [
+      "A company incorporated or registered in a Free Zone, including a Free Zone branch of a foreign company",
+      "Any UAE company that exports its goods",
+      "An individual who lives in a Free Zone",
+      "A mainland company that has a customer in a Free Zone"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Free Zone Person is a juridical person incorporated, established or otherwise registered in a Free Zone, including a branch of a Non-Resident Person registered there.",
+      "why": "What matters is where the entity is set up or registered, not where it sells or where its owners live. Exporting, or having Free Zone customers, doesn't make a mainland company a Free Zone Person. An individual isn't a juridical person.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 1 (definitions of Free Zone and Free Zone Person)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-025",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "free_zones",
+    "prompt": "Dhow Byte Labs FZ-LLC is a Qualifying Free Zone Person, and all its income for 2025 is Qualifying Income taxed at 0%. True or false: it must still file a Corporate Tax return for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Every Taxable Person must file a Corporate Tax return within nine months of the end of its tax period. A Qualifying Free Zone Person is a Taxable Person, even when its rate is 0%.",
+      "why": "Paying 0% isn't the same as being outside the tax. Dhow Byte Labs must file a return for 2025, by 30 September 2026, even though no tax is due.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3(2) and 53(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-026",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "prompt": "Brightleaf Engineering GmbH is a German company. It is a Non-Resident Person with a Permanent Establishment in Abu Dhabi, and its revenue for 2025 is AED 1.5 million. True or false: it can elect Small Business Relief for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Only a Taxable Person that is a Resident Person can elect Small Business Relief.",
+      "why": "Brightleaf Engineering's revenue is under AED 3,000,000, but it is a Non-Resident Person taxed through its Permanent Establishment. The relief isn't open to non-residents, however small their revenue.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21(1); Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-027",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "scenario": "Extract from Sandbar Catering LLC's file note on electing Small Business Relief for 2025. Its revenue has never been over AED 3,000,000.",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "We'll be treated as having no taxable income for 2025.",
+      "We must still file a Corporate Tax return for 2025.",
+      "We don't need to keep a transfer pricing master file or local file for 2025.",
+      "We can stop keeping our 2025 accounting records, because no tax is due."
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Electing Small Business Relief switches off the transfer pricing documentation rule and several computation rules for that period. It doesn't switch off the duties to file a return and to keep records for seven years.",
+      "why": "Line 4 is wrong. Records that support the return must still be kept for seven years after the period ends. The other lines are right: the company is treated as having no taxable income, it still files a return, and the master file and local file rule doesn't apply.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 21(1), 21(2)(e), 53(1) and 56(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-028",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "small_business_relief",
+    "scenario": "Oasis Thread Tailoring LLC has a tax loss of AED 400,000 brought forward from 2024, a year in which it did not elect Small Business Relief. For 2025 its revenue is AED 2.2 million and it elects the relief. In 2026 it expects revenue over AED 3,000,000, so it won't be able to elect.",
+    "prompt": "What happens to the AED 400,000 loss from 2024?",
+    "options": [
+      "It is lost, because electing the relief wipes out earlier losses",
+      "It is used up in 2025, against the profit the company would otherwise have been taxed on",
+      "It is carried back to get a refund for 2024",
+      "It isn't used in 2025, and is carried forward to 2026, when the normal loss rules apply again"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Tax loss relief doesn't apply in a period where Small Business Relief is elected. Losses from earlier periods without the election aren't used up, and can be carried forward to later periods where the relief isn't elected.",
+      "why": "For 2025 the company is treated as having no taxable income, so there is nothing to set the 2024 loss against and it stays intact. In 2026 it can be used, up to 75% of that year's taxable income. Electing doesn't cancel earlier losses, and a loss can never be carried back.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 21(2)(d) and 37; Ministerial Decision No. 73 of 2023, Article 4"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05",
+      "reviewNotes": "Confirm Article 4 of Ministerial Decision No. 73 of 2023: tax losses from periods without a Small Business Relief election can be carried forward to later periods in which the relief is not elected. The decision was not among the law texts available when drafting."
+    }
+  },
+  {
+    "id": "ct-b5-029",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "small_business_relief",
+    "scenario": "Bluewave Holdings LLC and its two wholly owned subsidiaries are an approved Tax Group for 2025, their first tax period. After eliminating sales between them, their 2025 revenues are AED 1.0 million, AED 2.0 million and AED 0.5 million. None of them belongs to a multinational group.",
+    "prompt": "Can the Tax Group elect Small Business Relief for 2025?",
+    "options": [
+      "No, because the group's combined revenue of AED 3.5 million is over the AED 3,000,000 limit",
+      "Yes, because each member's own revenue is under AED 3,000,000",
+      "Yes, but only for the member with revenue of AED 0.5 million",
+      "No, because a Tax Group can never elect Small Business Relief"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Tax Group is a single Taxable Person, so the AED 3,000,000 revenue limit for Small Business Relief is tested on the group's combined revenue.",
+      "why": "1.0 + 2.0 + 0.5 = AED 3.5 million, which is over the limit, so the group can't elect. Testing each member on its own is wrong, and a member can't elect separately while in the group. A Tax Group whose combined revenue is within the limit can elect.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 21(1) and 40(4); Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-030",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "small_business_relief",
+    "prompt": "Dune & Date Catering LLC is UAE-resident, with revenue of AED 1.2 million for 2025 and under AED 3,000,000 in every earlier period. True or false: Small Business Relief applies to it automatically for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Small Business Relief is optional. An eligible business gets it only if it elects it for that tax period.",
+      "why": "Dune & Date Catering qualifies, but nothing happens unless it makes the election in its 2025 tax return. Without the election, its taxable income is worked out and taxed in the normal way.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 21(1); Ministerial Decision No. 73 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-031",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_groups",
+    "scenario": "Lagoon Stage Rentals LLC joined the Coral Dhow Tax Group on 1 January 2025, bringing an unused tax loss of AED 1,000,000 from before it joined. For 2025 the Tax Group's taxable income is AED 2,000,000, of which AED 300,000 is attributable to Lagoon Stage Rentals. The loss meets all the other conditions for use.",
+    "prompt": "How much of the AED 1,000,000 loss can the Tax Group use in 2025?",
+    "options": [
+      "AED 1,000,000",
+      "AED 225,000",
+      "AED 300,000",
+      "AED 750,000"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A subsidiary's losses from before it joined a Tax Group can be set only against the group's taxable income attributable to that subsidiary. The 75% cap is tested on the group's total taxable income.",
+      "why": "The limit is the lower of the income attributable to Lagoon Stage Rentals (AED 300,000) and 75% of the group's taxable income (75% × 2,000,000 = AED 1,500,000), so AED 300,000. The other AED 700,000 is carried forward. AED 225,000 wrongly applies the 75% cap to the subsidiary's own share. AED 750,000 is 75% of the loss, which isn't a test.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 37(2), 42(3) and 42(5); Ministerial Decision No. 125 of 2023, Article 7"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-032",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "tax_groups",
+    "scenario": "Seashell Holdings LLC and its 100% subsidiary Seashell Villas Hotel LLC are a Tax Group. In March 2025 Seashell Holdings transfers a building to the subsidiary. Its net book value is AED 4 million and its market value is AED 6 million. The transfer is eliminated in the group's 2025 taxable income. In May 2026, 14 months later, Seashell Holdings sells all its shares in the subsidiary to an unrelated buyer.",
+    "prompt": "What happens to the AED 2 million gain on the building?",
+    "options": [
+      "It stays eliminated for good, because the transfer happened inside the Tax Group",
+      "It is taken into account, because the subsidiary left the Tax Group within two years of the transfer",
+      "It is taxed only if the subsidiary later sells the building",
+      "It stays eliminated, because the two-year rule only applies to Qualifying Group Relief"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Transfers between Tax Group members are eliminated. But if the transferor or transferee leaves the group within two years of the transfer, the gain or loss is taken into account when it leaves.",
+      "why": "The subsidiary leaves the group within two years of receiving the building, so the eliminated gain of 6 million − 4 million = AED 2 million is brought into taxable income. No other exemption or relief covers it here. A later sale of the building isn't needed, and the Tax Group rules have their own two-year test.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 42(1), 42(9) and 42(10)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-033",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "tax_groups",
+    "prompt": "True or false: with the tax authority's approval, the joint and several liability for a Tax Group's Corporate Tax for a tax period can be limited to one or more of its members.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The parent and each subsidiary are jointly and severally liable for the Tax Group's Corporate Tax. That liability can be limited to one or more members for a tax period, if the tax authority approves.",
+      "why": "Joint and several liability is the starting point, not a fixed rule. The group can ask the authority to limit it to particular members, and the limit only works once the authority has approved it.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 40(6) and 40(7)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-034",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "tax_groups",
+    "scenario": "Extract from a note to the board of Falcon Lane Holdings LLC on how its Tax Group works. All the members have calendar-year tax periods.",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "If we sell 10% of a wholly owned subsidiary in October, it leaves the group from the date of the sale.",
+      "The group is treated as a single Taxable Person, represented by the parent company.",
+      "The parent files one tax return for the whole group.",
+      "Sales between group members are eliminated when working out the group's taxable income."
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A subsidiary that stops meeting the Tax Group conditions is treated as leaving from the beginning of the tax period in which the conditions stopped being met.",
+      "why": "Line 1 is wrong. Selling 10% takes the parent below the 95% it needs, and the subsidiary then leaves from 1 January of that year, not from the date of the sale. The other lines are right: a Tax Group is one Taxable Person represented by its parent, the parent files one return, and transactions between members are eliminated.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 40(4), 40(10)(b), 41(3), 42(1) and 53(7)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-035",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "tax_groups",
+    "prompt": "True or false: an approved Tax Group is treated as a single Taxable Person for Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Tax Group is treated as a single Taxable Person, represented by its parent company.",
+      "why": "The members stop being taxed one by one. Their results are combined into one taxable income, and the parent deals with the tax authority on behalf of the whole group.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 40(4) and 40(5)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-036",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_groups",
+    "scenario": "The Palmfield Tax Group has unused tax losses of AED 900,000. All of them arose while the group existed, and AED 600,000 can be traced to the trading results of one subsidiary, Palmfield Logistics LLC, which had no losses of its own when it joined. From 1 January 2026 Palmfield Logistics leaves the group, which carries on with its other members.",
+    "prompt": "What happens to the AED 900,000 of losses?",
+    "options": [
+      "AED 600,000 goes with Palmfield Logistics and AED 300,000 stays with the group",
+      "All AED 900,000 is cancelled when a member leaves",
+      "It is split equally between the group and Palmfield Logistics",
+      "All AED 900,000 stays with the Tax Group"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "When a subsidiary leaves a Tax Group, the group's tax losses stay with the group. The only losses the subsidiary takes with it are its own unused losses from before it joined.",
+      "why": "These losses all arose inside the group, so they belong to the group, even the AED 600,000 that came from Palmfield Logistics' trading. Palmfield Logistics had no losses from before it joined, so it takes nothing. A member leaving doesn't cancel or split the group's losses.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 42(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-037",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "transfer_pricing",
+    "scenario": "Marina Coffee Trading LLC sold coffee to its UAE sister company, Marina Coffee Roasters LLC, for AED 300,000 less than the arm's length price. Both are UAE taxpayers. The tax authority adjusts Marina Coffee Trading's taxable income upwards by AED 300,000.",
+    "prompt": "What happens to Marina Coffee Roasters' taxable income?",
+    "options": [
+      "The tax authority makes a corresponding adjustment, treating its purchases as costing AED 300,000 more",
+      "Nothing: only the company that underpriced is adjusted",
+      "It is also increased by AED 300,000, as a penalty",
+      "It is adjusted only if Marina Coffee Roasters has paid tax abroad"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "When taxable income is adjusted to the arm's length result for a transaction between Related Parties, the tax authority makes a corresponding adjustment to the other Related Party's taxable income.",
+      "why": "The sale is now treated as made at the arm's length price on both sides, so the buyer's cost rises by AED 300,000 and the same profit isn't taxed twice. Increasing both companies' income would do the opposite. Foreign tax has nothing to do with a deal between two UAE taxpayers.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 34(8) and 34(10)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-038",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "transfer_pricing",
+    "scenario": "Sandstone Software Studio LLC charges its sister company in another country AED 1,000,000 for software services. That country's tax authority decides the arm's length price was AED 700,000 and disallows AED 300,000 of the sister company's deduction. Sandstone has already paid UAE Corporate Tax on the full AED 1,000,000.",
+    "prompt": "How can Sandstone get its UAE taxable income reduced to match?",
+    "options": [
+      "It happens automatically as soon as the foreign adjustment is made",
+      "It can't: UAE taxable income is never changed because of a foreign adjustment",
+      "By applying to the UAE tax authority for a corresponding adjustment",
+      "By deducting AED 300,000 in its next return without telling the tax authority"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "If a foreign tax authority adjusts a transaction with a UAE Taxable Person to meet the arm's length standard, the Taxable Person can apply to the UAE tax authority for a corresponding adjustment to its taxable income.",
+      "why": "A foreign adjustment doesn't change UAE taxable income by itself, and Sandstone can't simply help itself to a deduction. It has to apply, and the UAE authority then decides. Because that route exists, it's wrong to say a foreign adjustment can never be recognised.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 34(11)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-039",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "transfer_pricing",
+    "prompt": "True or false: a business must always price its Related Party transactions using one of the five transfer pricing methods named in the Corporate Tax law, and can never use any other method.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The law names five transfer pricing methods. A business may use another method if it can show that none of the five can reasonably be applied, and that its method gives an arm's length result.",
+      "why": "The five named methods come first, but they aren't the only ones allowed. If none of them fits the transaction, another method is acceptable, as long as the business can show it gives the result independent parties would have reached.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 34(3) and 34(4)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-040",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "transfer_pricing",
+    "scenario": "Palmfield Logistics PJSC is a UAE company whose shares are traded on a Recognised Stock Exchange. It pays its chief executive, who is also a director and a shareholder, AED 3 million a year.",
+    "prompt": "Does the Connected Persons rule, which limits the deduction to the market value of the service, apply to this payment?",
+    "options": [
+      "Yes, because every payment to a director is capped at market value",
+      "No, because the rule doesn't apply to a company whose shares are traded on a Recognised Stock Exchange",
+      "No, because a chief executive is never a Connected Person",
+      "Yes, but only to the part of the pay above AED 375,000"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Payments to Connected Persons are deductible only up to market value. That rule doesn't apply to a Taxable Person whose shares are traded on a Recognised Stock Exchange, or one regulated by a competent authority in the UAE.",
+      "why": "The chief executive is a Connected Person, as a director and as an owner. But Palmfield Logistics is listed, so the market value limit in the Connected Persons rule doesn't apply to it. The pay must still be incurred wholly and exclusively for the business to be deductible.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 28(1), 36(1), 36(2) and 36(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-041",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "transfer_pricing",
+    "prompt": "What does the arm's length principle require of a transaction between Related Parties?",
+    "options": [
+      "It must be priced at the seller's cost, with no profit",
+      "It must be approved by the tax authority before it happens",
+      "It must be priced at whatever the group's parent company decides",
+      "Its results must be consistent with what independent parties would have agreed in similar circumstances"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A transaction between Related Parties meets the arm's length standard if its results are consistent with those that unrelated parties would have realised in a similar transaction under similar circumstances.",
+      "why": "The test compares the deal with what independent businesses would have done. It doesn't mean selling at cost, and no approval in advance is needed. A price simply fixed by the parent is only arm's length if independent parties would have agreed the same.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 34(1) and 34(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-042",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "interest_limitation",
+    "scenario": "Coral Dhow Events LLC, which isn't a bank or an insurer, has interest expenditure of AED 30 million and taxable interest income of AED 6 million for 2025. It has no interest carried forward from earlier years. Its tax-adjusted EBITDA for 2025 is AED 60 million.",
+    "prompt": "How much net interest expenditure can it deduct for 2025?",
+    "options": [
+      "AED 24 million",
+      "AED 18 million",
+      "AED 12 million",
+      "AED 9 million"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Net interest expenditure is interest expenditure less taxable interest income. If it is over AED 12 million, the deduction is limited to the higher of 30% of adjusted EBITDA and AED 12 million.",
+      "why": "Net interest expenditure is 30 − 6 = AED 24 million, which is over AED 12 million. 30% × 60 million = AED 18 million, which is higher than AED 12 million, so AED 18 million is deducted and AED 6 million is carried forward. AED 24 million ignores the cap. AED 9 million is 30% of the interest expense, which isn't a test.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 30(1), 30(2) and 30(4); Ministerial Decision No. 126 of 2023, Article 8"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-043",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "interest_limitation",
+    "scenario": "Saffron Shore Interiors LLC borrows AED 20 million from its parent company, which is based in a country with no corporate tax. It uses the money to pay a dividend to that parent. The interest for 2025 is AED 1 million. Saffron Shore can't show any main purpose for the arrangement other than reducing its Corporate Tax.",
+    "prompt": "How much of the AED 1 million of interest can it deduct?",
+    "options": [
+      "Nothing, because the specific interest deduction limitation rule applies",
+      "All of it, because AED 1 million is under the AED 12 million threshold",
+      "AED 500,000, because half of all Related Party interest is disallowed",
+      "All of it, because interest on a loan is always deductible when it is incurred"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Interest on a Related Party loan used to pay a dividend to a Related Party isn't deductible, unless the borrower shows that the main purpose wasn't to gain a Corporate Tax advantage.",
+      "why": "The loan comes from a Related Party and funds a dividend to a Related Party. The lender pays no tax on the interest, so the 9% test doesn't protect the loan, and Saffron Shore can't show another main purpose. All AED 1 million is disallowed. The AED 12 million threshold belongs to the general rule, and there is no 50% rule.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 31(1)(a), 31(2) and 31(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-044",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "interest_limitation",
+    "prompt": "Lagoon Freight Services LLC takes a bank loan to buy shares in a UAE-resident company. Its only income from the shares will be exempt dividends. True or false: the interest on the loan can't be deducted, because it is a cost of earning exempt income.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Costs of earning exempt income are normally not deductible. Interest is the exception: it stays deductible, subject to the general and specific interest deduction limitation rules.",
+      "why": "The law carves interest out of the bar on costs of earning exempt income. So the interest on the bank loan is deductible, as long as it passes the interest limitation rules. Other costs of holding the shares, such as management fees, are not.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 28(2)(b) and 29"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05",
+      "reviewNotes": "This follows Article 29 and section 4.2.3 of the tax authority's Interest Deduction Limitation Rules guide (CTGIDL1). It gives the opposite result to the existing question ct-b1-021 (a draft, already on hold for this reason), whose answer key says no interest is deductible on very similar facts. Confirm which reading the team adopts."
+    }
+  },
+  {
+    "id": "ct-b5-045",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "interest_limitation",
+    "scenario": "Lion Rock Trading LLC, which isn't a bank or an insurer, has interest expenditure of AED 20 million for 2025 and no interest income. AED 4 million of that interest is disallowed under the specific rule for Related Party loans. It has no interest carried forward from earlier years. Its tax-adjusted EBITDA for 2025 is AED 30 million.",
+    "prompt": "How much interest can it deduct for 2025, and how much is carried forward?",
+    "options": [
+      "AED 12 million deducted; AED 8 million carried forward",
+      "AED 9 million deducted; AED 7 million carried forward",
+      "AED 12 million deducted; AED 4 million carried forward",
+      "AED 16 million deducted; nothing carried forward"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Interest disallowed under another rule is left out of net interest expenditure. The general rule then limits the rest to the higher of 30% of adjusted EBITDA and AED 12 million, and only that disallowed excess is carried forward.",
+      "why": "Net interest expenditure is 20 − 4 = AED 16 million. 30% × 30 million = AED 9 million, which is lower than AED 12 million, so AED 12 million is deducted and 16 − 12 = AED 4 million is carried forward. The AED 4 million caught by the specific rule is lost for good, so AED 8 million is wrong. AED 9 million ignores the AED 12 million floor.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 30(1), 30(4), 30(5) and 31; Ministerial Decision No. 126 of 2023, Article 8"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-046",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "interest_limitation",
+    "prompt": "Which of these is NOT Interest for the interest deduction limitation rules?",
+    "options": [
+      "Profit paid on an Islamic financial instrument",
+      "A discount or premium on a loan",
+      "An amount incurred in connection with raising finance",
+      "A repayment of the principal amount of a loan"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Interest means any amount for the use of money or credit, including discounts, premiums, profit on Islamic financial instruments and amounts incurred in raising finance. Payments of the principal are excluded.",
+      "why": "Repaying the amount borrowed isn't a cost of borrowing, so it isn't Interest. The other three are all named in the definition: profit on Islamic financial instruments, discounts and premiums, and amounts incurred in connection with raising finance.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 1 (definition of Interest)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-047",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "interest_limitation",
+    "scenario": "Extract from a draft interest limitation working for Seashell Villas Hotel LLC, which isn't a bank or an insurer, tax period ended 31 December 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Interest expenditure of AED 22,000,000 less interest income of AED 2,000,000: net interest expenditure AED 20,000,000",
+      "30% of tax-adjusted EBITDA of AED 50,000,000: AED 15,000,000",
+      "Deductible: the lower of AED 15,000,000 and the AED 12,000,000 threshold, so AED 12,000,000",
+      "Disallowed amount: carried forward for up to 10 tax periods"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "When net interest expenditure is over AED 12 million, the deductible amount is the higher of 30% of adjusted EBITDA and AED 12 million, not the lower.",
+      "why": "Line 3 is wrong. The deductible amount is the higher figure, AED 15,000,000, leaving 20,000,000 − 15,000,000 = AED 5,000,000 to carry forward. The other lines are right: interest income is netted off, 30% × 50,000,000 = 15,000,000, and disallowed interest can be carried forward for 10 tax periods.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 30(1), 30(2) and 30(4); Ministerial Decision No. 126 of 2023, Article 8"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-048",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "tax_losses",
+    "prompt": "Dhow Harbour Bank PJSC's shares are listed on a Recognised Stock Exchange, and most of them changed hands during 2025. True or false: it can still carry forward its tax losses without having to pass the 50% continuity of ownership test.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Normally, losses can be carried forward only if the same owners keep at least 50%, or the business stays the same or similar. That limit doesn't apply to a company whose shares are listed on a Recognised Stock Exchange.",
+      "why": "The law switches the ownership limit off for listed companies. So the bank keeps its tax losses, whoever now owns its shares, and it only has to follow the usual 75% cap when it uses them.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 39(1) and 39(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-049",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_losses",
+    "scenario": "Bluewave Pool Services LLC makes a tax loss of AED 500,000 in 2025. Bluewave Holdings LLC has owned 100% of it for years. On 1 July 2025 Bluewave Holdings also buys 100% of Coral Dhow Events LLC, which has taxable income of AED 800,000 for 2025. All three are UAE-resident, none is exempt or a Qualifying Free Zone Person, they aren't in a Tax Group, and all use calendar years and IFRS.",
+    "prompt": "Can Bluewave Pool Services transfer its 2025 loss to Coral Dhow Events for 2025?",
+    "options": [
+      "Yes, up to AED 500,000, because the common ownership exists at the end of 2025",
+      "No, because the 75% common ownership didn't exist from the start of 2025, the period in which the loss arose",
+      "Yes, but only half of the loss, for the half of the year under common ownership",
+      "No, because a loss can only be transferred between a parent and its direct subsidiary"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "A tax loss can be transferred to another company only if the 75% common ownership exists from the start of the period in which the loss arose to the end of the period in which it is used.",
+      "why": "Bluewave Holdings only owned Coral Dhow Events from 1 July 2025, so the two companies weren't under 75% common ownership at the start of 2025. None of the 2025 loss can go to Coral Dhow Events, and there is no part-year share. Sister companies with a common 75% owner can transfer losses, so the last reason is wrong too.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 38(1)(c) and 38(1)(d)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-050",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "tax_losses",
+    "prompt": "What is a Tax Loss under the Corporate Tax law?",
+    "options": [
+      "Any loss shown in the financial statements, before tax adjustments",
+      "Corporate Tax paid in a year when the business made no profit",
+      "Negative taxable income for a tax period, worked out under the Corporate Tax rules",
+      "A fall in the value of the business's assets"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "A Tax Loss is negative taxable income for a tax period, as calculated under the Corporate Tax law. It isn't simply the loss shown in the accounts.",
+      "why": "The accounting result is adjusted first, for example by taking out exempt income and adding back costs that aren't deductible. Only if the result is negative is there a Tax Loss to carry forward. It isn't an amount of tax paid, or a fall in asset values.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 1 (definition of Tax Loss) and 37(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-051",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "tax_losses",
+    "scenario": "Falcon Lane Print Studio LLC is UAE-resident, not a Qualifying Free Zone Person, and has never elected Small Business Relief. It makes a tax loss of AED 1,000,000 in 2024. Its taxable income before loss relief is AED 800,000 in 2025 and AED 400,000 in 2026. The loss meets all the conditions for use, and the company uses as much as it can each year.",
+    "prompt": "How much of the loss is left to carry forward after 2026?",
+    "options": [
+      "Nil",
+      "AED 400,000",
+      "AED 250,000",
+      "AED 100,000"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A tax loss can be carried forward and set against later taxable income. In each period it can reduce taxable income by no more than 75%.",
+      "why": "2025: 75% × 800,000 = AED 600,000 is used, leaving 1,000,000 − 600,000 = AED 400,000. 2026: 75% × 400,000 = AED 300,000 is used, leaving AED 100,000. Nil ignores the 75% cap. AED 400,000 stops after 2025. AED 250,000 wrongly treats 75% of the loss itself as the limit.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 37(1), 37(2) and 37(4)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-052",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "tax_losses",
+    "scenario": "Extract from a draft note on transferring Sandbar Catering LLC's 2025 tax loss to a sister company, Lagoon Leisure Supplies FZE",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Lagoon Leisure Supplies FZE is a Qualifying Free Zone Person, which doesn't affect the transfer.",
+      "Both companies are UAE-resident juridical persons.",
+      "The same parent has owned 80% of each company since before 2025, above the 75% minimum.",
+      "Both companies have a 31 December year-end and use IFRS."
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A tax loss can be transferred between two UAE-resident companies under 75% common ownership, with the same year-end and accounting standards. Neither can be an Exempt Person or a Qualifying Free Zone Person.",
+      "why": "Line 1 is wrong. Because Lagoon Leisure Supplies FZE is a Qualifying Free Zone Person, the loss can't be transferred to it. The other lines state conditions that are met: both are resident juridical persons, the 80% common ownership is over 75% and began before the loss arose, and the year-ends and accounting standards match.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 38(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-053",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "tax_losses",
+    "scenario": "Qamar Ridge Bakery LLC has taxable income of AED 1,000,000 for 2025 before any loss relief, and its own tax loss of AED 200,000 brought forward. Its sister company Dune & Date Catering LLC has a 2025 tax loss of AED 900,000 and wants to transfer as much of it as possible to Qamar Ridge. All the conditions for a transfer are met.",
+    "prompt": "How much of Dune & Date Catering's loss can Qamar Ridge use in 2025?",
+    "options": [
+      "AED 550,000",
+      "AED 750,000",
+      "AED 800,000",
+      "AED 900,000"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A company's own carried-forward losses must be used before any transferred loss. The total loss relief, own and transferred together, can't exceed 75% of taxable income before loss relief.",
+      "why": "The cap is 75% × 1,000,000 = AED 750,000. Qamar Ridge's own AED 200,000 is used first, leaving room for 750,000 − 200,000 = AED 550,000 of the transferred loss. AED 750,000 forgets Qamar Ridge's own loss. AED 800,000 fills all the remaining income and ignores the cap. AED 900,000 is the whole loss.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 37(2), 37(4) and 38(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-054",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "reliefs",
+    "scenario": "On 1 March 2025 Palmfield Office Supplies LLC transferred a warehouse to Palmfield Logistics LLC under a valid Qualifying Group Relief election. Its net book value was AED 2,000,000 and its market value AED 2,600,000. On 1 June 2026 Palmfield Logistics sells the warehouse to an unrelated buyer for AED 3,000,000. Both companies have calendar-year tax periods.",
+    "prompt": "What must Palmfield Office Supplies, the original transferor, include in its taxable income because of the sale?",
+    "options": [
+      "A gain of AED 1,000,000, in its 2026 tax period",
+      "A gain of AED 600,000, by reopening its 2025 tax period",
+      "A gain of AED 600,000, in its 2026 tax period",
+      "Nothing, because the relief was validly elected in 2025"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "If the asset leaves the Qualifying Group within two years, the original transfer is treated as made at market value on the transfer date. The transferor includes that gain in the tax period in which the clawback event happens.",
+      "why": "The sale is 15 months after the transfer, so the relief is clawed back. The gain is the market value at the original transfer less net book value: 2,600,000 − 2,000,000 = AED 600,000, included in 2026, when the sale happened. AED 1,000,000 wrongly uses the 2026 sale price. The 2025 return isn't reopened.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 26(4) and 26(5); Ministerial Decision No. 132 of 2023, Article 5"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-055",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "reliefs",
+    "scenario": "Loire Mobilier SAS is a French company with no Permanent Establishment in the UAE. It owns 100% of two UAE-resident companies, Saffron Shore Interiors LLC and Sandstone Software Studio LLC. Neither is exempt or a Qualifying Free Zone Person, and both have a 31 December year-end and use IFRS. Saffron Shore wants to transfer an office unit to Sandstone.",
+    "prompt": "Can the two UAE companies use Qualifying Group Relief for the transfer?",
+    "options": [
+      "No, because their common owner isn't a UAE Taxable Person",
+      "Yes, because a third person owns at least 75% of both, even though that person is foreign",
+      "No, because one of them must own at least 75% of the other",
+      "Yes, but only if the French parent also registers for UAE Corporate Tax"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Two Taxable Persons are in the same Qualifying Group if one owns at least 75% of the other, or a third person owns at least 75% of both. The third person needn't be a member of the group itself.",
+      "why": "Loire Mobilier owns 100% of both UAE companies, so the 75% test is met through a common owner. The parent can't be a member itself, because it is neither resident nor has a UAE Permanent Establishment, but that doesn't stop its two UAE subsidiaries qualifying. It doesn't need to register.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 26(2)(a) and 26(2)(b)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-056",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "reliefs",
+    "prompt": "True or false: Qualifying Group Relief can apply to the transfer of a liability, such as a loan owed, and not only to the transfer of an asset.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Qualifying Group Relief covers transfers of one or more assets or liabilities between members of the same Qualifying Group. Each is treated as transferred at its net book value, so no gain or loss arises.",
+      "why": "The relief isn't limited to assets such as buildings or machines. A liability moved between two members of the group can also be transferred at its net book value, if the transferor elects and the conditions are met.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 26(1) and 26(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-057",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "reliefs",
+    "prompt": "What does Business Restructuring Relief do?",
+    "options": [
+      "It lets a whole business, or an independent part of one, be transferred in exchange for shares with no gain or loss taxed",
+      "It gives a 0% rate to any company that restructures its debts",
+      "It lets a company deduct the legal costs of a merger twice",
+      "It cancels the Corporate Tax debts of a business that is closing down"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Business Restructuring Relief lets a Taxable Person transfer its entire business, or an independent part of it, to another Taxable Person in exchange for shares, with no gain or loss taken into account.",
+      "why": "The relief is for transfers of businesses in return for shares, such as mergers and spin-offs. The assets and liabilities move at their net book value. It has nothing to do with restructuring debt, extra deductions or writing off tax that is owed.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 27(1) and 27(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-058",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "reliefs",
+    "scenario": "Falcon Lane Print Studio LLC transfers one printing press to Coral Dhow Events LLC, an unrelated UAE-resident company, and receives newly issued shares in Coral Dhow Events in return. Falcon Lane keeps the rest of its printing business. The press is worth more than its net book value, so there is a gain.",
+    "prompt": "Can Falcon Lane use Business Restructuring Relief so that the gain isn't taxed?",
+    "options": [
+      "Yes, because it was paid in shares, not cash",
+      "Yes, because both companies are UAE-resident",
+      "No, because the relief is only for companies under 75% common ownership",
+      "No, because a single asset isn't an entire business or an independent part of one"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Business Restructuring Relief applies to the transfer of an entire business, or an independent part of a business, in exchange for shares. Moving a single asset isn't enough.",
+      "why": "Being paid in shares and being UAE-resident are both needed, but they aren't enough: what is transferred must be a whole business, or a part that can run on its own. One printing press is just an asset. Common ownership of 75% is a condition of Qualifying Group Relief, not of this relief.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 27(1) and 27(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-059",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "reliefs",
+    "scenario": "Dune Gate Holdings LLC owns 80% of Dune Gate Warehousing LLC, which owns 90% of Dune Gate Transport LLC. All three are UAE-resident, none is exempt or a Qualifying Free Zone Person, and all have a 31 December year-end and use IFRS. Dune Gate Holdings wants to transfer land directly to Dune Gate Transport.",
+    "prompt": "Are Dune Gate Holdings and Dune Gate Transport in the same Qualifying Group?",
+    "options": [
+      "No, because Dune Gate Holdings' indirect interest is 72%, below the 75% minimum",
+      "Yes, because each link in the chain is at least 75%",
+      "Yes, because its indirect interest is 85%, the average of the two holdings",
+      "No, because only direct shareholdings count for Qualifying Group Relief"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "The 75% ownership test for a Qualifying Group can be met directly or indirectly. A holding through a company that isn't wholly owned is counted in proportion, by multiplying the percentages.",
+      "why": "80% × 90% = 72%, so Dune Gate Holdings doesn't hold 75% of Dune Gate Transport. Each neighbouring pair is in a Qualifying Group (80% and 90%), but the top and bottom companies aren't in one together. Indirect holdings do count, and they are multiplied, not averaged.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 26(2)(b); Ministerial Decision No. 132 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-060",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "advanced",
+    "topic": "exempt_income",
+    "prompt": "Sandstone Software Studio LLC holds a qualifying Participating Interest in a foreign company. The foreign company is liquidated, and Sandstone realises a loss. True or false: the participation exemption doesn't apply to this loss, so the loss can be deducted.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Gains and losses on disposing of a Participating Interest are normally left out of taxable income. As an exception, the exemption doesn't apply to a loss realised on the liquidation of the Participation.",
+      "why": "Because the exemption doesn't cover a liquidation loss, Sandstone can take the loss into account in its taxable income, worked out under the detailed rules. A loss on an ordinary sale of the same shares would have been ignored.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 23(5)(b) and 23(8); Ministerial Decision No. 116 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-061",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_income",
+    "scenario": "Qamar Ridge Bakery LLC has owned 15% of a foreign bakery chain for four years. The holding meets every participation exemption condition. In 2025 it sells the whole stake to an unrelated buyer at a loss of AED 700,000.",
+    "prompt": "How is the AED 700,000 loss treated?",
+    "options": [
+      "It is deducted in full, because the exemption only covers gains",
+      "It is deducted, but only against future dividends from other shares",
+      "It is left out of taxable income, so it can't be deducted",
+      "It becomes a tax loss that must be used within five years"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "The participation exemption works both ways. Gains and losses on selling a Participating Interest are both left out of taxable income.",
+      "why": "The stake qualifies, so a gain on this sale would have been exempt. For the same reason the AED 700,000 loss is ignored: it can't reduce taxable income or be carried forward as a tax loss. Only a loss on the liquidation of a Participation is treated differently.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 23(5)(b), 23(8) and 37(3)(c)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-062",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "exempt_income",
+    "scenario": "In March 2025 Coral Dhow Events LLC buys 8% of a foreign events company for AED 2 million, meaning to keep it for years. In August 2025 it receives a dividend of AED 200,000 and treats it as exempt, as the other participation exemption conditions are met. In January 2026 it sells most of the shares, leaving it with 3%.",
+    "prompt": "What happens to the AED 200,000 dividend?",
+    "options": [
+      "It stays exempt, because Coral Dhow intended to hold for 12 months when it was paid",
+      "It stays exempt, because Coral Dhow still owns some of the shares",
+      "Coral Dhow must reopen 2025 and tax the dividend in that period",
+      "It is added to taxable income in 2026, the tax period in which the holding fell below 5%"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Income can be exempt before the 12 months are up, if the holder intends to hold 5% or more for 12 months. If it doesn't, the income is added back in the tax period in which the holding falls below 5%.",
+      "why": "Coral Dhow held 5% or more for only about 10 months, so the 12-month test was never met. Its AED 2 million cost is also under the AED 4 million alternative. The AED 200,000 left out in 2025 is included in 2026 taxable income. The earlier intention no longer protects it, and 2025 isn't reopened.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 23(2)(a) and 23(10); Ministerial Decision No. 116 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-063",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "exempt_income",
+    "prompt": "Which of these is Exempt Income for a UAE mainland company?",
+    "options": [
+      "Interest on a fixed deposit with a UAE bank",
+      "A dividend from another UAE-resident company",
+      "Rent from a warehouse it owns in Dubai",
+      "Profit from selling its trading stock"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Dividends and other profit distributions received from a UAE-resident company are Exempt Income, with no minimum shareholding or holding period.",
+      "why": "The dividend is left out of taxable income. Bank interest, rent and trading profit are all ordinary business income of a company, and are taxed in the normal way.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 22(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-064",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "exempt_income",
+    "scenario": "Oasis Thread Tailoring LLC owns 3% of a UAE-resident textile company, bought for AED 900,000 two years ago. In 2025 it receives a dividend of AED 40,000 on the shares, and then sells them at a gain of AED 250,000.",
+    "prompt": "How are the dividend and the gain treated?",
+    "options": [
+      "The dividend is exempt; the gain is taxable",
+      "Both are exempt, because the textile company is UAE-resident",
+      "Both are taxable, because the holding is under 5%",
+      "The dividend is taxable; the gain is exempt"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Dividends from a UAE-resident company are always exempt. A gain on selling the shares is exempt only if the holding is a Participating Interest, which needs 5% ownership or an acquisition cost of at least AED 4 million.",
+      "why": "The AED 40,000 dividend is exempt whatever the size of the holding. The gain is different: 3% is under 5%, and the AED 900,000 cost is under AED 4 million, so the shares aren't a Participating Interest and the AED 250,000 gain is taxable.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 22(1), 23(2), 23(5) and 23(11); Ministerial Decision No. 116 of 2023"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-065",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "exempt_income",
+    "scenario": "Extract from a draft Corporate Tax computation for Palmfield Holdings LLC, tax period ended 31 December 2025",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Less: dividend from its UAE subsidiary, exempt, AED 500,000",
+      "Less: dividend from a 40%-owned foreign company that meets the participation exemption, AED 300,000",
+      "Bank deposit interest of AED 40,000: left in taxable income",
+      "Deduct: AED 60,000 fee paid to an adviser only for managing those two shareholdings"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Exempt income is left out of taxable income, and so is the expenditure incurred in earning it. Interest expenditure is the only exception.",
+      "why": "Line 4 is wrong. The AED 60,000 fee relates directly to two shareholdings whose income is exempt, so it can't be deducted. The other lines are right: UAE dividends and qualifying foreign dividends are exempt, and bank interest is ordinary taxable income.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 22, 23, 28(2)(b) and 29"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-066",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "deductions",
+    "scenario": "Bluewave Pool Services LLC spends AED 40,000 in 2025 on running a pick-up truck. A mileage log shows that 60% of its use was for visiting customers' pools and 40% was private use by the owner's family.",
+    "prompt": "How much of the AED 40,000 can it deduct?",
+    "options": [
+      "AED 40,000",
+      "AED 24,000",
+      "AED 20,000",
+      "Nil"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Expenditure with more than one purpose is deductible only for the part, or a fair proportion, that is incurred wholly and exclusively for the business.",
+      "why": "The log identifies the business share: 60% × 40,000 = AED 24,000. The private 40% (AED 16,000) isn't for the business and can't be deducted. Mixed use doesn't block the whole cost, and there is no flat 50% rule for it: that applies only to entertainment.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 28(1), 28(2)(a) and 28(3)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-067",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "deductions",
+    "prompt": "Seashell Villas Hotel LLC pays AED 15,000 of input VAT on a deductible business expense, and the VAT rules don't allow it to recover that VAT. True or false: the AED 15,000 can be deducted for Corporate Tax.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Input VAT that a business can recover is not deductible for Corporate Tax. VAT it can't recover is part of the cost of the expense, and is deductible if the expense is.",
+      "why": "The bar only covers recoverable VAT, because the business gets that back through its VAT return. Here the AED 15,000 can't be recovered, so it is a real cost of a deductible business expense.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 28(1) and 33(7)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-068",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "deductions",
+    "prompt": "Two UAE companies run a restaurant together as an Unincorporated Partnership, which isn't a Taxable Person in its own right. The partnership pays one of them AED 50,000 of interest on its capital account. How is that interest treated in working out the partners' taxable income?",
+    "options": [
+      "As deductible interest, subject to the 30% EBITDA limit",
+      "As a deductible salary paid to the partner",
+      "As an allocation of income to that partner, so it isn't a deductible expense",
+      "As exempt income of the partner that receives it"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Interest that an Unincorporated Partnership pays to a partner on the partner's capital account is treated as an allocation of income to that partner. It isn't deductible expenditure.",
+      "why": "The AED 50,000 is simply part of how the restaurant's profit is shared, so it doesn't reduce the taxable income from the partnership. It isn't interest for the EBITDA limit, it isn't a salary, and it isn't exempt in the hands of the partner.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 16(1), 16(3) and 16(5)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-069",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "deductions",
+    "scenario": "Ravi is a UAE-resident sole proprietor whose licensed photography business makes him a Taxable Person. In 2025 he takes AED 240,000 out of the business bank account to pay his family's living costs, and records it as drawings.",
+    "prompt": "Can the AED 240,000 be deducted in working out the taxable income of his business?",
+    "options": [
+      "Yes, as a salary paid to the owner",
+      "Yes, but only up to AED 375,000 a year",
+      "No, because an individual can't deduct any expenses at all",
+      "No, because amounts an individual withdraws from their own business aren't deductible"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Amounts withdrawn from a business by a natural person who is the Taxable Person, or by a partner in an Unincorporated Partnership, are not deductible.",
+      "why": "Ravi and his business are the same person, so he can't pay himself a deductible salary. The drawings are just him taking out his own profit. Genuine business expenses, such as studio rent, are still deductible in the normal way.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 28(1) and 33(5)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-070",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "deductions",
+    "scenario": "Extract from a draft list of add-backs in Dune & Date Catering LLC's 2025 Corporate Tax computation",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "Add back: 50% of the AED 80,000 spent on hospitality for customers, AED 40,000.",
+      "Add back: AED 30,000 of fines from the municipality.",
+      "Add back: AED 25,000 donated to a charity that isn't a Qualifying Public Benefit Entity.",
+      "Add back: AED 20,000 of compensation paid to a customer for breach of contract."
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "Fines and penalties aren't deductible, but amounts awarded as compensation for damages or breach of contract are.",
+      "why": "Line 4 is wrong. Compensation for breach of contract is an ordinary business cost, so it stays deducted. The other lines are right: half of customer entertainment is disallowed (50% × 80,000 = 40,000), and so are fines and donations to an entity that isn't a Qualifying Public Benefit Entity.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 32, 33(1) and 33(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-071",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "foreign_income",
+    "scenario": "Extract from a draft memo for Sandstone Software Studio LLC on electing the foreign permanent establishment exemption for its branches in Kenya and Egypt, both taxed locally at more than 9%",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "If we elect, the branches' income and related expenditure are left out of our UAE taxable income.",
+      "A branch only qualifies if it is taxed in its own country at a rate of at least 9%.",
+      "We can elect for the profitable Kenyan branch only, and keep deducting the Egyptian branch's losses.",
+      "For an exempt branch, we can't claim a Foreign Tax Credit for the tax it pays abroad."
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "The foreign permanent establishment exemption is all or nothing. Once elected, it applies to every foreign Permanent Establishment that is taxed abroad at 9% or more.",
+      "why": "Line 3 is wrong. Sandstone can't pick the profitable branch and leave the loss-making one in. Both branches are taxed at more than 9%, so both are covered and the Egyptian losses can't be deducted. The other lines are right: income and expenditure are left out, the 9% test applies, and no Foreign Tax Credit is given.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 24(1), 24(2), 24(6) and 24(7)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-072",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "advanced",
+    "topic": "foreign_income",
+    "scenario": "Lagoon Freight Services LLC is UAE-resident, not a Qualifying Free Zone Person, and hasn't elected Small Business Relief. Its taxable income for 2025 is AED 1,375,000. That includes AED 500,000 of net income from a contract performed abroad, on which it paid AED 25,000 of foreign income tax.",
+    "prompt": "How much Corporate Tax does it have to pay for 2025, after the Foreign Tax Credit?",
+    "options": [
+      "AED 90,000",
+      "AED 65,000",
+      "AED 45,000",
+      "AED 87,750"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Foreign tax paid on income that is also taxed in the UAE can be credited against Corporate Tax. The credit can't be more than the foreign tax paid, or the UAE Corporate Tax due on that income.",
+      "why": "Tax before the credit is 9% × (1,375,000 − 375,000) = AED 90,000. The UAE tax on the foreign income is more than AED 25,000 (even a proportionate share, 90,000 × 500,000 ÷ 1,375,000, is about AED 32,700), so all AED 25,000 is credited: 90,000 − 25,000 = AED 65,000. AED 45,000 credits 9% of the income, more than was paid. AED 87,750 deducts the foreign tax as an expense, which isn't allowed.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3(1), 33(8), 47(1) and 47(2)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-073",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "intermediate",
+    "topic": "foreign_income",
+    "prompt": "Nordkai Estates GmbH, a German company with no presence in the UAE, lends money to Seashell Villas Hotel LLC, a UAE-resident company. True or false: the interest that Seashell Villas pays is State Sourced Income of the German lender.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Interest is State Sourced Income, meaning income from the UAE, if the borrower is a Resident Person or a Government Entity, or if the loan is secured on property in the UAE.",
+      "why": "Seashell Villas is a Resident Person, so the interest it pays is sourced in the UAE. That brings the interest within the scope of Withholding Tax, which is currently charged at 0%.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 13(2)(g) and 45(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-074",
+    "track": "ct",
+    "format": "scenario",
+    "difficulty": "intermediate",
+    "topic": "foreign_income",
+    "scenario": "Nordkai Shipping AS is a foreign shipping company with no office in the UAE. Its ships carry cargo between its home country and Jebel Ali, and it earns freight from UAE customers. Its home country would not tax a UAE shipping company on the same kind of income.",
+    "prompt": "Is Nordkai Shipping's freight income from this international transport subject to UAE Corporate Tax?",
+    "options": [
+      "No, because a non-resident's income from operating ships in international transport is exempt where its home country treats UAE operators the same way",
+      "Yes, because the freight is paid by UAE customers",
+      "Yes, at 9% on the part of each voyage that is in UAE waters",
+      "No, because foreign companies never pay UAE Corporate Tax"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A Non-Resident Person's income from operating aircraft or ships in international transportation isn't subject to Corporate Tax, if its home country would exempt a UAE operator doing the same.",
+      "why": "Nordkai Shipping is in the business of international transport by sea, and its home country gives UAE shipping companies the same treatment, so the condition is met. Who pays the freight doesn't change that, and there is no rule that splits a voyage. Foreign companies can pay UAE Corporate Tax in other cases, such as on a Permanent Establishment's income.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 22(5) and 25"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-075",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "foreign_income",
+    "prompt": "A double tax treaty in force in the UAE says something different from the Corporate Tax law about how an item of income is taxed. Which one applies?",
+    "options": [
+      "The Corporate Tax law, because domestic law always overrides a treaty",
+      "Whichever of the two gives the higher tax",
+      "The treaty, to the extent of the inconsistency",
+      "Neither: the income is simply taxed in both countries"
+    ],
+    "answerIndex": 2,
+    "explanation": {
+      "what": "Where the terms of an international agreement in force in the UAE are inconsistent with the Corporate Tax law, the international agreement prevails.",
+      "why": "A tax treaty is an international agreement, so where it conflicts with the Corporate Tax law, the treaty's rule is followed. Domestic law doesn't override it, and the taxpayer isn't left with the worse of the two results.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 66"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-076",
+    "track": "ct",
+    "format": "spot_issue",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "scenario": "Extract from Harbour Bake House FZCO's Corporate Tax calendar for its tax period 1 July 2025 to 30 June 2026",
+    "prompt": "Which line contains the error?",
+    "options": [
+      "File the Corporate Tax return by 31 March 2027.",
+      "Pay any Corporate Tax due by 30 June 2027.",
+      "Keep the supporting records until at least 30 June 2033.",
+      "If the tax authority asks for our transfer pricing documentation, send it within 30 days."
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "The Corporate Tax return and the payment are both due within nine months of the end of the tax period.",
+      "why": "Line 2 is wrong. Nine months after 30 June 2026 is 31 March 2027, and that is the deadline for the payment as well as the return. The other lines are right: records are kept for seven years after the period end, to 30 June 2033, and transfer pricing documentation must be sent within 30 days of a request.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 48, 53(1), 55(3) and 56(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-077",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "advanced",
+    "topic": "penalties_admin",
+    "prompt": "True or false: in any proceeding about the general anti-abuse rule, it is for the tax authority to show that its determination to counteract a Corporate Tax advantage is just and reasonable.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "Under the general anti-abuse rule, the tax authority can counteract a Corporate Tax advantage. In any proceeding about it, the authority must demonstrate that its determination is just and reasonable.",
+      "why": "The rule gives the authority wide powers, such as disallowing a deduction or recharacterising a payment. In return, the law puts the burden on the authority to justify the determination it has made.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 50(3), 50(4) and 50(6)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-078",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "intermediate",
+    "topic": "penalties_admin",
+    "prompt": "In which of these cases can a Taxable Person apply to the tax authority for a Corporate Tax refund?",
+    "options": [
+      "It made a tax loss this year, and paid tax in an earlier year",
+      "It has unused Foreign Tax Credit left over",
+      "It paid a fine that wasn't deductible",
+      "It has paid more Corporate Tax than its Corporate Tax Payable"
+    ],
+    "answerIndex": 3,
+    "explanation": {
+      "what": "A Taxable Person can apply for a refund where its Withholding Tax Credit exceeds its Corporate Tax Payable, or where the tax authority is satisfied that it has paid more Corporate Tax than was due.",
+      "why": "Overpaid tax can be claimed back. A loss can't be carried back to recover tax from an earlier year, unused Foreign Tax Credit simply lapses, and a non-deductible fine doesn't create a refund.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 37(1), 47(3) and 49(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-079",
+    "track": "ct",
+    "format": "mcq",
+    "difficulty": "foundation",
+    "topic": "penalties_admin",
+    "prompt": "Coral Coast Trading FZE isn't sure how the Corporate Tax law applies to a transaction it is planning. What formal step does the law allow?",
+    "options": [
+      "Apply to the tax authority for a clarification",
+      "Ask its trade licence authority to rule on the tax treatment",
+      "File two tax returns, one for each possible treatment",
+      "Nothing: it must wait for a tax audit"
+    ],
+    "answerIndex": 0,
+    "explanation": {
+      "what": "A person can apply to the tax authority for a clarification on how the Corporate Tax law applies to a transaction or arrangement that is proposed or already entered into.",
+      "why": "The clarification route lets a business get the authority's view before or after it acts. Licensing authorities don't decide tax questions, a business files one return for each tax period, and it doesn't have to wait for an audit.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Article 59"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  },
+  {
+    "id": "ct-b5-080",
+    "track": "ct",
+    "format": "true_false",
+    "difficulty": "foundation",
+    "topic": "penalties_admin",
+    "prompt": "Sandbar Catering LLC's taxable income for 2025 is AED 200,000, so its Corporate Tax is nil. It hasn't elected Small Business Relief. True or false: because no tax is due, it doesn't need to file a Corporate Tax return for 2025.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answerIndex": 1,
+    "explanation": {
+      "what": "Every Taxable Person must file a Corporate Tax return within nine months of the end of the tax period, whether or not any tax is due.",
+      "why": "Taxable income up to AED 375,000 is taxed at 0%, but Sandbar Catering is still a Taxable Person. It must file its 2025 return by 30 September 2026.",
+      "reference": "Federal Decree-Law No. 47 of 2022, Articles 3(1) and 53(1)"
+    },
+    "meta": {
+      "appliesFrom": "2023-06-01",
+      "status": "draft",
+      "reviewer": null,
+      "reviewedOn": null,
+      "source": "oblique:ct-batch-05"
+    }
+  }
+]
