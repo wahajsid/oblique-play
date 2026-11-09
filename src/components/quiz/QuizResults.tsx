@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DiagnosticOffer } from "@/components/offers/DiagnosticOffer";
+import { TopicOffer, weakestTopic } from "@/components/offers/TopicOffer";
+import { ProfileCard } from "@/components/ProfileCard";
 import { MilestoneOffer } from "@/components/offers/MilestoneOffer";
 import { ChallengeResult, shareMessage, type ChallengeInfo } from "@/components/share/Challenge";
 import { ShareSheet } from "@/components/share/ShareSheet";
@@ -45,6 +47,7 @@ export function QuizResults(props: {
   const score = answers.filter((a) => a.correct).length;
   const [streak, setStreak] = useState(0);
   const [sharing, setSharing] = useState(false);
+  const [copied, setCopied] = useState(false);
   useEffect(() => setStreak(localStreak()), []);
 
   // Topic breakdown, e.g. "Free zones 4/4"
@@ -56,6 +59,7 @@ export function QuizResults(props: {
     if (correctById.get(q.id)) t.right++;
     topics.set(q.topicLabel, t);
   }
+  const weak = weakestTopic(questions.map((q) => ({ track: q.track, topic: q.topic, label: q.topicLabel, correct: !!correctById.get(q.id) })));
   const breakdown = [...topics.entries()].sort((a, b) => b[1].of - a[1].of || a[0].localeCompare(b[0]));
 
   const message = shareMessage({
@@ -64,6 +68,25 @@ export function QuizResults(props: {
     what: `${isToday ? "today's" : `the ${longDate(date)}`} UAE ${SHARE_NAME[track]} quiz`,
     challenge,
   });
+
+  // A result that can be pasted anywhere as plain text: one square per
+  // question, in order, without giving any answer away.
+  const shownStreak = stats?.streak ?? streak;
+  const squares = questions.map((q) => (correctById.get(q.id) ? "🟩" : "⬜"));
+  const rows = [squares.slice(0, 10).join(""), squares.slice(10).join("")].filter(Boolean);
+  const pasteable = [
+    `UAE ${SHARE_NAME[track]} quiz · ${longDate(date)}`,
+    `${score}/${total} in ${formatTime(timeMs)}${shownStreak > 1 ? ` · 🔥 ${shownStreak}-day streak` : ""}`,
+    ...rows,
+    `${typeof window === "undefined" ? "" : window.location.host}`,
+  ].join("\n");
+  const copyResult = async () => {
+    try {
+      await navigator.clipboard.writeText(pasteable);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2500);
+    } catch {}
+  };
 
   return (
     <>
@@ -88,7 +111,10 @@ export function QuizResults(props: {
 
         {challenge && <ChallengeResult you={{ score, total, timeMs }} them={challenge} />}
         <MilestoneOffer stats={stats} afterShift={false} hasName={!!profile?.displayName} />
-        {profile?.role === "business_owner" && <DiagnosticOffer />}
+        {/* Asked once, after a player's first round. Without it most players
+            are never identified, and no offer can be shown to them. */}
+        {profile && !profile.displayName && !profile.role && <ProfileCard profile={profile} />}
+        {profile?.role !== "student" && weak ? <TopicOffer weak={weak} /> : profile?.role === "business_owner" && <DiagnosticOffer />}
 
         <section className="mt-6 rounded-2xl border border-line bg-surface p-4" aria-labelledby="breakdown-title">
           <h2 id="breakdown-title" className="text-sm font-semibold">
@@ -109,6 +135,9 @@ export function QuizResults(props: {
         <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
           <button type="button" onClick={() => setSharing(true)} className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold">
             {challenge ? "Send a rematch" : "Challenge someone"}
+          </button>
+          <button type="button" onClick={copyResult} className="min-h-12 rounded-full border border-line text-sm font-semibold" data-testid="copy-result">
+            {copied ? "Copied. Paste it anywhere" : "Copy result as text"}
           </button>
           <div className="grid grid-cols-2 gap-2">
             <button type="button" onClick={onReplay} className="min-h-12 rounded-full border border-line text-sm font-semibold">

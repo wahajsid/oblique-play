@@ -1,0 +1,33 @@
+{
+  "ct": {
+    "basics": { "service": "Corporate Tax health check", "line": "Getting the basics wrong is how small errors become penalties." },
+    "registration": { "service": "Corporate Tax registration check", "line": "Late or missed registration is the most common Corporate Tax penalty in the UAE." },
+    "taxable_persons": { "service": "Corporate Tax health check", "line": "Who is taxable, and on what, decides everything that follows." },
+    "exempt_persons": { "service": "Exemption review", "line": "Exemptions have conditions, and several need an application." },
+    "free_zones": { "service": "Free zone tax review", "line": "One wrong income stream can cost a free zone company its 0% rate for five years." },
+    "small_business_relief": { "service": "Small Business Relief check", "line": "The relief is an election with conditions, not an automatic 0%." },
+    "tax_groups": { "service": "Tax group review", "line": "Grouping changes who files, who pays and what can be offset." },
+    "transfer_pricing": { "service": "Transfer pricing review", "line": "Related-party pricing is where most groups are exposed, and where the paperwork is heaviest." },
+    "interest_limitation": { "service": "Financing and interest review", "line": "Interest above the limit isn't lost, but only if it's tracked properly." },
+    "tax_losses": { "service": "Tax loss review", "line": "Losses are valuable, and easy to forfeit on an ownership change." },
+    "reliefs": { "service": "Restructuring relief review", "line": "The reliefs for moving assets and businesses have claw-backs worth knowing before you restructure." },
+    "exempt_income": { "service": "Holding structure review", "line": "Dividends and gains are only exempt when the conditions are met and evidenced." },
+    "deductions": { "service": "Corporate Tax computation review", "line": "Disallowed and half-allowed expenses are where computations usually go wrong." },
+    "foreign_income": { "service": "Cross-border tax review", "line": "Foreign income, branches and tax credits need planning before the year ends, not after." },
+    "penalties_admin": { "service": "Compliance calendar check", "line": "Deadlines and record-keeping rules carry fixed penalties that are entirely avoidable." }
+  },
+  "vat": {
+    "registration": { "service": "VAT registration check", "line": "Crossing the threshold starts a 30-day clock most businesses miss." },
+    "place_of_supply": { "service": "Cross-border VAT review", "line": "Where a supply takes place decides whether UAE VAT applies at all." },
+    "date_of_supply": { "service": "VAT return review", "line": "VAT reported in the wrong period is an error, even when the amount is right." },
+    "zero_rating": { "service": "Export and zero-rating review", "line": "Zero rates depend on evidence; without it the supply is taxed at 5%." },
+    "exemptions": { "service": "Exempt supplies review", "line": "Exempt income quietly blocks input tax on the costs behind it." },
+    "designated_zones": { "service": "Designated zone review", "line": "Designated zones follow their own rules, and not every free zone is one." },
+    "reverse_charge": { "service": "Imports and reverse charge review", "line": "Reverse charge entries are missed more often than any other line of the return." },
+    "tax_invoices": { "service": "Invoice and records check", "line": "An invoice missing one required detail can cost your customer their input tax, and you a penalty." },
+    "input_tax": { "service": "Input tax recovery review", "line": "Most businesses either over-claim or leave recoverable VAT on the table." },
+    "profit_margin": { "service": "Margin scheme review", "line": "The margin scheme has strict conditions and its own invoicing rules." },
+    "tax_groups": { "service": "VAT group review", "line": "Grouping removes VAT between members, and makes them all liable for each other." },
+    "real_estate": { "service": "Real estate VAT review", "line": "Property is zero-rated, exempt or standard-rated depending on details that are easy to get wrong." }
+  }
+}

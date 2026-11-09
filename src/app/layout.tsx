@@ -21,7 +21,17 @@ export const metadata: Metadata = {
   // Link previews use the address the game is served from (the live site or a test copy).
   metadataBase: new URL(siteUrl),
   title: "UAE Tax Learning Game · by Oblique",
-  description: "Spot what's right or off on UAE tax documents, one shift at a time. A free learning game by Oblique.",
+  description: "Think you know UAE tax? 20 new Corporate Tax and VAT questions every day, plus one document to check. Free, by Oblique.",
+  // What LinkedIn and WhatsApp show for the main link. Pages with their own
+  // preview (challenges, certificates, spot the error) replace this.
+  openGraph: {
+    title: "Think you know UAE tax? Prove it in 3 minutes.",
+    description: "20 new Corporate Tax and VAT questions every day, plus one document to check. Free, by Oblique.",
+    siteName: "Oblique",
+    type: "website",
+    images: [{ url: "/card", width: 1200, height: 630, alt: "UAE Tax Learning Game by Oblique" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/card"] },
 };
 
 export const viewport: Viewport = {

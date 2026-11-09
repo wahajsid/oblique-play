@@ -35,6 +35,7 @@ const yesNo = (name, label) => ({
 const properties = [
   yesNo("oblique_play_player", "Oblique Play: player"),
   text("oblique_play_display_name", "Oblique Play: display name"),
+  text("oblique_play_weak_topic", "Oblique Play: weakest topic in last quiz"),
   {
     name: "oblique_play_role",
     label: "Oblique Play: role",

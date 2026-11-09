@@ -9,12 +9,15 @@ import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
 // POST only, so link previews and prefetching can't record a click.
 const BOOKING_URL = process.env.DIAGNOSTIC_BOOKING_URL || "https://calendly.com/obco";
 
-export async function POST() {
+export async function POST(request: Request) {
   const url = new URL(BOOKING_URL);
   // Calendly reads these: utm_* for reporting, name and email to prefill.
   url.searchParams.set("utm_source", "oblique-play");
   url.searchParams.set("utm_medium", "game");
   url.searchParams.set("utm_campaign", "free-diagnostic");
+  // The topic the offer was about, e.g. "ct-transfer_pricing", so the booking says what to prepare.
+  const topic = String((await request.formData().catch(() => null))?.get("topic") ?? "");
+  if (/^[a-z_-]{3,60}$/.test(topic)) url.searchParams.set("utm_content", topic);
 
   if (authEnabled) {
     const player = await getSignedInPlayer();

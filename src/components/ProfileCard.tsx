@@ -16,6 +16,7 @@ const ROLES: { value: PlayerRole; label: string }[] = [
 export function ProfileCard({ profile, mode = "first" }: { profile: PlayerProfile; mode?: "first" | "edit" }) {
   const editing = mode === "edit";
   const [name, setName] = useState(profile.displayName ?? "");
+  const [company, setCompany] = useState(profile.company ?? "");
   const [role, setRole] = useState<PlayerRole | null>(profile.role);
   const [board, setBoard] = useState(profile.leaderboardMode);
   const [marketing, setMarketing] = useState(profile.marketingConsent);
@@ -40,6 +41,7 @@ export function ProfileCard({ profile, mode = "first" }: { profile: PlayerProfil
       setError(null);
       const result = await saveProfile({
         displayName: name,
+        company,
         role,
         leaderboardMode: board,
         ...(editing ? { marketing } : {}),
@@ -75,6 +77,19 @@ export function ProfileCard({ profile, mode = "first" }: { profile: PlayerProfil
         maxLength={40}
         autoComplete="nickname"
         placeholder="Shown on challenge cards"
+        className="mt-1 min-h-12 w-full rounded-xl border border-line bg-bg px-3 text-base"
+      />
+
+      <label htmlFor="company" className="mt-4 block text-sm font-semibold">
+        Company <span className="font-normal text-muted">(optional)</span>
+      </label>
+      <input
+        id="company"
+        value={company}
+        onChange={(e) => setCompany(e.target.value)}
+        maxLength={80}
+        autoComplete="organization"
+        placeholder="Where you work"
         className="mt-1 min-h-12 w-full rounded-xl border border-line bg-bg px-3 text-base"
       />
 

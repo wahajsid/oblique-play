@@ -133,6 +133,25 @@ function mark(q: QuizQuestion, choice: number, seed: string): QuizCheckResult | 
   return { correct: order[choice] === q.answerIndex, answerIndex: order.indexOf(q.answerIndex), explanation: q.explanation };
 }
 
+// "Corporate Tax: Transfer pricing (1/3)" for the topic a set of answers
+// did worst on, or null if nothing stands out. Same rule as the offer on
+// the results screen (src/components/offers/TopicOffer.tsx).
+export function weakTopicLabel(answers: { question_id: string; correct: boolean }[]): string | null {
+  const byTopic = new Map<string, { label: string; right: number; of: number }>();
+  for (const a of answers) {
+    const q = questionsById.get(a.question_id);
+    if (!q) continue;
+    const key = `${q.track}:${q.topic}`;
+    const t = byTopic.get(key) ?? { label: `${TRACKS[q.track].title}: ${topicLabel(q.track, q.topic)}`, right: 0, of: 0 };
+    t.of++;
+    if (a.correct) t.right++;
+    byTopic.set(key, t);
+  }
+  const weak = [...byTopic.values()].filter((t) => t.of >= 2 && t.right * 2 <= t.of);
+  weak.sort((a, b) => a.right / a.of - b.right / b.of || b.of - a.of || a.label.localeCompare(b.label));
+  return weak[0] ? `${weak[0].label} (${weak[0].right}/${weak[0].of})` : null;
+}
+
 export function isQuestionId(id: string): boolean {
   return questionsById.has(id);
 }

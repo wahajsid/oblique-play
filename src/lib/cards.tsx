@@ -33,6 +33,48 @@ function loadFonts() {
 }
 
 // Who's ahead in a rematch: higher score, then faster time.
+// The game's own link preview: what LinkedIn and WhatsApp show when
+// someone pastes play.obliqueconsult.com.
+export async function renderHomeCard() {
+  const width = 1200;
+  const height = 630;
+  const chip = (text: string) => (
+    <div style={{ display: "flex", padding: "10px 22px", borderRadius: 999, border: `2px solid ${AQUA}`, color: AQUA, fontSize: 26, fontWeight: 700, marginRight: 14 }}>
+      {text}
+    </div>
+  );
+  return new ImageResponse(
+    (
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width, height, background: NAVY, fontFamily: "Satoshi", position: "relative", padding: 64 }}>
+        <div style={{ position: "absolute", top: 0, right: 0, display: "flex", width: 460, height, overflow: "hidden" }}>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <div key={i} style={{ position: "absolute", top: -200, left: 80 + i * 80, width: 34, height: height + 400, background: AQUA, opacity: 0.08 + i * 0.03, transform: "rotate(20deg)" }} />
+          ))}
+        </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <svg width={(44 * 1011.81) / 386.23} height={44} viewBox={OBCO_VIEWBOX}>
+            <path d={OBCO_PATH} fill={CREAM} />
+          </svg>
+          <div style={{ display: "flex", marginTop: 44, fontSize: 28, color: AQUA, fontWeight: 700, letterSpacing: 2 }}>UAE TAX LEARNING GAME · FREE</div>
+          <div style={{ display: "flex", flexDirection: "column", marginTop: 14, fontSize: 78, lineHeight: 1.05, color: "white", fontWeight: 700 }}>
+            <div style={{ display: "flex" }}>Think you know UAE tax?</div>
+            <div style={{ display: "flex" }}>Prove it in 3 minutes.</div>
+          </div>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{ display: "flex" }}>
+            {chip("20 new questions a day")}
+            {chip("Corporate Tax · VAT")}
+            {chip("Spot the error")}
+          </div>
+          <div style={{ display: "flex", marginTop: 22, fontSize: 24, color: "#c9cadb" }}>A learning game by Oblique. Not tax advice.</div>
+        </div>
+      </div>
+    ),
+    { width, height, fonts: await loadFonts(), headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" } },
+  );
+}
+
 // The "spot the error" page's link preview: a navy card with a paper
 // document, one line flagged.
 export async function renderSpotCard() {

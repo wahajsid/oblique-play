@@ -13,6 +13,8 @@ type Player = {
   id: string;
   email: string;
   display_name: string | null;
+  company: string | null;
+  weak_topic: string | null;
   role: string | null;
   source: string;
   referred_by: string | null;
@@ -68,6 +70,9 @@ async function toProperties(p: Player): Promise<Record<string, string>> {
     email: p.email,
     oblique_play_player: "true",
     oblique_play_display_name: p.display_name ?? "",
+    // HubSpot's own Company name field, filled only when the player gave one.
+    ...(p.company ? { company: p.company } : {}),
+    oblique_play_weak_topic: p.weak_topic ?? "",
     oblique_play_role: p.role ?? "",
     // Business owners are flagged for the free 30-minute diagnostic.
     oblique_play_diagnostic_flag: String(p.role === "business_owner"),
@@ -89,7 +94,7 @@ async function toProperties(p: Player): Promise<Record<string, string>> {
 
 // Fields that matter to HubSpot; other column changes don't trigger a sync.
 const SYNCED: (keyof Player)[] = [
-  "email", "display_name", "role", "source", "referred_by", "marketing_consent",
+  "email", "display_name", "company", "weak_topic", "role", "source", "referred_by", "marketing_consent",
   "modules_played", "quiz_tracks_played", "shifts_completed", "best_scores", "current_streak",
   "diagnostic_clicked_at", "prize_entered_at",
 ];

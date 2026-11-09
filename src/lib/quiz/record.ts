@@ -3,6 +3,7 @@ import "server-only";
 import { validChallengeFor } from "@/lib/challenge-check";
 import { authEnabled } from "@/lib/supabase/config";
 import { createAdminClient, getSignedInPlayer } from "@/lib/supabase/server";
+import { weakTopicLabel } from "./content";
 import { uaeToday } from "./dates";
 import type { PlayTrack } from "./types";
 
@@ -120,7 +121,7 @@ export async function finishQuizAttempt(attemptId: unknown, total: number) {
   const db = createAdminClient();
   const { data: answers, error } = await db
     .from("quiz_answers")
-    .select("correct, time_ms, quiz_attempts!inner(player_id)")
+    .select("question_id, correct, time_ms, quiz_attempts!inner(player_id)")
     .eq("attempt_id", attemptId)
     .eq("quiz_attempts.player_id", player.id);
   if (error) throw error;
@@ -136,6 +137,10 @@ export async function finishQuizAttempt(attemptId: unknown, total: number) {
     .is("completed_at", null)
     .select("scored")
     .maybeSingle();
+  // The topic this round went worst on, for a specific follow-up in HubSpot.
+  // A round with no weak topic leaves the last one in place.
+  const weak = weakTopicLabel(answers);
+  if (updated && weak) await db.from("players").update({ weak_topic: weak }).eq("id", player.id);
   return { score, total, timeMs, scored: updated?.scored ?? false };
 }
 

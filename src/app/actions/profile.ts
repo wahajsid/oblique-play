@@ -9,6 +9,7 @@ const ROLES = ["business_owner", "finance_professional", "student"] as const;
 // leaderboard choice, so this can't touch anything else.
 export async function saveProfile(input: {
   displayName: string;
+  company?: string;
   role: string | null;
   leaderboardMode: "name" | "anonymous";
   // Only sent from the profile page; omitted after the first round.
@@ -19,6 +20,7 @@ export async function saveProfile(input: {
 
   const displayName = input.displayName.trim().replace(/\s+/g, " ").slice(0, 40) || null;
   const role = ROLES.find((r) => r === input.role) ?? null;
+  const company = typeof input.company === "string" ? input.company.trim().replace(/\s+/g, " ").slice(0, 80) || null : undefined;
   // Showing a name on the leaderboard needs a name to show.
   const leaderboardMode = input.leaderboardMode === "name" && displayName ? "name" : "anonymous";
 
@@ -27,6 +29,7 @@ export async function saveProfile(input: {
     .from("players")
     .update({
       display_name: displayName,
+      ...(company !== undefined ? { company } : {}),
       role,
       leaderboard_mode: leaderboardMode,
       ...(typeof input.marketing === "boolean" ? { marketing_consent: input.marketing } : {}),

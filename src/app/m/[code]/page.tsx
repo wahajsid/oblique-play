@@ -14,6 +14,22 @@ function headline(m: Milestone) {
     : `${who} is on a ${m.value}-day streak.`;
 }
 
+// LinkedIn's "add to profile" form, filled in: the certificate then sits
+// under Licences & certifications, with a link back to this page.
+function linkedInAddUrl(m: Milestone) {
+  const issued = new Date(m.createdAt);
+  const q = new URLSearchParams({
+    startTask: "CERTIFICATION_NAME",
+    name: "UAE VAT Document Review",
+    organizationName: "Oblique Consult",
+    issueYear: String(issued.getUTCFullYear()),
+    issueMonth: String(issued.getUTCMonth() + 1),
+    certUrl: milestoneUrl(m.code),
+    certId: m.code,
+  });
+  return `https://www.linkedin.com/profile/add?${q}`;
+}
+
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { code } = await params;
   const m = await getMilestone(code);
@@ -42,6 +58,16 @@ export default async function MilestonePage({ params }: Params) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={`/m/${code}/card?size=square`} alt={headline(m)} width={1080} height={1080} className="mt-5 aspect-square w-full rounded-2xl border border-line" />
         <div className="mt-auto pt-8 pb-safe">
+          {m.kind === "certificate" && (
+            <a
+              href={linkedInAddUrl(m)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-2 flex min-h-12 items-center justify-center rounded-full border border-line px-4 text-sm font-semibold"
+            >
+              Yours? Add it to your LinkedIn profile
+            </a>
+          )}
           <Link href="/" className="flex min-h-14 items-center justify-center rounded-full btn-primary px-4 text-base font-semibold">
             Play the game
           </Link>
