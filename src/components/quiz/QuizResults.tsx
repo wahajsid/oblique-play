@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { SiteFooter } from "@/components/SiteFooter";
+import { track as trackEvent } from "@/lib/analytics";
 import { DiagnosticOffer } from "@/components/offers/DiagnosticOffer";
 import { TopicOffer, weakestTopic } from "@/components/offers/TopicOffer";
 import { ProfileCard } from "@/components/ProfileCard";
@@ -83,6 +84,7 @@ export function QuizResults(props: {
   const copyResult = async () => {
     try {
       await navigator.clipboard.writeText(pasteable);
+      trackEvent("result_copied", { track });
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2500);
     } catch {}
@@ -106,7 +108,8 @@ export function QuizResults(props: {
         <div className="mt-6 grid grid-cols-3 gap-2 text-center">
           <Stat label="Score" value={`${score}/${total}`} />
           <Stat label="Time" value={formatTime(timeMs)} />
-          <Stat label="Day streak" value={String(stats?.streak ?? streak)} />
+          {/* Signed-in players' streak comes from the server; a dash until it arrives, never a stale 0. */}
+          <Stat label="Day streak" value={stats ? String(stats.streak) : profile ? "–" : String(streak)} />
         </div>
 
         {challenge && <ChallengeResult you={{ score, total, timeMs }} them={challenge} />}
@@ -133,7 +136,14 @@ export function QuizResults(props: {
         </section>
 
         <div className="mt-auto flex flex-col gap-2 pt-8 pb-safe">
-          <button type="button" onClick={() => setSharing(true)} className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold">
+          <button
+            type="button"
+            onClick={() => {
+              trackEvent("share_opened", { track });
+              setSharing(true);
+            }}
+            className="min-h-14 rounded-full btn-primary px-4 text-base font-semibold"
+          >
             {challenge ? "Send a rematch" : "Challenge someone"}
           </button>
           <button type="button" onClick={copyResult} className="min-h-12 rounded-full border border-line text-sm font-semibold" data-testid="copy-result">

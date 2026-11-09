@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Geist_Mono } from "next/font/google";
+import { Analytics } from "@/components/Analytics";
+import { analyticsEnabled } from "@/lib/analytics";
 import { siteUrl } from "@/lib/supabase/config";
+import { getSignedInPlayer } from "@/lib/supabase/server";
 import "./globals.css";
 
 // Satoshi is Oblique's typeface (free under the ITF Free Font License, from Fontshare).
@@ -44,11 +47,14 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  // Only looked up when analytics is switched on, so pages stay as they were without it.
+  const player = analyticsEnabled ? await getSignedInPlayer() : null;
   return (
     <html lang="en">
       <body className={`${sans.variable} ${mono.variable} font-sans antialiased`}>
         <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col">{children}</div>
+        {analyticsEnabled && <Analytics playerId={player?.id ?? null} />}
       </body>
     </html>
   );

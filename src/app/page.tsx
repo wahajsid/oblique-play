@@ -55,6 +55,14 @@ export default async function Home() {
               Today&apos;s quiz
             </span>
           </Link>
+          <Link href={player ? "/review/daily" : "/spot-the-error"} className="group rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-accent">
+            <p className="text-xs font-semibold tracking-wide text-accent uppercase">One a day · 1 minute</p>
+            <h2 className="mt-1 text-xl font-semibold">Spot the error</h2>
+            <p className="mt-1 text-sm text-muted">Today&apos;s tax document. Is it right, or is something off?</p>
+            <span className="mt-4 inline-flex min-h-11 items-center rounded-full btn-primary px-4 text-sm font-semibold">
+              Today&apos;s document
+            </span>
+          </Link>
           {authEnabled && !player && (
             <Link href="/quiz/sample" className="-mt-1 inline-flex min-h-11 items-center self-start px-1 text-sm font-medium underline underline-offset-2">
               New here? Try 5 sample questions, no sign-in

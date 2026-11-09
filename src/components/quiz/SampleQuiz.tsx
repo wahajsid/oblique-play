@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { SiteFooter } from "@/components/SiteFooter";
+import { track } from "@/lib/analytics";
 import type { QuizCheckResult } from "@/lib/quiz/types";
 import type { GameQuestion } from "./QuizGame";
 
@@ -88,6 +89,7 @@ export function SampleQuiz({ questions, prize }: { questions: GameQuestion[]; pr
       });
       if (!res.ok) throw new Error(String(res.status));
       const r = (await res.json()) as QuizCheckResult;
+      if (index === 0) track("sample_started");
       setReply(r);
       if (r.correct) setScore((s) => s + 1);
     } catch {
@@ -98,6 +100,7 @@ export function SampleQuiz({ questions, prize }: { questions: GameQuestion[]; pr
 
   const next = () => {
     if (index + 1 >= total) {
+      track("sample_finished", { score });
       setDone(true);
     } else {
       setIndex(index + 1);

@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { saveProfile } from "@/app/actions/profile";
+import { track } from "@/lib/analytics";
 import { DiagnosticOffer } from "@/components/offers/DiagnosticOffer";
 import type { PlayerProfile, PlayerRole } from "@/lib/players";
 
@@ -46,7 +47,10 @@ export function ProfileCard({ profile, mode = "first" }: { profile: PlayerProfil
         leaderboardMode: board,
         ...(editing ? { marketing } : {}),
       });
-      if (result.ok) setState("saved");
+      if (result.ok) {
+        track("profile_saved", { has_company: !!company.trim(), role });
+        setState("saved");
+      }
       else setError(result.error ?? null);
     });
 

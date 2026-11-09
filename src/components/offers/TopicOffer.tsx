@@ -1,3 +1,6 @@
+"use client";
+
+import { track } from "@/lib/analytics";
 import offers from "@/content/offers.json";
 
 type Offer = { service: string; line: string };
@@ -40,7 +43,7 @@ export function TopicOffer({ weak }: { weak: WeakTopic }) {
         {offer.line} If it matters to your business, Oblique&apos;s tax team will walk you through it: a free 30-minute{" "}
         {offer.service.toLowerCase()}.
       </p>
-      <form action="/diagnostic" method="post" target="_blank" className="mt-3">
+      <form action="/diagnostic" method="post" target="_blank" className="mt-3" onSubmit={() => track("offer_clicked", { topic: `${weak.track}-${weak.topic}` })}>
         <input type="hidden" name="topic" value={`${weak.track}-${weak.topic}`} />
         <button type="submit" className="min-h-12 w-full rounded-full btn-primary px-4 text-base font-semibold">
           Book a free call

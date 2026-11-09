@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { setPrizeEntry } from "@/app/actions/prizes";
+import { track } from "@/lib/analytics";
 
 export function EnterPrize({ entered }: { entered: boolean }) {
   const router = useRouter();
@@ -17,7 +18,10 @@ export function EnterPrize({ entered }: { entered: boolean }) {
     const result = await setPrizeEntry({ enter, confirmed }).catch(() => ({ ok: false, error: "Couldn't save just now. Please try again." }));
     setBusy(false);
     if (!result.ok) setError(result.error ?? "Something went wrong.");
-    else router.refresh();
+    else {
+      if (enter) track("prize_entered");
+      router.refresh();
+    }
   };
 
   if (entered) {

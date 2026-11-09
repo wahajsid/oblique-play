@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ObliqueMark } from "@/components/brand/ObliqueMark";
 import { ReportProblem } from "@/components/ReportProblem";
+import { track as trackEvent } from "@/lib/analytics";
 import { ChallengeBanner, type ChallengeInfo } from "@/components/share/Challenge";
 import type { PlayerProfile, PlayerStats } from "@/lib/players";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -173,6 +174,7 @@ export function QuizGame(props: Props) {
       setAttemptId(attemptRef.current);
       setStartedAt(Date.now());
       setScored(null);
+      trackEvent("quiz_started", { track, date });
       showQuestion(0, []);
     }
     setSavedRun(null);
@@ -225,6 +227,7 @@ export function QuizGame(props: Props) {
     const isScored = signedIn ? !!scored : isToday && !getQuizResult(key)?.scored;
     const score = answers.filter((a) => a.correct).length;
     recordQuizResult(key, { score, total, timeMs: doneMs, scored: isScored, completedAt: Date.now() });
+    trackEvent("quiz_finished", { track, date, scored: isScored, score });
     setScored(isScored);
     fetch("/api/quiz/finish", {
       method: "POST",

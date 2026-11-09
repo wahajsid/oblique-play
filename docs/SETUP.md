@@ -98,6 +98,11 @@ Then go to **Database → Webhooks → Create**:
 4. **Diagnostic bookings** go to Oblique's Calendly page, `https://calendly.com/obco`. To use another Calendly event, set `DIAGNOSTIC_BOOKING_URL` in Vercel. The player's name and email are prefilled, and bookings are tagged `utm_source=oblique-play` for Calendly's reports.
 5. **Plan:** Vercel's Hobby plan is for non-commercial use. A public marketing game for Oblique needs **Pro** ($20/month).
 
+## 6. Analytics and uptime alerts
+
+1. **PostHog** (analytics and error reports): create a project at posthog.com (the EU region is the default here). In Vercel, set `NEXT_PUBLIC_POSTHOG_KEY` to the project API key, and `NEXT_PUBLIC_POSTHOG_HOST` only if the project is not in the EU. Nothing is sent until the key is set. The events are listed at the top of `src/lib/analytics.ts`.
+2. **Uptime alert:** point any uptime monitor (for example UptimeRobot or Better Stack, both have free plans) at `https://play.obliqueconsult.com/api/health`, checking every 5 minutes. It answers 200 when the game can reach its database and has a quiz for today, and 503 otherwise, so it also warns when the question schedule has run out.
+
 ## Testing everything locally
 
 Needs Docker. `npx supabase start` runs a local copy of Supabase with the same sign-in settings as production (`supabase/config.toml`) and applies all migrations. Sign-in emails land in a local inbox at http://127.0.0.1:54324. `npx supabase status` shows the local keys for `.env.local`.

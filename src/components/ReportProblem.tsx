@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics";
 
 const REASONS = [
   { id: "wrong_answer", label: "The answer is wrong" },
@@ -48,6 +49,7 @@ export function ReportProblem({ itemId, kind, signedIn = false }: { itemId: stri
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error ?? "Couldn't send that just now. Please try again.");
+      track("report_sent", { kind, reason });
       setState("sent");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Couldn't send that just now. Please try again.");
